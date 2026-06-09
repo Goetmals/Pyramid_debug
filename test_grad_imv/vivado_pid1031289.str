@@ -8389,3 +8389,4 @@ selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation S
 selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, TEST_PYRAMID(ARCH_TEST_PYRAMID) (test_pyramid.vhd), RI0 : READIMG(ARCH_READIMG) (readimg.vhd)]", 21, false, false, false, false, false, true); // E - Double Click
 selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, TEST_PYRAMID(ARCH_TEST_PYRAMID) (test_pyramid.vhd)]", 20, true); // E - Node
 selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Simulation Sources, sim_1, TEST_PYRAMID(ARCH_TEST_PYRAMID) (test_pyramid.vhd)]", 20, true, false, false, false, false, true); // E - Double Click - Node
+// HMemoryUtils.trashcanNow. Engine heap size: 4,108 MB. GUI used memory: 122 MB. Current time: 6/9/26, 2:38:14 PM CEST
