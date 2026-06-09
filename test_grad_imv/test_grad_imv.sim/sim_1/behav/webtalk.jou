@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2016.4 (64-bit)
+# SW Build 1756540 on Mon Jan 23 19:11:23 MST 2017
+# IP Build 1755317 on Mon Jan 23 20:30:07 MST 2017
+# Start of session at: Fri Jan 21 17:39:08 2022
+# Process ID: 22368
+# Current directory: C:/Users/frede/OneDrive/Documents/testbench_eads/test_grad_imv/test_grad_imv.sim/sim_1/behav
+# Command line: wbtcv.exe -mode batch -source C:/Users/frede/OneDrive/Documents/testbench_eads/test_grad_imv/test_grad_imv.sim/sim_1/behav/xsim.dir/TEST_PYRAMID_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/frede/OneDrive/Documents/testbench_eads/test_grad_imv/test_grad_imv.sim/sim_1/behav/webtalk.log
+# Journal file: C:/Users/frede/OneDrive/Documents/testbench_eads/test_grad_imv/test_grad_imv.sim/sim_1/behav\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/frede/OneDrive/Documents/testbench_eads/test_grad_imv/test_grad_imv.sim/sim_1/behav/xsim.dir/TEST_PYRAMID_behav/webtalk/xsim_webtalk.tcl -notrace

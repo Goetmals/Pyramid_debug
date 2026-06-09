@@ -1,0 +1,96 @@
+#-- AEROSPATIALE MATRA Missiles
+#-- Hardware Description Project
+#-- Written on Thu Jan 23 14:32:11 2003
+
+#-- Application Options
+set app(editor)		{textedit "%1"}
+set app(seecmd)		{1}
+set app(comment)		{}
+
+#-- NC Options
+set nc(cdslib)		{etc/cds.lib}
+set nc(hdlvar)		{etc/hdl.var}
+set nc(mtm)		{typ}
+set nc(sdfcmd)		{etc/$prjname.sdf_cmd}
+set nc(tool,ncls)	{ncls $cdslib $hdlvar $library -nolog -time -vhdl -command -architecture -package}
+set nc(tool,ncvhdl)	{ncvhdl -nolog -errormax 5 -messages -status $cdslib $hdlvar $library $hdlfile}
+set nc(tool,ncvlog)	{ncvlog -nolog -errormax 5 -messages -status $cdslib $hdlvar $library $hdlfile}
+set nc(tool,ncelab)	{ncelab -acces +r -nolog -errormax 5 -messages -status -nowarn CUDEFB $coverage $cdslib $hdlvar $sdfcmd $library $hdlarch}
+set nc(tool,ncsim)	{ncsim  -nolog -nokey -input etc/xc_cmos.sgn $batch $cdslib $hdlvar $hdlarch}
+set nc(tool,ncsdfc)	{ncsdfc -nolog $cdslib $hdlvar $sdffile}
+
+#-- HDL sobel
+add sobel technology	{}
+add sobel part		{}
+add sobel speed_grade	{}
+add sobel package	{}
+add sobel frequency	{}
+add sobel fanout_limit	{}
+add sobel sdcfile	{}
+add sobel sdcheck	{0}
+add sobel library	{work}
+add sobel maplibrary	{mapped}
+add sobel impl		{rev_1}
+add sobel syndir	{map/$entity/$technology}
+add sobel syntool	{{1 {synplify $batch $entity.prj}}}
+add sobel synscript	{
+#-- AEROSPATIALE MATRA Missiles
+#-- Synplify project
+#-- Written on $clock
+
+#-- reporting options
+
+#-- implementation: 
+impl -add 				$impl
+
+#-- device options
+set_option -technology			$technology
+set_option -part			$part
+set_option -speed_grade			$speed_grade
+set_option -package			$package
+
+#-- compilation/mapping options
+set_option -default_enum_encoding	default
+set_option -symbolic_fsm_compiler	1
+set_option -resource_sharing		0
+
+#-- map options
+set_option -frequency			$frequency
+set_option -fanout_limit		$fanout_limit
+
+#-- simulation options
+set_option -write_verilog		0
+set_option -write_vhdl			0
+
+#-- automatic place and route (vendor) options
+set_option -write_apr_constraint	1
+
+#-- set result format/file last
+project -result_file			$result_file
+
+#-- add files
+[add_file $hdl]
+[add_constraint $sdcheck $sdcfile]
+			}
+add sobel synfscript	{$entity.prj}
+add sobel mapdir	{map/$entity/$technology}
+add sobel maptool	{}
+add sobel mapscript	{}
+add sobel mapfscript	{}
+add sobel file		src/orec-II/virtex-II/lr_1280x16.vhd
+add sobel file		src/sobel/sobel.vhd
+
+#-- HDL divers
+add divers sdcheck	{0}
+add divers library	{work}
+add divers maplibrary	{mapped}
+add divers file		tst/divers/readimg.vhd
+add divers file		tst/divers/writeimg.vhd
+add divers file		tst/divers/write16img.vhd
+add divers file		tst/divers/resynch_sgnx8.vhd
+
+#-- HDL test
+add test sdcheck	{0}
+add test library	{work}
+add test maplibrary	{mapped}
+add test file		tst/test_sobel.vhd

@@ -1,0 +1,4 @@
+include			$AERO_VHDLIB_DIR/cds.lib
+
+define work		../wrk/fct
+define mapped		../wrk/map

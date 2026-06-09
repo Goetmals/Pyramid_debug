@@ -1,0 +1,53 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Tue Apr  7 10:06:49 2026
+# Process ID: 1031289
+# Current directory: /home/demelo/vivado_prjs/testbench_eads/test_grad_imv
+# Command line: vivado test_grad_imv.xpr
+# Log file: /home/demelo/vivado_prjs/testbench_eads/test_grad_imv/vivado.log
+# Journal file: /home/demelo/vivado_prjs/testbench_eads/test_grad_imv/vivado.jou
+# Running On: metal, OS: Linux, CPU Frequency: 1199.966 MHz, CPU Physical cores: 12, Host memory: 134740 MB
+#-----------------------------------------------------------
+start_gui
+open_project test_grad_imv.xpr
+launch_simulation
+open_wave_config /home/demelo/vivado_prjs/testbench_eads/test_grad_imv/TEST_PYRAMID_behav.wcfg
+source TEST_PYRAMID.tcl
+restart
+run all
+close_sim
+launch_simulation
+open_wave_config /home/demelo/vivado_prjs/testbench_eads/test_grad_imv/TEST_PYRAMID_behav.wcfg
+source TEST_PYRAMID.tcl
+restart
+run all
+save_wave_config {/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/TEST_PYRAMID_behav.wcfg}
+close_sim
+set_property -dict [list CONFIG.Write_Depth_A {512} CONFIG.Read_Depth_A {512}] [get_ips dp_grad_tarek]
+launch_runs synth_1 -jobs 24
+wait_on_run synth_1
+launch_simulation
+launch_simulation
+reset_simulation -simset sim_1 -mode behavioral
+launch_simulation
+launch_simulation
+reset_simulation -simset sim_1 -mode behavioral
+launch_simulation
+reset_target all [get_files  /home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/ip/dp_grad_tarek/dp_grad_tarek.xci]
+export_ip_user_files -of_objects  [get_files  /home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/ip/dp_grad_tarek/dp_grad_tarek.xci] -sync -no_script -force -quiet
+delete_ip_run [get_files -of_objects [get_fileset dp_grad_tarek] /home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/ip/dp_grad_tarek/dp_grad_tarek.xci]
+generate_target all [get_files  /home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/ip/dp_grad_tarek/dp_grad_tarek.xci]
+catch { config_ip_cache -export [get_ips -all dp_grad_tarek] }
+export_ip_user_files -of_objects [get_files /home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/ip/dp_grad_tarek/dp_grad_tarek.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/ip/dp_grad_tarek/dp_grad_tarek.xci]
+launch_runs dp_grad_tarek_synth_1 -jobs 24
+wait_on_run dp_grad_tarek_synth_1
+export_simulation -of_objects [get_files /home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/ip/dp_grad_tarek/dp_grad_tarek.xci] -directory /home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.ip_user_files/sim_scripts -ip_user_files_dir /home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.ip_user_files -ipstatic_source_dir /home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.cache/compile_simlib/modelsim} {questa=/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.cache/compile_simlib/questa} {xcelium=/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.cache/compile_simlib/xcelium} {vcs=/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.cache/compile_simlib/vcs} {riviera=/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+open_wave_config /home/demelo/vivado_prjs/testbench_eads/test_grad_imv/TEST_PYRAMID_behav.wcfg
+source TEST_PYRAMID.tcl
+restart
+run all

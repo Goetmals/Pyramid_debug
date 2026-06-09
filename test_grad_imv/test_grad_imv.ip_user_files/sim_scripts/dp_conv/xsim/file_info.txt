@@ -1,0 +1,2 @@
+dp_conv.v,verilog,xil_defaultlib,../../../../test_grad_imv.gen/sources_1/ip/dp_conv/sim/dp_conv.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

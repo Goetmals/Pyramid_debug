@@ -1,0 +1,141 @@
+#-- AEROSPATIALE MATRA Missiles
+#-- Hardware Description Project
+#-- Written on Wed Nov 13 09:17:51 2002
+
+#-- Application Options
+set app(editor)		{textedit "%1"}
+set app(seecmd)		{1}
+set app(comment)		{}
+
+#-- NC Options
+set nc(cdslib)		{etc/cds.lib}
+set nc(hdlvar)		{etc/hdl.var}
+set nc(mtm)		{typ}
+set nc(sdfcmd)		{etc/$prjname.sdf_cmd}
+set nc(tool,ncls)	{ncls $cdslib $hdlvar $library -nolog -time -vhdl -command -architecture -package}
+set nc(tool,ncvhdl)	{ncvhdl -nolog -errormax 5 -messages -status $cdslib $hdlvar $library $hdlfile}
+set nc(tool,ncvlog)	{ncvlog -nolog -errormax 5 -messages -status $cdslib $hdlvar $library $hdlfile}
+set nc(tool,ncelab)	{ncelab -nolog -errormax 5 -messages -status -nowarn CUDEFB $coverage $cdslib $hdlvar $sdfcmd $library $hdlarch}
+set nc(tool,ncsim)	{ncsim  -nolog -nokey -input etc/xc_cmos.sgn $batch $cdslib $hdlvar $hdlarch}
+set nc(tool,ncsdfc)	{ncsdfc -nolog $cdslib $hdlvar $sdffile}
+
+#-- HDL orec
+add orec technology	{VIRTEX2}
+add orec part		{XC2V3000}
+add orec speed_grade	{-4}
+add orec package	{FG676}
+add orec frequency	{40}
+add orec fanout_limit	{100}
+add orec sdcfile	{etc/xc_mire.sdc}
+add orec sdcheck	{1}
+add orec library	{work}
+add orec maplibrary	{mapped}
+add orec impl		{rev_1}
+add orec syndir		{map/$entity/$technology}
+add orec syntool	{{1 {synplify $batch $entity.prj}}}
+add orec synscript	{
+#-- AEROSPATIALE MATRA Missiles
+#-- Synplify project
+#-- Written on $clock
+
+#-- reporting options
+
+#-- implementation: 
+impl -add 				$impl
+
+#-- device options
+set_option -technology			$technology
+set_option -part			$part
+set_option -speed_grade			$speed_grade
+set_option -package			$package
+
+#-- compilation/mapping options
+set_option -default_enum_encoding	default
+set_option -symbolic_fsm_compiler	1
+set_option -resource_sharing		0
+
+#-- map options
+set_option -frequency			$frequency
+set_option -fanout_limit		$fanout_limit
+
+#-- simulation options
+set_option -write_verilog		0
+set_option -write_vhdl			0
+
+#-- automatic place and route (vendor) options
+set_option -write_apr_constraint	1
+
+#-- set result format/file last
+project -result_file			$result_file
+
+#-- add files
+[add_file $hdl]
+[add_constraint $sdcheck $sdcfile]
+			}
+add orec synfscript	{$entity.prj}
+add orec mapdir		{map/$entity/$technology}
+add orec maptool	{{1 {ngdbuild -p $part-$speed_grade-$package $entity.edf $entity.ngd}} {1 {map -p $part-$speed_grade-$package -pr b -o map.ncd $entity.ngd $entity.pcf}} {1 {par -ol 5 -i 1 -d 5 -t 1 -w -c 2 map.ncd $entity.ncd $entity.pcf}} {0 {trce $entity.ncd $entity.pcf -e 3 -skew -o $entity.twr}} {1 {bitgen -g StartupClk:JtagClk -g DCMShutdown:Disable -d -m -w $entity.ncd $entity.bit}} {0 {bitgen -g StartupClk:Cclk -g DCMShutdown:Disable -d -m -w $entity.ncd $entity.bit}} {0 {promgen -x xc18v04 xc18v04 xc18v04 -u 0 $entity.bit -p mcs}} {0 {ngdanno $entity.ncd map.ngm}} {0 {ngd2vhdl -w -rpw 20 -te $entity -ti $entity $entity.nga $entity.vhd}}}
+add orec mapscript	{
+
+}
+add orec mapfscript	{}
+add orec file		src/orec-II/virtex-II/lr_conv.vhd
+add orec file		src/orec-II/conv_col.vhd
+add orec file		src/orec-II/conv_lig.vhd
+add orec file		src/orec-II/ampl.vhd
+add orec file		src/orec-II/virtex-II/lr_grad.vhd
+add orec file		src/orec-II/gradient.vhd
+add orec file		src/orec-II/norm_orie.vhd
+add orec file		src/orec-II/virtex-II/lr_snml.vhd
+add orec file		src/orec-II/snml.vhd
+add orec file		src/orec-II/biseuillage.vhd
+add orec file		src/orec-II/orec.vhd
+add orec file		src/interfaces/led_life.vhd
+add orec file		src/interfaces/inter_cmos.vhd
+add orec file		src/interfaces/inter_vesa.vhd
+add orec file		src/interfaces/mire_vesa.vhd
+add orec file		src/interfaces/edcm108.vhd
+add orec file		src/interfaces/incruste.vhd
+add orec file		src/interfaces/button.vhd
+add orec file		src/xc_cmos.vhd
+
+#-- HDL divers
+add divers sdcheck	{0}
+add divers library	{work}
+add divers maplibrary	{mapped}
+add divers file		tst/divers/readimg.vhd
+add divers file		tst/divers/writeimg.vhd
+add divers file		tst/divers/write16img.vhd
+add divers file		tst/divers/resynch_sgnx8.vhd
+add divers file		tst/divers/write_vesa.vhd
+add divers file		tst/divers/pb_mv13.vhd
+add divers file		tst/divers/img_vesa.vhd
+
+#-- HDL conv3x3
+add conv3x3 technology	{virtex}
+add conv3x3 part	{XCV1000}
+add conv3x3 speed_grade	{-6}
+add conv3x3 package	{FG680}
+add conv3x3 frequency	{50}
+add conv3x3 fanout_limit	{100}
+add conv3x3 sdcfile	{}
+add conv3x3 sdcheck	{0}
+add conv3x3 library	{work}
+add conv3x3 maplibrary	{mapped}
+add conv3x3 impl	{rev_1}
+add conv3x3 mapdir	{map/$entity/$technology}
+add conv3x3 maptool	{{1 {ngdbuild -p $part-$speed_grade-$package $entity.edf $entity.ngd}} {1 {map -p $part-$speed_grade-$package -o map.ncd $entity.ngd $entity.pcf}} {1 {par -ol 5 -i 1 -d 5 -t 1 -w -c 2 map.ncd $entity.ncd $entity.pcf}} {0 {trce $entity.ncd $entity.pcf -e 3 -skew -o $entity.twr}} {1 {ngdanno $entity.ncd map.ngm}} {0 {bitgen -w $entity.ncd $entity.bit}} {0 {promgen -u 0 $entity.bit -w -o $entity.mcs -p mcs -s 512}} {1 {ngd2vhdl -w -rpw 20 -te $entity -ti $entity $entity.nga $entity.vhd}}}
+add conv3x3 mapscript	{}
+add conv3x3 mapfscript	{}
+add conv3x3 file		src/orec-II/virtex-II/lr_1280x16.vhd
+add conv3x3 file		src/orec-II/conv3x3.vhd
+
+#-- HDL test
+add test sdcheck	{0}
+add test library	{work}
+add test maplibrary	{mapped}
+add test file		tst/test_carte.vhd
+add test file		tst/test_orec.vhd
+add test file		tst/test_opni.vhd
+add test file		tst/test_cmos.vhd
+add test file		tst/test_conv3x3.vhd

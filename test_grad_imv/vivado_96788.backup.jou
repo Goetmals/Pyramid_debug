@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Mon Apr  7 16:27:29 2025
+# Process ID: 96788
+# Current directory: /home/demelo/vivado_prjs/testbench_eads/test_grad_imv
+# Command line: vivado
+# Log file: /home/demelo/vivado_prjs/testbench_eads/test_grad_imv/vivado.log
+# Journal file: /home/demelo/vivado_prjs/testbench_eads/test_grad_imv/vivado.jou
+# Running On: metal, OS: Linux, CPU Frequency: 1199.837 MHz, CPU Physical cores: 12, Host memory: 134740 MB
+#-----------------------------------------------------------
+start_gui
+open_project /home/demelo/vivado_prjs/lionel_prj/lionel_prj.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1

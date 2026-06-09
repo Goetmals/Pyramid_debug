@@ -1,0 +1,58 @@
+database -open waves -into wrk/fct/waves.shm -default 
+set assert_1164_warnings NO
+
+probe -create -shm :RESETB			-waveform
+probe -create -shm :CLK				-waveform
+
+probe -create -shm :SORTIE_LED			-waveform
+
+probe -create -shm :SELECT_OREC			-waveform
+probe -create -shm :SELECT_MODE			-waveform
+
+probe -create -shm :SELECT_WINDOW		-waveform
+
+probe -create -shm :SYSCLK_CMOS			-waveform
+probe -create -shm :ROW_ADDR_CMOS		-waveform
+probe -create -shm :ROW_STRTN_CMOS		-waveform
+probe -create -shm :ROW_DONEN_CMOS		-waveform
+probe -create -shm :LD_SHIFTN_CMOS		-waveform
+probe -create -shm :DATA_READ_ENN_CMOS		-waveform
+probe -create -shm :DATA_CMOS			-waveform
+probe -create -shm :PGN_CMOS			-waveform
+probe -create -shm :TXN_CMOS			-waveform
+probe -create -shm :CAL_STRST_CMOS		-waveform
+probe -create -shm :DARK_OFF_ENN_CMOS		-waveform
+probe -create -shm :STANDBYN_CMOS		-waveform
+probe -create -shm :LRSTN_CMOS			-waveform
+
+probe -create -shm :MOS0:SYN0:CPT_COL		-waveform
+probe -create -shm :MOS0:SYN0:CPT_LIG		-waveform
+
+probe -create -shm :MOS0:HSYNC_INN		-waveform
+probe -create -shm :MOS0:VSYNC_INN		-waveform
+probe -create -shm :MOS0:PIXEL_INN		-waveform
+
+probe -create -shm :CLK_DVI			-waveform
+probe -create -shm :DIE				-waveform
+probe -create -shm :DIO				-waveform
+probe -create -shm :DE				-waveform
+probe -create -shm :HSYNCH			-waveform
+probe -create -shm :VSYNCH			-waveform
+probe -create -shm :CTL1			-waveform
+probe -create -shm :CTL2			-waveform
+probe -create -shm :CTL3			-waveform
+probe -create -shm :EDGE			-waveform
+probe -create -shm :PIXS			-waveform
+probe -create -shm :PD				-waveform
+
+
+probe -create -shm :HSYNC_INN			-waveform
+probe -create -shm :VSYNC_INN			-waveform
+probe -create -shm :PIXEL_INN			-waveform
+
+probe -create -shm :HSYNC_OUT			-waveform
+probe -create -shm :VSYNC_OUT			-waveform
+probe -create -shm :PIXEL_OUT			-waveform
+
+probe -create -shm :CVN0:P_IN			-waveform
+

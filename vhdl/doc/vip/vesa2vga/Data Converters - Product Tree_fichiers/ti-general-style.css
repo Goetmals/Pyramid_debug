@@ -1,0 +1,213 @@
+STYLE .nothing {
+	FONT-FAMILY: verdana; FONT-SIZE: 10px
+}
+P {
+	FONT-FAMILY: verdana; FONT-SIZE: 11px
+}
+H1 {
+	FONT-FAMILY: verdana; FONT-SIZE: 12px
+}
+H2 {
+	FONT-FAMILY: verdana; FONT-SIZE: 11px
+}
+H3 {
+	FONT-FAMILY: verdana; FONT-SIZE: 10px
+}
+H4 {
+	FONT-FAMILY: verdana; FONT-SIZE: 10px
+}
+UL {
+	FONT-FAMILY: verdana; FONT-SIZE: 11px
+}
+OL {
+	FONT-FAMILY: verdana; FONT-SIZE: 11px
+}
+.breadcrumbs {
+	FONT-FAMILY: arial; FONT-SIZE: 10px
+}
+.breadcrumbarrow {
+	COLOR: #ff0000; FONT-FAMILY: arial; FONT-SIZE: 10px
+}
+.pagetitle {
+	FONT-FAMILY: verdana; FONT-SIZE: 12px
+}
+.navbullet {
+	COLOR: #ff6600; FONT-FAMILY: verdana; FONT-SIZE: 10px
+}
+.navfont {
+	FONT-FAMILY: verdana; FONT-SIZE: 10px
+}
+.navsubfont {
+	FONT-FAMILY: verdana; FONT-SIZE: 10px
+}
+.bodyfont {
+	FONT-FAMILY: verdana; FONT-SIZE: 11px
+}
+.bodyfontsmall {
+	FONT-FAMILY: verdana; FONT-SIZE: 10px
+}
+.pagetitlearrow {
+	COLOR: #ff0000; FONT-FAMILY: verdana; FONT-SIZE: 11px
+}
+.leftnavheader {
+	BACKGROUND-COLOR: #6699cc; FONT-FAMILY: verdana; FONT-SIZE: 11px
+}
+.leftnavheaderyellow {
+	BACKGROUND-COLOR: #ffcc00; FONT-FAMILY: verdana; FONT-SIZE: 11px
+}
+.leveltwonavcolor {
+	BACKGROUND-COLOR: #ffffcc
+}
+.levelthreenavcolor {
+	BACKGROUND-COLOR: #ffffcc
+}
+.levelthreenavfont {
+	FONT-FAMILY: verdana; FONT-SIZE: 10px
+}
+.levelthreenavborder {
+	BORDER-BOTTOM-COLOR: #666666; BORDER-BOTTOM-WIDTH: 1px; BORDER-LEFT-COLOR: #666666; BORDER-LEFT-WIDTH: 1px; BORDER-RIGHT-COLOR: #666666; BORDER-RIGHT-WIDTH: 1px; BORDER-TOP-COLOR: #666666; BORDER-TOP-WIDTH: 1px
+}
+.leftnavborder {
+	BORDER-BOTTOM-COLOR: #666666; BORDER-BOTTOM-WIDTH: 1px; BORDER-LEFT-COLOR: #666666; BORDER-LEFT-WIDTH: 1px; BORDER-RIGHT-COLOR: #666666; BORDER-RIGHT-WIDTH: 1px; BORDER-TOP-COLOR: #666666; BORDER-TOP-WIDTH: 1px
+}
+.rightnavheader {
+	FONT-FAMILY: verdana; FONT-SIZE: 11px
+}
+.rightnavborder {
+	BORDER-BOTTOM-COLOR: #666666; BORDER-BOTTOM-WIDTH: 1px; BORDER-LEFT-COLOR: #666666; BORDER-LEFT-WIDTH: 1px; BORDER-RIGHT-COLOR: #666666; BORDER-RIGHT-WIDTH: 1px; BORDER-TOP-COLOR: #666666; BORDER-TOP-WIDTH: 1px
+}
+.navshadegray {
+	BACKGROUND-COLOR: #cccccc
+}
+.appsrightnavshade {
+	BACKGROUND-COLOR: #ffcc66
+}
+.leftnavheaderorange {
+	BACKGROUND-COLOR: #ff6600; FONT-FAMILY: verdana; FONT-SIZE: 10px
+}
+.leftnavheadertraining {
+	BACKGROUND-COLOR: #669999; COLOR: #ffffff; FONT-FAMILY: verdana; FONT-SIZE: 10px
+}
+.appstreebutton {
+	BACKGROUND-COLOR: #666666; COLOR: #ffffff; FONT-FAMILY: verdana; FONT-SIZE: 10px
+}
+.supportleftnavheader {
+	BACKGROUND-COLOR: #cccc99; FONT-FAMILY: verdana; FONT-SIZE: 11px
+}
+.scpressbutton {
+	BACKGROUND-COLOR: #666666; COLOR: #ffffff; FONT-FAMILY: verdana; FONT-SIZE: 10px
+}
+.subheader {
+	FONT-FAMILY: verdana; FONT-SIZE: 11px
+}
+.bluesubheaderfont {
+	COLOR: #000066; FONT-FAMILY: verdana; FONT-SIZE: 12px
+}
+.descriptivetext {
+	FONT-FAMILY: arial; FONT-SIZE: 10px
+}
+.bodyfontcolor {
+	COLOR: #ff0000; FONT-FAMILY: verdana; FONT-SIZE: 11px
+}
+.bodyboxcolor {
+	BACKGROUND-COLOR: #ffffcc; BORDER-BOTTOM-COLOR: #666666; BORDER-BOTTOM-WIDTH: 1px; BORDER-LEFT-COLOR: #666666; BORDER-LEFT-WIDTH: 1px; BORDER-RIGHT-COLOR: #666666; BORDER-RIGHT-WIDTH: 1px; BORDER-TOP-COLOR: #666666; BORDER-TOP-WIDTH: 1px
+}
+.bodyboxfontcolor {
+	COLOR: #ff0000; FONT-FAMILY: verdana; FONT-SIZE: 10px
+}
+.featurecolor {
+	BACKGROUND-COLOR: #cccccc
+}
+.yellowcontainer {
+	BACKGROUND-COLOR: #ffffcc
+}
+.producttreehighlight {
+	BACKGROUND-COLOR: #cccccc
+}
+.maintabheader {
+	BACKGROUND-COLOR: #000066; COLOR: #ffffff; FONT-FAMILY: verdana; FONT-SIZE: 10px
+}
+.appstableheader {
+	BACKGROUND-COLOR: #cccc99; FONT-FAMILY: verdana; FONT-SIZE: 10px
+}
+.supporttableheader {
+	BACKGROUND-COLOR: #cccc99; FONT-FAMILY: verdana; FONT-SIZE: 10px
+}
+.trainingtableheader {
+	BACKGROUND-COLOR: #cccccc; FONT-FAMILY: verdana; FONT-SIZE: 10px
+}
+.paratableheader {
+	BACKGROUND-COLOR: #ffcc00; BORDER-BOTTOM-COLOR: #666666; BORDER-BOTTOM-WIDTH: 1px; BORDER-LEFT-COLOR: #666666; BORDER-LEFT-WIDTH: 1px; BORDER-RIGHT-COLOR: #666666; BORDER-RIGHT-WIDTH: 1px; BORDER-TOP-COLOR: #666666; BORDER-TOP-WIDTH: 1px; FONT-FAMILY: verdana; FONT-SIZE: 10px
+}
+.paratableheadernoborder {
+	BACKGROUND-COLOR: #ffcc00; FONT-FAMILY: verdana; FONT-SIZE: 10px
+}
+.paratableshadeon {
+	BACKGROUND-COLOR: #ffffcc; FONT-FAMILY: verdana; FONT-SIZE: 10px
+}
+.paratableshadeoff {
+	BACKGROUND-COLOR: #ffffff; FONT-FAMILY: verdana; FONT-SIZE: 10px
+}
+.paratableshadegray {
+	BACKGROUND-COLOR: #cccccc; FONT-FAMILY: verdana; FONT-SIZE: 10px
+}
+.paratableborder {
+	BORDER-BOTTOM-COLOR: #666666; BORDER-BOTTOM-WIDTH: 1px; BORDER-LEFT-COLOR: #666666; BORDER-LEFT-WIDTH: 1px; BORDER-RIGHT-COLOR: #666666; BORDER-RIGHT-WIDTH: 1px; BORDER-TOP-COLOR: #666666; BORDER-TOP-WIDTH: 1px
+}
+.smallbullet {
+	FONT-FAMILY: arial; FONT-SIZE: 10px
+}
+.orangelink {
+	COLOR: #ff6600; FONT-FAMILY: verdana; FONT-SIZE: 10px
+}
+.blacklink {
+	COLOR: #000000; FONT-FAMILY: verdana; FONT-SIZE: 10px
+}
+.whitelink {
+	COLOR: #ffffff; FONT-FAMILY: verdana; FONT-SIZE: 10px
+}
+.scpresstableheader {
+	BACKGROUND-COLOR: #cccccc; FONT-FAMILY: verdana; FONT-SIZE: 10px
+}
+.headerlogocolor {
+	BACKGROUND-COLOR: #000000
+}
+.headerredcolor {
+	BACKGROUND-COLOR: #ff0000
+}
+.headerdropdowncolor {
+	BACKGROUND-COLOR: #999999
+}
+.headersearchcolor {
+	BACKGROUND-COLOR: #ffffcc
+}
+.headerlinkscolor {
+	BACKGROUND-COLOR: #666666
+}
+.headerlinkscoloractive {
+	BACKGROUND-COLOR: #333333; COLOR: #cccccc; FONT-FAMILY: verdana; FONT-SIZE: 10px
+}
+.advsearch {
+	COLOR: #ff0000; FONT-FAMILY: verdana; FONT-SIZE: 10px
+}
+.advsearchbullet {
+	COLOR: #ff0000; FONT-FAMILY: arial; FONT-SIZE: 10px
+}
+.headerlinkdivider {
+	COLOR: #666666; FONT-FAMILY: verdana; FONT-SIZE: 10px
+}
+.footerfont {
+	FONT-FAMILY: arial; FONT-SIZE: 10px
+}
+.footercolor {
+	BACKGROUND-COLOR: #cccccc; BORDER-BOTTOM-COLOR: #000000; BORDER-BOTTOM-WIDTH: 1px; BORDER-LEFT-COLOR: #000000; BORDER-LEFT-WIDTH: 1px; BORDER-RIGHT-COLOR: #000000; BORDER-RIGHT-WIDTH: 1px; BORDER-TOP-COLOR: #000000; BORDER-TOP-WIDTH: 1px
+}
+.footerfontlinks {
+	COLOR: #000066; FONT-FAMILY: verdana; FONT-SIZE: 10px
+}
+.footerfontcopy {
+	COLOR: #666666; FONT-FAMILY: arial; FONT-SIZE: 10px
+}
+.footerfonttrade {
+	COLOR: #333333; FONT-FAMILY: arial; FONT-SIZE: 10px
+}

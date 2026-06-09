@@ -1,0 +1,7 @@
+verilog xil_defaultlib  \
+"../../../../test_grad_imv.gen/sources_1/ip/dp_snml/sim/dp_snml.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

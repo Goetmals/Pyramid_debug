@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Wed Apr  9 10:44:38 2025
+# Process ID: 321065
+# Current directory: /home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.runs/dp_snml_synth_1
+# Command line: vivado -log dp_snml.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source dp_snml.tcl
+# Log file: /home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.runs/dp_snml_synth_1/dp_snml.vds
+# Journal file: /home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.runs/dp_snml_synth_1/vivado.jou
+# Running On: metal, OS: Linux, CPU Frequency: 1599.965 MHz, CPU Physical cores: 12, Host memory: 134740 MB
+#-----------------------------------------------------------
+source dp_snml.tcl -notrace

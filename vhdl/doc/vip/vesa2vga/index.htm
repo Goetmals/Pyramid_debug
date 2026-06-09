@@ -1,0 +1,781 @@
+<!doctype html public "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<title>ADI - Data Converters</title>
+<link rel="stylesheet" type="text/css" href="/baseSite/include/styles/main.css">
+<!--THE FOLLOWING INCLUDE WILL APPLY STYLESHEETS EXCEPTIONS AND JAVASCRIPT THROUGH A SINGLE FILE-->
+<style type="text/css">
+<!--
+@import url(/baseSite/include/styles/import.css);
+-->
+</style>
+<script language="JavaScript">
+<!--
+//in NN 4, the dropdowns are buggy when browser is resized--this refreshes & fixes it
+/*function nsResizeFx() {
+ 
+  if (document.NS.nsResizeFx.WindowWidth != window.innerWidth || document.NS.nsResizeFx.WindowHeight != window.innerHeight) {
+	document.location = document.location;
+  }
+}
+
+function nsRezFxCk() {
+
+  if ((navigator.appName == 'Netscape') && (parseInt(navigator.appVersion) == 4)) {
+    if (typeof document.NS == 'undefined'){
+      document.NS = new Object;
+    }
+    if (typeof document.NS.scaleFont == 'undefined') {
+      document.NS.nsResizeFx = new Object;
+      document.NS.nsResizeFx.WindowWidth = window.innerWidth;
+      document.NS.nsResizeFx.WindowHeight = window.innerHeight;
+    }
+    window.onresize = nsResizeFx;
+  }
+}
+
+nsRezFxCk()*/
+
+function changeStatus(text) {
+	//includes time delay for IE bug
+	window.setTimeout('window.status="' + text + '"', 1);
+	return true;
+}
+
+//general popups
+function popUp(url) {
+	var popWindow = window.open(url,'pop','width=600,height=400,top=167,left=165,menubar,status,scrollbars,resizable,toolbar,location');
+	popWindow.focus();
+}
+
+//popups converted ppt presentations
+function popUpPPT(url) {
+	var popWindow = window.open(url,'pop','width=600,height=425,top=167,left=165,menubar,status,scrollbars,resizable,toolbar,location');
+	popWindow.focus();
+}
+
+//popup for signal chains
+function popUpSC(url,windowName) {
+	var popWindow = window.open(url,windowName,'width=550,height=270,top=167,left=165,scrollbars,resizable');
+	popWindow.focus();
+}
+//-->
+</script>
+
+</head>
+<body marginheight="0" marginwidth="0" topmargin="0" leftmargin="0">
+<!----------------HEADER GOES HERE-------------->
+
+
+<a name="top"></a>
+<table width="760" border="0" cellpadding="0" cellspacing="0" height="80">
+<tr>
+<td width="37"><img src="/baseSite/images/spacer.gif" width="37" height="1" alt="" border="0"></td>
+<td width="134">
+   <table width="134" border="0" cellpadding="0" cellspacing="0">
+   <tr>
+   <td width="134" height="25"><img src="/baseSite/images/spacer.gif" width="134" height="1" alt="" border="0"></td>
+   </tr>
+   <tr>
+   <td width="134" height="30" align="left" valign="middle"><a href="http://www.analog.com/index.html"><img src="/baseSite/images/adi_logo.gif" width="96" height="30" border="0" alt="Analog Devices, Inc. Home Page"></a></td>
+   </tr>
+   <tr>
+   <td width="134" height="25"><img src="/baseSite/images/spacer.gif" width="134" height="1" alt="" border="0"></td>
+   </tr>
+   </table>
+</td>
+<td width="589" align="left" valign="top">
+   <table width="589" border="0" cellpadding="0" cellspacing="0">
+   <tr>
+   <td width="393" height="35" valign="top"><img src="/baseSite/images/brand_bar_2ndlevel.jpg" width="393" height="35" border="0" alt="" usemap="#techLeadership"><map name="techLeadership">
+<area alt="Amplifiers and Linear Home" coords="0,0,64,35" href="http://www.analog.com/technology/amplifiersLinear/index.html">
+<area alt="Power / Supervisory / Interface Home" coords="65,0,127,35" href="http://www.analog.com/technology/powerSupervisoryInterface/index.html">
+<area alt="Digital Signal Processing Home" coords="128,0,190,35" href="http://www.analog.com/technology/dsp/index.html">
+<area alt="RF and Communications Home" coords="191,0,254,35" href="http://www.analog.com/technology/RFComms/index.html">
+<area alt="MEMS Technology Home" coords="255,1,316,35" href="http://www.analog.com/technology/mems/index.html">
+<area alt="Data Converters Home" coords="317,0,402,35" href="http://www.analog.com/technology/dataConverters/index.html">
+</map></td>
+   <td width="196" rowspan="3" valign="top">
+      <table border="0" cellpadding="0" cellspacing="0">
+      <tr>
+      <td colspan="2" height="10"><img src="/baseSite/images/spacer.gif" width="1" height="10" border="0" alt=""></td>
+      </tr>
+      <form method="get" action="/redirect.asp">
+      <tr>
+      <td class="select" width="196" colspan="2">
+      <select name="url" style="width:196px" width="196" onchange="if (this.selectedIndex>0) location.href=this.options[this.selectedIndex].value;">
+      <option value="none" selected>ADI Site Navigation</option>
+      <option value="http://www.analog.com/technology/dataConverters/index.html">Data Converters</option>
+      <option value="http://www.analog.com/technology/dsp/index.html">Digital Signal Processing</option>
+      <option value="http://www.analog.com/technology/RFComms/index.html">RF and Communications</option>
+      <option value="http://www.analog.com/technology/amplifiersLinear/index.html">Amplifiers and Linear</option>
+      <option value="http://www.analog.com/technology/powerSupervisoryInterface/index.html">Power / Supervisory / Interface</option>
+      <option value="http://www.analog.com/technology/mems/index.html">MEMS Technology</option>
+      <option value="http://www.analog.com/marketSolutions/index.html">Market Solutions</option>
+      <option value="http://www.analog.com/corporate/index.html">Corporate Information</option>
+      <option value="http://www.analog.com/corporate/jobs/index.html">Job Opportunities</option>
+      </select>
+      <noscript>
+      <img src="/baseSite/images/spacer.gif" width="1" height="5" alt="" border="0"><br><input type="image" src="/baseSite/images/bt_go.gif" width="23" height="15" alt="Go" border="0" align="right">
+      </noscript>
+      </td>
+      </tr>
+      </form>
+      <tr>
+      <td colspan="2" height="5"><img src="/baseSite/images/spacer.gif" width="1" height="5" border="0" alt=""></td>
+      </tr>
+      <form method="post" action="http://products.analog.com/products/search.asp"  name="search">
+      <tr>
+      <td valign="bottom">
+      <input type="text" name="queryText" style="width:125px" size="11"></td>
+      <td><input type="image" src="/baseSite/images/homepage_art/search_button.gif" width="57" height="19" border="0" alt="Search" name="queryText"></td>
+      </tr>
+      <tr>
+      <td colspan="2" valign="bottom"><a href="http://search.analog.com"><img src="/baseSite/images/homepage_art/advanced_search.gif" width="81" height="9" border="0" alt="Advanced Search"></a>&nbsp;</td>
+      </tr>
+      </form>
+      </table>
+   </td>
+   </tr>
+   <tr>
+   <td width="393" height="15">&nbsp;</td>
+   </tr>
+   <tr>
+   <td width="393" height="11" valign="top"><map name="toolbar">
+<area alt="Analog Devices Home" coords="0,0,41,17" href="http://www.analog.com/index.html">
+<area alt="Buy Online" coords="41,0,95,17" href="http://www.analog.com/commerce/index.html">
+<area alt="Order Samples" coords="96,0,193,17" href="http://www.analog.com/productSelection/orderSamples/index.html">
+<area alt="Technical Support" coords="194,0,312,17" href="http://www.analog.com/techSupport/index.html">
+<area alt="myAnalog" coords="313,0,394,17" href="http://products.analog.com/custom_home_page/member/asp/home_page_dhtml.asp?">
+</map>
+<img src="/baseSite/images/toolbar_2ndlevel.gif" width="373" height="15" border="0" usemap="#toolbar"></td>
+   </tr>
+   </table>
+</td>
+</tr>
+</table>
+
+
+
+
+<!--------------------END HEADER---------------->
+<!----------------BEGIN BREADCRUMBS-------------->
+<table width="760" border="0" cellpadding="0" cellspacing="0">
+<tr>
+<td width="5">&nbsp;</td>
+<td width="755" class="breadcrumb"><a href="/index.html">ADI Home</a>&nbsp;&gt;&nbsp;<a href="/technology/dataConverters/index.html">Data Converters</a>&nbsp;&gt;&nbsp;<a href="/technology/dataConverters/products/newProducts.html">New and Featured Products</a>&nbsp;&gt;&nbsp;</td>
+</tr>
+</table>
+<!-----------------END BREADCRUMBS--------------->
+<table width="760" border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="171" height="100%" align="left" valign="top" bgcolor="#cccccc">
+<!--BEGIN ADDITIONAL NESTED TABLE TO AVOID POOR NETSCAPE SPACING-->
+<!----------------------------------------------->
+<!------------LEFT NAV--------------------------->
+<!----------------------------------------------->
+<!-- BEGIN NESTED TABLE FOR LEFT NAVIGATION -->
+	<table width="171" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+	<td class="leftnavheader" width="5" height="20" style="background-color: #336699;"><img src="/baseSite/images/spacer.gif" width="5" height="1" alt="" border="0"></td>
+	<td class="leftnavheader" width="166" height="20" align="left" valign="middle" style="background-color: #336699;"><strong>Data Converters</strong></td>
+	</tr>
+	<!--SPACER ROW-->
+	<tr>
+	<td bgcolor="#cccccc" height="10" colspan="2"><img src="/baseSite/images/spacer.gif" width="1" height="10" alt="" border="0"></td>
+	</tr>
+	<tr>
+	<td class="leftnav"><img src="/baseSite/images/spacer.gif" width="5" height="1" alt="" border="0"></td>
+	<td class="leftnav" align="left" valign="top"><a href="/technology/dataConverters/index.html">Data Converters Home</a></td>
+	</tr>
+	<tr>
+	<td colspan="2"><img src="/baseSite/images/spacer.gif" width="1" height="5" border="0" alt=""></td>
+	</tr>
+	<tr>
+	<td class="leftnav"><img src="/baseSite/images/spacer.gif" width="5" height="1" alt="" border="0"></td>
+	<td class="leftnav" align="left" valign="top"><a href="/technology/dataConverters/designTools/selectionGuides/selectionGuides.html">Selection Guides</a></td>
+	</tr>
+	<tr>
+	<td colspan="2"><img src="/baseSite/images/spacer.gif" width="1" height="5" border="0" alt=""></td>
+	</tr>
+	<tr>
+	<td class="leftnav"><img src="/baseSite/images/spacer.gif" width="5" height="1" alt="" border="0"></td>
+	<td class="leftnav" align="left" valign="top"><a href="/technology/dataConverters/designTools.html">Design Tools</a></td>
+	</tr>
+	<tr>
+	<td colspan="2"><img src="/baseSite/images/spacer.gif" width="1" height="5" border="0" alt=""></td>
+	</tr> 
+	<tr>
+	<td class="leftnav"><img src="/baseSite/images/spacer.gif" width="5" height="1" alt="" border="0"></td>
+	<td class="leftnav" align="left" valign="top"><a href="/technology/dataConverters/library.html">Technical Library</a></td>
+	</tr>
+	<tr>
+	<td colspan="2"><img src="/baseSite/images/spacer.gif" width="1" height="5" border="0" alt=""></td>
+	</tr>
+	<tr>
+	<td class="leftnav"><img src="/baseSite/images/spacer.gif" width="5" height="1" alt="" border="0"></td>
+	<td class="leftnav" align="left" valign="top"><a href="/technology/dataConverters/products/newProducts.html">New and Featured Products</a></td>
+	</tr>
+	<tr>
+	<td colspan="2"><img src="/baseSite/images/spacer.gif" width="1" height="5" border="0" alt=""></td>
+	</tr>
+	<tr>
+	<td class="leftnav"><img src="/baseSite/images/spacer.gif" width="5" height="1" alt="" border="0"></td>
+	<td class="leftnav" align="left" valign="top"><a href="http://forms.analog.com/Form_Pages/support/standard_linear/contactTechSupport.asp">Contact Data Converters</a></td>
+	</tr>
+	<tr>
+	<td bgcolor="#cccccc" height="15" colspan="2"><img src="/baseSite/images/spacer.gif" width="1" height="15" alt="" border="0"></td>
+	</tr>
+	<tr>
+	<td class="leftnavheader" height="20" style="background-color: #336699;"><img src="/baseSite/images/spacer.gif" width="5" height="1" alt="" border="0"></td>
+	<td class="leftnavheader" width="166" height="20" align="left" valign="middle" style="background-color: #336699;"><strong>Data Converters</strong></td>
+	</tr>
+<!--SPACER ROW-->
+	<tr>
+	<td bgcolor="#cccccc" height="10" colspan="2"><img src="/baseSite/images/spacer.gif" width="1" height="10" alt="" border="0"></td>
+	</tr>
+	<tr>
+	<td class="leftnav"><img src="/baseSite/images/spacer.gif" width="5" height="1" alt="" border="0"></td>
+	<td class="select" align="left" valign="top">
+	<form method="get" action="/redirect.asp">
+<select name="url" style="width:160px" width="160" size="1" class="select" onchange="if (this.selectedIndex>0) parent.location.href=this.options[this.selectedIndex].value;">
+<option value="" selected>Data Converters...</option>
+<option value="http://www.analog.com/technology/dataConverters/index.html">Data Converters Home</option>
+<option value="http://www.analog.com/technology/dataConverters/adc/index.html">Analog-to-Digital</option>
+<option value="http://www.analog.com/technology/dataConverters/dac/index.html">Digital-to-Analog</option>
+<option value="http://www.analog.com/technology/dataConverters/dds/directDigitalSyn.html">Direct Digital Synthesis (DDS)</option>
+<option value="http://www.analog.com/technology/dataConverters/versacomm/versacomm.html">VersaCOMM Converters</option>
+<option value="http://www.analog.com/technology/dataConverters/displayElectronics/displayElectronics.html">Display Electronics</option>
+<option value="http://www.analog.com/technology/dataConverters/mixedSignal/mixed_signalFrontEnds.html">Mixed-Signal Front Ends</option>
+<option value="http://www.analog.com/technology/dataConverters/energyMeasurement/energyMeasurementICs.html">Energy Measurement ICs</option>
+<option value="http://www.analog.com/technology/dataConverters/microconverter/microconverter.html">MicroConverter</option>
+<option value="http://www.analog.com/technology/dataConverters/thermalSystemMonitoring/thermal_systemMonitoring.html">Thermal/System Monitoring</option>
+<option value="http://www.analog.com/technology/dataConverters/voltageToFrequency/voltageToFrequency.html">Voltage-to-Frequency</option>
+<option value="http://www.analog.com/technology/dataConverters/precisionVoltage/precisionVoltageReferences.html">Precision Voltage Reference</option>
+</select>
+<noscript><br><input type="image" src="/baseSite/images/bt_go.gif" width="23" height="15" alt="Go" border="0" align="right" vspace="5"></noscript>
+</form>
+	</td>
+	</tr>
+	<tr>
+	<td bgcolor="#cccccc" height="10" colspan="2"><img src="/baseSite/images/spacer.gif" width="1" height="10" alt="" border="0"></td>
+	</tr>
+	<tr>
+	<td colspan="2">
+				<table width="171" cellpadding="0" cellspacing="0" border="0">
+			<tr>
+			<td class="leftnavheader" width="5" height="20" style="background-color:#000000;"><img src="/baseSite/images/spacer.gif" width="5" height="1" alt="" border="0"></td>
+			<td class="leftnavheader" height="20" align="left" valign="middle" style="background-color:#000000;">ADI Design Resources</td>
+			</tr>
+			<!--SPACER ROW-->
+			<tr>
+			<td bgcolor="#cccccc" height="10" colspan="2"><img src="/baseSite/images/spacer.gif" width="1" height="10" alt="" border="0"></td>
+			</tr>
+			<form method="get" action="/redirect.asp">
+			<tr>
+			<td class="leftnav" width="5"><img src="/baseSite/images/spacer.gif" width="5" height="1" alt="" border="0"></td>
+			<td class="select" align="left" valign="top">
+			<select name="url" style="width:160px" width="160" size="1" onchange="if (this.selectedIndex>0) parent.location.href=this.options[this.selectedIndex].value;">
+			<option value="" selected>Product Selection...</option>
+			<option value="http://search.analog.com/">Part Number Search</option>
+			<option value="http://www.analog.com/productSelection/selection_guides.html">Selection Guides</option>
+			<!--<option value="http://catalog.analog.com/">Parametric Search</option>-->
+			<option value="http://products.analog.com/products_html/list_gen_category_tree.html">Product Category Tree</option>
+			<option value="http://products.analog.com/products_html/list_gen_all.html">Master Product Index</option>
+			<option value="http://www.analog.com/productSelection/obsolete/search_obsolete.html">Obsolete Products</option>
+			<option value="http://products.analog.com/products/cross-reference/competitor_search.asp">Cross Reference</option>
+			<option value="http://www.analog.com/productSelection/signalChains/index.html">Signal Chains</option>
+			<option value="http://www.analog.com/productSelection/orderSamples/index.html">Order Samples</option>
+			</select>
+			</td>
+			</tr>
+			<noscript>
+			<tr>
+			<td align="right" colspan="2"><img src="/baseSite/images/spacer.gif" width="1" height="5" alt="" border="0"><br><input type="image" src="/baseSite/images/bt_go.gif" width="23" height="15" alt="Go" border="0"><img src="/baseSite/images/spacer.gif" width="5" height="1" alt="" border="0"></td>
+			</tr>
+			</noscript>
+			</form>
+			<!--SPACER ROW-->
+			<tr>
+			<td bgcolor="#cccccc" height="10" colspan="2"><img src="/baseSite/images/spacer.gif" width="1" height="10" alt="" border="0"></td>
+			</tr>
+			<form method="get" action="/redirect.asp">
+			<tr>
+			<td class="leftnav" width="5"><img src="/baseSite/images/spacer.gif" width="5" height="1" alt="" border="0"></td>
+			<td class="select" align="left" valign="top">
+			<select name="url" style="width:160px" width="160" size="1" onchange="if (this.selectedIndex>0) parent.location.href=this.options[this.selectedIndex].value;">
+			<option selected value="">Design Tools...</option>
+			<option value="http://www.analog.com/techSupport/designTools/evaluationBoards/evalBoards.html">Evaluation Boards/Tools</option>
+			<option value="http://www.analog.com/techSupport/designTools/interactiveTools/index.html">Interactive Design Tools</option>
+			<option value="http://www.analog.com/techSupport/designTools/codeExamples/index.html">Code Examples</option>
+			<option value="http://www.analog.com/techSupport/designTools/saberModels/index.html">SABER Models</option>
+			<option value="http://products.analog.com/products/generics/list_spice.asp">SPICE Models</option>
+			<option value="http://www.analog.com/techSupport/faqs/index.html">FAQs</option>
+			<!--<option value="">IBIS Models</option>-->
+			<!--<option value="">SABER Models</option>-->
+			</select>
+			</td>
+			</tr>
+			<noscript>
+			<tr>
+			<td align="right" colspan="2"><img src="/baseSite/images/spacer.gif" width="1" height="5" alt="" border="0"><br><input type="image" src="/baseSite/images/bt_go.gif" width="23" height="15" alt="Go" border="0"><img src="/baseSite/images/spacer.gif" width="5" height="1" alt="" border="0"></td>
+			</tr>
+			</noscript>
+			</form>
+			<!--SPACER ROW-->
+			<tr>
+			<td bgcolor="#cccccc" height="10" colspan="2"><img src="/baseSite/images/spacer.gif" width="1" height="10" alt="" border="0"></td>
+			</tr>
+			<form method="get" action="/redirect.asp">
+			<tr>
+			<td class="leftnav" width="5"><img src="/baseSite/images/spacer.gif" width="5" height="1" alt="" border="0"></td>
+			<td class="select" align="left" valign="top">
+			<select name="url" style="width:160px" width="160" size="1" onchange="if (this.selectedIndex>0) parent.location.href=this.options[this.selectedIndex].value;">
+			<option value="" selected>Technical Library...</option>
+			<option value="http://www.analog.com/library/index.html">Technical Library Home</option>
+			<option value="http://www.analog.com/library/applicationGuides/applicationGuides.html">Application Guides</option>
+			<option value="http://www.analog.com/library/applicationNotes/applicationNotes.html">Application Notes</option>
+			<option value="http://www.analog.com/library/analogDialogue/index.html">Analog Dialogue</option>
+			<option value="http://www.analog.com/technology/dsp/developmentTools/gen_purpose.html">DSP Manuals</option>
+			<option value="http://content.analog.com/pressrelease/prindex/">Press Releases</option>
+			<option value="http://www.analog.com/library/solutionsBulletins.html">Solutions Bulletins</option>
+			<option value="http://www.analog.com/library/techArticles/techArticles.html">Technical Articles</option>
+			<option value="http://www.analog.com/techSupport/training.html">Training and Events</option>
+			</select>
+			</td>
+			</tr>
+			<noscript>
+			<tr>
+			<td align="right" colspan="2"><img src="/baseSite/images/spacer.gif" width="1" height="5" alt="" border="0"><br><input type="image" src="/baseSite/images/bt_go.gif" width="23" height="15" alt="Go" border="0"><img src="/baseSite/images/spacer.gif" width="5" height="1" alt="" border="0"></td>
+			</tr>
+			</noscript>
+			</form>
+			<tr>
+			<td bgcolor="#cccccc" height="10" colspan="2"><img src="/baseSite/images/spacer.gif" width="1" height="10" alt="" border="0"></td>
+			</tr>
+			</table>
+	</td>
+	</tr>
+	</table>
+	<!-- END NESTED TABLE FOR LEFT NAVIGATION -->
+</td>
+<td width="589" align="left" valign="top">
+<!------------MAIN CONTENT-------------------->
+	<!-- BEGIN NESTED TABLE FOR MAIN CONTENT -->
+	<table width="589" border="0" cellspacing="0" cellpadding="0">
+<!-- START BLUE BAR -->
+	<tr>
+	<td align="left" valign="top" colspan="4">
+		<table width="589" border="0" cellpadding="0" cellspacing="0">
+		<tr>
+		<td class="leftnavheader" width="5" height="10" style="background-color: #336699;"><img src="/baseSite/images/spacer.gif" width="352" height="1" alt="" border="0"></td>
+		<td width="237" rowspan="2" valign="top"><img src="/baseSite/images/technology/dataConverters/dataConverters.gif" width="237" height="30" border="0" alt="Data Converters"></td>
+		</tr>
+		<tr>
+		<td><img src="/baseSite/images/spacer.gif" width="5" height="30" alt="" border="0"></td>
+		</tr>
+		</table>
+	</td>
+	</tr>
+<!-- END BLUE BAR  -->
+<!-- START SPACER CELLS -->
+	<tr>
+	<td width="20" height="1"><img src="/baseSite/images/spacer.gif" width="20" height="1" alt="" border="0"></td>
+	<td width="275" height="1"><img src="/baseSite/images/spacer.gif" width="275" height="1" alt="" border="0"></td>
+	<td width="20" height="1"><img src="/baseSite/images/spacer.gif" width="20" height="1" alt="" border="0"></td>
+	<td width="274" height="1"><img src="/baseSite/images/spacer.gif" width="274" height="1" alt="" border="0"></td>
+	</tr> 
+<!-- END SPACER CELLS -->
+	<tr>
+<!-- left gutter: fixed min. height of 325 -->
+	<td height="325">&nbsp;</td>
+	<td align="left" valign="top">
+	<!-- BEGIN NESTED TABLE FOR LEFT CONTENT -->
+		<table width="275" border="0" cellspacing="0" cellpadding="1">
+		<tr>
+		<td align="left" valign="top"><h3>Digital-to-Analog Converters</h3>
+		<strong>June 2001</strong></td>
+		</tr>
+		<tr>
+		<td height="10"><img src="/baseSite/images/spacer.gif" width="1" height="10" alt="" border="0"></td>
+		</tr>
+		<tr>
+		<td height="10"><img src="/baseSite/images/spacer.gif" width="1" height="10" alt="" border="0"></td>
+		</tr>
+		<tr>
+		<td align="left" valign="top" class="select"><form><select name="product_group" style="width:193px" width="193" size="1" onchange="if (this.selectedIndex>0) location.href=this.options[this.selectedIndex].value;">
+		<option value="none" selected>Select a topic</option>
+		<option value="#section2">Featured in this Solutions Bulletin</option>
+		<option value="#section3">Selection Guides</option>
+		<option value="#section4">Related Information</option>
+		</select></form></td>
+		</tr>
+		</table>
+	<!-- END NESTED TABLE FOR LEFT CONTENT -->
+	</td>
+	<td>&nbsp;</td>
+	<td align="left" valign="top">
+<!-- BEGIN NESTED TABLE FOR RIGHT CONTENT -->
+		<table width="274" border="0" cellspacing="0" cellpadding="1">
+		<tr>
+		<td><img src="/baseSite/images/technology/dataConverters/dacs6-01.gif" width="192" height="269" border="0" alt="Digital-to-Analog"></td>
+		</tr>
+		<tr>
+		<td height="5"><img src="/baseSite/images/spacer.gif" width="1" height="5" alt="" border="0"></td>
+		</tr>
+		<tr>
+		<td align="left" valign="top"><a href="/technology/dataConverters/products/solutionsBulletins/dacs6-01/dacs6-01.pdf">Download this Solutions Bulletin</a><br>
+		<span class="smallerfont">(pdf, 555,845 bytes)</span></td>
+		</tr>
+		</table>
+<!-- END NESTED TABLE FOR RIGHT CONTENT -->
+	</td>
+	</tr>
+
+	<tr>
+	<td>&nbsp;</td>
+	<td align="left" valign="top" colspan="3">
+<!-- START FEATURED -->
+		<p><table width="569" border="0" cellspacing="0" cellpadding="1">
+		<tr>
+		<td height="15"><img src="/baseSite/images/spacer.gif" width="5" height="15" alt="" border="0"></td>
+		</tr>
+		<tr>
+		<td valign="top">
+			<table width="569" border="0" cellpadding="0" cellspacing="0">
+			<tr bgcolor="#336699">
+			<td><img src="/baseSite/images/spacer.gif" width="5" height="1" alt="" border="0"></td>
+			</tr>
+			</table></td>
+		</tr>
+		<tr>
+		<td height="15"><img src="/baseSite/images/spacer.gif" width="5" height="15" alt="" border="0"></td>
+		</tr>	
+		<tr>
+		<td align="left" valign="top"><a name="section2"><strong>Featured in this Solutions Bulletin</strong></a></td>
+		</tr>
+		<tr>
+		<td height="10"><img src="/baseSite/images/spacer.gif" width="1" height="10" alt="" border="0"></td>
+		</tr>
+		<tr>
+		<td align="right" valign="top" class="select"><form><select name="product_group" style="width:160px" width="160" size="1" onchange="if (this.selectedIndex>0) location.href=this.options[this.selectedIndex].value;">
+		<option value="none" selected>Select a product category</option>
+		<option value="#digital">Digital Potentiometers</option>
+		<option value="#synthesis">Direct Digital Synthesis</option>
+		<option value="#general">General Purpose DACs</option>
+		<option value="#precision">Precision Voltage References</option>
+		<option value="#txdacs">TxDACs &#174;</option>
+		</select></form></td>
+		</tr>
+		<tr>
+		<td height="10"><img src="/baseSite/images/spacer.gif" width="1" height="10" alt="" border="0"></td>
+		</tr>
+		</table>
+<!-- END FEATURED -->
+	</td>
+	</tr>
+
+	<tr>
+	<td>&nbsp;</td>
+	<td align="left" valign="top" colspan="3">
+<!-- START FEATURED TABLES -->
+<!-- START DIGITAL -->
+		<p><table width="569" border="1" cellspacing="0" cellpadding="2">
+		<tr bgcolor="#336699">
+		<th colspan="2" align="center" valign="middle" height="20" class="tableheader" style="background-color: #336699;"><a name="digital"></a>Digital Potentiometer</td>
+		</tr>
+		
+		<tr>
+		<td width="65" align="center" class="smallerfont"><a href="http://products.analog.com/products/info.asp?product=AD5207">AD5207</a></td>
+		<td align="left" class="smallerfont">Dual, 256 Position, Digital Potentiometer</td>
+		</tr>
+		
+		<tr>
+		<td width="65" align="center" class="smallerfont"><a href="http://products.analog.com/products/info.asp?product=AD5260">AD5260</a></td>
+		<td align="left" class="smallerfont">+15 V, Single-Channel, SPI Compatible, 256 Position, Digital Potentiometer</td>
+		</tr>
+		
+		<tr>
+		<td width="65" align="center" class="smallerfont"><a href="http://products.analog.com/products/info.asp?product=AD5262">AD5262</a></td>
+		<td align="left" class="smallerfont">+15 V, Dual-Channel, SPI Compatible, 256 Position, Digital Potentiometer</td>
+		</tr>
+		</table>
+
+		<table width="569" border="0" cellspacing="0" cellpadding="2">
+		<tr>
+		<td align="right" valign="middle" class="smallerfont"><a href="#section2">top of section</a></td>
+		</tr>
+		</table></p>
+<!-- END DIGITAL-->
+
+<!-- START SYNTHESIS -->
+		<p><table width="569" border="1" cellspacing="0" cellpadding="2">
+		<tr bgcolor="#336699">
+		<th colspan="2" align="center" valign="middle" height="20" class="tableheader" style="background-color: #336699;"><a name="synthesis"></a>Direct Digital Synthesis</td>
+		</tr>
+		
+		<tr>
+		<td width="65" align="center" class="smallerfont"><a href="http://products.analog.com/products/info.asp?product=AD9833">AD9833</a></td>
+		<td align="left" class="smallerfont">+2.5V to +5.5V, 50 MHz Low Power CMOS Complete DDS</td>
+		</tr>
+		
+		<tr>
+		<td width="65" align="center" class="smallerfont"><a href="http://products.analog.com/products/info.asp?product=AD9834">AD9834</a></td>
+		<td align="left" class="smallerfont">+2.5 V to +5.5 V, 50 MHz, Low Power, Complete DDS</td>
+		</tr>
+		</table>
+
+		<table width="569" border="0" cellspacing="0" cellpadding="2">
+		<tr>
+		<td align="right" valign="middle" class="smallerfont"><a href="#section2">top of section</a></td>
+		</tr>
+		</table></p>
+<!-- END SYNTHESIS-->
+
+<!-- START GENERAL -->
+		<p><table width="569" border="1" cellspacing="0" cellpadding="2">
+		<tr bgcolor="#336699">
+		<th colspan="2" align="center" valign="middle" height="20" class="tableheader" style="background-color: #336699;"><a name="general"></a>General Purpose DACs</td>
+		</tr>
+		
+		<tr>
+		<td width="65" align="center" class="smallerfont"><a href="http://products.analog.com/products/info.asp?product=AD5300">AD5300</a></td>
+		<td align="left" class="smallerfont">8-Bit, +2.7 V to +5.5 V, 140 &micro;A, Buffered, Rail-to-Rail DAC in 6-lead SOT-23</td>
+		</tr>
+		
+		<tr>
+		<td width="65" align="center" class="smallerfont"><a href="http://products.analog.com/products/info.asp?product=AD5310">AD5310</a></td>
+		<td align="left" class="smallerfont">10-Bit, 2.7 V to 5.5 V, 140 &micro;A, Rail-to-Rail Voltage Output DAC in SOT-23 and MicroSOIC Packages</td>
+		</tr>
+		
+		<tr>
+		<td width="65" align="center" class="smallerfont"><a href="http://products.analog.com/products/info.asp?product=AD5320">AD5320</a></td>
+		<td align="left" class="smallerfont">12-Bit, 2.7 V to 5.5 V, 140 &micro;A, Rail-to-Rail Voltage Output DAC in SOT-23 and MicroSOIC Packages</td>
+		</tr>
+		
+		<tr>
+		<td width="65" align="center" class="smallerfont"><a href="http://products.analog.com/products/info.asp?product=AD5516">AD5516</a></td>
+		<td align="left" class="smallerfont">12-Bit, 16-Channel, Voltage-Output DAC</td>
+		</tr>
+		
+		
+		<tr>
+		<td width="65" align="center" class="smallerfont"><a href="http://products.analog.com/products/info.asp?product=AD5517">AD5517</a></td>
+		<td align="left" class="smallerfont">14-Bit, 16-Channel, Voltage-Output DAC</td>
+		</tr>
+		
+		<tr>
+		<td width="65" align="center" class="smallerfont"><a href="http://products.analog.com/products/info.asp?product=AD5532">AD5532</a></td>
+		<td align="left" class="smallerfont">32-Channel Voltage Translation Function With an Infinite or Droopless Output Hold Capability</td>
+		</tr>
+		
+		<tr>
+		<td width="65" align="center" class="smallerfont"><a href="http://products.analog.com/products/info.asp?product=AD5582">AD5582</a></td>
+		<td align="left" class="smallerfont">12-Bit, +15 V, Quad, Parallel Input DAC</td>
+		</tr>
+		
+		<tr>
+		<td width="65" align="center" class="smallerfont"><a href="http://products.analog.com/products/info.asp?product=AD5583">AD5583</a></td>
+		<td align="left" class="smallerfont">10-Bit, +15V, Quad, Parallel Input DAC</td>
+		</tr>
+		
+		<tr>
+		<td width="65" align="center" class="smallerfont"><a href="http://products.analog.com/products/info.asp?product=AD7839">AD7839</a></td>
+		<td align="left" class="smallerfont">13-Bit, Octal, Parallel Input, Voltage-Output DAC</td>
+		</tr>
+		
+		<tr>
+		<td width="65" align="center" class="smallerfont"><a href="http://products.analog.com/products/info.asp?product=AD7841">AD7841</a></td>
+		<td align="left" class="smallerfont">Eight 14-Bit, Buffered Voltage-Output DACs on One Monolithic Chip</td>
+		</tr>
+		</table>
+
+		<table width="569" border="0" cellspacing="0" cellpadding="2">
+		<tr>
+		<td align="right" valign="middle" class="smallerfont"><a href="#section2">top of section</a></td>
+		</tr>
+		</table></p>
+<!-- END GENERAL-->
+
+<!-- START PRECISION -->
+		<p><table width="569" border="1" cellspacing="0" cellpadding="2">
+		<tr bgcolor="#336699">
+		<th colspan="2" align="center" valign="middle" height="20" class="tableheader" style="background-color: #336699;"><a name="precision"></a>Precision Voltage References</td>
+		</tr>
+		
+		<tr>
+		<td width="65" align="center" class="smallerfont"><a href="http://products.analog.com/products/info.asp?product=ADR420">ADR420</a></td>
+		<td align="left" class="smallerfont">2.048 V XFET&#174; Voltage Reference</td>
+		</tr>
+		
+		<tr>
+		<td width="65" align="center" class="smallerfont"><a href="http://products.analog.com/products/info.asp?product=ADR421">ADR421</a></td>
+		<td align="left" class="smallerfont">2.5 V XFET Voltage Reference</td>
+		</tr>
+		</table>
+		
+		<table width="569" border="0" cellspacing="0" cellpadding="2">
+		<tr>
+		<td align="left" valign="middle" class="smallerfont">XFET is a registered trademark of Analog Devices, Inc.</td>
+		<td align="right" valign="middle" class="smallerfont"><a href="#section2">top of section</a></td>
+		</tr>
+		</table></p>
+<!-- END PRECISION-->
+
+<!-- START TxDACs -->
+		<p><table width="569" border="1" cellspacing="0" cellpadding="2">
+		<tr bgcolor="#336699">
+		<th colspan="2" align="center" valign="middle" height="20" class="tableheader" style="background-color: #336699;"><a name="txdacs"></a>TxDACs&#174;</td>
+		</tr>
+		
+		<tr>
+		<td width="65" align="center" class="smallerfont"><a href="http://products.analog.com/products/info.asp?product=AD9772A">AD9772A</a></td>
+		<td align="left" class="smallerfont">14-Bit, 160 MSPS TxDAC+&#174; with 2x Interpolation Filter</td>
+		</tr>
+		
+		<tr>
+		<td width="65" align="center" class="smallerfont"><a href="http://products.analog.com/products/info.asp?product=AD9744">AD9744</a>&nbsp;&nbsp;&nbsp;</td>
+		<td align="left" class="smallerfont">14-Bit, 165 MSPS TxDAC&#174;</td>
+		</tr>
+		</table>
+
+		<table width="569" border="0" cellspacing="0" cellpadding="2">
+		<tr>
+		<td align="left" valign="middle" class="smallerfont">TxDAC and TxDAC+ are registered trademarks of Analog Devices, Inc.</td>
+		<td align="right" valign="middle" class="smallerfont"><a href="#section2">top of section</a></td>
+		</tr>
+		</table></p>
+<!-- END TxDACs-->
+<!-- END FEATURED TABLES -->
+	</td>
+	</tr>
+
+	<tr>
+	<td>&nbsp;</td>
+	<td align="left" valign="top" colspan="3">
+<!-- START SELECTION GUIDES -->
+		<table width="569" border="0" cellspacing="0" cellpadding="1">
+		<tr>
+		<td height="15"><img src="/baseSite/images/spacer.gif" width="5" height="15" alt="" border="0"></td>
+		</tr>
+		<tr>
+		<td valign="top">
+			<table width="569" border="0" cellpadding="0" cellspacing="0">
+			<tr bgcolor="#336699">
+			<td><img src="/baseSite/images/spacer.gif" width="5" height="1" alt="" border="0"></td>
+			</tr>
+			</table></td>
+		</tr>
+		<tr>
+		<td height="15"><img src="/baseSite/images/spacer.gif" width="5" height="15" alt="" border="0"></td>
+		</tr>	
+		<tr>
+		<td align="left" valign="top"><a name="section3"><strong>Selection Guides</strong></a></td>
+		</tr>
+		<tr>
+		<td height="10"><img src="/baseSite/images/spacer.gif" width="1" height="10" alt="" border="0"></td>
+		</tr>
+		<tr>
+		<td align="left" valign="top"><p class="padding"><a href="/technology/dataConverters/designTools/selectionGuides/AD53xx.html">DACs, AD53xx Family (2.5 - 5.5 V, 110 &micro;A/50nA)</a></p>
+		<p class="padding"><a href="/technology/dataConverters/designTools/selectionGuides/digitalPotentiometers.html">Digital Potentiometers </a></p>
+		<p class="padding"><a href="/technology/dataConverters/designTools/selectionGuides/dds.html">Direct Digital Synthesizers </a></p>
+		<p class="padding"><a href="/technology/dataConverters/designTools/selectionGuides/precisionvolt.html">Precision Voltage References</a></p>
+		<p class="padding"><a href="/technology/dataConverters/designTools/selectionGuides/txDacs.html">TxDACs&#174;</a></p>
+		
+		<p>Visit our broad selection of both <a href="/technology/dataConverters/designTools/selectionGuides/selectionGuides.html#adc">ADC</a> and <a href="/technology/dataConverters/designTools/selectionGuides/selectionGuides.html#dac">DAC</a> Selection Guides.</p></td>
+		</tr>
+		<tr>
+		<td height="10"><img src="/baseSite/images/spacer.gif" width="1" height="10" alt="" border="0"></td>
+		</tr>
+		<tr>
+		<td align="right" valign="middle" class="smallerfont"><a href="#top">back to top</a></td>
+		</tr>
+		</table>
+<!-- END SELECTION GUIDES -->
+	</td>
+	</tr>
+
+	<tr>
+	<td>&nbsp;</td>
+	<td align="left" valign="top" colspan="3">
+<!-- START RELATED INFORMATION -->
+		<table width="569" border="0" cellspacing="0" cellpadding="1">
+		<tr>
+		<td height="15"><img src="/baseSite/images/spacer.gif" width="5" height="15" alt="" border="0"></td>
+		</tr>
+		<tr>
+		<td valign="top">
+			<table width="569" border="0" cellpadding="0" cellspacing="0">
+			<tr bgcolor="#336699">
+			<td><img src="/baseSite/images/spacer.gif" width="5" height="1" alt="" border="0"></td>
+			</tr>
+			</table></td>
+		</tr>
+		<tr>
+		<td height="15"><img src="/baseSite/images/spacer.gif" width="5" height="15" alt="" border="0"></td>
+		</tr>	
+		<tr>
+		<td align="left" valign="top"><a name="section4"><strong>Related Information</strong></a></td>
+		</tr>
+		<tr>
+		<td height="10"><img src="/baseSite/images/spacer.gif" width="1" height="10" alt="" border="0"></td>
+		</tr>
+		<tr>
+		<td align="left" valign="top"><p>Visit our <a href="/technology/dataConverters/index.html">Data Converter Home Page</a>... all the information about ADI's Data Converters at your fingertips!</p>
+		<p>Need an amplifier to go with your DAC or ADC? - the <a href="/technology/amplifiersLinear/">Amplifiers &amp; Linear Home Page</a> is the source for the latest news about those product families</p>
+		<p><a href="http://products.analog.com/custom_home_page/member/asp/home_page_dhtml.asp?">MyAnalog.com</a>... Customize the ADI web site with ONLY the information that's important to you. Plus, myAnalog.com can be updated at any time to include new information or products of interest to you.</p>
+		<p>Get Instant Pricing &amp; Availability On All Parts With <a href="/commerce/index.html">Analog Devices' Buyonline</a><br>
+		We're making it easy to purchase direct from ADI when you go to www.analog.com/BuyOnline. If your project calls for anywhere from 1 to 4999 pieces, and you're in North America or one of 15 European countries, then visit today!</p></td>
+		</tr>
+		<tr>
+		<td height="10"><img src="/baseSite/images/spacer.gif" width="1" height="10" alt="" border="0"></td>
+		</tr>
+		<tr>
+		<td align="right" valign="middle" class="smallerfont"><a href="#top">back to top</a></td>
+		</tr>
+		</table>
+<!-- END RELATED INFORMATION -->
+	</td>
+	</tr>
+	</table>
+
+<!-- END NESTED TABLE FOR MAIN CONTENT -->
+	<!-- START FOOTER INFO -->	
+	<table width="589" border="0" cellspacing="0" cellpadding="0">
+<!-- 25px spacer row -->
+<tr>
+<td height="25" width="20"><img src="/basesite/images/spacer.gif" width="1" height="1" border="0" alt=""></td>	
+<td height="25" width="569"><img src="/basesite/images/spacer.gif" width="1" height="1" border="0" alt=""></td>	
+</tr>
+<!-- grey horizontal rule -->
+<tr>
+<td bgcolor="#cccccc" colspan="2"><img src="/basesite/images/spacer.gif" width="1" height="1" border="0" alt=""></td>	
+</tr>
+<!-- 5px spacer row -->
+<tr>
+<td height="5" width="20"><img src="/basesite/images/spacer.gif" width="1" height="1" border="0" alt=""></td>	
+<td height="5" width="569"><img src="/basesite/images/spacer.gif" width="1" height="1" border="0" alt=""></td>	
+</tr>
+<!-- footer info -->
+<tr>
+<td></td>
+<td class="footerlink"><a href="http://www.analog.com/contact.html">Contact ADI</a>&nbsp;|&nbsp;<a href="http://www.analog.com/siteMap.html">Site Map</a>&nbsp;|&nbsp;<a href="http://products.analog.com/membership/formslogin.asp">Registration</a></td>
+</tr>
+<tr>
+<td></td>
+<td class="footer">&copy; 1995-<script language="javascript">var today = new Date(); document.write(today.getFullYear());</script> Analog Devices, Inc. All Rights Reserved</td>
+</tr>
+<!-- 5px spacer row -->
+<tr>
+<td height="5" width="20"><img src="/basesite/images/spacer.gif" width="1" height="1" border="0" alt=""></td>	
+<td height="5" width="569"><img src="/basesite/images/spacer.gif" width="1" height="1" border="0" alt=""></td>	
+</tr>
+</table>
+	<!-- END FOOTER INFO -->
+</td>
+</tr>
+</table>
+</body>
+</html>

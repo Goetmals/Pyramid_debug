@@ -1,0 +1,20 @@
+database -open waves -into wrk/fct/waves.shm -default 
+
+
+probe -create -shm :DE				-waveform
+probe -create -shm :HSYNCH			-waveform
+probe -create -shm :VSYNCH			-waveform
+probe -create -shm :CTL1			-waveform
+probe -create -shm :CTL2			-waveform
+probe -create -shm :CTL3			-waveform
+probe -create -shm :EDGE			-waveform
+probe -create -shm :PIXS			-waveform
+probe -create -shm :PD				-waveform
+probe -create -shm :SORTIE_LED			-waveform
+probe -create -shm :MIR0:MIR0:CPT_COL		-waveform
+probe -create -shm :MIR0:MIR0:CPT_LIG		-waveform
+probe -create -shm :MIR0:I2C0:ack_value :MIR0:I2C0:byte :MIR0:I2C0:horloge :MIR0:I2C0:i :MIR0:I2C0:mot :MIR0:I2C0:nb_access :MIR0:I2C0:state :MIR0:I2C0:reset -waveform
+probe -create -shm :MIR0:I2C0:start -waveform
+probe -create -shm :MIR0:I2C0:nb_128 -waveform
+probe -create -shm :MIR0:SCL_OUT :MIR0:SDA_OUT -waveform
+

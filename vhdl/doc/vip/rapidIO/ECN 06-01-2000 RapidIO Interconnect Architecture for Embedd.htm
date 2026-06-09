@@ -1,0 +1,463 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0059)http://ecnmag.com/ecnmag/issues/2000/06012000/ec06th01_.asp -->
+<HTML><HEAD><TITLE>ECN 06/01/2000: RapidIO: Interconnect Architecture for Embedded Systems</TITLE>
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<META content="MSHTML 5.00.3105.105" name=GENERATOR><!-- Begin StyleSheet --><!-- Begin StyleSheet -->
+<STYLE type=text/css>.navtext {
+	COLOR: #ffffff; FONT-FAMILY: Arial, Geneva, sans-serif; FONT-SIZE: 10pt; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.navtextbold {
+	COLOR: #003300; FONT-FAMILY: Arial, Geneva, sans-serif; FONT-SIZE: 10pt; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.current {
+	COLOR: #ffffcc; FONT-FAMILY: Arial, Geneva, sans-serif; FONT-SIZE: 10pt; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.header {
+	COLOR: #ffffff; FONT-FAMILY: Verdana, Arial, Geneva; FONT-SIZE: 10pt; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+.linktext {
+	FONT-FAMILY: Arial, Geneva, sans-serif; FONT-SIZE: 9pt; FONT-WEIGHT: normal
+}
+.footertext {
+	COLOR: #ffffff; FONT-FAMILY: Arial, Geneva, sans-serif; FONT-SIZE: 10pt; FONT-WEIGHT: normal; TEXT-DECORATION: none
+}
+.color {
+	BACKGROUND-COLOR: #ffff66; COLOR: #000000; FONT-FAMILY: Arial, Geneva, sans-serif; FONT-SIZE: 10pt; FONT-WEIGHT: bold; TEXT-DECORATION: none
+}
+</STYLE>
+<!-- End StyleSheet --><!-- End StyleSheet -->
+<META 
+content="Technical Articles: Processor technology, advancing at Moore's Law rates, has created a gap between processor performance and communications performance. RapidIO™ is a new, high-performance interconnect that directly addresses the need for embedded systems. Its high bandwidth and low latency provide the required bandwi" 
+name=description></HEAD>
+<BODY bgColor=#ffffff topMargin=3>
+<DIV align=center>
+<CENTER>
+<TABLE border=0 cellPadding=0 cellSpacing=0 width=605>
+  <TBODY>
+  <TR>
+    <TD><SMALL><FONT face=Arial><!-- Begin Header --><!-- Begin Header -->
+      <DIV align=left>
+      <TABLE align=center border=0 cellPadding=0 cellSpacing=0 width=605>
+        <TBODY>
+        <TR>
+          <TD colSpan=2>
+            <DIV align=left>
+            <TABLE border=0 cellPadding=0 cellSpacing=0 width=605>
+              <TBODY>
+              <TR>
+                <TD rowSpan=2><A href="http://www.cahners.com/" 
+                  target=_top><IMG alt=Cahners border=0 height=31 
+                  src="ECN 06-01-2000 RapidIO Interconnect Architecture for Embedded Systems_fichiers/cahners.gif" 
+                  width=79></A></TD>
+                <TD align=right height=5 vAlign=center><IMG border=0 height=1 
+                  src="ECN 06-01-2000 RapidIO Interconnect Architecture for Embedded Systems_fichiers/1pt.gif" 
+                  width=1></TD>
+                <TD align=right rowSpan=2><A 
+                  href="http://e-insitesearch.cahners1.com/cgi-win/cEdnSearch.exe/einsite.hta/256.qf/edn?p=edn&amp;pg=electronics"><IMG 
+                  alt="Search E-wiz" border=0 height=31 
+                  src="ECN 06-01-2000 RapidIO Interconnect Architecture for Embedded Systems_fichiers/searchEW.gif" 
+                  width=128></A></TD></TR>
+              <TR>
+                <TD align=right vAlign=center><SMALL><FONT face=Arial>Product 
+                  News &amp; Information for the Electronic 
+                  Designer</FONT></SMALL></TD></TR></TBODY></TABLE></DIV></TD></TR>
+        <TR>
+          <TD rowSpan=7 width=165><A href="http://ecnmag.com/ecnmag/"><IMG 
+            alt=ECN border=0 height=71 
+            src="ECN 06-01-2000 RapidIO Interconnect Architecture for Embedded Systems_fichiers/ecnlogo.gif" 
+            width=165></A></TD>
+          <TD height=1><IMG border=0 height=1 
+            src="ECN 06-01-2000 RapidIO Interconnect Architecture for Embedded Systems_fichiers/1pt.gif" 
+            width=1></TD></TR>
+        <TR>
+          <TD>
+            <DIV align=left>
+            <TABLE border=0 cellPadding=0 cellSpacing=0 width=440>
+              <TBODY>
+              <TR>
+                <TD align=right width=46><IMG border=0 height=24 
+                  src="ECN 06-01-2000 RapidIO Interconnect Architecture for Embedded Systems_fichiers/tri1.gif" 
+                  width=15></TD>
+                <TD align=middle bgColor=#000066 width=88><A 
+                  href="http://ecnmag.com/ecnmag/P223352.htm"><STRONG><SMALL><FONT 
+                  class=navtext color=white 
+                  face="arial, geneva, helvetica">Supplements</FONT></SMALL></STRONG></A></FONT></TD>
+                <TD bgColor=#000066><FONT 
+                  face="arial, geneva, helvetica"><STRONG><SMALL><FONT 
+                  class=navtext color=white>|</FONT></SMALL></STRONG></FONT></TD>
+                <TD align=middle bgColor=#000066 width=68><A 
+                  href="http://ecnmag.com/ecnmag/P224183.htm"><STRONG><SMALL><FONT 
+                  class=navtext color=white 
+                  face="arial, geneva, helvetica">Webcasts</FONT></SMALL></STRONG></A></FONT></TD>
+                <TD bgColor=#000066><FONT 
+                  face="arial, geneva, helvetica"><STRONG><SMALL><FONT 
+                  class=navtext color=white>|</FONT></SMALL></STRONG></FONT></TD>
+                <TD align=middle bgColor=#000066 width=63><A 
+                  href="http://ecnmag.com/ecnmag/currentlitnews/currentlitnews.asp"><STRONG><SMALL><FONT 
+                  class=navtext color=white face="arial, geneva, helvetica">Lit 
+                  News</FONT></SMALL></STRONG></A></FONT></TD>
+                <TD bgColor=#000066><FONT 
+                  face="arial, geneva, helvetica"><STRONG><SMALL><FONT 
+                  class=navtext color=white>|</FONT></SMALL></STRONG></FONT></TD>
+                <TD align=middle bgColor=#000066 width=68><A 
+                  href="http://ecnmag.com/ecnmag/postcards/postcard.asp"><STRONG><SMALL><FONT 
+                  class=navtext color=white 
+                  face="arial, geneva, helvetica">Postcards</FONT></SMALL></STRONG></A></FONT></TD>
+                <TD bgColor=#000066><FONT 
+                  face="arial, geneva, helvetica"><STRONG><SMALL><FONT 
+                  class=navtext color=white>|</FONT></SMALL></STRONG></FONT></TD>
+                <TD align=middle bgColor=#000066 width=87><A 
+                  href="http://ecnmag.com/ecnmag/careerzone/careerzone.asp"><STRONG><SMALL><FONT 
+                  class=navtext color=white 
+                  face="arial, geneva, helvetica">CarEEr 
+                  Zone</FONT></SMALL></STRONG></A></FONT></TD>
+                <TD width=16><IMG border=0 height=24 
+                  src="ECN 06-01-2000 RapidIO Interconnect Architecture for Embedded Systems_fichiers/tri4.gif" 
+                  width=16></TD></TR></TBODY></TABLE></DIV></TD></TR>
+        <TR>
+          <TD height=1><IMG border=0 height=1 
+            src="ECN 06-01-2000 RapidIO Interconnect Architecture for Embedded Systems_fichiers/1pt.gif" 
+            width=1></TD></TR>
+        <TR>
+          <TD>
+            <DIV align=left>
+            <TABLE border=0 cellPadding=0 cellSpacing=0 width=440>
+              <TBODY>
+              <TR>
+                <TD align=right width=28><IMG border=0 height=22 
+                  src="ECN 06-01-2000 RapidIO Interconnect Architecture for Embedded Systems_fichiers/tri2.gif" 
+                  width=28></TD>
+                <TD align=middle bgColor=#003366 width=60><SMALL><A 
+                  href="http://www.e-insite.com/"><FONT class=navtext 
+                  color=#ffffff face=Arial>E-Insite</FONT></A></SMALL></TD>
+                <TD align=middle bgColor=#003366><FONT class=navtext 
+                  color=#ffffff face=Arial>|</FONT></TD>
+                <TD align=middle bgColor=#003366 width=114><SMALL><A 
+                  href="http://ecnmag.com/ecnmag/search/search.asp"><FONT 
+                  class=navtext color=#ffffff face=Arial>Product 
+                  Database</FONT></A></SMALL></TD>
+                <TD align=middle bgColor=#003366><FONT class=navtext 
+                  color=#ffffff face=Arial>|</FONT></TD>
+                <TD align=middle bgColor=#003366 width=116><SMALL><A 
+                  href="http://ecnmag.com/ecnmag/currentcorpprofiles/currentcorporateprofiles.asp"><FONT 
+                  class=navtext color=#ffffff face=Arial>Corporate 
+                  Profiles</FONT></A></SMALL></TD>
+                <TD align=middle bgColor=#003366><FONT class=navtext 
+                  color=#ffffff face=Arial>|</FONT></TD>
+                <TD align=middle bgColor=#003366 width=40><SMALL><A 
+                  href="http://www.ecnmag.com/eitd/index.htm"><FONT 
+                  class=navtext color=#ffffff 
+                face=Arial>EITD</FONT></A></SMALL></TD>
+                <TD align=middle bgColor=#003366><FONT class=navtext 
+                  color=#ffffff face=Arial>|</FONT></TD>
+                <TD align=middle bgColor=#003366 width=60><SMALL><A 
+                  href="http://ecnmag.com/ecnmag/ecnInfo/ECNinfo.asp"><FONT 
+                  class=navtext color=#ffffff face=Arial>ECN 
+                  Info</FONT></A></SMALL></TD></TR></TBODY></TABLE></DIV></TD></TR>
+        <TR>
+          <TD width=1><IMG border=0 height=1 
+            src="ECN 06-01-2000 RapidIO Interconnect Architecture for Embedded Systems_fichiers/1pt.gif" 
+            width=1></TD></TR>
+        <TR>
+          <TD>
+            <DIV align=left>
+            <TABLE border=0 cellPadding=0 cellSpacing=0 width=440>
+              <TBODY>
+              <TR>
+                <TD align=right width=14><IMG border=0 height=21 
+                  src="ECN 06-01-2000 RapidIO Interconnect Architecture for Embedded Systems_fichiers/tri3.gif" 
+                  width=14></TD>
+                <TD align=middle bgColor=#003399 width=54><SMALL><A 
+                  href="http://ecnmag.com/ecnmag/default.asp"><FONT 
+                  class=navtext color=#ffffff 
+                  face=Arial>Home</FONT></A></SMALL></A></TD>
+                <TD align=middle bgColor=#003399><FONT color=#ffffff 
+                  face=Arial><SMALL>|</SMALL></FONT></TD>
+                <TD align=middle bgColor=#003399 width=97><SMALL><A 
+                  href="http://ecnmag.com/ecnmag/currentissue/TOC.asp"><FONT 
+                  class=navtext color=#ffffff face=Arial>Current 
+                  Issue</FONT></A></SMALL></A></TD>
+                <TD align=middle bgColor=#003399><FONT color=#ffffff 
+                  face=Arial><SMALL>|</SMALL></FONT></TD>
+                <TD align=middle bgColor=#003399 width=101><SMALL><A 
+                  href="http://ecnmag.com/ecnmag/news/NewsIndex.asp"><FONT 
+                  class=navtext color=#ffffff face=Arial>Industry 
+                  News</FONT></A></SMALL></A></TD>
+                <TD align=middle bgColor=#003399><FONT color=#ffffff 
+                  face=Arial><SMALL>|</SMALL></FONT></TD>
+                <TD align=middle bgColor=#003399 width=121><SMALL><A 
+                  href="http://ecnmag.com/ecnmag/currenttodaysproducts/currenttodaysproducts.asp"><FONT 
+                  class=navtext color=#ffffff face=Arial>Today's 
+                  Products</FONT></A></SMALL></A></TD>
+                <TD align=middle bgColor=#003399><FONT color=#ffffff 
+                  face=Arial><SMALL>|</SMALL></FONT></TD>
+                <TD align=middle bgColor=#003399 width=57><SMALL><A 
+                  href="http://ecnmag.com/ecnmag/news/EventsIndex.asp"><FONT 
+                  class=navtext color=#ffffff 
+                  face=Arial>Events</FONT></A></SMALL></A></TD></TR></TBODY></TABLE></DIV></TD></TR>
+        <TR>
+          <TD height=1>
+            <DIV align=left>
+            <TABLE border=0 cellPadding=0 cellSpacing=0 width=440>
+              <TBODY>
+              <TR>
+                <TD height=1 width=304><IMG border=0 height=1 
+                  src="ECN 06-01-2000 RapidIO Interconnect Architecture for Embedded Systems_fichiers/1pt.gif" 
+                  width=303></TD>
+                <TD align=middle bgColor=#003399 height=1 width=136><IMG 
+                  border=0 height=1 
+                  src="ECN 06-01-2000 RapidIO Interconnect Architecture for Embedded Systems_fichiers/1pt.gif" 
+                  width=135></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE></DIV><!-- End Header --></FONT></SMALL></TD></TR>
+  <TR>
+    <TD>
+      <DIV align=center>
+      <CENTER>
+      <TABLE border=0 cellPadding=0 cellSpacing=0 width=605>
+        <TBODY>
+        <TR>
+          <TD bgColor=#336699 height=22 width=467>&nbsp;<FONT color=#ffffff 
+            face=Verdana> <STRONG><!--Top Bar Title -->Technical Articles 
+            </STRONG></FONT></TD>
+          <TD width=1><IMG border=0 height=1 
+            src="ECN 06-01-2000 RapidIO Interconnect Architecture for Embedded Systems_fichiers/1pt.gif" 
+            width=1></TD>
+          <TD bgColor=#003399 width=136><IMG border=0 height=1 
+            src="ECN 06-01-2000 RapidIO Interconnect Architecture for Embedded Systems_fichiers/1pt.gif" 
+            width=1></TD></TR>
+        <TR>
+          <TD height=0 vAlign=top width=463><BR><!--BODY CONTENT -->
+            <P><STRONG><FONT face=Arial size=3>RapidIO: Interconnect 
+            Architecture for Embedded Systems</FONT></STRONG></P>
+            <P><I><FONT face="Arial, Helvetica, sans-serif" size=-1>by Richard 
+            Jaenicke, Mercury Computer Systems, Inc., Chelmsford, MA 
+            </FONT></I></P>
+            <P>Processor technology, advancing at Moore's Law rates, has created 
+            a gap between processor performance and communications performance. 
+            RapidIO™ is a new, high-performance interconnect that directly 
+            addresses the need for embedded systems. Its high bandwidth and low 
+            latency provide the required bandwidth to feed the fastest 
+            processors. </P>
+            <P>RapidIO is optimized for chip-to-chip and board-to-board 
+            communications within embedded computer systems. Targeted for an 
+            initial bandwidth of more than 1 gigabyte per second per device 
+            pair, RapidIO provides the data throughput required for increasingly 
+            complex applications running on ever-faster processors, and 
+            requiring ever more data to move between multiple processing stages. 
+            Just as important, it is easy to use and appears as a traditional 
+            microprocessor bus to the software.</P>
+            <P><B><FONT face=Arial size=2>The RapidIO 
+Architecture</FONT></B></P>
+            <P>RapidIO is a logical intra-system complement to intersystem 
+            fabric initiatives such as InfiniBand. In effect, RapidIO links the 
+            components in a chassis to form a system, and InfiniBand connects 
+            systems in a system area network. </P>
+            <P>Mercury Computer Systems, Inc. and Motorola collaborated in 
+            developing and promoting the RapidIO switched-fabric architecture. 
+            The RapidIO specification results from a 1998 agreement between 
+            Mercury and Motorola Semiconductor Products Sector to merge their 
+            previously independent work on next-generation embedded interconnect 
+            fabrics. </P>
+            <P>RapidIO builds on the foundation of the industry-standard RACEway 
+            Interlink (ANSI/VITA 5-1994) architecture and takes switched-fabric 
+            interconnects to the next level of performance. It is implemented 
+            using crossbar switches, similar to today's switched-fabric 
+            architectures. As Figure 1 shows, one or two crossbars allow very 
+            efficient interconnection of a few RapidIO devices. A hierarchy of 
+            multiple crossbars, similar to those used in existing architectures 
+            such as the RACEway Interlink, would extend this capability to many 
+            devices.</P>
+            <P>Physically, RapidIO is a packet-based protocol implemented on a 
+            copper-based interconnect. The first version that will appear on the 
+            market requires 40 pins per port, providing a full duplex 8-bit data 
+            path using standard LVDS signaling.</P>
+            <P>RapidIO is targeted for clock rates from 250MHz to more than 
+            1GHz. Data is sampled on both edges of the clock. The draft 
+            specification includes provisions for faster clock rates, as well as 
+            different data path widths. The resulting data rates in each 
+            direction scale to 2 giabytes per second per port for the 8-bit 
+            interface, and 4 gigabytes per second for the 16-bit interface. Thus 
+            RapidIO provides the foundation to meet the data transit demands of 
+            many generations of embedded processors.</P>
+            <P>These point-to-point data rates are further augmented by 
+            RapidIO's ability to form crossbar-based switched fabrics. This 
+            enables topologies that provide multiple paths within a chassis, and 
+            that scale directly with the number of crossbars in the hierarchy. 
+            The result is the ability to increase aggregate system bandwidth 
+            simply by adding additional, low-cost crossbar components, providing 
+            virtually unlimited bandwidth within a system.</P>
+            <P><B><FONT face=Arial size=2>Ease of Use</FONT></B></P>
+            <P>RapidIO has its origins in the microprocessor bus, and its direct 
+            memory-mapped address model is very easy to use. RapidIO supports 
+            multiple programming models, including NUMA with physical addresses, 
+            ccNUMA, and message passing. This permits simultaneous distributed 
+            I/O processing and general-purpose multiprocessing within a single 
+            system. </P>
+            <P>To software, RapidIO looks like a traditional microprocessor bus. 
+            Hardware implementations can handle issues like discovery and error 
+            management, which helps to protect users' legacy software 
+            investment.</P>
+            <P>RapidIO also bridges cleanly into PCI and PCI-X architectures, 
+            and some prospective members of the RapidIO Trade Association have 
+            simulated RapidIO operation over the user I/O pins described within 
+            the CompactPCI standard. A formal endorsement of a specific RapidIO 
+            mapping in the CompactPCI community is being pursued. Work is also 
+            ongoing to determine RapidIO's ability to transit the user pins on 
+            the VME P0 connector. </P>
+            <P><B><FONT face=Arial size=2>RapidIO in Embedded Systems 
+            </FONT></B></P>
+            <P>RapidIO is focused as a processor, memory and memory-mapped I/O 
+            interface with very little impact on embedded system software. 
+            RapidIO ports can be implemented directly on a microprocessor or in 
+            a small portion at a modern Field Programmable Gate Array (FPGA). 
+            Within a system, these ports lead to a crossbar network, where the 
+            network can contain memory, I/O, and bridges to bus 
+            architectures.</P>
+            <P>RapidIO end points fit easily into an FPGA with plenty of room 
+            left over for application specific logic. This makes RapidIO easy to 
+            fit into the tight confines of embedded systems, and also results in 
+            lower costs compared to technologies that require dedicated 
+            componentry. One implementation consumes about 20,000 gates within 
+            an Altera FPGA and leading FPGA manufacturers are expected to add 
+            RapidIO end points to their libraries. </P>
+            <P>Similarly, peripheral chip designers may choose to embed RapidIO 
+            endpoints in a small corner of the silicon. For example, chips that 
+            today bridge PCI into a proprietary microprocessor bus will likely 
+            evolve to bridge PCI into RapidIO, and may include an embedded 
+            RapidIO switch as well. And where separate switch chips prove 
+            necessary, switches with multiple ports will likely bear prices 
+            similar to today's PCI bridging chips.</P>
+            <P>Figure 2 illustrates one powerful application of RapidIO in 
+            embedded systems. In this model, RapidIO crossbars form a virtual 
+            PCI bus for high-speed, low-latency, concurrent communications 
+            between PCI bus segments. Because RapidIO uses a direct 
+            memory-mapped model brought forward from Mercury's RACE® 
+            architecture, this implementation is easy to create. It offers 
+            particular advantages in PCI-X systems, where the number of devices 
+            that can be connected to the bus itself is very limited.</P>
+            <P><B><FONT face=Arial size=2>Latency and Determinism 
+</FONT></B></P>
+            <P>Processors that are tightly connected to each other and to memory 
+            within a system require low latency. RapidIO addresses this 
+            requirement through the use of small packet headers and the absence 
+            of a software protocol stack. </P>
+            <P>In the RapidIO specification, packet headers are as small as 
+            possible to minimize the control overhead, and are organized for 
+            fast, efficient assembly and disassembly. Streaming writes, 
+            containing up to 256 bytes of data, require only 8 bytes of header 
+            information. Header size is constant regardless of the quantity of 
+            data in the packet, so efficiency increases with packet size up to 
+            the maximum data load of 256 bytes. At the same time, RapidIO's full 
+            duplex architecture eliminates delays as acknowledgements travel 
+            back to the sender. </P>
+            <P>Similar to the RACEway Interlink standard, multiple priority 
+            levels in RapidIO promote determinism by ensuring the most important 
+            transactions always get through. Each packet is assigned a 
+            transaction priority, with each priority associated with one of 
+            three transaction flows. Higher-priority flows take precedence over 
+            lower-priority flows, and RapidIO moves them before continuing with 
+            less-critical traffic. Within flows, all transactions complete on a 
+            first-come, first-served basis.</P>
+            <P>RapidIO is designed to work efficiently in heavily loaded 
+            networks. Because it can provide multiple paths between senders and 
+            recipients, packets can utilize adaptive routing to bypass busy 
+            channels. This allows the interconnection fabric to find alternate 
+            paths for blocked traffic, thereby decreasing the likelihood that 
+            data will be delayed due to conflicts for the route.</P>
+            <P><B><FONT face=Arial size=2>Bringing RapidIO to 
+            Market</FONT></B></P>
+            <P>As one of the driving forces behind RapidIO, Mercury's architects 
+            and engineers are already well attuned to this emerging standard. 
+            However, because the RapidIO Trade Association will be open to all 
+            interested parties, many companies are likely to bring RapidIO 
+            products to many different markets. High-end embedded digital signal 
+            and image processing applications will especially benefit from the 
+            increased performance and communication density that RapidIO 
+            provides. In fact, some of these solutions are likely to look very 
+            much like today's RACE architecture, even those from Mercury's 
+            competitors.</P>
+            <P>Ownership of the resulting specification will be transferred to 
+            the RapidIO Trade Association, open to all interested parties, once 
+            the group is formally established. As the embedded processing 
+            industry unites around RapidIO, competing architectures will no 
+            longer be impediments to users attempting to leverage the best 
+            technologies regardless of their source. </P>
+            <P>The expected broad adoption and availability of RapidIO 
+            interfaces means that customers will benefit from expanded choice 
+            and increased interoperability of components. Vendors too will be 
+            freed to innovate in areas such as processing density and 
+            optimization rather than developing expensive proprietary 
+            solutions.</P>
+            <P><B><FONT face=Arial size=2>Author Information</FONT></B></P>
+            <P>Richard Jaenicke is the Director of Product Marketing for Mercury 
+            Computer Systems, Inc., 199 Riverneck Rd., Chelmsford, MA 
+            01824-2820. (987) 256-1300, ext. 1727; Fax (978) 256-0852; <A 
+            href="mailto:rjaenick@mc.com">rjaenick@mc.com</A>.</P></TD>
+          <TD bgColor=#336699 width=1><IMG border=0 height=1 
+            src="ECN 06-01-2000 RapidIO Interconnect Architecture for Embedded Systems_fichiers/1pt.gif" 
+            width=1></TD><!--Ad's Banners-->
+          <TD align=right vAlign=top width=136>
+            <DIV align=right><!-- AdSpace cegbutton ... --><BR><IFRAME 
+            frameBorder=0 height=125 marginHeight=0 marginWidth=0 scrolling=no 
+            src="ECN 06-01-2000 RapidIO Interconnect Architecture for Embedded Systems_fichiers/CAJH0O5I.htm" 
+            width=125 
+            BORDERCOLOR="#ffffff"><SCRIPT LANGUAGE='JavaScript1.2' SRC='http://ads.cahners.net/js.ng/Params.richmedia=yes&adtype=cegbutton&position=1&site=ceg&magazine=ecn&usercn=guestcahners&transactionid=A2CC2F0B13EA9CA1B90F8F2B7D2087CF&keyword=&document-uri=/ecnmag/issues/2000/06012000/ec06th01_.asp&ipaddress=195.6.68.181&browserstring=Mozilla%2F4%2E0+%28compatible%3B+MSIE+5%2E01%3B+Windows+NT%29'></SCRIPT><NOSCRIPT><A HREF='http://ads.cahners.net/click.ng/Params.richmedia=yes&adtype=cegbutton&position=1&site=ceg&magazine=ecn&usercn=guestcahners&transactionid=A2CC2F0B13EA9CA1B90F8F2B7D2087CF&keyword=&document-uri=/ecnmag/issues/2000/06012000/ec06th01_.asp&ipaddress=195.6.68.181&browserstring=Mozilla%2F4%2E0+%28compatible%3B+MSIE+5%2E01%3B+Windows+NT%29' target='_top'><IMG SRC='http://ads.cahners.net/image.ng/Params.richmedia=yes&adtype=cegbutton&position=1&site=ceg&magazine=ecn&usercn=guestcahners&transactionid=A2CC2F0B13EA9CA1B90F8F2B7D2087CF&keyword=&document-uri=/ecnmag/issues/2000/06012000/ec06th01_.asp&ipaddress=195.6.68.181&browserstring=Mozilla%2F4%2E0+%28compatible%3B+MSIE+5%2E01%3B+Windows+NT%29'></A></NOSCRIPT></IFRAME><BR><BR><BR><IFRAME 
+            frameBorder=0 height=125 marginHeight=0 marginWidth=0 scrolling=no 
+            src="ECN 06-01-2000 RapidIO Interconnect Architecture for Embedded Systems_fichiers/CA4DU3K9.htm" 
+            width=125 
+            BORDERCOLOR="#ffffff"><SCRIPT LANGUAGE='JavaScript1.2' SRC='http://ads.cahners.net/js.ng/Params.richmedia=yes&adtype=cegbutton&position=2&site=ceg&magazine=ecn&usercn=guestcahners&transactionid=A2CC2F0B13EA9CA1B90F8F2B7D2087CF&keyword=&document-uri=/ecnmag/issues/2000/06012000/ec06th01_.asp&ipaddress=195.6.68.181&browserstring=Mozilla%2F4%2E0+%28compatible%3B+MSIE+5%2E01%3B+Windows+NT%29'></SCRIPT><NOSCRIPT><A HREF='http://ads.cahners.net/click.ng/Params.richmedia=yes&adtype=cegbutton&position=2&site=ceg&magazine=ecn&usercn=guestcahners&transactionid=A2CC2F0B13EA9CA1B90F8F2B7D2087CF&keyword=&document-uri=/ecnmag/issues/2000/06012000/ec06th01_.asp&ipaddress=195.6.68.181&browserstring=Mozilla%2F4%2E0+%28compatible%3B+MSIE+5%2E01%3B+Windows+NT%29' target='_top'><IMG SRC='http://ads.cahners.net/image.ng/Params.richmedia=yes&adtype=cegbutton&position=2&site=ceg&magazine=ecn&usercn=guestcahners&transactionid=A2CC2F0B13EA9CA1B90F8F2B7D2087CF&keyword=&document-uri=/ecnmag/issues/2000/06012000/ec06th01_.asp&ipaddress=195.6.68.181&browserstring=Mozilla%2F4%2E0+%28compatible%3B+MSIE+5%2E01%3B+Windows+NT%29'></A></NOSCRIPT></IFRAME><BR><BR><BR><IFRAME 
+            frameBorder=0 height=125 marginHeight=0 marginWidth=0 scrolling=no 
+            src="ECN 06-01-2000 RapidIO Interconnect Architecture for Embedded Systems_fichiers/CAENU9OZ.htm" 
+            width=125 
+            BORDERCOLOR="#ffffff"><SCRIPT LANGUAGE='JavaScript1.2' SRC='http://ads.cahners.net/js.ng/Params.richmedia=yes&adtype=cegbutton&position=3&site=ceg&magazine=ecn&usercn=guestcahners&transactionid=A2CC2F0B13EA9CA1B90F8F2B7D2087CF&keyword=&document-uri=/ecnmag/issues/2000/06012000/ec06th01_.asp&ipaddress=195.6.68.181&browserstring=Mozilla%2F4%2E0+%28compatible%3B+MSIE+5%2E01%3B+Windows+NT%29'></SCRIPT><NOSCRIPT><A HREF='http://ads.cahners.net/click.ng/Params.richmedia=yes&adtype=cegbutton&position=3&site=ceg&magazine=ecn&usercn=guestcahners&transactionid=A2CC2F0B13EA9CA1B90F8F2B7D2087CF&keyword=&document-uri=/ecnmag/issues/2000/06012000/ec06th01_.asp&ipaddress=195.6.68.181&browserstring=Mozilla%2F4%2E0+%28compatible%3B+MSIE+5%2E01%3B+Windows+NT%29' target='_top'><IMG SRC='http://ads.cahners.net/image.ng/Params.richmedia=yes&adtype=cegbutton&position=3&site=ceg&magazine=ecn&usercn=guestcahners&transactionid=A2CC2F0B13EA9CA1B90F8F2B7D2087CF&keyword=&document-uri=/ecnmag/issues/2000/06012000/ec06th01_.asp&ipaddress=195.6.68.181&browserstring=Mozilla%2F4%2E0+%28compatible%3B+MSIE+5%2E01%3B+Windows+NT%29'></A></NOSCRIPT></IFRAME><BR><BR><BR><IFRAME 
+            frameBorder=0 height=125 marginHeight=0 marginWidth=0 scrolling=no 
+            src="ECN 06-01-2000 RapidIO Interconnect Architecture for Embedded Systems_fichiers/CA9ADYEC.htm" 
+            width=125 
+            BORDERCOLOR="#ffffff"><SCRIPT LANGUAGE='JavaScript1.2' SRC='http://ads.cahners.net/js.ng/Params.richmedia=yes&adtype=cegbutton&position=4&site=ceg&magazine=ecn&usercn=guestcahners&transactionid=A2CC2F0B13EA9CA1B90F8F2B7D2087CF&keyword=&document-uri=/ecnmag/issues/2000/06012000/ec06th01_.asp&ipaddress=195.6.68.181&browserstring=Mozilla%2F4%2E0+%28compatible%3B+MSIE+5%2E01%3B+Windows+NT%29'></SCRIPT><NOSCRIPT><A HREF='http://ads.cahners.net/click.ng/Params.richmedia=yes&adtype=cegbutton&position=4&site=ceg&magazine=ecn&usercn=guestcahners&transactionid=A2CC2F0B13EA9CA1B90F8F2B7D2087CF&keyword=&document-uri=/ecnmag/issues/2000/06012000/ec06th01_.asp&ipaddress=195.6.68.181&browserstring=Mozilla%2F4%2E0+%28compatible%3B+MSIE+5%2E01%3B+Windows+NT%29' target='_top'><IMG SRC='http://ads.cahners.net/image.ng/Params.richmedia=yes&adtype=cegbutton&position=4&site=ceg&magazine=ecn&usercn=guestcahners&transactionid=A2CC2F0B13EA9CA1B90F8F2B7D2087CF&keyword=&document-uri=/ecnmag/issues/2000/06012000/ec06th01_.asp&ipaddress=195.6.68.181&browserstring=Mozilla%2F4%2E0+%28compatible%3B+MSIE+5%2E01%3B+Windows+NT%29'></A></NOSCRIPT></IFRAME><BR><BR><!-- /AdSpace --></DIV></TD><!--End Ad's Banners--></TR></TBODY></TABLE></CENTER></DIV></TD></TR>
+  <TR>
+    <TD><!-- Begin Footer -->
+      <DIV align=center>
+      <CENTER><!-- Begin Footer -->
+      <DIV align=center>
+      <TABLE border=0 cellPadding=2 cellSpacing=0 width=605>
+        <TBODY>
+        <TR>
+          <TD align=middle bgColor=#003399 width=64><SMALL><A 
+            href="http://ecnmag.com/ecnmag/default.asp"><FONT class=footertext 
+            color=white 
+          face="arial, geneva, helvetica">Home</FONT></A></SMALL></TD>
+          <TD align=middle bgColor=#003399><FONT color=#ffffff 
+            face="arial, geneva, helvetica"><SMALL>|</SMALL></FONT></TD>
+          <TD align=middle bgColor=#003399 width=100><SMALL><A 
+            href="http://ecnmag.com/ecnmag/P122549.htm"><FONT class=footertext 
+            color=white face="arial, geneva, helvetica">Back 
+            Issues</FONT></A></SMALL></TD>
+          <TD align=middle bgColor=#003399><FONT color=#ffffff 
+            face="arial, geneva, helvetica"><SMALL>|</SMALL></FONT></TD>
+          <TD align=middle bgColor=#003399 width=100><SMALL><A 
+            href="http://ecnmag.com/ecnmag/about/contact.asp"><FONT 
+            class=footertext color=white face="arial, geneva, helvetica">Contact 
+            ECN</FONT></A></SMALL></TD>
+          <TD align=middle bgColor=#003399><FONT color=#ffffff 
+            face="arial, geneva, helvetica"><SMALL>|</SMALL></FONT></TD>
+          <TD align=middle bgColor=#003399 width=140><SMALL><A 
+            href="http://ecnmag.com/ecnmag/terms/P37603.htm"><FONT 
+            class=footertext color=white face="arial, geneva, helvetica">Terms 
+            &amp; Conditions</FONT></A></SMALL></TD>
+          <TD align=middle bgColor=#003399><FONT color=#ffffff 
+            face="arial, geneva, helvetica"><SMALL>|</SMALL></FONT></TD>
+          <TD align=middle bgColor=#003399 width=140><SMALL><A 
+            href="http://ecnmag.com/ecnmag/privacy/privacy.asp"><FONT 
+            class=footertext color=white face="arial, geneva, helvetica">Privacy 
+            Statement</FONT></A></SMALL></TD>
+          <TD align=middle bgColor=#003399><FONT color=#ffffff 
+            face="arial, geneva, helvetica"><SMALL>|</SMALL></FONT></TD>
+          <TD align=middle bgColor=#003399 width=79><SMALL><A 
+            href="http://ecnmag.com/ecnmag/ecnInfo/admag.asp"><FONT 
+            class=footertext color=white face="arial, geneva, helvetica">Ad 
+            Info</FONT></A></SMALL></TD></TR>
+        <TR>
+          <TD align=middle colSpan=11><FONT face=Arial size=2><EM>Copyright © 
+            2001&nbsp;<A href="http://www.cahners.com/">Cahners Business 
+            Information</A> A Division of <A 
+            href="http://www.reed-elsevier.com/">Reed Elsevier, 
+            Inc</A>.</EM></FONT> </TD></TR></TBODY></TABLE></DIV><!-- End Footer --><!-- End Footer --></CENTER></DIV></TD></TR></TBODY></TABLE></CENTER></DIV></BODY></HTML>

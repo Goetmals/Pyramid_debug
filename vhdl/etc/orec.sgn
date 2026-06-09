@@ -1,0 +1,19 @@
+database -open waves -into wrk/fct/waves.shm -default 
+set assert_1164_warnings NO
+
+probe -create -shm :resetb			-waveform
+probe -create -shm :clk				-waveform
+
+probe -create -shm :hsync_inn			-waveform
+probe -create -shm :vsync_inn			-waveform
+probe -create -shm :pixel_inn			-waveform
+
+probe -create -shm :hsync_int			-waveform
+probe -create -shm :vsync_int			-waveform
+probe -create -shm :pixel_int			-waveform
+
+probe -create -shm :hsync_out			-waveform
+probe -create -shm :vsync_out			-waveform
+probe -create -shm :pixel_out			-waveform
+
+

@@ -1,0 +1,2 @@
+dp_grad_tarek.v,verilog,xil_defaultlib,../../../../test_grad_imv.gen/sources_1/ip/dp_grad_tarek/sim/dp_grad_tarek.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

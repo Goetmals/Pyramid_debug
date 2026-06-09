@@ -1,0 +1,4 @@
+COMPILED_SDF_FILE = "map/xc_cmos/VIRTEX2/rev_1/xc_cmos.sdf.X",
+SCOPE = :mos0;
+
+

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="dp_conv_synth_1" LaunchDir="/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.runs/dp_conv_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="dp_grad_synth_1" LaunchDir="/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.runs/dp_grad_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="dp_grad_tarek_synth_1" LaunchDir="/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.runs/dp_grad_tarek_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="dp_snml_synth_1" LaunchDir="/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.runs/dp_snml_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

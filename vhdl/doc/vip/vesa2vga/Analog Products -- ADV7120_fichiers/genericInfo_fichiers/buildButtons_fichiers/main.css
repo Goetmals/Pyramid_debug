@@ -1,0 +1,102 @@
+BODY {
+	COLOR: #000000; FONT-FAMILY: Arial, Helvetica, Verdana, Sans-Serif; FONT-SIZE: 12px
+}
+TD {
+	COLOR: #000000; FONT-FAMILY: Arial, Helvetica, Verdana, Sans-Serif; FONT-SIZE: 12px
+}
+P {
+	COLOR: #000000; FONT-FAMILY: Arial, Helvetica, Verdana, Sans-Serif; FONT-SIZE: 12px
+}
+DD {
+	COLOR: #000000; FONT-FAMILY: Arial, Helvetica, Verdana, Sans-Serif; FONT-SIZE: 12px
+}
+DL {
+	COLOR: #000000; FONT-FAMILY: Arial, Helvetica, Verdana, Sans-Serif; FONT-SIZE: 12px
+}
+OL {
+	COLOR: #000000; FONT-FAMILY: Arial, Helvetica, Verdana, Sans-Serif; FONT-SIZE: 12px
+}
+UL {
+	COLOR: #000000; FONT-FAMILY: Arial, Helvetica, Verdana, Sans-Serif; FONT-SIZE: 12px
+}
+LI {
+	COLOR: #000000; FONT-FAMILY: Arial, Helvetica, Verdana, Sans-Serif; FONT-SIZE: 12px
+}
+BODY {
+	BACKGROUND-COLOR: #ffffff
+}
+H3 {
+	FONT-SIZE: 18px; FONT-WEIGHT: bold
+}
+UL {
+	LIST-STYLE: square
+}
+A:link {
+	COLOR: #003399
+}
+A:visited {
+	COLOR: #666666
+}
+A:active {
+	COLOR: #666666
+}
+INPUT.interactiveTools {
+	BACKGROUND-COLOR: #ccccc0
+}
+SELECT {
+	FONT-FAMILY: Arial, Helvetica, Verdana, Sans-Serif; FONT-SIZE: 11px
+}
+.select {
+	FONT-SIZE: 11px
+}
+.homepageHeadlines {
+	FONT-SIZE: 10px
+}
+TD.leftnav {
+	BACKGROUND-COLOR: #cccccc; FONT-WEIGHT: bold; PADDING-LEFT: 1px
+}
+TD.leftnavheader {
+	BACKGROUND-COLOR: #666666; COLOR: #ffffff; FONT-WEIGHT: bold
+}
+TH.tableheader {
+	COLOR: #ffffff; FONT-FAMILY: Arial, Helvetica, Verdana, Sans-Serif; FONT-SIZE: 12px; FONT-WEIGHT: bold
+}
+.smallerfont {
+	FONT-FAMILY: Arial, Helvetica, Verdana, Sans-Serif; FONT-SIZE: 10px
+}
+.asterisk {
+	COLOR: #cc0000; FONT-WEIGHT: bold
+}
+.breadcrumb {
+	FONT-FAMILY: Arial, Helvetica, Verdana, Sans-Serif; FONT-SIZE: 10px
+}
+.footerlink {
+	COLOR: #cccccc; FONT-FAMILY: Arial, Helvetica, Verdana, Sans-Serif; FONT-SIZE: 10px
+}
+.footer {
+	COLOR: #000000; FONT-FAMILY: Arial, Helvetica, Verdana, Sans-Serif; FONT-SIZE: 10px
+}
+.padding {
+	MARGIN-BOTTOM: 5px; MARGIN-TOP: 5px
+}
+.symbol {
+	FONT-FAMILY: Symbol
+}
+.coupler {
+	FONT-FAMILY: times new roman; FONT-STYLE: italic
+}
+TD.leftnavNews {
+	BACKGROUND-COLOR: #e5e5e5; FONT-WEIGHT: bold; PADDING-LEFT: 1px
+}
+TD.newsletterLine {
+	FONT-SIZE: 2px; MARGIN-BOTTOM: 0px; MARGIN-TOP: 0px
+}
+TD.leftnavNewsSmall {
+	BACKGROUND-COLOR: #ffffff; FONT-SIZE: 10px; PADDING-RIGHT: 8px
+}
+TD.secondlevel {
+	COLOR: #336699; FONT-WEIGHT: bold
+}
+TD.featured {
+	COLOR: #336699
+}

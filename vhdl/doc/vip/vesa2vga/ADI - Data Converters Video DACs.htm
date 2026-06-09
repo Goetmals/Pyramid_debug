@@ -1,0 +1,560 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0072)http://www.analog.com/technology/dataConverters/dac/video/videoDacs.html -->
+<HTML><HEAD><TITLE>ADI - Data Converters: Video DACs</TITLE>
+<META content="text/html; charset=windows-1252" http-equiv=Content-Type>
+<META content="" name=keywords>
+<META content="" name=description><LINK 
+href="ADI - Data Converters Video DACs_fichiers/main.css" rel=stylesheet 
+type=text/css><!--THE FOLLOWING INCLUDE WILL APPLY STYLESHEETS EXCEPTIONS AND JAVASCRIPT THROUGH A SINGLE FILE-->
+<STYLE type=text/css>@import url( ADI - Data Converters Video DACs_fichiers/import.css );
+</STYLE>
+
+<SCRIPT language=JavaScript>
+<!--
+//in NN 4, the dropdowns are buggy when browser is resized--this refreshes & fixes it
+/*function nsResizeFx() {
+ 
+  if (document.NS.nsResizeFx.WindowWidth != window.innerWidth || document.NS.nsResizeFx.WindowHeight != window.innerHeight) {
+	document.location = document.location;
+  }
+}
+
+function nsRezFxCk() {
+
+  if ((navigator.appName == 'Netscape') && (parseInt(navigator.appVersion) == 4)) {
+    if (typeof document.NS == 'undefined'){
+      document.NS = new Object;
+    }
+    if (typeof document.NS.scaleFont == 'undefined') {
+      document.NS.nsResizeFx = new Object;
+      document.NS.nsResizeFx.WindowWidth = window.innerWidth;
+      document.NS.nsResizeFx.WindowHeight = window.innerHeight;
+    }
+    window.onresize = nsResizeFx;
+  }
+}
+
+nsRezFxCk()*/
+
+function changeStatus(text) {
+	//includes time delay for IE bug
+	window.setTimeout('window.status="' + text + '"', 1);
+	return true;
+}
+
+//general popups
+function popUp(url) {
+	var popWindow = window.open(url,'pop','width=600,height=400,top=167,left=165,menubar,status,scrollbars,resizable,toolbar,location');
+	popWindow.focus();
+}
+
+//popups converted ppt presentations
+function popUpPPT(url) {
+	var popWindow = window.open(url,'pop','width=600,height=425,top=167,left=165,menubar,status,scrollbars,resizable,toolbar,location');
+	popWindow.focus();
+}
+
+//popup for signal chains
+function popUpSC(url,windowName) {
+	var popWindow = window.open(url,windowName,'width=550,height=270,top=167,left=165,scrollbars,resizable');
+	popWindow.focus();
+}
+//-->
+</SCRIPT>
+
+<META content="MSHTML 5.00.3105.105" name=GENERATOR></HEAD>
+<BODY leftMargin=0 topMargin=0 marginwidth="0" marginheight="0"><!----------------HEADER GOES HERE--------------><A 
+name=top></A>
+<TABLE border=0 cellPadding=0 cellSpacing=0 height=80 width=760>
+  <TBODY>
+  <TR>
+    <TD width=37><IMG alt="" border=0 height=1 
+      src="ADI - Data Converters Video DACs_fichiers/spacer.gif" width=37></TD>
+    <TD width=134>
+      <TABLE border=0 cellPadding=0 cellSpacing=0 width=134>
+        <TBODY>
+        <TR>
+          <TD height=25 width=134><IMG alt="" border=0 height=1 
+            src="ADI - Data Converters Video DACs_fichiers/spacer.gif" 
+          width=134></TD></TR>
+        <TR>
+          <TD align=left height=30 vAlign=center width=134><A 
+            href="http://www.analog.com/index.html"><IMG 
+            alt="Analog Devices, Inc. Home Page" border=0 height=30 
+            src="ADI - Data Converters Video DACs_fichiers/adi_logo.gif" 
+            width=96></A></TD></TR>
+        <TR>
+          <TD height=25 width=134><IMG alt="" border=0 height=1 
+            src="ADI - Data Converters Video DACs_fichiers/spacer.gif" 
+          width=134></TD></TR></TBODY></TABLE></TD>
+    <TD align=left vAlign=top width=589>
+      <TABLE border=0 cellPadding=0 cellSpacing=0 width=589>
+        <TBODY>
+        <TR>
+          <TD height=35 vAlign=top width=393><IMG alt="" border=0 height=35 
+            src="ADI - Data Converters Video DACs_fichiers/brand_bar_2ndlevel.jpg" 
+            useMap=#techLeadership width=393><MAP name=techLeadership> <AREA 
+              alt="Amplifiers and Linear Home" coords=0,0,64,35 
+              href="http://www.analog.com/technology/amplifiersLinear/index.html" 
+              shape=RECT><AREA alt="Power / Supervisory / Interface Home" 
+              coords=65,0,127,35 
+              href="http://www.analog.com/technology/powerSupervisoryInterface/index.html" 
+              shape=RECT><AREA alt="Digital Signal Processing Home" 
+              coords=128,0,190,35 
+              href="http://www.analog.com/technology/dsp/index.html" 
+              shape=RECT><AREA alt="RF and Communications Home" 
+              coords=191,0,254,35 
+              href="http://www.analog.com/technology/RFComms/index.html" 
+              shape=RECT><AREA alt="MEMS Technology Home" coords=255,1,316,35 
+              href="http://www.analog.com/technology/mems/index.html" 
+              shape=RECT><AREA alt="Data Converters Home" coords=317,0,402,35 
+              href="http://www.analog.com/technology/dataConverters/index.html" 
+              shape=RECT></MAP></TD>
+          <TD rowSpan=3 vAlign=top width=196>
+            <TABLE border=0 cellPadding=0 cellSpacing=0>
+              <TBODY>
+              <TR>
+                <TD colSpan=2 height=10><IMG alt="" border=0 height=10 
+                  src="ADI - Data Converters Video DACs_fichiers/spacer.gif" 
+                  width=1></TD></TR>
+              <FORM action=/redirect.asp method=get>
+              <TR>
+                <TD class=select colSpan=2 width=196><SELECT name=url 
+                  onchange="if (this.selectedIndex>0) location.href=this.options[this.selectedIndex].value;" 
+                  style="WIDTH: 196px" width="196"> <OPTION selected 
+                    value=none>ADI Site Navigation</OPTION> <OPTION 
+                    value=http://www.analog.com/technology/dataConverters/index.html>Data 
+                    Converters</OPTION> <OPTION 
+                    value=http://www.analog.com/technology/dsp/index.html>Digital 
+                    Signal Processing</OPTION> <OPTION 
+                    value=http://www.analog.com/technology/RFComms/index.html>RF 
+                    and Communications</OPTION> <OPTION 
+                    value=http://www.analog.com/technology/amplifiersLinear/index.html>Amplifiers 
+                    and Linear</OPTION> <OPTION 
+                    value=http://www.analog.com/technology/powerSupervisoryInterface/index.html>Power 
+                    / Supervisory / Interface</OPTION> <OPTION 
+                    value=http://www.analog.com/technology/mems/index.html>MEMS 
+                    Technology</OPTION> <OPTION 
+                    value=http://www.analog.com/marketSolutions/index.html>Market 
+                    Solutions</OPTION> <OPTION 
+                    value=http://www.analog.com/corporate/index.html>Corporate 
+                    Information</OPTION> <OPTION 
+                    value=http://www.analog.com/corporate/jobs/index.html>Job 
+                    Opportunities</OPTION></SELECT> <NOSCRIPT><IMG alt="" border=0 
+                  height=5 
+                  src="ADI - Data Converters Video DACs_fichiers/spacer.gif" 
+                  width=1><BR><INPUT align=right alt=Go border=0 height=15 
+                  src="ADI - Data Converters Video DACs_fichiers/bt_go.gif" 
+                  type=image width=23> </NOSCRIPT></TD></TR></FORM>
+              <TR>
+                <TD colSpan=2 height=5><IMG alt="" border=0 height=5 
+                  src="ADI - Data Converters Video DACs_fichiers/spacer.gif" 
+                  width=1></TD></TR>
+              <FORM action=http://products.analog.com/products/search.asp 
+              method=post name=search>
+              <TR>
+                <TD vAlign=bottom><INPUT name=queryText size=11 
+                  style="WIDTH: 125px"></TD>
+                <TD><INPUT alt=Search border=0 height=19 name=queryText 
+                  src="ADI - Data Converters Video DACs_fichiers/search_button.gif" 
+                  type=image width=57></TD></TR>
+              <TR>
+                <TD colSpan=2 vAlign=bottom><A 
+                  href="http://search.analog.com/"><IMG alt="Advanced Search" 
+                  border=0 height=9 
+                  src="ADI - Data Converters Video DACs_fichiers/advanced_search.gif" 
+                  width=81></A>&nbsp;</TD></TR></FORM></TBODY></TABLE></TD></TR>
+        <TR>
+          <TD height=15 width=393>&nbsp;</TD></TR>
+        <TR>
+          <TD height=11 vAlign=top width=393><MAP name=toolbar><AREA 
+              alt="Analog Devices Home" coords=0,0,41,17 
+              href="http://www.analog.com/index.html" shape=RECT><AREA 
+              alt="Buy Online" coords=41,0,95,17 
+              href="http://www.analog.com/commerce/index.html" shape=RECT><AREA 
+              alt="Order Samples" coords=96,0,193,17 
+              href="http://www.analog.com/productSelection/orderSamples/index.html" 
+              shape=RECT><AREA alt="Technical Support" coords=194,0,312,17 
+              href="http://www.analog.com/techSupport/index.html" 
+              shape=RECT><AREA alt=myAnalog coords=313,0,394,17 
+              href="http://products.analog.com/custom_home_page/member/asp/home_page_dhtml.asp?" 
+              shape=RECT></MAP><IMG border=0 height=15 
+            src="ADI - Data Converters Video DACs_fichiers/toolbar_2ndlevel.gif" 
+            useMap=#toolbar width=373></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><!--------------------END HEADER----------------><!----------------BEGIN BREADCRUMBS-------------->
+<TABLE border=0 cellPadding=0 cellSpacing=0 width=760>
+  <TBODY>
+  <TR>
+    <TD width=5>&nbsp;</TD>
+    <TD class=breadcrumb width=755><A 
+      href="http://www.analog.com/index.html">ADI Home</A>&nbsp;&gt;&nbsp;<A 
+      href="http://www.analog.com/technology/dataConverters/index.html">Data 
+      Converters</A>&nbsp;&gt;&nbsp;<A 
+      href="http://www.analog.com/technology/dataConverters/dac/index.html">Digital-to-Analog</A>&nbsp;&gt;&nbsp;</TD></TR></TBODY></TABLE><!-----------------END BREADCRUMBS--------------->
+<TABLE border=0 cellPadding=0 cellSpacing=0 width=760>
+  <TBODY>
+  <TR>
+    <TD align=left bgColor=#cccccc height="100%" vAlign=top width=171><!--BEGIN ADDITIONAL NESTED TABLE TO AVOID POOR NETSCAPE SPACING--><!-----------------------------------------------><!------------LEFT NAV---------------------------><!-----------------------------------------------><!-- BEGIN NESTED TABLE FOR LEFT NAVIGATION -->
+      <TABLE border=0 cellPadding=0 cellSpacing=0 width=171>
+        <TBODY>
+        <TR>
+          <TD class=leftnavheader height=20 style="BACKGROUND-COLOR: #336699" 
+          width=5><IMG alt="" border=0 height=1 
+            src="ADI - Data Converters Video DACs_fichiers/spacer.gif" 
+          width=5></TD>
+          <TD align=left class=leftnavheader height=20 
+          style="BACKGROUND-COLOR: #336699" vAlign=center 
+            width=166><STRONG>Video DACs</STRONG></TD></TR><!--SPACER ROW-->
+        <TR>
+          <TD bgColor=#cccccc colSpan=2 height=10><IMG alt="" border=0 
+            height=10 src="ADI - Data Converters Video DACs_fichiers/spacer.gif" 
+            width=1></TD></TR>
+        <TR>
+          <TD class=leftnav><IMG alt="" border=0 height=1 
+            src="ADI - Data Converters Video DACs_fichiers/spacer.gif" 
+          width=5></TD>
+          <TD align=left class=leftnav vAlign=top>Video DACs Home</TD></TR>
+        <TR>
+          <TD colSpan=2><IMG alt="" border=0 height=5 
+            src="ADI - Data Converters Video DACs_fichiers/spacer.gif" 
+          width=1></TD></TR>
+        <TR>
+          <TD class=leftnav><IMG alt="" border=0 height=1 
+            src="ADI - Data Converters Video DACs_fichiers/spacer.gif" 
+          width=5></TD>
+          <TD align=left class=leftnav vAlign=top><A 
+            href="http://www.analog.com/technology/dataConverters/designTools/selectionGuides/videoDacs.html">Selection 
+            Guides</A></TD></TR>
+        <TR>
+          <TD colSpan=2><IMG alt="" border=0 height=5 
+            src="ADI - Data Converters Video DACs_fichiers/spacer.gif" 
+          width=1></TD></TR>
+        <TR>
+          <TD class=leftnav><IMG alt="" border=0 height=1 
+            src="ADI - Data Converters Video DACs_fichiers/spacer.gif" 
+          width=5></TD>
+          <TD align=left class=leftnav vAlign=top><A 
+            href="http://www.analog.com/technology/dataConverters/products/newProducts.html#videoDACs">New 
+            and Featured Products</A></TD></TR>
+        <TR>
+          <TD colSpan=2><IMG alt="" border=0 height=5 
+            src="ADI - Data Converters Video DACs_fichiers/spacer.gif" 
+          width=1></TD></TR>
+        <TR>
+          <TD class=leftnav><IMG alt="" border=0 height=1 
+            src="ADI - Data Converters Video DACs_fichiers/spacer.gif" 
+          width=5></TD>
+          <TD align=left class=leftnav vAlign=top><A 
+            href="http://forms.analog.com/Form_Pages/support/standard_linear/contactTechSupport.asp">Contact 
+            Video DACs</A></TD></TR>
+        <TR>
+          <TD bgColor=#cccccc colSpan=2 height=15><IMG alt="" border=0 
+            height=15 src="ADI - Data Converters Video DACs_fichiers/spacer.gif" 
+            width=1></TD></TR>
+        <TR>
+          <TD class=leftnavheader height=20 
+            style="BACKGROUND-COLOR: #336699"><IMG alt="" border=0 height=1 
+            src="ADI - Data Converters Video DACs_fichiers/spacer.gif" 
+          width=5></TD>
+          <TD align=left class=leftnavheader height=20 
+          style="BACKGROUND-COLOR: #336699" vAlign=center 
+            width=166><STRONG>Data Converters</STRONG></TD></TR><!--SPACER ROW-->
+        <TR>
+          <TD bgColor=#cccccc colSpan=2 height=10><IMG alt="" border=0 
+            height=10 src="ADI - Data Converters Video DACs_fichiers/spacer.gif" 
+            width=1></TD></TR>
+        <TR>
+          <TD class=leftnav><IMG alt="" border=0 height=1 
+            src="ADI - Data Converters Video DACs_fichiers/spacer.gif" 
+          width=5></TD>
+          <TD align=left class=select vAlign=top>
+            <FORM action=/redirect.asp method=get><SELECT class=select name=url 
+            onchange="if (this.selectedIndex>0) parent.location.href=this.options[this.selectedIndex].value;" 
+            size=1 style="WIDTH: 160px" width="160"> <OPTION selected 
+              value="">Data Converters...</OPTION> <OPTION 
+              value=http://www.analog.com/technology/dataConverters/index.html>Data 
+              Converters Home</OPTION> <OPTION 
+              value=http://www.analog.com/technology/dataConverters/adc/index.html>Analog-to-Digital</OPTION> 
+              <OPTION 
+              value=http://www.analog.com/technology/dataConverters/dac/index.html>Digital-to-Analog</OPTION> 
+              <OPTION 
+              value=http://www.analog.com/technology/dataConverters/dds/directDigitalSyn.html>Direct 
+              Digital Synthesis (DDS)</OPTION> <OPTION 
+              value=http://www.analog.com/technology/dataConverters/versacomm/versacomm.html>VersaCOMM 
+              Converters</OPTION> <OPTION 
+              value=http://www.analog.com/technology/dataConverters/displayElectronics/displayElectronics.html>Display 
+              Electronics</OPTION> <OPTION 
+              value=http://www.analog.com/technology/dataConverters/mixedSignal/mixed_signalFrontEnds.html>Mixed-Signal 
+              Front Ends</OPTION> <OPTION 
+              value=http://www.analog.com/technology/dataConverters/energyMeasurement/energyMeasurementICs.html>Energy 
+              Measurement ICs</OPTION> <OPTION 
+              value=http://www.analog.com/technology/dataConverters/microconverter/microconverter.html>MicroConverter</OPTION> 
+              <OPTION 
+              value=http://www.analog.com/technology/dataConverters/thermalSystemMonitoring/thermal_systemMonitoring.html>Thermal/System 
+              Monitoring</OPTION> <OPTION 
+              value=http://www.analog.com/technology/dataConverters/voltageToFrequency/voltageToFrequency.html>Voltage-to-Frequency</OPTION> 
+              <OPTION 
+              value=http://www.analog.com/technology/dataConverters/precisionVoltage/precisionVoltageReferences.html>Precision 
+              Voltage Reference</OPTION></SELECT> <NOSCRIPT><BR><INPUT align=right 
+            alt=Go border=0 height=15 
+            src="ADI - Data Converters Video DACs_fichiers/bt_go.gif" type=image 
+            vspace=5 width=23></NOSCRIPT> </FORM></TD></TR>
+        <TR>
+          <TD bgColor=#cccccc colSpan=2 height=10><IMG alt="" border=0 
+            height=10 src="ADI - Data Converters Video DACs_fichiers/spacer.gif" 
+            width=1></TD></TR>
+        <TR>
+          <TD colSpan=2>
+            <TABLE border=0 cellPadding=0 cellSpacing=0 width=171>
+              <TBODY>
+              <TR>
+                <TD class=leftnavheader height=20 
+                style="BACKGROUND-COLOR: #000000" width=5><IMG alt="" border=0 
+                  height=1 
+                  src="ADI - Data Converters Video DACs_fichiers/spacer.gif" 
+                  width=5></TD>
+                <TD align=left class=leftnavheader height=20 
+                style="BACKGROUND-COLOR: #000000" vAlign=center>ADI Design 
+                  Resources</TD></TR><!--SPACER ROW-->
+              <TR>
+                <TD bgColor=#cccccc colSpan=2 height=10><IMG alt="" border=0 
+                  height=10 
+                  src="ADI - Data Converters Video DACs_fichiers/spacer.gif" 
+                  width=1></TD></TR>
+              <FORM action=/redirect.asp method=get>
+              <TR>
+                <TD class=leftnav width=5><IMG alt="" border=0 height=1 
+                  src="ADI - Data Converters Video DACs_fichiers/spacer.gif" 
+                  width=5></TD>
+                <TD align=left class=select vAlign=top><SELECT name=url 
+                  onchange="if (this.selectedIndex>0) parent.location.href=this.options[this.selectedIndex].value;" 
+                  size=1 style="WIDTH: 160px" width="160"> <OPTION selected 
+                    value="">Product Selection...</OPTION> <OPTION 
+                    value=http://search.analog.com/>Part Number Search</OPTION> 
+                    <OPTION 
+                    value=http://www.analog.com/productSelection/selection_guides.html>Selection 
+                    Guides</OPTION> <OPTION 
+                    value=http://products.analog.com/products_html/list_gen_category_tree.html>Product 
+                    Category Tree</OPTION> <OPTION 
+                    value=http://products.analog.com/products_html/list_gen_all.html>Master 
+                    Product Index</OPTION> <OPTION 
+                    value=http://www.analog.com/productSelection/obsolete/search_obsolete.html>Obsolete 
+                    Products</OPTION> <OPTION 
+                    value=http://products.analog.com/products/cross-reference/competitor_search.asp>Cross 
+                    Reference</OPTION> <OPTION 
+                    value=http://www.analog.com/productSelection/signalChains/index.html>Signal 
+                    Chains</OPTION> <OPTION 
+                    value=http://www.analog.com/productSelection/orderSamples/index.html>Order 
+                    Samples</OPTION></SELECT> </TD></TR><NOSCRIPT>
+              <TR>
+                <TD align=right colSpan=2><IMG alt="" border=0 height=5 
+                  src="ADI - Data Converters Video DACs_fichiers/spacer.gif" 
+                  width=1><BR><INPUT alt=Go border=0 height=15 
+                  src="ADI - Data Converters Video DACs_fichiers/bt_go.gif" 
+                  type=image width=23><IMG alt="" border=0 height=1 
+                  src="ADI - Data Converters Video DACs_fichiers/spacer.gif" 
+                  width=5></TD></TR></NOSCRIPT></FORM><!--SPACER ROW-->
+              <TR>
+                <TD bgColor=#cccccc colSpan=2 height=10><IMG alt="" border=0 
+                  height=10 
+                  src="ADI - Data Converters Video DACs_fichiers/spacer.gif" 
+                  width=1></TD></TR>
+              <FORM action=/redirect.asp method=get>
+              <TR>
+                <TD class=leftnav width=5><IMG alt="" border=0 height=1 
+                  src="ADI - Data Converters Video DACs_fichiers/spacer.gif" 
+                  width=5></TD>
+                <TD align=left class=select vAlign=top><SELECT name=url 
+                  onchange="if (this.selectedIndex>0) parent.location.href=this.options[this.selectedIndex].value;" 
+                  size=1 style="WIDTH: 160px" width="160"> <OPTION selected 
+                    value="">Design Tools...</OPTION> <OPTION 
+                    value=http://www.analog.com/techSupport/designTools/evaluationBoards/evalBoards.html>Evaluation 
+                    Boards/Tools</OPTION> <OPTION 
+                    value=http://www.analog.com/techSupport/designTools/interactiveTools/index.html>Interactive 
+                    Design Tools</OPTION> <OPTION 
+                    value=http://www.analog.com/techSupport/designTools/codeExamples/index.html>Code 
+                    Examples</OPTION> <OPTION 
+                    value=http://www.analog.com/techSupport/designTools/saberModels/index.html>SABER 
+                    Models</OPTION> <OPTION 
+                    value=http://products.analog.com/products/generics/list_spice.asp>SPICE 
+                    Models</OPTION> <OPTION 
+                    value=http://www.analog.com/techSupport/faqs/index.html>FAQs</OPTION></SELECT> 
+                </TD></TR><NOSCRIPT>
+              <TR>
+                <TD align=right colSpan=2><IMG alt="" border=0 height=5 
+                  src="ADI - Data Converters Video DACs_fichiers/spacer.gif" 
+                  width=1><BR><INPUT alt=Go border=0 height=15 
+                  src="ADI - Data Converters Video DACs_fichiers/bt_go.gif" 
+                  type=image width=23><IMG alt="" border=0 height=1 
+                  src="ADI - Data Converters Video DACs_fichiers/spacer.gif" 
+                  width=5></TD></TR></NOSCRIPT></FORM><!--SPACER ROW-->
+              <TR>
+                <TD bgColor=#cccccc colSpan=2 height=10><IMG alt="" border=0 
+                  height=10 
+                  src="ADI - Data Converters Video DACs_fichiers/spacer.gif" 
+                  width=1></TD></TR>
+              <FORM action=/redirect.asp method=get>
+              <TR>
+                <TD class=leftnav width=5><IMG alt="" border=0 height=1 
+                  src="ADI - Data Converters Video DACs_fichiers/spacer.gif" 
+                  width=5></TD>
+                <TD align=left class=select vAlign=top><SELECT name=url 
+                  onchange="if (this.selectedIndex>0) parent.location.href=this.options[this.selectedIndex].value;" 
+                  size=1 style="WIDTH: 160px" width="160"> <OPTION selected 
+                    value="">Technical Library...</OPTION> <OPTION 
+                    value=http://www.analog.com/library/index.html>Technical 
+                    Library Home</OPTION> <OPTION 
+                    value=http://www.analog.com/library/applicationGuides/applicationGuides.html>Application 
+                    Guides</OPTION> <OPTION 
+                    value=http://www.analog.com/library/applicationNotes/applicationNotes.html>Application 
+                    Notes</OPTION> <OPTION 
+                    value=http://www.analog.com/library/analogDialogue/index.html>Analog 
+                    Dialogue</OPTION> <OPTION 
+                    value=http://www.analog.com/technology/dsp/developmentTools/gen_purpose.html>DSP 
+                    Manuals</OPTION> <OPTION 
+                    value=http://content.analog.com/pressrelease/prindex/>Press 
+                    Releases</OPTION> <OPTION 
+                    value=http://www.analog.com/library/solutionsBulletins.html>Solutions 
+                    Bulletins</OPTION> <OPTION 
+                    value=http://www.analog.com/library/techArticles/techArticles.html>Technical 
+                    Articles</OPTION> <OPTION 
+                    value=http://www.analog.com/techSupport/training.html>Training 
+                    and Events</OPTION></SELECT> </TD></TR><NOSCRIPT>
+              <TR>
+                <TD align=right colSpan=2><IMG alt="" border=0 height=5 
+                  src="ADI - Data Converters Video DACs_fichiers/spacer.gif" 
+                  width=1><BR><INPUT alt=Go border=0 height=15 
+                  src="ADI - Data Converters Video DACs_fichiers/bt_go.gif" 
+                  type=image width=23><IMG alt="" border=0 height=1 
+                  src="ADI - Data Converters Video DACs_fichiers/spacer.gif" 
+                  width=5></TD></TR></NOSCRIPT></FORM>
+              <TR>
+                <TD bgColor=#cccccc colSpan=2 height=10><IMG alt="" border=0 
+                  height=10 
+                  src="ADI - Data Converters Video DACs_fichiers/spacer.gif" 
+                  width=1></TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE><!-- END NESTED TABLE FOR LEFT NAVIGATION --></TD>
+    <TD align=left height="100%" vAlign=top width=589><!------------MAIN CONTENT--------------------><!-- BEGIN NESTED TABLE FOR MAIN CONTENT -->
+      <TABLE border=0 cellPadding=0 cellSpacing=0 width=589><!-- START BLUE BAR -->
+        <TBODY>
+        <TR>
+          <TD align=left colSpan=4 vAlign=top>
+            <TABLE border=0 cellPadding=0 cellSpacing=0 width=589>
+              <TBODY>
+              <TR>
+                <TD class=leftnavheader height=10 
+                style="BACKGROUND-COLOR: #336699" width=5><IMG alt="" border=0 
+                  height=1 
+                  src="ADI - Data Converters Video DACs_fichiers/spacer.gif" 
+                  width=337></TD>
+                <TD rowSpan=2 vAlign=top width=237><IMG 
+                  alt="Data Converters:Digital-to-Analog" border=0 height=30 
+                  src="ADI - Data Converters Video DACs_fichiers/dac.gif" 
+                  width=252></TD></TR>
+              <TR>
+                <TD><IMG alt="" border=0 height=30 
+                  src="ADI - Data Converters Video DACs_fichiers/spacer.gif" 
+                  width=5></TD></TR></TBODY></TABLE></TD></TR><!-- END BLUE BAR  --><!-- START SPACER CELLS -->
+        <TR>
+          <TD height=1 width=20><IMG alt="" border=0 height=1 
+            src="ADI - Data Converters Video DACs_fichiers/spacer.gif" 
+          width=20></TD>
+          <TD height=1 width=275><IMG alt="" border=0 height=1 
+            src="ADI - Data Converters Video DACs_fichiers/spacer.gif" 
+          width=275></TD>
+          <TD height=1 width=20><IMG alt="" border=0 height=1 
+            src="ADI - Data Converters Video DACs_fichiers/spacer.gif" 
+          width=20></TD>
+          <TD height=1 width=274><IMG alt="" border=0 height=1 
+            src="ADI - Data Converters Video DACs_fichiers/spacer.gif" 
+          width=274></TD></TR><!-- END SPACER CELLS -->
+        <TR><!-- left gutter: fixed min. height of 325 -->
+          <TD height=325>&nbsp;</TD>
+          <TD align=left vAlign=top><!-- BEGIN NESTED TABLE FOR LEFT CONTENT -->
+            <TABLE border=0 cellPadding=1 cellSpacing=0 width=275>
+              <TBODY>
+              <TR>
+                <TD>
+                  <H3>Video DACs</H3>
+                  <P>With unsurpassed performance and quality from the market 
+                  leader, Analog Devices offers a wide range of Video DACs for 
+                  all video applications.</P>
+                  <P>Available in speed grades from 50 MHz, right up to 240 MHz, 
+                  these products offer precision video in both 8-bit and 10-bit 
+                  versions.</P>
+                  <P>Single and triple DAC products are available to suit a 
+                  variety of applications, including: 
+                  <UL>
+                    <LI class=iepadding><SPAN class=padding>PC Graphics</SPAN> 
+                    <LI class=iepadding><SPAN class=padding>Set-Top Boxes</SPAN> 
+
+                    <LI class=iepadding><SPAN class=padding>Medical 
+                    Imaging</SPAN> 
+                    <LI class=iepadding><SPAN class=padding>Video Signal 
+                    Generators</SPAN>
+                    <P></P></LI></UL></TD></TR>
+              <TR>
+                <TD height=15><IMG alt="" border=0 height=15 
+                  src="ADI - Data Converters Video DACs_fichiers/spacer.gif" 
+                  width=1></TD></TR></TBODY></TABLE><!-- END NESTED TABLE LEFT FOR CONTENT --></TD>
+          <TD>&nbsp;</TD>
+          <TD align=left vAlign=top><!-- BEGIN NESTED TABLE FOR RIGHT CONTENT -->
+            <TABLE border=0 cellPadding=1 cellSpacing=0 width=274>
+              <TBODY>
+              <TR bgColor=#336699>
+                <TH height=20 width=5><IMG alt="" border=0 height=1 
+                  src="ADI - Data Converters Video DACs_fichiers/spacer.gif" 
+                  width=5></TH>
+                <TH align=left class=tableheader height=20 vAlign=center 
+                width=269><STRONG>Featured</STRONG></TH></TR><!-- SPACER ROW -->
+              <TR>
+                <TD colSpan=2 height=10><IMG alt="" border=0 height=1 
+                  src="ADI - Data Converters Video DACs_fichiers/spacer.gif" 
+                  width=1></TD></TR><!-- END SPACER ROW -->
+              <TR>
+                <TD align=left colSpan=2 vAlign=top>
+                  <P class=padding>Solutions Bulletin: <A 
+                  href="http://www.analog.com/technology/dataConverters/products/solutionsBulletins/dacs6-01/index.html">Digital-to-Analog 
+                  Converters, June 2001</A></P></TD></TR>
+              <TR>
+                <TD colSpan=2 height=5><IMG alt="" border=0 height=5 
+                  src="ADI - Data Converters Video DACs_fichiers/spacer.gif" 
+                  width=1></TD></TR></TBODY></TABLE><!-- END NESTED TABLE FOR RIGHT CONTENT --></TD></TR></TBODY></TABLE><!-- START FOOTER INFO -->
+      <TABLE border=0 cellPadding=0 cellSpacing=0 width=589><!-- 25px spacer row -->
+        <TBODY>
+        <TR>
+          <TD height=25 width=20><IMG alt="" border=0 height=1 
+            src="C:\WINNT\Profiles\bo20942\Bureau\documents_web\vesa2vga\ADI - Data Converters Video DACs_fichiers\spacer(1).gif" 
+            width=1></TD>
+          <TD height=25 width=569><IMG alt="" border=0 height=1 
+            src="C:\WINNT\Profiles\bo20942\Bureau\documents_web\vesa2vga\ADI - Data Converters Video DACs_fichiers\spacer(1).gif" 
+            width=1></TD></TR><!-- grey horizontal rule -->
+        <TR>
+          <TD bgColor=#cccccc colSpan=2><IMG alt="" border=0 height=1 
+            src="C:\WINNT\Profiles\bo20942\Bureau\documents_web\vesa2vga\ADI - Data Converters Video DACs_fichiers\spacer(1).gif" 
+            width=1></TD></TR><!-- 5px spacer row -->
+        <TR>
+          <TD height=5 width=20><IMG alt="" border=0 height=1 
+            src="C:\WINNT\Profiles\bo20942\Bureau\documents_web\vesa2vga\ADI - Data Converters Video DACs_fichiers\spacer(1).gif" 
+            width=1></TD>
+          <TD height=5 width=569><IMG alt="" border=0 height=1 
+            src="C:\WINNT\Profiles\bo20942\Bureau\documents_web\vesa2vga\ADI - Data Converters Video DACs_fichiers\spacer(1).gif" 
+            width=1></TD></TR><!-- footer info -->
+        <TR>
+          <TD></TD>
+          <TD class=footerlink><A 
+            href="http://www.analog.com/contact.html">Contact 
+            ADI</A>&nbsp;|&nbsp;<A 
+            href="http://www.analog.com/siteMap.html">Site 
+            Map</A>&nbsp;|&nbsp;<A 
+            href="http://products.analog.com/membership/formslogin.asp">Registration</A></TD></TR>
+        <TR>
+          <TD></TD>
+          <TD class=footer>© 1995-
+            <SCRIPT language=javascript>var today = new Date(); document.write(today.getFullYear());</SCRIPT>
+             Analog Devices, Inc. All Rights Reserved</TD></TR><!-- 5px spacer row -->
+        <TR>
+          <TD height=5 width=20><IMG alt="" border=0 height=1 
+            src="C:\WINNT\Profiles\bo20942\Bureau\documents_web\vesa2vga\ADI - Data Converters Video DACs_fichiers\spacer(1).gif" 
+            width=1></TD>
+          <TD height=5 width=569><IMG alt="" border=0 height=1 
+            src="C:\WINNT\Profiles\bo20942\Bureau\documents_web\vesa2vga\ADI - Data Converters Video DACs_fichiers\spacer(1).gif" 
+            width=1></TD></TR></TBODY></TABLE><!-- END FOOTER INFO --><!-- END NESTED TABLE FOR MAIN CONTENT --></TD></TR></TBODY></TABLE></BODY></HTML>

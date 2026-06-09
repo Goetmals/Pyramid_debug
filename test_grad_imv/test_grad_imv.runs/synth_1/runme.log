@@ -1,0 +1,59 @@
+
+*** Running vivado
+    with args -log TEST_PYRAMID.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source TEST_PYRAMID.tcl
+
+
+****** Vivado v2023.1 (64-bit)
+  **** SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source TEST_PYRAMID.tcl -notrace
+Command: synth_design -top TEST_PYRAMID -part xc7z045ffg900-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z045'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z045'
+INFO: [Common 17-1540] The version limit for your license is '2025.06' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for new releases.
+INFO: [Device 21-403] Loading part xc7z045ffg900-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 1081280
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3246.062 ; gain = 384.801 ; free physical = 60161 ; free virtual = 112859
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'TEST_PYRAMID' [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/test_pyramid.vhd:41]
+	Parameter nomfichier bound to: /home/demelo/vivado_prjs/testbench_eads/vhdl/tst/ImageTests/bridge.imv - type: string 
+	Parameter format bound to: IMAGING - type: string 
+	Parameter nbPixDeb bound to: 6 - type: integer 
+	Parameter nbPixFin bound to: 6 - type: integer 
+	Parameter nbLigDeb bound to: 6 - type: integer 
+	Parameter nbLigFin bound to: 6 - type: integer 
+	Parameter nbLigFinSeq bound to: 6 - type: integer 
+	Parameter tPHV bound to: 64'b0000000000000000000000000000000000000000001101010110011111100000 
+	Parameter pix_unknown bound to: 8'b11111111 
+INFO: [Synth 8-3491] module 'READIMG' declared at '/home/demelo/vivado_prjs/testbench_eads/vhdl/tst/divers/readimg.vhd:29' bound to instance 'RI0' of component 'READIMG' [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/test_pyramid.vhd:281]
+INFO: [Synth 8-638] synthesizing module 'READIMG' [/home/demelo/vivado_prjs/testbench_eads/vhdl/tst/divers/readimg.vhd:59]
+	Parameter nomfichier bound to: /home/demelo/vivado_prjs/testbench_eads/vhdl/tst/ImageTests/bridge.imv - type: string 
+	Parameter format bound to: IMAGING - type: string 
+	Parameter nbPixDeb bound to: 6 - type: integer 
+	Parameter nbPixFin bound to: 6 - type: integer 
+	Parameter nbLigDeb bound to: 6 - type: integer 
+	Parameter nbLigFin bound to: 6 - type: integer 
+	Parameter nbLigFinSeq bound to: 6 - type: integer 
+	Parameter tPHV bound to: 64'b0000000000000000000000000000000000000000001101010110011111100000 
+	Parameter pix_unknown bound to: 8'b11111111 
+ERROR: [Synth 8-27] null value not supported [/home/demelo/vivado_prjs/testbench_eads/vhdl/tst/divers/readimg.vhd:186]
+ERROR: [Synth 8-421] mismatched array sizes in rhs and lhs of assignment [/home/demelo/vivado_prjs/testbench_eads/vhdl/tst/divers/readimg.vhd:186]
+ERROR: [Synth 8-285] failed synthesizing module 'READIMG' [/home/demelo/vivado_prjs/testbench_eads/vhdl/tst/divers/readimg.vhd:59]
+ERROR: [Synth 8-285] failed synthesizing module 'TEST_PYRAMID' [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/test_pyramid.vhd:41]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3317.000 ; gain = 455.738 ; free physical = 60077 ; free virtual = 112775
+---------------------------------------------------------------------------------
+RTL Elaboration failed
+INFO: [Common 17-83] Releasing license: Synthesis
+10 Infos, 0 Warnings, 0 Critical Warnings and 5 Errors encountered.
+synth_design failed
+ERROR: [Common 17-69] Command failed: Synthesis failed - please see the console or run log file for details
+INFO: [Common 17-206] Exiting Vivado at Tue Apr  7 15:16:25 2026...

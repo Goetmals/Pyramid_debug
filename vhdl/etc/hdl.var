@@ -1,0 +1,3 @@
+softinclude		$CDS_INST_DIR/tools/inca/files/hdl.var
+
+DEFINE WORK		work

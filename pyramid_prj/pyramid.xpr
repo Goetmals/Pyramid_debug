@@ -1,0 +1,662 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Product Version: Vivado v2016.4 (64-bit)              -->
+<!--                                                         -->
+<!-- Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.   -->
+
+<Project Version="7" Minor="17" Path="./pyramid.xpr">
+  <DefaultLaunch Dir="$PRUNDIR"/>
+  <Configuration>
+    <Option Name="Id" Val="43919003ec784e358b72834453939b01"/>
+    <Option Name="Part" Val="xc7z045ffg900-2"/>
+    <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
+    <Option Name="CompiledLibDirXSim" Val=""/>
+    <Option Name="CompiledLibDirModelSim" Val="$PCACHEDIR/compile_simlib/modelsim"/>
+    <Option Name="CompiledLibDirQuesta" Val="$PCACHEDIR/compile_simlib/questa"/>
+    <Option Name="CompiledLibDirIES" Val="$PCACHEDIR/compile_simlib/ies"/>
+    <Option Name="CompiledLibDirVCS" Val="$PCACHEDIR/compile_simlib/vcs"/>
+    <Option Name="CompiledLibDirRiviera" Val="$PCACHEDIR/compile_simlib/riviera"/>
+    <Option Name="CompiledLibDirActivehdl" Val="$PCACHEDIR/compile_simlib/activehdl"/>
+    <Option Name="TargetLanguage" Val="VHDL"/>
+    <Option Name="BoardPart" Val="xilinx.com:zc706:part0:1.3"/>
+    <Option Name="ActiveSimSet" Val="sim_1"/>
+    <Option Name="DefaultLib" Val="xil_defaultlib"/>
+    <Option Name="IPRepoPath" Val="$PSRCDIR/sources_1/imports"/>
+    <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
+    <Option Name="IPCachePermission" Val="read"/>
+    <Option Name="IPCachePermission" Val="write"/>
+    <Option Name="EnableCoreContainer" Val="FALSE"/>
+    <Option Name="CreateRefXciForCoreContainers" Val="FALSE"/>
+    <Option Name="IPUserFilesDir" Val="$PPRDIR/pyramid.ip_user_files"/>
+    <Option Name="IPStaticSourceDir" Val="$PPRDIR/pyramid.ip_user_files/ipstatic"/>
+    <Option Name="EnableBDX" Val="FALSE"/>
+    <Option Name="DSABoardId" Val="zc706"/>
+    <Option Name="DSANumComputeUnits" Val="16"/>
+    <Option Name="WTXSimLaunchSim" Val="0"/>
+    <Option Name="WTModelSimLaunchSim" Val="0"/>
+    <Option Name="WTQuestaLaunchSim" Val="0"/>
+    <Option Name="WTIesLaunchSim" Val="0"/>
+    <Option Name="WTVcsLaunchSim" Val="0"/>
+    <Option Name="WTRivieraLaunchSim" Val="0"/>
+    <Option Name="WTActivehdlLaunchSim" Val="0"/>
+    <Option Name="WTXSimExportSim" Val="0"/>
+    <Option Name="WTModelSimExportSim" Val="0"/>
+    <Option Name="WTQuestaExportSim" Val="0"/>
+    <Option Name="WTIesExportSim" Val="0"/>
+    <Option Name="WTVcsExportSim" Val="0"/>
+    <Option Name="WTRivieraExportSim" Val="0"/>
+    <Option Name="WTActivehdlExportSim" Val="0"/>
+    <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
+    <Option Name="XSimRadix" Val="hex"/>
+    <Option Name="XSimTimeUnit" Val="ns"/>
+    <Option Name="XSimArrayDisplayLimit" Val="64"/>
+    <Option Name="XSimTraceLimit" Val="65536"/>
+  </Configuration>
+  <FileSets Version="1" Minor="31">
+    <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+      <Filter Type="Srcs"/>
+      <File Path="$PSRCDIR/sources_1/imports/work/generic_dpram.v">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/generic_dpram.v"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/saturn_numeric_pkg.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/saturn_numeric_pkg.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/saturn_dog_pkg.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/saturn_dog_pkg.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/timescale.v">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/timescale.v"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/generic_fifo_dc_gray.v">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/generic_fifo_dc_gray.v"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/saturn_numeric_pkg-body.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/saturn_numeric_pkg-body.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/saturn_dog_pkg-body.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/saturn_dog_pkg-body.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/dual_clk_fifo_pkg.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/dual_clk_fifo_pkg.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/dual_clk_fifo.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/dual_clk_fifo.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/xy_delay_pkg.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/xy_delay_pkg.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/xy_delay.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/xy_delay.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/shift_reg.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/shift_reg.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/proc_common_v3_00_a/proc_common_pkg.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="proc_common_v3_00_a"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/proc_common_v3_00_a/proc_common_pkg.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/proc_common_v3_00_a/family_support.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="proc_common_v3_00_a"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/proc_common_v3_00_a/family_support.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/subsample_pkg.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/subsample_pkg.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/subsample.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/subsample.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/saturn_search_pkg.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/saturn_search_pkg.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/math_real.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/math_real.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/gradient_tarek.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/gradient_tarek.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/gradient_pkg.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/gradient_pkg.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/gaussian_filter_pkg.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/gaussian_filter_pkg.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/gaussian_filter.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/gaussian_filter.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/proc_common_v3_00_a/pselect_f.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="proc_common_v3_00_a"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/proc_common_v3_00_a/pselect_f.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/proc_common_v3_00_a/ipif_pkg.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="proc_common_v3_00_a"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/proc_common_v3_00_a/ipif_pkg.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/saturn_search_pkg-body.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/saturn_search_pkg-body.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/pyramid_pkg.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/pyramid_pkg.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/pyramid.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/pyramid.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/max_2_xv.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/max_2_xv.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/math_real_body.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/math_real_body.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/dpram_pkg.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/dpram_pkg.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/dpram.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/dpram.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/dog_pkg.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/dog_pkg.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/dog.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/dog.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/delay_pkg.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/delay_pkg.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/delay.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/delay.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/axi_lite_ipif_v1_01_a/address_decoder.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="axi_lite_ipif_v1_01_a"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/axi_lite_ipif_v1_01_a/address_decoder.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/sort_pkg.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/sort_pkg.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/sort.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/sort.vhd"/>
+          <Attr Name="ImportTime" Val="1625746036"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/search_pkg.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/search_pkg.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/search.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/search.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/pyramid_dog_pkg.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/pyramid_dog_pkg.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/pyramid_dog.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/pyramid_dog.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/extractor_pkg.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/extractor_pkg.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/extractor.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/extractor.vhd"/>
+          <Attr Name="ImportTime" Val="1625746148"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/proc_common_v3_00_a/counter_f.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="proc_common_v3_00_a"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/proc_common_v3_00_a/counter_f.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/axi_lite_ipif_v1_01_a/slave_attachment.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="axi_lite_ipif_v1_01_a"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/axi_lite_ipif_v1_01_a/slave_attachment.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/xy_to_axis.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/xy_to_axis.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/rgb_to_gs_pkg.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/rgb_to_gs_pkg.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/pyramid_kp_pkg.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/pyramid_kp_pkg.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/pyramid_kp.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/pyramid_kp.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/axis_xy_pkg.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/axis_xy_pkg.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/axis_to_xy.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/axis_to_xy.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/addr_dec_pkg.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/addr_dec_pkg.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/addr_dec.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/addr_dec.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/axi_lite_ipif_v1_01_a/axi_lite_ipif.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="axi_lite_ipif_v1_01_a"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/axi_lite_ipif_v1_01_a/axi_lite_ipif.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/user_logic.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/user_logic.vhd"/>
+          <Attr Name="ImportTime" Val="1627723966"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/axis_pyramid_kp.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/axis_pyramid_kp.vhd"/>
+          <Attr Name="ImportTime" Val="1627723453"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/gradient.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/gradient.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/work/rgb_to_gs.vhd">
+        <FileInfo>
+          <Attr Name="Library" Val="work"/>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="ImportPath" Val="$PPRDIR/../ips_for_wizard/pyramid_kp_v2/src/work/rgb_to_gs.vhd"/>
+          <Attr Name="ImportTime" Val="1595200550"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/component.xml">
+        <FileInfo SFType="IPXACT"/>
+      </File>
+      <Config>
+        <Option Name="DesignMode" Val="RTL"/>
+        <Option Name="TopModule" Val="axis_pyramid_kp"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+      <Filter Type="Constrs"/>
+      <Config>
+        <Option Name="ConstrsType" Val="XDC"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
+      <Filter Type="Srcs"/>
+      <Config>
+        <Option Name="DesignMode" Val="RTL"/>
+        <Option Name="TopModule" Val="gradient"/>
+        <Option Name="TopAutoSet" Val="TRUE"/>
+        <Option Name="TransportPathDelay" Val="0"/>
+        <Option Name="TransportIntDelay" Val="0"/>
+        <Option Name="SrcSet" Val="sources_1"/>
+      </Config>
+    </FileSet>
+  </FileSets>
+  <Simulators>
+    <Simulator Name="XSim">
+      <Option Name="Description" Val="Vivado Simulator"/>
+      <Option Name="CompiledLib" Val="0"/>
+    </Simulator>
+    <Simulator Name="ModelSim">
+      <Option Name="Description" Val="ModelSim Simulator"/>
+    </Simulator>
+    <Simulator Name="Questa">
+      <Option Name="Description" Val="Questa Advanced Simulator"/>
+    </Simulator>
+    <Simulator Name="Riviera">
+      <Option Name="Description" Val="Riviera-PRO Simulator"/>
+    </Simulator>
+    <Simulator Name="ActiveHDL">
+      <Option Name="Description" Val="Active-HDL Simulator"/>
+    </Simulator>
+  </Simulators>
+  <Runs Version="1" Minor="10">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z045ffg900-2" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2016"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z045ffg900-2" ConstrsSet="constrs_1" Description="Default settings for Implementation." State="current" SynthRun="synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2016"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+  </Runs>
+</Project>

@@ -1,0 +1,54 @@
+#-- AEROSPATIALE MATRA Missiles
+#-- Hardware Description Project
+#-- Written on Fri Dec 14 14:00:44 2001
+
+#-- Application Options
+set app(editor)	{textedit "%1"}
+set app(seecmd)	{1}
+
+#-- NC Options
+set nc(cdslib)	{etc/cds.lib}
+set nc(hdlvar)	{etc/hdl.var}
+set nc(tool,ncls)	{ncls $cdslib $hdlvar $library -nolog -time -vhdl -command -architecture -package}
+set nc(tool,ncvhdl)	{ncvhdl -nolog -errormax 5 -messages -status $cdslib $hdlvar $library $hdlfile}
+set nc(tool,ncelab)	{ncelab -nolog -errormax 5 -messages -status -nowarn CUDEFB $coverage $cdslib $hdlvar $sdfcmd $library $hdlarch}
+set nc(tool,ncsim)	{ncsim  -nolog -nokey -input etc/mire-i2c.sgn $batch $cdslib $hdlvar $hdlarch}
+set nc(tool,ncsdfc)	{ncsdfc -nolog $cdslib $hdlvar $sdffile}
+
+#-- HDL connect
+add connect library	{work}
+add connect maplibrary	{mapped}
+add connect technology	{VIRTEX2}
+add connect part		{XC2V3000}
+add connect speed_grade	{-4}
+add connect package	{FG676}
+add connect frequency	{40}
+add connect fanout_limit	{100}
+add connect sdcfile	{etc/xc_mire.sdc}
+add connect sdcheck	{1}
+add connect impl		{rev_1}
+add connect mapdir		{map/$entity/$technology}
+add connect tool		{{1 {ngdbuild -p $part-$speed_grade-$package $entity.edf $entity.ngd -uc $entity.ucf}} {1 {map -p $part-$speed_grade-$package -o map.ncd $entity.ngd $entity.pcf}} {1 {par -ol 5 -i 1 -d 5 -t 1 -w -c 2 map.ncd $entity.ncd $entity.pcf}} {0 {trce $entity.ncd $entity.pcf -e 3 -skew -o $entity.twr}} {1 {bitgen -g StartupClk:Jtagclk -g DCMShutdown:Disable -d -m -w $entity.ncd $entity.bit}} {0 {bitgen -g StartupClk:Cclk -g DCMShutdown:Disable -d -m -w $entity.ncd $entity.bit}} {0 {promgen -x xc18v04 xc18v04 xc18v04 -u 0 $entity.bit -p mcs}} {0 {ngdanno $entity.ncd map.ngm}} {0 {ngd2vhdl -w -rpw 20 -te $entity -ti $entity $entity.nga $entity.vhd}}}
+add connect fscript	{}
+add connect file		src/interfaces/led_life.vhd
+add connect file		src/interfaces/mire_vesa.vhd
+add connect file		src/interfaces/edcm108.vhd
+add connect file		src/interfaces/I2C.vhd
+add connect file		src/xc_mire.vhd
+
+#-- HDL test
+add test library	{work}
+add test maplibrary	{mapped}
+add test technology	{VIRTEX2}
+add test part		{XC2V3000}
+add test speed_grade	{-4}
+add test package	{FG676}
+add test frequency	{40}
+add test fanout_limit	{100}
+add test sdcfile	{}
+add test sdcheck	{1}
+add test impl		{rev_1}
+add test mapdir		{map/$entity/$technology}
+add test tool		{{1 {ngdbuild -p $part-$speed_grade-$package $entity.edf $entity.ngd -uc $entity.ucf}} {1 {map -p $part-$speed_grade-$package -o map.ncd $entity.ngd $entity.pcf}} {1 {par -ol 5 -i 1 -d 5 -t 1 -w -c 2 map.ncd $entity.ncd $entity.pcf}} {0 {trce $entity.ncd $entity.pcf -e 3 -skew -o $entity.twr}} {0 {ngdanno $entity.ncd map.ngm}} {1 {bitgen -g StartupClk:Jtagclk -g DCMShutdown:Disable -d -m -w $entity.ncd $entity.bit}} {0 {promgen -x xc18v04 xc18v04 xc18v04 -u 0 $entity.bit -p mcs}} {0 {ngd2vhdl -w -rpw 20 -te $entity_map -ti $entity_map $entity.nga $entity.vhd}}}
+add test fscript	{}
+add test file		tst/test_connect.vhd

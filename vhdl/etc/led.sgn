@@ -1,0 +1,7 @@
+database -open waves -into wrk/fct/waves.shm -default
+
+probe -create -shm :RESETB			-waveform
+probe -create -shm :CLK				-waveform
+probe -create -shm :SORTIE_LED			-waveform
+probe -create -shm :LED0:LED0:CPT		-waveform
+

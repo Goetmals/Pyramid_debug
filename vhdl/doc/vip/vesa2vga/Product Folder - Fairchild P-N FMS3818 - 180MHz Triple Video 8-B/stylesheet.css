@@ -1,0 +1,177 @@
+A {
+	COLOR: #1313ab
+}
+A:active {
+	COLOR: #1313ab
+}
+A:visited {
+	COLOR: #000000
+}
+A:hover {
+	COLOR: #cc0000
+}
+TD {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 9pt
+}
+UL {
+	MARGIN-TOP: 0px
+}
+OL {
+	MARGIN-TOP: 0px
+}
+.nolistmargins {
+	MARGIN: 0px auto; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+DL {
+	MARGIN: 0px auto 0px 10px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+DT {
+	MARGIN-LEFT: 10px
+}
+DD {
+	MARGIN-LEFT: 20px
+}
+.monospace {
+	FONT-FAMILY: Courier, mono
+}
+.spacedtext {
+	LINE-HEIGHT: 11pt
+}
+.spacedtext13 {
+	LINE-HEIGHT: 13pt
+}
+.indented5 {
+	LEFT: 5px; POSITION: relative
+}
+.indented10 {
+	LEFT: 10px; POSITION: relative
+}
+.indented10header {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 9pt; FONT-WEIGHT: bold; LEFT: 10px; POSITION: relative
+}
+.indented15 {
+	LEFT: 15px; POSITION: relative
+}
+.indented20 {
+	LEFT: 20px; POSITION: relative
+}
+.indented25 {
+	LEFT: 25px; POSITION: relative
+}
+.Hblackcell {
+	BACKGROUND-COLOR: #000000
+}
+.Hwhitecellcolor {
+	BACKGROUND-COLOR: #ffffff
+}
+.Hbackgroundcolor {
+	BACKGROUND-COLOR: #8ca9c9
+}
+.SBtablecolor {
+	BACKGROUND-COLOR: #bdcbe4
+}
+.SBsearchnavtext {
+	COLOR: #000000; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.SBsearchlinktext {
+	COLOR: #000000; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: underline
+}
+.SBsearchlinktext:active {
+	COLOR: #000080; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: underline
+}
+.SBsearchlinktext:visited {
+	COLOR: #000000; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: underline
+}
+.SBsearchlinktext:unknown {
+	COLOR: #000080; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: underline
+}
+.BCtext {
+	COLOR: #ffffff; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-WEIGHT: normal
+}
+.BCcellcolor {
+	BACKGROUND-COLOR: #cc0000
+}
+.BClinktext {
+	COLOR: #ffffff; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: underline
+}
+.BClinktext:visited {
+	COLOR: #ffffff; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: underline
+}
+.BClinktext:hover {
+	COLOR: #000000; FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: underline
+}
+.BCproductsoncellcolor {
+	BACKGROUND-COLOR: #bdcbe4
+}
+.PNexpandedcellcolor {
+	BACKGROUND-COLOR: #bdcbe4
+}
+.PNindented5 {
+	LEFT: 5px; POSITION: relative; TEXT-DECORATION: none
+}
+.PNindented10 {
+	LEFT: 10px; POSITION: relative; TEXT-DECORATION: none
+}
+.PNindented10header {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 9pt; FONT-WEIGHT: bold; LEFT: 10px; POSITION: relative; TEXT-DECORATION: none
+}
+.PNindented15 {
+	LEFT: 15px; POSITION: relative; TEXT-DECORATION: none
+}
+.PNindented20 {
+	COLOR: #000000; LEFT: 20px; POSITION: relative; TEXT-DECORATION: none
+}
+.PNindented20:active {
+	COLOR: #000080; LEFT: 20px; POSITION: relative; TEXT-DECORATION: underline
+}
+.PNindented20:visited {
+	COLOR: #000000; LEFT: 20px; POSITION: relative; TEXT-DECORATION: none
+}
+.PNindented20:hover {
+	COLOR: #cc0000; LEFT: 20px; POSITION: relative; TEXT-DECORATION: underline
+}
+.PNindented25 {
+	LEFT: 25px; POSITION: relative; TEXT-DECORATION: none
+}
+.NavNoLine {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+.NavNoLine2 {
+	COLOR: #1313ab; TEXT-DECORATION: none
+}
+.Bpageheader {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 14pt; FONT-WEIGHT: bold; TEXT-TRANSFORM: none
+}
+.Bpageheadercapitals {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 14pt; FONT-WEIGHT: bold; TEXT-TRANSFORM: uppercase
+}
+.Blocktitle {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 11.5pt; FONT-WEIGHT: bold
+}
+.Bsubhead2 {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 11.5pt; FONT-WEIGHT: bold
+}
+.Bsubhead3 {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 10.5pt; FONT-WEIGHT: bold
+}
+.Bbold {
+	FONT-WEIGHT: bold
+}
+.Bsubhead1 {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 9pt; FONT-WEIGHT: bold
+}
+.Bhighlightcellcolor {
+	BACKGROUND-COLOR: #ffffcc; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 9pt
+}
+.Bsmalltext1 {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: smaller
+}
+.Btableheader {
+	BACKGROUND-COLOR: #8ca9c9; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 9pt; FONT-WEIGHT: bold; TEXT-ALIGN: center
+}
+.Btablesubheader {
+	BACKGROUND-COLOR: #8ca9c9; FONT-FAMILY: Arial, Helvetica, sans-serif; FONT-SIZE: 9pt; TEXT-ALIGN: center
+}
+.Bhighlightcolor {
+	BACKGROUND: #ff0000
+}

@@ -1,0 +1,550 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0053)http://www.skycomputers.com/technical/infiniband.html -->
+<HTML><HEAD><TITLE>InfiniBand, RapidIO and the Future of SKYchannel</TITLE>
+<META content=text/html;charset=iso-8859-1 http-equiv=content-type>
+<META content="MSHTML 5.00.3105.105" name=GENERATOR>
+<META 
+content="SKY, SKY Computers, multicomputer, DSP, digital signal processing, real time, computer systems, embedded computers, embedded, COTS, commercial off the shelf, SKYchannel, RapidIO, InfiniBand, RACEway, radar systems, AltiVec, altivec, PPC7400, MPC7400, Mercury Computer, array processor" 
+name=keywords>
+<META 
+content="SKY Computers multi-processor systems are the highest performance embedded computer systems available today. SKY&#8217;s commercial-off-the-shelf products meet the embedded computing requirements for airborne, surface, undersea, and ground-based applications. Advanced technologies such as the AltiVec G4 MPC7400 PowerPC processor and the ANSI standard SKYchannel&#8482; are employed in an open system architecture to provide solutions today and for future generations. SKY's advanced software environment provides investment protection by allowing software re-use (recompile and run) and true scalability across the program lifecycle." 
+name="SKY Computers"></HEAD>
+<BODY bgColor=white link=black vLink=black>
+<TABLE border=0 cellPadding=0 cellSpacing=0 height=2715 width=705 usegridy 
+showgridy gridy="16" usegridx showgridx gridx="16" cool>
+  <TBODY>
+  <TR height=16>
+    <TD align=left colSpan=4 height=80 rowSpan=2 vAlign=top width=563 
+      xpos="0"><A href="http://www.skycomputers.com/SKYhome.html"><IMG border=0 
+      height=70 
+      src="InfiniBand, RapidIO and the Future of SKYchannel_fichiers/skylogo3inch.jpg" 
+      width=216></A></TD>
+    <TD height=16 width=19></TD>
+    <TD height=80 rowSpan=2 width=122></TD>
+    <TD height=16 width=1><SPACER height="16" width="1" type="block"></TD></TR>
+  <TR height=64>
+    <TD align=left height=64 vAlign=top width=19 xpos="563" csheight="32" 
+    content>&nbsp;<A name=top></A></TD>
+    <TD height=64 width=1><SPACER height="64" width="1" type="block"></TD></TR>
+  <TR height=48>
+    <TD align=left colSpan=6 height=48 vAlign=top width=704 xpos="0"><IMG 
+      border=0 height=38 lowsrc=../SKYgif/navbar2ls.gif 
+      src="InfiniBand, RapidIO and the Future of SKYchannel_fichiers/navbar2.gif" 
+      useMap=#navbar2b5a5f302 width=590 autolowsrc></TD>
+    <TD height=48 width=1><SPACER height="48" width="1" type="block"></TD></TR>
+  <TR height=571>
+    <TD align=left colSpan=3 height=571 vAlign=top width=160 xpos="0">
+      <TABLE bgColor=#6699cc border=0 cellPadding=0 cellSpacing=0 height=531 
+      width=128 usegridy showgridy gridy="16" usegridx showgridx gridx="16" 
+cool>
+        <TBODY>
+        <TR height=17>
+          <TD height=530 rowSpan=2 width=1><SPACER height="530" width="1" 
+            type="block"></TD>
+          <TD height=17 width=126><SPACER height="17" width="126" 
+          type="block"></TD>
+          <TD height=17 width=1><SPACER height="17" width="1" 
+        type="block"></TD></TR>
+        <TR height=513>
+          <TD align=left height=513 vAlign=top width=126 xpos="1">
+            <TABLE bgColor=#6699cc border=0 cellPadding=0 cellSpacing=3 
+            width=125>
+              <TBODY>
+              <TR>
+                <TD><FONT color=black 
+                  face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular><B><A 
+                  href="http://www.skycomputers.com/hardware/systems.html">Systems 
+                  Overview</A></B></FONT></TD></TR>
+              <TR>
+                <TD><FONT color=black 
+                  face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=-2><A 
+                  href="http://www.skycomputers.com/news/systems_intro.html">Rapid 
+                  Development Systems</A></FONT></TD></TR>
+              <TR>
+                <TD><FONT color=black 
+                  face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=-2><A 
+                  href="http://www.skycomputers.com/hardware/hpc.html">High 
+                  Performance Computers</A></FONT></TD></TR>
+              <TR>
+                <TD></TD></TR>
+              <TR>
+                <TD><FONT 
+                  face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular><B><A 
+                  href="http://www.skycomputers.com/hardware/hardware.html">Boards</A></B></FONT></TD></TR>
+              <TR>
+                <TD><FONT color=black 
+                  face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=-2><A 
+                  href="http://www.skycomputers.com/hardware/SB6u.html">6U 
+                  VME</A></FONT></TD></TR>
+              <TR>
+                <TD><FONT color=black 
+                  face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=-2><A 
+                  href="http://www.skycomputers.com/hardware/bolt9u.html">9U 
+                  VME</A></FONT></TD></TR>
+              <TR>
+                <TD><A 
+                  href="http://www.skycomputers.com/ruggedintro.html"><FONT 
+                  color=black face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular 
+                  size=-2>Rugged</FONT></A></TD></TR>
+              <TR>
+                <TD><A 
+                  href="http://www.skycomputers.com/hardware/merlin.html"><FONT 
+                  color=black face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular 
+                  size=-2>AltiVec MPC7400</FONT></A></TD></TR>
+              <TR>
+                <TD></TD></TR>
+              <TR>
+                <TD><FONT color=black 
+                  face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular><B><A 
+                  href="http://www.skycomputers.com/software/skyvec1.html">Software 
+                  and Tools</A></B></FONT></TD></TR>
+              <TR>
+                <TD><FONT color=black 
+                  face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=-2><A 
+                  href="http://www.skycomputers.com/software/skyvec1.html">Compilers</A></FONT></TD></TR>
+              <TR>
+                <TD><FONT color=black 
+                  face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=-2><A 
+                  href="http://www.skycomputers.com/software/gist.html">Event 
+                  Analyzers</A></FONT></TD></TR>
+              <TR>
+                <TD><FONT color=black 
+                  face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=-2><A 
+                  href="http://www.skycomputers.com/software/skysml.html">Standard 
+                  Math Library</A></FONT></TD></TR>
+              <TR>
+                <TD><FONT color=black 
+                  face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=-2><A 
+                  href="http://www.skycomputers.com/software/scl.html">Communications 
+                  Library</A></FONT></TD></TR>
+              <TR>
+                <TD><FONT color=black 
+                  face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=-2><A 
+                  href="http://www.skycomputers.com/software/vsipl.html">Vector 
+                  Signal Processing<BR>Library (VSIPL)</A></FONT></TD></TR>
+              <TR>
+                <TD></TD></TR>
+              <TR>
+                <TD><FONT 
+                  face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular><B><A 
+                  href="http://www.skycomputers.com/technical/SKYchannel.html">SKYchannel<BR>Interconnect</A></B></FONT></TD></TR>
+              <TR>
+                <TD></TD></TR>
+              <TR>
+                <TD><FONT color=black 
+                  face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular><B><A 
+                  href="http://www.skycomputers.com/skylite.html">Newsletter</A></B></FONT></TD></TR>
+              <TR>
+                <TD></TD></TR>
+              <TR>
+                <TD><FONT color=black 
+                  face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular><B><A 
+                  href="http://www.skycomputers.com/technical/technical.html">Technical 
+                  Articles</A></B></FONT></TD></TR>
+              <TR>
+                <TD><FONT face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular 
+                  size=-2><A 
+                  href="http://www.skycomputers.com/technical/infiniband.html">InfiniBand, 
+                  RapidIO and the Future of SKYchannel</A></FONT></TD></TR>
+              <TR>
+                <TD><FONT face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular 
+                  size=-2><A 
+                  href="http://www.skycomputers.com/technical/cornerturn.html">system 
+                  Speedup: Cornerturn Benchmark</A></FONT></TD></TR>
+              <TR>
+                <TD><FONT face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular 
+                  size=-2><A 
+                  href="http://www.skycomputers.com/technical/SKYchannelintro.html">SKYchannel</A></FONT></TD></TR>
+              <TR>
+                <TD><FONT face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular 
+                  size=-2><A 
+                  href="http://www.skycomputers.com/technical/vectorization.html">Software</A></FONT></TD></TR>
+              <TR>
+                <TD><FONT face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular 
+                  size=-2><A 
+                  href="http://www.skycomputers.com/technical/COTS.html">COTS 
+                  Supportability Report</A></FONT></TD></TR>
+              <TR>
+                <TD></TD></TR>
+              <TR>
+                <TD><A 
+                  href="http://www.skycomputers.com/press/pressinfo.html"><FONT 
+                  color=black 
+                  face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular><B>Press/Media</B></FONT></A><FONT 
+                  color=black 
+                  face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular><B> 
+                  </B></FONT></TD></TR>
+              <TR>
+                <TD></TD></TR>
+              <TR>
+                <TD>
+                  <CENTER><A 
+                  href="http://www.skycomputers.com/company/contact.html"><IMG 
+                  border=0 height=20 
+                  src="InfiniBand, RapidIO and the Future of SKYchannel_fichiers/contact.jpg" 
+                  width=72></A></CENTER></TD></TR></TBODY></TABLE></TD>
+          <TD height=513 width=1><SPACER height="513" width="1" 
+          type="block"></TD></TR>
+        <TR height=1 cntrlrow>
+          <TD height=1 width=1><SPACER height="1" width="1" type="block"></TD>
+          <TD height=1 width=126><SPACER height="1" width="126" 
+          type="block"></TD>
+          <TD height=1 width=1><SPACER height="1" width="1" 
+        type="block"></TD></TR></TBODY></TABLE></TD>
+    <TD align=left colSpan=3 height=2560 rowSpan=6 vAlign=top width=544 
+    xpos="160" csheight="2560" content>
+      <DIV align=left>
+      <H2><FONT color=#000033 
+      face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular><B>Serial Interconnects 
+      for High Performance Computing</B></FONT></H2>
+      <P><FONT color=black face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular>by 
+      Bob Hoenig, CTO SKY Computers</FONT></P>
+      <P><FONT color=#000033 
+      face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular><B>Introduction</B></FONT><FONT 
+      color=black face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular><BR>The 
+      parallel busses that have been in use since the beginning of the computer 
+      revolution are a dying breed. Computer systems have been getting faster, 
+      and parallel busses have been trying to keep up. VME started as a 40 MB/s 
+      bus, and is now capable of 320 MB/s (peak). The original PCI was a 133 
+      MB/s bus, but PCI-X is raises the speed to over 1 GB/s. In multi-processor 
+      interconnects, SKYchannel has led the performance charge at 320 MB/s with 
+      RaceWay undergoing a performance boost to 264 MB/s.</FONT></P>
+      <P><FONT color=black face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular>All 
+      of these busses are running up against the laws of physics in their 
+      attempts to keep up with the increasing performance of the processors. The 
+      large voltage swings required for these busses limits their achievable 
+      peak clock rate. The other approach to increasing bandwidth is to increase 
+      the bus width, but this is impractical because of the pin count and signal 
+      skew issues.<BR>The interconnect solution for high performance computing 
+      is coming from the telecommunications industry. By using lower voltage 
+      swings and differential signaling (LVDS), it's possible to get very high 
+      data rates using a serial connection. Whereas a parallel bus may require 
+      64 data lines plus some parity and control lines, and a clock rate of 133 
+      MHz (PCI-X) to get a half-duplex bandwidth of 1 GB/s, components are 
+      becoming available that can provide 250 MB/s bandwidth full-duplex. This 
+      delivers an effective bandwidth of .5 GB/s over 4 wires using LVDS serial 
+      technology clocked at 2.5 GHz.</FONT></P>
+      <P><FONT color=black face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular>The 
+      computer industry is building on this serial technology to define and 
+      standardize serial busses to replace the parallel busses. There are over 
+      50 proposed interconnects, with the primary public specifications being 
+      InfiniBand&#8482; and RapidIO&#8482;. Serial FPDP also has some advantages, although 
+      it isn't a general purpose interconnect like the other two. </FONT></P>
+      <P><FONT color=#000033 
+      face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular><B>Radar 
+      Application</B></FONT><FONT color=black 
+      face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular><BR>Processor 
+      performance was once the only metric used to determine the size and 
+      success of a multi-processor system. Metrics such as MFLOPS or the 
+      achieved performance on a key algorithm such as the FFT, were used as 
+      primary parameters when selecting a solution. With the speed of today's 
+      processors, bandwidth has become the primary metric for many applications 
+      which previously used computational speed as the prime determinant of 
+      size. One example of this is Synthetic Aperture Radar (SAR).</FONT></P>
+      <P><FONT color=black face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular>SAR 
+      is a technique used to map ground features with very high resolution. A 
+      radar system is installed on a vehicle, typically an aircraft or 
+      satellite, and is pointed to the side of the vehicle. The radar transmits 
+      pulses for some period of time, and the radar returns are collected. Each 
+      individual radar pulse fans out as it travels, with the result that each 
+      individual pulse has limited resolution. However, because the vehicle is 
+      moving, each pulse covers a different portion of the ground, and the 
+      pulses have significant overlap. Processing all of these pulses together 
+      results in a high resolution image.</FONT></P>
+      <P><FONT color=black 
+      face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular>Because of the number of 
+      computations required to form the image, a multi-processor system is 
+      required to produce the result in a reasonable amount of time. The typical 
+      processing flow is as follows:</FONT></P>
+      <P><FONT color=black face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular>1. 
+      Collect data that will be used in the processing. <BR>2. Arrange the data 
+      into a matrix, with one axis labeled "range", the other labeled "azimuth". 
+      Going along the range axis the data originates from locations farther from 
+      the vehicle along a single pulse. Going along the azimuth axis represents 
+      successive pulses as the vehicle moves.<BR>3. Image formation begins by 
+      processing in the azimuth direction. In order to maximize performance, 
+      each row of data in the azimuth direction should be contiguous in a single 
+      processor. Unfortunately, the data from the radar arrives in range order, 
+      so before processing can start the data must be re-arranged in order to 
+      maximize performance. This particular form of re-arranging the data is 
+      called a "corner turn", where the "corners" of the matrix are effectively 
+      flipped. The result is that each processor has a stripe of the data in the 
+      azimuth direction to be processed.<BR>4. The processors can now do a 
+      portion of the math. The next stage of processing involves going in the 
+      range direction. A corner turn is performed, resulting in each processor 
+      having a stripe of data in the range direction.<BR>5. In order to complete 
+      the image formation, a final stage of processing must be performed in the 
+      azimuth direction, requiring yet another corner turn before the processing 
+      can occur.<BR></FONT></P>
+      <P><FONT color=black 
+      face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular>Using today's 
+      processors, the corner turn performance is actually the limiting factor in 
+      over-all system performance. For every corner turn, almost all of the data 
+      leaves one processor to go to another processor. Thus a SAR system 
+      requires many processors to achieve real time results. Multiprocessing 
+      architectures usually have interconnects which scale with the number of 
+      processors, so that one way to achieve the required performance is by 
+      adding processors which increases the effective system bandwidth. However, 
+      there is usually a limit to how many processors can be added effectively, 
+      and this can be a potentially expensive solution.<BR>Another solution is 
+      to improve the performance of the interconnect. Serial busses will be the 
+      future of high-performance computing, providing the interconnect speeds 
+      needed to effectively build systems of many 
+      processors.<BR><BR></FONT><FONT color=#000033 
+      face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular><B>InfiniBand</B></FONT><FONT 
+      color=black face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular><BR>If 
+      maturity of a proposed standard specification is measured by weight of the 
+      spec, InfiniBand is a very mature specification. This is a very large, 
+      complicated specification requiring nearly 2,000 pages. InfiniBand has 
+      been under development for two or more years and has the backing of 
+      several major companies (Compaq, Dell, Hewlett-Packard , IBM, Intel, 
+      Microsoft, and Sun Microsystems to name but a few of the over 200 member 
+      companies), with probably over 100 engineers either writing the 
+      specifications or implementing product. Another measure of maturity is 
+      that chips are already shipping, with many more soon to be 
+      released.</FONT></P>
+      <P><FONT color=black 
+      face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular>InfiniBand was 
+      originally designed as a replacement for PCI. It provides performance, 
+      scalability and reliability not possible for PCI. InfiniBand allows 
+      developers to easily build very large computer room sized systems composed 
+      of hundreds or even thousands of smaller computer systems and supporting 
+      peripherals.</FONT></P>
+      <P><FONT color=black face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular>As 
+      originally architected, InfiniBand was primarily cables connecting boxes. 
+      However, the standards have evolved so that a backplane and a packaging 
+      definition have been defined as well. The base technology for InfiniBand 
+      is 2.5 GHz differential pairs - one transmit and one receive - using 
+      8B/10B encoding to move packets over the connections. Higher bandwidth 
+      connections are possible by grouping 4 or 12 of these basic LVDS pairs 
+      together, for up to 3 GB/s full-duplex connections. Crossbar switches are 
+      used to tie InfiniBand connections together. </FONT></P>
+      <P><FONT color=#000033 
+      face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular><B>RapidIO</B></FONT><FONT 
+      color=black face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular><BR>RapidIO 
+      is newer than InfiniBand, and doesn&#8217;t have the number of people involved 
+      as compared to the masses that have been working on InfiniBand. RapidIO is 
+      intentionally smaller and simpler, so the specification should never be as 
+      large as InfiniBand. The RapidIO trade association was formed in June 2000 
+      and its membership is growing. Besides SKY Computers, members include: 
+      Alcatel, Altera Corp., Thales Computers, Cisco Systems, EMC Corporation, 
+      Ericsson, Galileo Technology, Lucent Technologies, Mercury Computers 
+      Systems, Motorola, Nortel Networks, PLX Technology, Praesum 
+      Communications, RedSwitch, Rydal Research and Development, Seagull 
+      Semiconductor, StarGen Technologies, Tundra Semiconductor Corp., V3 
+      Semiconductor, and Xilinx, Inc. With this level of participation it is 
+      expected that RapidIO will be rapidly defined.</FONT></P>
+      <P><FONT color=black face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular>The 
+      target application of RapidIO is different from InfiniBand. InfiniBand is 
+      positioned to tie together multiple computer systems, while RapidIO is 
+      intended as the fabric to tie multiple processors into a single computer 
+      system. RapidIO provides support for cache coherency as well as some 
+      simple message passing. On the other hand, InfiniBand is more oriented 
+      toward capable message passing, and doesn't concern itself with the level 
+      of cache coherency required in a symmetric multi processing (SMP) 
+      system.</FONT></P>
+      <P><FONT color=black face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular>The 
+      base technology for RapidIO is still LVDS, but it is used in a more 
+      traditional parallel architecture. The minimum implementation involves 40 
+      wires, with 8 bit paths in each direction along with separate clock and 
+      framing signals. These links are used to carry packets, and crossbars are 
+      used to switch the packets between links. Data bandwidth ranges from 500 
+      MB/s to perhaps 4 GB/s depending on bus width and clock rate.</FONT></P>
+      <P><FONT color=black 
+      face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular>There are a number of 
+      RapidIO issues that still must be resolved before it makes sense to start 
+      an implementation. Some of the more obvious issues involve the lack of 
+      backplane and packaging specifications, even though it is supposed to be 
+      used in exactly these environments.</FONT></P>
+      <P><FONT color=#000033 
+      face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular><B>Serial 
+      FPDP</B></FONT><FONT color=black 
+      face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular><BR>For many 
+      applications, Serial FPDP is also important. It is important because it 
+      provides an easy, inexpensive way to get high bandwidth data into 
+      systems.</FONT></P>
+      <P><FONT color=black face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular>The 
+      original Front Panel Data Port (FPDP) specification provides a simple 
+      32-bit parallel bus for data acquisition implemented over a ribbon cable. 
+      Bandwidth is up to 160 MB/s. It is typically used to connect from A/D 
+      converters to the processor(s). The primary limitation is cable length - 
+      about 1 meter. By adopting serial technology, cable length can be 
+      increased significantly. Using Fiber Optic media, cable lengths can 
+      potentially be kilometers in length. Bandwidth is currently at 105 MB/s, 
+      but that could easily double by using the latest 2.5 GHz serial 
+      technology.</FONT></P>
+      <P><FONT color=#000033 
+      face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular><B>Use in 
+      RADAR</B></FONT><FONT color=black 
+      face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular><BR>Considering the 
+      three options, how does a developer solve the application problem? Going 
+      back to the SAR radar application, a system might be configured 
+      as:<BR></FONT></P>
+      <P><FONT color=black face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular>1. 
+      Serial FPDP provides the connection to the radar receiver. Separating the 
+      transmitter/receiver from the computer system and using a fiber optic 
+      cable simplifies packaging and the RFI management problem.<BR>2. RapidIO 
+      would be used to build SMP clusters of processors. Each cluster would 
+      require only a single board in the system. The low latency and high 
+      bandwidth of RapidIO would improve the corner turn performance over 
+      today's solutions by 3X or more. The net result would be an increase in 
+      throughput or decrease in system cost.<BR>3. The SMP clusters would be 
+      connected together using either InfiniBand or RapidIO.<BR>4. InfiniBand 
+      would be used to connect the system to the outside and to high performance 
+      peripherals. Often there is a requirement to log the input data, for 
+      example. InfiniBand could also be used to transmit the resulting image to 
+      a workstation for viewing, or another system for further 
+      processing.</FONT></P>
+      <P><FONT color=#000033 
+      face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular><B>One Supplier&#8217;s 
+      Directions</B></FONT><FONT color=black 
+      face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular><BR>SKY Computers is 
+      participating in the development of all of these specifications. SKY is 
+      committed to working with the RapidIO Trade Association to address the 
+      problems that we recognize in the specification, and make RapidIO a 
+      success.</FONT></P>
+      <P><FONT color=black face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular>We 
+      are also excited by the capabilities of InfiniBand. We believe that 
+      InfiniBand will play an important part in our future product generations. 
+      It is critical to make InfiniBand work together with RapidIO for the class 
+      of systems that we develop for our customers.</FONT></P>
+      <P><FONT color=black 
+      face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular>Serial FPDP will be 
+      enhanced, and bridges to RapidIO and InfiniBand developed to enable its 
+      use in these future systems.</FONT></P>
+      <P><FONT color=black 
+      face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular>Finally, any computer is 
+      little more than an expensive room heater unless there is good software 
+      provided to support it. As the hardware becomes more complex and capable, 
+      it is increasingly important to provide the software tools to use, 
+      diagnose, and repair it. Our customers expend more time and thus more 
+      money on software than hardware, and we must provide the software to make 
+      them successful. Both InfiniBand and RapidIO support "discovery", where 
+      the actual configuration isn't known until the system is started, and the 
+      configuration can actually change during operation. Similarly, both 
+      specifications require complex error detection and recovery. Error 
+      diagnosis and fault isolation on a large system is a complex problem. 
+      These issues all add up to significant software support 
+      requirements.</FONT></P>
+      <P><FONT color=#000033 
+      face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular><B>Summary</B></FONT><FONT 
+      color=black face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular><BR>Parallel 
+      busses have been evolving for a long time, but they are running out of 
+      steam. Serial interconnects will provide the quantum leap in performance 
+      and capability to complement today's processor performance to enable 
+      exciting new applications.<BR></FONT></P>
+      <P></P>
+      <P></P></DIV>
+      <CENTER>
+      <P><FONT color=black 
+      face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular><IMG height=7 
+      src="InfiniBand, RapidIO and the Future of SKYchannel_fichiers/bl.jpg" 
+      width=324></FONT></P></CENTER></TD>
+    <TD height=571 width=1><SPACER height="571" width="1" type="block"></TD></TR>
+  <TR height=48>
+    <TD align=left colSpan=3 height=48 vAlign=top width=160 xpos="0"><A 
+      href="http://www.skycomputers.com/SKYhome.html"><IMG border=0 height=39 
+      src="InfiniBand, RapidIO and the Future of SKYchannel_fichiers/tinylogo.gif" 
+      width=144></A></TD>
+    <TD height=48 width=1><SPACER height="48" width="1" type="block"></TD></TR>
+  <TR height=928>
+    <TD align=left colSpan=3 height=928 vAlign=top width=160 xpos="0" 
+    csheight="128" content>
+      <DIV align=left><FONT color=#000033 
+      face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular size=1>A Subsidiary of 
+      Analogic Corporation<BR>27 Industrial Ave.<BR>Chelmsford, MA 
+      01824<BR>Telephone 1-978-250-1920<BR>Fax 1-978-250-0036</FONT> 
+      <P><FONT color=#000033 face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular 
+      size=1>Copyright SKY Computers, Inc. 1999<BR>Last Revised <CSOBJ 
+      region="0" format="ShortDate" t="DateTime" h="10" 
+      w="31">1/18/02</CSOBJ><BR>Feedback to <A 
+      href="mailto:webmaster@skycomputers.com">webmaster@skycomputers.com</A></FONT></P></DIV></TD>
+    <TD height=928 width=1><SPACER height="928" width="1" type="block"></TD></TR>
+  <TR height=434>
+    <TD height=1039 rowSpan=4 width=16></TD>
+    <TD height=1013 rowSpan=3 width=32></TD>
+    <TD align=left height=434 vAlign=top width=112 xpos="48"><A 
+      href="http://www.skycomputers.com/technical/infiniband.html#top"><IMG 
+      border=0 height=20 
+      src="InfiniBand, RapidIO and the Future of SKYchannel_fichiers/top.jpg" 
+      width=36></A></TD>
+    <TD height=434 width=1><SPACER height="434" width="1" type="block"></TD></TR>
+  <TR height=531>
+    <TD align=left height=531 vAlign=top width=112 xpos="48"><A 
+      href="http://www.skycomputers.com/technical/infiniband.html#top"><IMG 
+      border=0 height=20 
+      src="InfiniBand, RapidIO and the Future of SKYchannel_fichiers/top.jpg" 
+      width=36></A></TD>
+    <TD height=531 width=1><SPACER height="531" width="1" type="block"></TD></TR>
+  <TR height=48>
+    <TD align=left height=48 vAlign=top width=112 xpos="48"><A 
+      href="http://www.skycomputers.com/technical/infiniband.html#top"><IMG 
+      border=0 height=20 
+      src="InfiniBand, RapidIO and the Future of SKYchannel_fichiers/top.jpg" 
+      width=36></A></TD>
+    <TD height=48 width=1><SPACER height="48" width="1" type="block"></TD></TR>
+  <TR height=26>
+    <TD align=left colSpan=5 height=26 vAlign=top width=688 xpos="16">
+      <TABLE bgColor=#003399 border=1 cellPadding=1 cellSpacing=2 width=571>
+        <TBODY>
+        <TR>
+          <TD>
+            <CENTER><A 
+            href="http://www.skycomputers.com/company/aboutsky.html"><FONT 
+            color=white 
+            face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular><B>Company</B></FONT></A></CENTER></TD>
+          <TD>
+            <CENTER><A 
+            href="http://www.skycomputers.com/hardware/hardware.html"><FONT 
+            color=white 
+            face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular><B>Hardware</B></FONT></A></CENTER></TD>
+          <TD>
+            <CENTER><A 
+            href="http://www.skycomputers.com/software/software.html"><FONT 
+            color=white 
+            face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular><B>Software</B></FONT></A></CENTER></TD>
+          <TD>
+            <CENTER><A href="http://www.skycomputers.com/news/news1.html"><FONT 
+            color=white 
+            face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular><B>News</B></FONT></A></CENTER></TD>
+          <TD>
+            <CENTER><A 
+            href="http://www.skycomputers.com/applications/applications.html"><FONT 
+            color=white 
+            face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular><B>Applications</B></FONT></A></CENTER></TD>
+          <TD>
+            <CENTER><A 
+            href="http://www.skycomputers.com/career/career.html"><FONT 
+            color=white 
+            face=Arial,Helvetica,Geneva,Swiss,SunSans-Regular><B>Careers 
+            </B></FONT></A></CENTER></TD></TR></TBODY></TABLE></TD>
+    <TD height=26 width=1><SPACER height="26" width="1" type="block"></TD></TR>
+  <TR height=1 cntrlrow>
+    <TD height=1 width=16><SPACER height="1" width="16" type="block"></TD>
+    <TD height=1 width=32><SPACER height="1" width="32" type="block"></TD>
+    <TD height=1 width=112><SPACER height="1" width="112" type="block"></TD>
+    <TD height=1 width=403><SPACER height="1" width="403" type="block"></TD>
+    <TD height=1 width=19><SPACER height="1" width="19" type="block"></TD>
+    <TD height=1 width=122><SPACER height="1" width="122" type="block"></TD>
+    <TD height=1 width=1></TD></TR><CSNOPOS><CSPOS xpos="0" ypos="80"><MAP 
+  name=navbar2b5a5f302><AREA coords=343,3,433,30 
+    href="http://www.skycomputers.com/applications/applications.html" 
+    shape=RECT><AREA coords=507,7,582,26 
+    href="http://www.skycomputers.com/press/pressinfo.html" shape=RECT><AREA 
+    coords=437,4,496,28 
+    href="http://www.skycomputers.com/partners/partners.html" shape=RECT><AREA 
+    coords=279,5,338,28 href="http://www.skycomputers.com/career/career.html" 
+    shape=RECT><AREA coords=222,6,274,27 
+    href="http://www.skycomputers.com/news/news1.html" shape=RECT><AREA 
+    coords=152,5,216,27 
+    href="http://www.skycomputers.com/software/software.html" shape=RECT><AREA 
+    coords=73,6,144,26 href="http://www.skycomputers.com/hardware/hardware.html" 
+    shape=RECT><AREA coords=8,3,66,29 
+    href="http://www.skycomputers.com/company/aboutsky.html" 
+  shape=RECT></MAP></CSPOS></CSNOPOS></TBODY></TABLE>
+<SCRIPT language=JavaScript 
+src="InfiniBand, RapidIO and the Future of SKYchannel_fichiers/2133.js">
+</SCRIPT>
+<NOSCRIPT><IMG 
+src="InfiniBand, RapidIO and the Future of SKYchannel_fichiers/db.gif"> 
+</NOSCRIPT></BODY></HTML>

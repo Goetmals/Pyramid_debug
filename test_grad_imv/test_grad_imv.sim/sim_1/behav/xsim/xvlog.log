@@ -1,0 +1,8 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.gen/sources_1/ip/dp_conv/sim/dp_conv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dp_conv
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.gen/sources_1/ip/dp_grad/sim/dp_grad.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dp_grad
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.gen/sources_1/ip/dp_snml/sim/dp_snml.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dp_snml
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.gen/sources_1/ip/dp_grad_tarek/sim/dp_grad_tarek.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dp_grad_tarek

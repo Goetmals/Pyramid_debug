@@ -1,0 +1,38 @@
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /home/demelo/Xilinx_2023/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L blk_mem_gen_v8_4_6 -L work -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot TEST_PYRAMID_behav work.TEST_PYRAMID work.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package work.saturn_numeric_pkg
+Compiling package ieee.numeric_std
+Compiling package work.xy_delay_pkg
+Compiling package vl.vl_types
+Compiling module work.glbl
+Compiling architecture arch_readimg of entity work.READIMG [\READIMG(nomfichier="/home/demel...]
+Compiling architecture arch_resynch_sgnx8 of entity work.RESYNCH_SGNX8 [resynch_sgnx8_default]
+Compiling architecture arch_imaging_to_axis of entity work.imaging_to_axis [imaging_to_axis_default]
+Compiling architecture rtl of entity work.axis_to_xy [\axis_to_xy(bus_width=8,img_widt...]
+Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6_output_stage(...
+Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6_output_stage(...
+Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6_softecc_outpu...
+Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6_mem_module(C_...
+Compiling module blk_mem_gen_v8_4_6.blk_mem_axi_regs_fwd_v8_4(C_DATA...
+Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6(C_FAMILY="zyn...
+Compiling module xil_defaultlib.dp_grad_tarek
+Compiling architecture arch_lr_grad_tarek of entity work.LR_GRAD_TAREK [lr_grad_tarek_default]
+Compiling architecture arch_sobel of entity work.gradient_tarek [\gradient_tarek(pixel_bus_width=...]
+Compiling architecture rtl of entity work.xy_to_axis [\xy_to_axis(img_width=512,img_he...]
+Compiling architecture arch_writeimg of entity work.WRITEIMG [\WRITEIMG(nomfichier="/home/deme...]
+Compiling architecture arch_test_pyramid of entity work.test_pyramid
+Built simulation snapshot TEST_PYRAMID_behav

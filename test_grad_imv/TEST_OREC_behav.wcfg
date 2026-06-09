@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="TEST_OREC_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="TEST_OREC" />
+            <top_module name="glbl" />
+            <top_module name="saturn_numeric_pkg" />
+            <top_module name="xy_delay_pkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="13926813000fs"></ZoomStartTime>
+      <ZoomEndTime time="28466813001fs"></ZoomEndTime>
+      <Cursor1Time time="19926813000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="114"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="40" />
+   <wave_markers>
+      <marker time="653059320000" label="" />
+      <marker time="18071616000" label="" />
+   </wave_markers>
+   <wvobject fp_name="/TEST_OREC/eof" type="logic">
+      <obj_property name="ElementShortName">eof</obj_property>
+      <obj_property name="ObjectShortName">eof</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_OREC/resetb" type="logic">
+      <obj_property name="ElementShortName">resetb</obj_property>
+      <obj_property name="ObjectShortName">resetb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_OREC/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_OREC/clkb" type="logic">
+      <obj_property name="ElementShortName">clkb</obj_property>
+      <obj_property name="ObjectShortName">clkb</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_OREC/hsync_inn" type="logic">
+      <obj_property name="ElementShortName">hsync_inn</obj_property>
+      <obj_property name="ObjectShortName">hsync_inn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_OREC/vsync_inn" type="logic">
+      <obj_property name="ElementShortName">vsync_inn</obj_property>
+      <obj_property name="ObjectShortName">vsync_inn</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_OREC/pixel_inn" type="array">
+      <obj_property name="ElementShortName">pixel_inn[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pixel_inn[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_OREC/hsync_int" type="logic">
+      <obj_property name="ElementShortName">hsync_int</obj_property>
+      <obj_property name="ObjectShortName">hsync_int</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_OREC/vsync_int" type="logic">
+      <obj_property name="ElementShortName">vsync_int</obj_property>
+      <obj_property name="ObjectShortName">vsync_int</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_OREC/pixel_int" type="array">
+      <obj_property name="ElementShortName">pixel_int[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pixel_int[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_OREC/M_AXIS_TREADY" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_TREADY</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_TREADY</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_OREC/M_AXIS_TVALID" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_TVALID</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_TVALID</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_OREC/M_AXIS_TUSER" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_TUSER</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_TUSER</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_OREC/M_AXIS_TLAST" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_TLAST</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_TLAST</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_OREC/M_AXIS_TDATA" type="array">
+      <obj_property name="ElementShortName">M_AXIS_TDATA[7:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_TDATA[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_OREC/o_en" type="logic">
+      <obj_property name="ElementShortName">o_en</obj_property>
+      <obj_property name="ObjectShortName">o_en</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_OREC/o_x" type="array">
+      <obj_property name="ElementShortName">o_x[7:0]</obj_property>
+      <obj_property name="ObjectShortName">o_x[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_OREC/o_y" type="array">
+      <obj_property name="ElementShortName">o_y[7:0]</obj_property>
+      <obj_property name="ObjectShortName">o_y[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_OREC/o_value" type="array">
+      <obj_property name="ElementShortName">o_value[7:0]</obj_property>
+      <obj_property name="ObjectShortName">o_value[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_OREC/GRD0/A" type="array">
+      <obj_property name="ElementShortName">A[7:0]</obj_property>
+      <obj_property name="ObjectShortName">A[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_OREC/GRD0/C" type="array">
+      <obj_property name="ElementShortName">C[7:0]</obj_property>
+      <obj_property name="ObjectShortName">C[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_OREC/GRD0/D0" type="array">
+      <obj_property name="ElementShortName">D0[9:0]</obj_property>
+      <obj_property name="ObjectShortName">D0[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_OREC/GRD0/S0" type="array">
+      <obj_property name="ElementShortName">S0[9:0]</obj_property>
+      <obj_property name="ObjectShortName">S0[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_OREC/GRD0/D1" type="array">
+      <obj_property name="ElementShortName">D1[9:0]</obj_property>
+      <obj_property name="ObjectShortName">D1[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_OREC/GRD0/S1" type="array">
+      <obj_property name="ElementShortName">S1[9:0]</obj_property>
+      <obj_property name="ObjectShortName">S1[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_OREC/GRD0/pixel_gx" type="array">
+      <obj_property name="ElementShortName">pixel_gx[9:0]</obj_property>
+      <obj_property name="ObjectShortName">pixel_gx[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_OREC/GRD0/pixel_gy" type="array">
+      <obj_property name="ElementShortName">pixel_gy[9:0]</obj_property>
+      <obj_property name="ObjectShortName">pixel_gy[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_OREC/GRD0/pixel_ngd" type="array">
+      <obj_property name="ElementShortName">pixel_ngd[9:0]</obj_property>
+      <obj_property name="ObjectShortName">pixel_ngd[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_OREC/GRD0/s_EN_out" type="logic">
+      <obj_property name="ElementShortName">s_EN_out</obj_property>
+      <obj_property name="ObjectShortName">s_EN_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_OREC/en_grd" type="logic">
+      <obj_property name="ElementShortName">en_grd</obj_property>
+      <obj_property name="ObjectShortName">en_grd</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_OREC/x_grd" type="array">
+      <obj_property name="ElementShortName">x_grd[7:0]</obj_property>
+      <obj_property name="ObjectShortName">x_grd[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_OREC/y_grd" type="array">
+      <obj_property name="ElementShortName">y_grd[7:0]</obj_property>
+      <obj_property name="ObjectShortName">y_grd[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_OREC/pixel_grd" type="array">
+      <obj_property name="ElementShortName">pixel_grd[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pixel_grd[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_OREC/M_AXIS_TVALID_o" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_TVALID_o</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_TVALID_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_OREC/M_AXIS_TUSER_o" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_TUSER_o</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_TUSER_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_OREC/M_AXIS_TLAST_o" type="logic">
+      <obj_property name="ElementShortName">M_AXIS_TLAST_o</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_TLAST_o</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_OREC/M_AXIS_TDATA_o" type="array">
+      <obj_property name="ElementShortName">M_AXIS_TDATA_o[7:0]</obj_property>
+      <obj_property name="ObjectShortName">M_AXIS_TDATA_o[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_OREC/hsync_out" type="logic">
+      <obj_property name="ElementShortName">hsync_out</obj_property>
+      <obj_property name="ObjectShortName">hsync_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_OREC/vsync_out" type="logic">
+      <obj_property name="ElementShortName">vsync_out</obj_property>
+      <obj_property name="ObjectShortName">vsync_out</obj_property>
+   </wvobject>
+   <wvobject fp_name="/TEST_OREC/pixel_out" type="array">
+      <obj_property name="ElementShortName">pixel_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pixel_out[7:0]</obj_property>
+   </wvobject>
+</wave_config>
