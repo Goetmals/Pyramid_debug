@@ -17,6 +17,9 @@ Compiling package ieee.std_logic_unsigned
 Compiling package work.saturn_numeric_pkg
 Compiling package ieee.numeric_std
 Compiling package work.xy_delay_pkg
+Compiling package work.math_real
+Compiling package work.saturn_dog_pkg
+Compiling package work.dual_clk_fifo_pkg
 Compiling package vl.vl_types
 Compiling module work.glbl
 Compiling architecture arch_readimg of entity work.READIMG [\READIMG(nomfichier="/home/demel...]
@@ -32,6 +35,15 @@ Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6(C_FAMILY="zyn...
 Compiling module xil_defaultlib.dp_grad_tarek
 Compiling architecture arch_lr_grad_tarek of entity work.LR_GRAD_TAREK [lr_grad_tarek_default]
 Compiling architecture arch_sobel of entity work.gradient_tarek [\gradient_tarek(pixel_bus_width=...]
+Compiling architecture arch_xy_delay_fred of entity work.xy_delay_fred [\xy_delay_fred(delay_x=4,delay_y...]
+Compiling module work.generic_dpram(aw=10,dw=8)
+Compiling module work.generic_fifo_dc_gray(dw=8,aw=10)
+Compiling architecture arch of entity work.dual_clk_fifo [\dual_clk_fifo(depth=513)\]
+Compiling architecture arch_xy_delay_fred of entity work.xy_delay_fred [\xy_delay_fred(delay_x=511,img_w...]
+Compiling architecture arch_xy_delay_fred of entity work.xy_delay_fred [\xy_delay_fred(delay_x=8,delay_y...]
+Compiling architecture arch_1d of entity work.gaussian_filter [\gaussian_filter(pixel_bus_width...]
+Compiling architecture arch of entity work.delay [\delay(pixel_bus_width=8,w_img=5...]
+Compiling architecture arch_unsigned of entity work.dog [\dog(pixel_bus_width=8,w_img=512...]
 Compiling architecture rtl of entity work.xy_to_axis [\xy_to_axis(img_width=512,img_he...]
 Compiling architecture arch_writeimg of entity work.WRITEIMG [\WRITEIMG(nomfichier="/home/deme...]
 Compiling architecture arch_test_pyramid of entity work.test_pyramid

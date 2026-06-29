@@ -88,9 +88,12 @@ begin
 
 nb_lig <= xy_y_i;
 
---xy_en_o <= '1' when ((output_starting='1' and xy_en_i='1') or (output_ending='1' and xy_en_i = '1'))
---     else '0';
-xy_en_o <= en_rtd(DELAY_X) or nb_lig_r(DELAY_Y);
+--xy_en_o <= '1' when ( (output_starting='1' and xy_en_i='1') or (output_ending='1' and xy_en_i = '1') )
+--		   else '0';
+		   
+xy_en_o <= '1' when ((output_starting='1' and en_rtd(unsigned_num_bits(DELAY_X)-1) ='1') or (output_ending='1' and en_rtd(unsigned_num_bits(DELAY_X)-1) ='1'))
+		   else '0';		   
+--xy_en_o <= en_rtd(DELAY_X) and nb_lig_r(DELAY_Y-1);
 
 xy_x_o   <= std_logic_vector(s_xout);
 xy_y_o   <= std_logic_vector(s_yout);
@@ -115,20 +118,29 @@ SYN0:   process(global_resetn_i, global_clk_i)
 process(global_clk_i)
 begin
   if(rising_edge(global_clk_i)) then
-  --  if(xy_en_i='1' ) then --or output_ending='1') then
-      if(xy_en_i='1' and output_ending='1') then
-      -- End of output picture, IP goes to sleep
-      if(s_xout=to_unsigned(IMG_WIDTH-1,s_xout'length) and s_yout=to_unsigned(IMG_HEIGHT-1,s_yout'length)) then
-        output_ending <= '0';
+  
+    -- Output starting point
+      if(s_xin=to_unsigned(DELAY_X,s_xin'length) and s_yin=to_unsigned(DELAY_Y,s_yin'length)) then
+        s_xout <= (others => '0');
+        s_yout <= (others => '0');
+        output_starting <= '1';
       end if;
-
-      -- End of input picture, output signals are always on until the end of the output picture.
+  
+   -- End of input picture, output signals are always on until the end of the output picture.
       if(s_xin=to_unsigned(IMG_WIDTH-1,s_xin'length) and s_yin=to_unsigned(IMG_HEIGHT-1,s_yin'length)) then
         output_starting <= '0';
         output_ending <= '1';
       end if;
-
-      if(output_starting = '1') or (output_ending = '1') then
+	  
+  --  if(xy_en_i='1' ) then --or output_ending='1') then
+      if(xy_en_i='1' or output_ending='1') then
+      -- End of output picture, IP goes to sleep
+      if(s_xout=to_unsigned(IMG_WIDTH-1,s_xout'length) and s_yout=to_unsigned(IMG_HEIGHT-1,s_yout'length)) then
+        output_ending <= '0';
+      end if;
+	  end if;	
+     
+      if(output_starting = '1') and (output_ending = '0') then
         -- Next coordinates are calculated if count has started
         if(s_xout = to_unsigned(IMG_WIDTH-1,s_xout'length)) then
           s_xout <= (others=>'0');
@@ -138,13 +150,7 @@ begin
         end if;
       end if;
 
-      -- Output starting point
-      if(s_xin=to_unsigned(DELAY_X,s_xin'length) and s_yin=to_unsigned(DELAY_Y,s_yin'length)) then
-        s_xout <= (others => '0');
-        s_yout <= (others => '0');
-        output_starting <= '1';
-      end if;
-    end if;
+          
   end if;
 end process;
 

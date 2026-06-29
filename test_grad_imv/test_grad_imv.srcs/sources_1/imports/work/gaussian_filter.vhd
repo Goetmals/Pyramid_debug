@@ -159,7 +159,7 @@ end component;
 	signal s_h_acc_out      : t_kernel_data_out;
 	signal s_h_coeff        : t_kernel_coeffs;
 -- result of Gaussian filtering
-	signal s_h_gauss_result : unsigned(pixel_bus_width-1 downto 0);
+	signal s_h_gauss_result : unsigned(pixel_bus_width-1 downto 0)  := (others => '0');
 -- coordinates of input pixel of second pass
 	signal s_h_xin          : std_logic_vector(bus_width_x-1 downto 0);
 	signal s_h_yin          : std_logic_vector(bus_width_y-1 downto 0);
@@ -245,9 +245,33 @@ begin
 	end generate gen_EN_vertical;
 	s_v_coordOK(0) <= EN;
 
+
+
+
 ---------------------
 -- Horizontal pass --
 ---------------------
+
+	c_xy_delay_horizontal : xy_delay_fred
+	generic map (
+		DELAY_X => delay_x_H,
+		DELAY_Y => delay_y_H,
+		IMG_WIDTH => w_img,
+		IMG_HEIGHT => h_img
+	)
+	port map (
+		 global_clk_i => clk,
+		 global_resetn_i => '1',
+
+		 xy_en_i => EN,
+		 xy_x_i => xin,
+		 xy_y_i => yin,
+
+		 xy_en_o => s_h_EN,
+		 xy_x_o => s_h_xin,
+		 xy_y_o => s_h_yin
+	 );
+
 
 	gen_mul_horizontal: for x in 0 to (kernel_width-1) generate
 		s_h_mul_out(x) <= s_v_gauss_result * s_h_coeff(x);
@@ -393,26 +417,7 @@ begin
 		 );
 	end generate gen_xy_delay_vertical_others;
 
-	c_xy_delay_horizontal : xy_delay_fred
-	generic map (
-		DELAY_X => delay_x_H,
-		DELAY_Y => delay_y_H,
-		IMG_WIDTH => w_img,
-		IMG_HEIGHT => h_img
-	)
-	port map (
-		 global_clk_i => clk,
-		 global_resetn_i => '1',
-
-		 xy_en_i => EN,
-		 xy_x_i => xin,
-		 xy_y_i => yin,
-
-		 xy_en_o => s_h_EN,
-		 xy_x_o => s_h_xin,
-		 xy_y_o => s_h_yin
-	 );
-
+	
 	c_xy_delay_out : xy_delay_fred
 	generic map (
 		DELAY_X => delay_x_total,
