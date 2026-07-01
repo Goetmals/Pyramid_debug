@@ -16,19 +16,19 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="51.880000 us"></ZoomStartTime>
-      <ZoomEndTime time="207.480001 us"></ZoomEndTime>
-      <Cursor1Time time="79.280000 us"></Cursor1Time>
+      <ZoomStartTime time="40,240.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="44,050.001 ns"></ZoomEndTime>
+      <Cursor1Time time="41,385.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="155"></NameColumnWidth>
+      <NameColumnWidth column_width="171"></NameColumnWidth>
       <ValueColumnWidth column_width="66"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="13" />
+   <WVObjectSize size="23" />
    <wave_markers>
       <marker label="" time="47743506000" />
       <marker label="" time="280000000" />
-      <marker label="" time="283600000" />
+      <marker label="" time="32100000" />
    </wave_markers>
    <wvobject type="logic" fp_name="/TEST_PYRAMID/clkb">
       <obj_property name="ElementShortName">clkb</obj_property>
@@ -38,37 +38,42 @@
       <obj_property name="ElementShortName">resetb</obj_property>
       <obj_property name="ObjectShortName">resetb</obj_property>
    </wvobject>
-   <wvobject type="group" fp_name="group173">
-      <obj_property name="label">Imaging Input</obj_property>
+   <wvobject type="group" fp_name="group462">
+      <obj_property name="label">READIMG</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject type="logic" fp_name="/TEST_PYRAMID/RS0/hsync_inn">
-         <obj_property name="ElementShortName">hsync_inn</obj_property>
-         <obj_property name="ObjectShortName">hsync_inn</obj_property>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/RI0/hsync_out">
+         <obj_property name="ElementShortName">hsync_out</obj_property>
+         <obj_property name="ObjectShortName">hsync_out</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/TEST_PYRAMID/RS0/vsync_inn">
-         <obj_property name="ElementShortName">vsync_inn</obj_property>
-         <obj_property name="ObjectShortName">vsync_inn</obj_property>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/RI0/vsync_out">
+         <obj_property name="ElementShortName">vsync_out</obj_property>
+         <obj_property name="ObjectShortName">vsync_out</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/TEST_PYRAMID/RI0/eof">
-         <obj_property name="ElementShortName">eof</obj_property>
-         <obj_property name="ObjectShortName">eof</obj_property>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/RI0/pixel_out">
+         <obj_property name="ElementShortName">pixel_out[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_out[7:0]</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/TEST_PYRAMID/hsync_int">
-         <obj_property name="ElementShortName">hsync_int</obj_property>
-         <obj_property name="ObjectShortName">hsync_int</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group173">
+      <obj_property name="label">RESYNCH</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/RS0/hsync_out">
+         <obj_property name="ElementShortName">hsync_out</obj_property>
+         <obj_property name="ObjectShortName">hsync_out</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/TEST_PYRAMID/vsync_int">
-         <obj_property name="ElementShortName">vsync_int</obj_property>
-         <obj_property name="ObjectShortName">vsync_int</obj_property>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/RS0/vsync_out">
+         <obj_property name="ElementShortName">vsync_out</obj_property>
+         <obj_property name="ObjectShortName">vsync_out</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/TEST_PYRAMID/pixel_int">
-         <obj_property name="ElementShortName">pixel_int[7:0]</obj_property>
-         <obj_property name="ObjectShortName">pixel_int[7:0]</obj_property>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/RS0/pixel_out">
+         <obj_property name="ElementShortName">pixel_out[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_out[7:0]</obj_property>
       </wvobject>
    </wvobject>
    <wvobject type="group" fp_name="group174">
       <obj_property name="label">AXIS Input</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject type="logic" fp_name="/TEST_PYRAMID/M_AXIS_TREADY">
          <obj_property name="ElementShortName">M_AXIS_TREADY</obj_property>
          <obj_property name="ObjectShortName">M_AXIS_TREADY</obj_property>
@@ -93,9 +98,22 @@
    <wvobject type="group" fp_name="group175">
       <obj_property name="label">XY Input Image</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/ASXY0/s_en">
+         <obj_property name="ElementShortName">s_en</obj_property>
+         <obj_property name="ObjectShortName">s_en</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/ASXY0/s_y_en">
+         <obj_property name="ElementShortName">s_y_en</obj_property>
+         <obj_property name="ObjectShortName">s_y_en</obj_property>
+      </wvobject>
       <wvobject type="logic" fp_name="/TEST_PYRAMID/o_en">
          <obj_property name="ElementShortName">o_en</obj_property>
          <obj_property name="ObjectShortName">o_en</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/ASXY0/en_rtd">
+         <obj_property name="ElementShortName">en_rtd[12:0]</obj_property>
+         <obj_property name="ObjectShortName">en_rtd[12:0]</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="/TEST_PYRAMID/o_x">
          <obj_property name="ElementShortName">o_x[8:0]</obj_property>
@@ -113,6 +131,7 @@
    <wvobject type="group" fp_name="group176">
       <obj_property name="label">Gradient</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject type="logic" fp_name="/TEST_PYRAMID/en_grd">
          <obj_property name="ElementShortName">en_grd</obj_property>
          <obj_property name="ObjectShortName">en_grd</obj_property>
@@ -130,27 +149,217 @@
          <obj_property name="ObjectShortName">pixel_grd[7:0]</obj_property>
       </wvobject>
    </wvobject>
-   <wvobject type="group" fp_name="group196">
-      <obj_property name="label">XY_DELAY</obj_property>
+   <wvobject type="group" fp_name="group107">
+      <obj_property name="label">c_xy_delay_vertical_0</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GF00/c_xy_delay_vertical_0/xy_en_i">
+         <obj_property name="ElementShortName">xy_en_i</obj_property>
+         <obj_property name="ObjectShortName">xy_en_i</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/GF00/c_xy_delay_vertical_0/xy_x_i">
+         <obj_property name="ElementShortName">xy_x_i[8:0]</obj_property>
+         <obj_property name="ObjectShortName">xy_x_i[8:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/GF00/c_xy_delay_vertical_0/xy_y_i">
+         <obj_property name="ElementShortName">xy_y_i[8:0]</obj_property>
+         <obj_property name="ObjectShortName">xy_y_i[8:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GF00/c_xy_delay_vertical_0/en_rtd_int">
+         <obj_property name="ElementShortName">en_rtd_int</obj_property>
+         <obj_property name="ObjectShortName">en_rtd_int</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GF00/c_xy_delay_vertical_0/valid_image">
+         <obj_property name="ElementShortName">valid_image</obj_property>
+         <obj_property name="ObjectShortName">valid_image</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GF00/c_xy_delay_vertical_0/xy_en_o">
+         <obj_property name="ElementShortName">xy_en_o</obj_property>
+         <obj_property name="ObjectShortName">xy_en_o</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/GF00/c_xy_delay_vertical_0/xy_x_o">
+         <obj_property name="ElementShortName">xy_x_o[8:0]</obj_property>
+         <obj_property name="ObjectShortName">xy_x_o[8:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GF00/c_xy_delay_vertical_0/en_rtd2_int">
+         <obj_property name="ElementShortName">en_rtd2_int</obj_property>
+         <obj_property name="ObjectShortName">en_rtd2_int</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/GF00/c_xy_delay_vertical_0/starting_line">
+         <obj_property name="ElementShortName">starting_line[1:0]</obj_property>
+         <obj_property name="ObjectShortName">starting_line[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/GF00/c_xy_delay_vertical_0/xy_y_o">
+         <obj_property name="ElementShortName">xy_y_o[8:0]</obj_property>
+         <obj_property name="ObjectShortName">xy_y_o[8:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group70">
+      <obj_property name="label">FIFO_0</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GF00/c_fifo_vertical_0/i_wr_en">
+         <obj_property name="ElementShortName">i_wr_en</obj_property>
+         <obj_property name="ObjectShortName">i_wr_en</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/GF00/c_fifo_vertical_0/i_wr_data">
+         <obj_property name="ElementShortName">i_wr_data[7:0]</obj_property>
+         <obj_property name="ObjectShortName">i_wr_data[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GF00/c_fifo_vertical_0/i_rd_en">
+         <obj_property name="ElementShortName">i_rd_en</obj_property>
+         <obj_property name="ObjectShortName">i_rd_en</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/GF00/c_fifo_vertical_0/o_rd_data">
+         <obj_property name="ElementShortName">o_rd_data[7:0]</obj_property>
+         <obj_property name="ObjectShortName">o_rd_data[7:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group75">
+      <obj_property name="label">FIFO_1</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GF00/\gen_fifo_vertical_others(1)\/c_fifo_vertical_others/i_wr_en">
+         <obj_property name="ElementShortName">i_wr_en</obj_property>
+         <obj_property name="ObjectShortName">i_wr_en</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/GF00/\gen_fifo_vertical_others(1)\/c_fifo_vertical_others/i_wr_data">
+         <obj_property name="ElementShortName">i_wr_data[7:0]</obj_property>
+         <obj_property name="ObjectShortName">i_wr_data[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GF00/\gen_fifo_vertical_others(1)\/c_fifo_vertical_others/i_rd_en">
+         <obj_property name="ElementShortName">i_rd_en</obj_property>
+         <obj_property name="ObjectShortName">i_rd_en</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/GF00/\gen_fifo_vertical_others(1)\/c_fifo_vertical_others/o_rd_data">
+         <obj_property name="ElementShortName">o_rd_data[7:0]</obj_property>
+         <obj_property name="ObjectShortName">o_rd_data[7:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group80">
+      <obj_property name="label">FIFO_2</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GF00/\gen_fifo_vertical_others(2)\/c_fifo_vertical_others/i_wr_en">
+         <obj_property name="ElementShortName">i_wr_en</obj_property>
+         <obj_property name="ObjectShortName">i_wr_en</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/GF00/\gen_fifo_vertical_others(2)\/c_fifo_vertical_others/i_wr_data">
+         <obj_property name="ElementShortName">i_wr_data[7:0]</obj_property>
+         <obj_property name="ObjectShortName">i_wr_data[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GF00/\gen_fifo_vertical_others(2)\/c_fifo_vertical_others/i_rd_en">
+         <obj_property name="ElementShortName">i_rd_en</obj_property>
+         <obj_property name="ObjectShortName">i_rd_en</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/GF00/\gen_fifo_vertical_others(2)\/c_fifo_vertical_others/o_rd_data">
+         <obj_property name="ElementShortName">o_rd_data[7:0]</obj_property>
+         <obj_property name="ObjectShortName">o_rd_data[7:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group85">
+      <obj_property name="label">FIFO_3</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GF00/\gen_fifo_vertical_others(3)\/c_fifo_vertical_others/i_wr_en">
+         <obj_property name="ElementShortName">i_wr_en</obj_property>
+         <obj_property name="ObjectShortName">i_wr_en</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/GF00/\gen_fifo_vertical_others(3)\/c_fifo_vertical_others/i_wr_data">
+         <obj_property name="ElementShortName">i_wr_data[7:0]</obj_property>
+         <obj_property name="ObjectShortName">i_wr_data[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GF00/\gen_fifo_vertical_others(3)\/c_fifo_vertical_others/i_rd_en">
+         <obj_property name="ElementShortName">i_rd_en</obj_property>
+         <obj_property name="ObjectShortName">i_rd_en</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/GF00/\gen_fifo_vertical_others(3)\/c_fifo_vertical_others/o_rd_data">
+         <obj_property name="ElementShortName">o_rd_data[7:0]</obj_property>
+         <obj_property name="ObjectShortName">o_rd_data[7:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group91">
+      <obj_property name="label">FIFO_4</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GF00/\gen_fifo_vertical_others(4)\/c_fifo_vertical_others/i_wr_en">
+         <obj_property name="ElementShortName">i_wr_en</obj_property>
+         <obj_property name="ObjectShortName">i_wr_en</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/GF00/\gen_fifo_vertical_others(4)\/c_fifo_vertical_others/i_wr_data">
+         <obj_property name="ElementShortName">i_wr_data[7:0]</obj_property>
+         <obj_property name="ObjectShortName">i_wr_data[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GF00/\gen_fifo_vertical_others(4)\/c_fifo_vertical_others/i_rd_en">
+         <obj_property name="ElementShortName">i_rd_en</obj_property>
+         <obj_property name="ObjectShortName">i_rd_en</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/GF00/\gen_fifo_vertical_others(4)\/c_fifo_vertical_others/o_rd_data">
+         <obj_property name="ElementShortName">o_rd_data[7:0]</obj_property>
+         <obj_property name="ObjectShortName">o_rd_data[7:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group96">
+      <obj_property name="label">FIFO_5</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GF00/\gen_fifo_vertical_others(5)\/c_fifo_vertical_others/i_wr_en">
+         <obj_property name="ElementShortName">i_wr_en</obj_property>
+         <obj_property name="ObjectShortName">i_wr_en</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/GF00/\gen_fifo_vertical_others(5)\/c_fifo_vertical_others/i_wr_data">
+         <obj_property name="ElementShortName">i_wr_data[7:0]</obj_property>
+         <obj_property name="ObjectShortName">i_wr_data[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GF00/\gen_fifo_vertical_others(5)\/c_fifo_vertical_others/i_rd_en">
+         <obj_property name="ElementShortName">i_rd_en</obj_property>
+         <obj_property name="ObjectShortName">i_rd_en</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/GF00/\gen_fifo_vertical_others(5)\/c_fifo_vertical_others/o_rd_data">
+         <obj_property name="ElementShortName">o_rd_data[7:0]</obj_property>
+         <obj_property name="ObjectShortName">o_rd_data[7:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group101">
+      <obj_property name="label">FIFO_6</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GF00/\gen_fifo_vertical_others(6)\/c_fifo_vertical_others/i_wr_en">
+         <obj_property name="ElementShortName">i_wr_en</obj_property>
+         <obj_property name="ObjectShortName">i_wr_en</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/GF00/\gen_fifo_vertical_others(6)\/c_fifo_vertical_others/i_wr_data">
+         <obj_property name="ElementShortName">i_wr_data[7:0]</obj_property>
+         <obj_property name="ObjectShortName">i_wr_data[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GF00/\gen_fifo_vertical_others(6)\/c_fifo_vertical_others/i_rd_en">
+         <obj_property name="ElementShortName">i_rd_en</obj_property>
+         <obj_property name="ObjectShortName">i_rd_en</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/GF00/\gen_fifo_vertical_others(6)\/c_fifo_vertical_others/o_rd_data">
+         <obj_property name="ElementShortName">o_rd_data[7:0]</obj_property>
+         <obj_property name="ObjectShortName">o_rd_data[7:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group106">
+      <obj_property name="label">FIFO_7</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GF00/\gen_fifo_vertical_others(7)\/c_fifo_vertical_others/i_wr_en">
+         <obj_property name="ElementShortName">i_wr_en</obj_property>
+         <obj_property name="ObjectShortName">i_wr_en</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/GF00/\gen_fifo_vertical_others(7)\/c_fifo_vertical_others/i_wr_data">
+         <obj_property name="ElementShortName">i_wr_data[7:0]</obj_property>
+         <obj_property name="ObjectShortName">i_wr_data[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GF00/\gen_fifo_vertical_others(7)\/c_fifo_vertical_others/i_rd_en">
+         <obj_property name="ElementShortName">i_rd_en</obj_property>
+         <obj_property name="ObjectShortName">i_rd_en</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/GF00/\gen_fifo_vertical_others(7)\/c_fifo_vertical_others/o_rd_data">
+         <obj_property name="ElementShortName">o_rd_data[7:0]</obj_property>
+         <obj_property name="ObjectShortName">o_rd_data[7:0]</obj_property>
+      </wvobject>
    </wvobject>
    <wvobject type="group" fp_name="group180">
       <obj_property name="label">Gaussien_00</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject type="array" fp_name="/TEST_PYRAMID/GF00/c_xy_delay_out/en_rtd">
          <obj_property name="ElementShortName">en_rtd[8:0]</obj_property>
          <obj_property name="ObjectShortName">en_rtd[8:0]</obj_property>
          <obj_property name="Radix">HEXRADIX</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/TEST_PYRAMID/GF00/c_xy_delay_out/output_starting">
-         <obj_property name="ElementShortName">output_starting</obj_property>
-         <obj_property name="ObjectShortName">output_starting</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/TEST_PYRAMID/GF00/c_xy_delay_out/output_ending">
-         <obj_property name="ElementShortName">output_ending</obj_property>
-         <obj_property name="ObjectShortName">output_ending</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/TEST_PYRAMID/en_gf00">
          <obj_property name="ElementShortName">en_gf00</obj_property>
@@ -277,10 +486,9 @@
    <wvobject type="group" fp_name="group179">
       <obj_property name="label">Imaging Output</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject type="array" fp_name="/TEST_PYRAMID/decal_h">
-         <obj_property name="ElementShortName">decal_h[14:0]</obj_property>
-         <obj_property name="ObjectShortName">decal_h[14:0]</obj_property>
+         <obj_property name="ElementShortName">decal_h[15:0]</obj_property>
+         <obj_property name="ObjectShortName">decal_h[15:0]</obj_property>
          <obj_property name="Radix">BINARYRADIX</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/TEST_PYRAMID/hsync_out">
@@ -295,5 +503,10 @@
          <obj_property name="ElementShortName">pixel_out[7:0]</obj_property>
          <obj_property name="ObjectShortName">pixel_out[7:0]</obj_property>
       </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group196">
+      <obj_property name="label">XY_DELAY</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
 </wave_config>

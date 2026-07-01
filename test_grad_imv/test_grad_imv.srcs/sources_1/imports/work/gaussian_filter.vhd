@@ -80,7 +80,7 @@ end entity;
 
 architecture arch_1D of gaussian_filter is
 
-component xy_delay_fred is
+component xy_delay_cody is
   generic (
   DELAY_X     : natural := 1;
   DELAY_Y     : natural := 0;
@@ -252,7 +252,7 @@ begin
 -- Horizontal pass --
 ---------------------
 
-	c_xy_delay_horizontal : xy_delay_fred
+	c_xy_delay_horizontal : xy_delay_cody
 	generic map (
 		DELAY_X => delay_x_H,
 		DELAY_Y => delay_y_H,
@@ -371,10 +371,57 @@ begin
 	--  end if;
 	--end process;
 
-	c_xy_delay_vertical_0: xy_delay_fred
+	-- c_xy_delay_vertical_0: xy_delay_fred
+	-- generic map (
+		-- DELAY_X => w_img-1,
+		-- DELAY_Y => 0,
+		-- IMG_WIDTH => w_img,
+		-- IMG_HEIGHT => h_img
+	-- )
+	-- port map (
+		-- global_clk_i => clk,
+		-- global_resetn_i => '1',
+		
+		-- xy_en_i => EN,
+		-- xy_x_i => s_xin,
+		-- xy_y_i => s_yin,
+		
+		-- xy_en_o => s_R_fifo(0),
+		-- xy_x_o => s_x_fifo(0),
+		-- xy_y_o => s_y_fifo(0)
+	-- );
+
+	-- gen_s_W_fifo: for i in 1 to (kernel_width-2) generate
+		-- s_W_fifo(i) <= s_R_fifo(i-1);
+	-- end generate gen_s_W_fifo;
+
+	-- gen_xy_delay_vertical_others: for i in 1 to (kernel_width-2) generate
+		-- c_xy_delay_vertical_others : xy_delay_fred
+		-- generic map (
+			-- DELAY_X => w_img-1,
+			-- DELAY_Y => 0,
+			-- IMG_WIDTH => w_img,
+			-- IMG_HEIGHT => h_img
+		-- )
+		-- port map (
+			 -- global_clk_i => clk,
+			 -- global_resetn_i => '1',
+
+			 -- xy_en_i => s_R_fifo(i-1),
+			 -- xy_x_i => s_x_fifo(i-1),
+			 -- xy_y_i => s_y_fifo(i-1),
+
+			 -- xy_en_o => s_R_fifo(i),
+			 -- xy_x_o => s_x_fifo(i),
+			 -- xy_y_o => s_y_fifo(i)
+		 -- );
+	-- end generate gen_xy_delay_vertical_others;
+
+
+	c_xy_delay_vertical_0: xy_delay_cody
 	generic map (
-		DELAY_X => w_img-1,
-		DELAY_Y => 0,
+		DELAY_X => 0,
+		DELAY_Y => 1,
 		IMG_WIDTH => w_img,
 		IMG_HEIGHT => h_img
 	)
@@ -391,15 +438,17 @@ begin
 		xy_y_o => s_y_fifo(0)
 	);
 
+
+
 	gen_s_W_fifo: for i in 1 to (kernel_width-2) generate
 		s_W_fifo(i) <= s_R_fifo(i-1);
 	end generate gen_s_W_fifo;
 
 	gen_xy_delay_vertical_others: for i in 1 to (kernel_width-2) generate
-		c_xy_delay_vertical_others : xy_delay_fred
+		c_xy_delay_vertical_others : xy_delay_cody
 		generic map (
-			DELAY_X => w_img-1,
-			DELAY_Y => 0,
+			DELAY_X => 0,
+			DELAY_Y => 1,
 			IMG_WIDTH => w_img,
 			IMG_HEIGHT => h_img
 		)
@@ -416,9 +465,9 @@ begin
 			 xy_y_o => s_y_fifo(i)
 		 );
 	end generate gen_xy_delay_vertical_others;
-
 	
-	c_xy_delay_out : xy_delay_fred
+	
+	c_xy_delay_out : xy_delay_cody
 	generic map (
 		DELAY_X => delay_x_total,
 		DELAY_Y => delay_y_total,

@@ -31,7 +31,7 @@ generic (
 	  --nomSrce	: string  := "C:\Users\frede\OneDrive\Documents\testbench_eads\vhdl\tst\ImageTests\cube.imv";
 	  nomSrce	: string  := "/home/demelo/vivado_prjs/testbench_eads/vhdl/tst/ImageTests/bridge.imv";
 	  --nomDest	: string  := "C:\Users\frede\OneDrive\Documents\testbench_eads\vhdl\tst\ImageTests\cube_gf_py.imv";
-      nomDest	: string  := "/home/demelo/vivado_prjs/testbench_eads/vhdl/tst/ImageTests/bridge_gauss_00.imv";
+      nomDest	: string  := "/home/demelo/vivado_prjs/testbench_eads/vhdl/tst/ImageTests/bridge_dog00.imv";
 	  Periode	: time    := 10.000 ns
 	);
 end TEST_PYRAMID;
@@ -116,12 +116,15 @@ component imaging_to_axis
     end component;
     
 	-- --------------------------------------------------------- --
-component axis_to_xy
+component axis_to_xy_cody
     generic (
 		BUS_WIDTH : positive := 32;
 		IMG_WIDTH : positive := 1920;
-		IMG_HEIGHT : positive := 1080
-	);
+		IMG_HEIGHT : positive := 1080;
+		
+		nbPixDeb	: integer := 6;
+		nbPixFin	: integer := 6
+		);
 	port (
 		aclk : in std_logic;
 		aresetn : in std_logic;
@@ -334,6 +337,11 @@ end component;
     --signal decal_h : std_logic_vector(29 downto 0);
     signal decal_h : std_logic_vector(15 downto 0);
     signal delay00_data_out_s : std_logic_vector( 7 downto 0);
+	
+	signal nbPixDeb, nbPixFin, nbLigDeb, nbLigFin, nbLigFinSeq	: integer := 6;
+	
+
+	 
     
 -- ========================================================================= --
 begin
@@ -342,11 +350,11 @@ begin
 RI0:	READIMG	    generic map	(
 				 nomfichier => nomSrce
 				,format	=> "IMAGING"
-				,nbPixDeb => 6
-	            ,nbPixFin => 6
-	            ,nbLigDeb => 6
-	            ,nbLigFin => 6
-	            ,nbLigFinSeq => 6
+				,nbPixDeb => nbPixDeb
+	            ,nbPixFin => nbPixFin
+	            ,nbLigDeb => nbLigDeb
+	            ,nbLigFin => nbLigFin
+	            ,nbLigFinSeq => nbLigFinSeq
 				,tPHV => Periode*0.35
 				,pix_unknown => "11111111"
 				)
@@ -378,11 +386,14 @@ AXIS0:  imaging_to_axis	 port map	(
  
 M_AXIS_TUSER <= '0','1' after 15544.182 ns,'0' after 15553.440 ns;
 
-ASXY0:  axis_to_xy
+ASXY0:  axis_to_xy_cody
                            generic map  (
                                 BUS_WIDTH
                                ,IMG_WIDTH
                                ,IMG_HEIGHT
+							   
+							   ,NbPixDeb
+							   ,NbPixFin
                            )
                            port map (
                                clkb,resetb
