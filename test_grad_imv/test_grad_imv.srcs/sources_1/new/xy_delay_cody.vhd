@@ -76,12 +76,13 @@ end entity;
 
 architecture arch_xy_delay_cody of xy_delay_cody is
 
-signal en_rtd   : std_logic_vector(DELAY_X downto 0) := (others => '0');
+signal en_rtd   : std_logic_vector((DELAY_X+4) downto 0) := (others => '0');
 signal valid_image, en_rtd_int, en_rtd2_int : std_logic := '0'; 
 signal starting_line : std_logic_vector(1 downto 0) := "00";
 signal xy_x_o_int : std_logic_vector(unsigned_num_bits(IMG_WIDTH-1)-1 downto 0);
 signal xy_y_o_int : std_logic_vector(unsigned_num_bits(IMG_HEIGHT-1)-1 downto 0);
-signal xy_en_o_int : std_logic := '0'; 
+signal xy_en_o_int, xy_en_o_int2 : std_logic := '0'; 
+signal decal_y : std_logic := '0'; 
             
 begin
 
@@ -90,13 +91,17 @@ SYNC0:	process( global_clk_i, global_resetn_i )
 	begin
 		-- ------------------------------------------------- --
 		if    ( global_resetn_i='0' ) then
-			en_rtd <= (others=>'1');
+			en_rtd <= (others=>'0');
 				-- ------------------------------------------------- --
 		elsif ( rising_edge(global_clk_i) ) then
-			en_rtd <= en_rtd((DELAY_X - 1) downto 0) & xy_en_i; 
+		    if (DELAY_X = 0) then 
+		    en_rtd(DELAY_X) <= xy_en_i;
+		    else en_rtd <= en_rtd((DELAY_X+3) downto 0) & xy_en_i; 
+		    end if;
 		end if;
 	end process;
    
+--en_rtd <= en_rtd((DELAY_X+3) downto 0) & xy_en_i;    
 en_rtd_int <= en_rtd(DELAY_X);																-- enable en entrée décalé de DELAY_X coups d'horloge
 
 
@@ -112,7 +117,7 @@ DLY_LINE0: 	process(global_clk_i, global_resetn_i )
 					end process;
 
 xy_en_o_int <= en_rtd_int and valid_image;
-xy_en_o <= xy_en_o_int;
+xy_en_o <= xy_en_o_int2;
 xy_x_o <= xy_x_o_int;
 xy_y_o <= xy_y_o_int;
 
@@ -121,7 +126,7 @@ XCAL0:	process(global_clk_i, global_resetn_i)
 				if (global_resetn_i = '0') then 
 					xy_x_o_int <= (others => '0');
 					elsif(rising_edge(global_clk_i)) then 
-						if (xy_en_o_int ='1') then 
+						if (xy_en_o_int2 ='1') then 
 							xy_x_o_int <= xy_x_o_int + '1';
 						else xy_x_o_int <= (others => '0');
 						end if;
@@ -132,12 +137,14 @@ STARTLINE0:	process(global_clk_i, global_resetn_i)
 						begin
 						if (global_resetn_i = '0') then 
 							en_rtd2_int <= '0';
+							xy_en_o_int2 <= '0';
 						elsif(rising_edge(global_clk_i)) then 
 							en_rtd2_int <= en_rtd_int;
+							xy_en_o_int2 <= xy_en_o_int;
 						end if;
 						end process;	
 		
-starting_line <= en_rtd_int & 	en_rtd2_int;					-- start of line when starting_line = "01"
+starting_line <= en_rtd_int & en_rtd2_int;					-- start of line when starting_line = "10"
 
 	
 YCAL0:	process(global_clk_i, global_resetn_i)
@@ -145,9 +152,12 @@ YCAL0:	process(global_clk_i, global_resetn_i)
 				if (global_resetn_i = '0') then 
 					xy_y_o_int <= (others => '0');
 					elsif(rising_edge(global_clk_i)) then 
-						if (starting_line = "01") then 
+						if ((starting_line = "10") and (valid_image = '1') and decal_y ='1') then 
 						xy_y_o_int <= xy_y_o_int + '1';
-						else xy_y_o_int <= (others => '0');
+						end if;
+						
+						if ((starting_line = "10") and (valid_image = '1')) then
+						decal_y <= '1';
 						end if;
 				end if;
 				end process;	

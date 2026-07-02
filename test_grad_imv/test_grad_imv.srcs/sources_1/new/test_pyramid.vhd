@@ -31,7 +31,8 @@ generic (
 	  --nomSrce	: string  := "C:\Users\frede\OneDrive\Documents\testbench_eads\vhdl\tst\ImageTests\cube.imv";
 	  nomSrce	: string  := "/home/demelo/vivado_prjs/testbench_eads/vhdl/tst/ImageTests/bridge.imv";
 	  --nomDest	: string  := "C:\Users\frede\OneDrive\Documents\testbench_eads\vhdl\tst\ImageTests\cube_gf_py.imv";
-      nomDest	: string  := "/home/demelo/vivado_prjs/testbench_eads/vhdl/tst/ImageTests/bridge_dog00.imv";
+      --nomDest	: string  := "/home/demelo/vivado_prjs/testbench_eads/vhdl/tst/ImageTests/bridge_grd.imv";
+      nomDest	: string  := "/home/demelo/vivado_prjs/testbench_eads/vhdl/tst/ImageTests/bridge_grd.imv";
 	  Periode	: time    := 10.000 ns
 	);
 end TEST_PYRAMID;
@@ -335,7 +336,8 @@ end component;
     signal pixel_grd, pixel_gf00, pixel_gf01, pixel_gf02, pixel_dog00  : std_logic_vector(7 downto 0);
     
     --signal decal_h : std_logic_vector(29 downto 0);
-    signal decal_h : std_logic_vector(15 downto 0);
+    --signal decal_h : std_logic_vector(15 downto 0);
+    signal decal_h : std_logic_vector(9 downto 0);
     signal delay00_data_out_s : std_logic_vector( 7 downto 0);
 	
 	signal nbPixDeb, nbPixFin, nbLigDeb, nbLigFin, nbLigFinSeq	: integer := 6;
@@ -457,89 +459,90 @@ GRD0:   gradient_tarek
 --                                ,xy_y_o     => y_dly
 --                                        );
                             
-GF00:     gaussian_filter 
-                            generic map(
-                                 8
-                                ,IMG_WIDTH
-                                ,IMG_HEIGHT
-                                ,bus_width_x
-                                ,bus_width_y
+--GF00:     gaussian_filter 
+--                            generic map(
+--                                 8
+--                                ,IMG_WIDTH
+--                                ,IMG_HEIGHT
+--                                ,bus_width_x
+--                                ,bus_width_y
                             
-                                ,sq_sigma00            
-                                ,kernel_width        
-                                ,bus_width_coeff_sum 
-                            )
-                            port map(
-                                 clkb, en_grd
-                                ,resetb
-                                ,en_gf00
-                                ,x_grd
-                                ,y_grd
-                                ,x_gf00
-                                ,y_gf00
-                                ,pixel_grd
-                                ,pixel_gf00
-                            );
+--                                ,sq_sigma00            
+--                                ,kernel_width        
+--                                ,bus_width_coeff_sum 
+--                            )
+--                            port map(
+--                                 clkb, en_grd
+--                                ,resetb
+--                                ,en_gf00
+--                                ,x_grd
+--                                ,y_grd
+--                                ,x_gf00
+--                                ,y_gf00
+--                                ,pixel_grd
+--                                ,pixel_gf00
+--                            );
 
-GF01:     gaussian_filter 
-                            generic map(
-                                 8
-                                ,IMG_WIDTH
-                                ,IMG_HEIGHT
-                                ,bus_width_x
-                                ,bus_width_y
+--GF01:     gaussian_filter 
+--                            generic map(
+--                                 8
+--                                ,IMG_WIDTH
+--                                ,IMG_HEIGHT
+--                                ,bus_width_x
+--                                ,bus_width_y
                             
-                                ,sq_sigma01            
-                                ,kernel_width        
-                                ,bus_width_coeff_sum 
-                            )
-                            port map(
-                                 clkb, en_gf00
-                                ,resetb
-                                ,en_gf01
-                                ,x_gf00
-                                ,y_gf00
-                                ,x_gf01
-                                ,y_gf01
-                                ,pixel_gf00
-                                ,pixel_gf01
-                            );
+--                                ,sq_sigma01            
+--                                ,kernel_width        
+--                                ,bus_width_coeff_sum 
+--                            )
+--                            port map(
+--                                 clkb, en_gf00
+--                                ,resetb
+--                                ,en_gf01
+--                                ,x_gf00
+--                                ,y_gf00
+--                                ,x_gf01
+--                                ,y_gf01
+--                                ,pixel_gf00
+--                                ,pixel_gf01
+--                            );
 
-DLY01:  delay
-		generic map (
-			pixel_bus_width => unsigned_num_bits(MAX_COLOR),
-			w_img => IMG_WIDTH,
-			h_img => IMG_HEIGHT,
-			delay_x => GAUSS_DELAY_X_C,
-			delay_y => GAUSS_DELAY_Y_C
-		)
-		port map (
-			clk => clkb,
-			EN => en_gf00,
-			data_in => pixel_gf00,
-			data_out => delay00_data_out_s
-		);
+--DLY01:  delay
+--		generic map (
+--			pixel_bus_width => unsigned_num_bits(MAX_COLOR),
+--			w_img => IMG_WIDTH,
+--			h_img => IMG_HEIGHT,
+--			delay_x => GAUSS_DELAY_X_C,
+--			delay_y => GAUSS_DELAY_Y_C
+--		)
+--		port map (
+--			clk => clkb,
+--			EN => en_gf00,
+--			data_in => pixel_gf00,
+--			data_out => delay00_data_out_s
+--		);
 		
-DOG00:  dog
-		generic map (
-			pixel_bus_width => unsigned_num_bits(MAX_COLOR),
-			w_img => IMG_WIDTH,
-			h_img => IMG_HEIGHT,
-			bus_width_x => unsigned_num_bits(IMG_WIDTH-1),
-			bus_width_y => unsigned_num_bits(IMG_HEIGHT-1)
-		)
-		port map (
-			clk => clkb,
-			EN => en_gf01,
-			EN_out => en_dog00,
-			xin => x_gf01,
-			yin => y_gf01,
-			xout => x_dog00,
-			yout => y_dog00,
-			data_in_a => pixel_gf01,
-			data_in_b => delay00_data_out_s,
-			data_out => pixel_dog00
-		);		
+--DOG00:  dog
+--		generic map (
+--			pixel_bus_width => unsigned_num_bits(MAX_COLOR),
+--			w_img => IMG_WIDTH,
+--			h_img => IMG_HEIGHT,
+--			bus_width_x => unsigned_num_bits(IMG_WIDTH-1),
+--			bus_width_y => unsigned_num_bits(IMG_HEIGHT-1)
+--		)
+--		port map (
+--			clk => clkb,
+--			EN => en_gf01,
+--			EN_out => en_dog00,
+--			xin => x_gf01,
+--			yin => y_gf01,
+--			xout => x_dog00,
+--			yout => y_dog00,
+--			data_in_a => pixel_gf01,
+--			data_in_b => delay00_data_out_s,
+--			data_out => pixel_dog00
+--		);		
+
 --GF02:     gaussian_filter 
 --                            generic map(
 --                                 8
@@ -576,10 +579,10 @@ XYAS0:  xy_to_axis
                                --------------------------------------------------------------------------------
                                -- XYEn side
                                --------------------------------------------------------------------------------
-                                       ,en_dog00
-                                       ,x_dog00
-                                       ,y_dog00
-                                       ,pixel_dog00
+                                       ,en_grd
+                                       ,x_grd
+                                       ,y_grd
+                                       ,pixel_grd
                                --------------------------------------------------------------------------------
                                -- AXIS Master side
                                --------------------------------------------------------------------------------
@@ -591,6 +594,11 @@ XYAS0:  xy_to_axis
                                    );                      
                                
 
+--hsync_out <= hsync_int;
+--vsync_out <= not (M_AXIS_TVALID_o);
+--pixel_out <= M_AXIS_TDATA_o;
+    
+    
 SYNC0:	process( resetb,clkb )
 	begin
 		-- ------------------------------------------------- --
@@ -599,13 +607,30 @@ SYNC0:	process( resetb,clkb )
 			
 		-- ------------------------------------------------- --
 		elsif ( rising_edge(clkb) ) then
-			decal_h <= decal_h(14 downto 0) & hsync_int;
+			decal_h <= decal_h(8 downto 0) & hsync_int;
 		end if;
 	end process;
 	
-	hsync_out <= decal_h(15);
+	hsync_out <= decal_h(7);
 	vsync_out <= not (M_AXIS_TVALID_o);
     pixel_out <= M_AXIS_TDATA_o;
+    
+    
+--SYNC1:	process( resetb,clkb )
+--	begin
+--		-- ------------------------------------------------- --
+--		if    ( resetb='0' ) then
+--			decal_h <= (others=>'1');
+			
+--		-- ------------------------------------------------- --
+--		elsif ( rising_edge(clkb) ) then
+--			decal_h <= decal_h(14 downto 0) & hsync_int;
+--		end if;
+--	end process;
+	
+--	hsync_out <= decal_h(15);
+--	vsync_out <= not (M_AXIS_TVALID_o);
+--    pixel_out <= M_AXIS_TDATA_o;
     
 	-- Enregistre l'image g�n�r�e.
 	-- --------------------------------------------------------- --

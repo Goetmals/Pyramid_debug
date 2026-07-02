@@ -70,11 +70,11 @@ end entity;
 
 
 architecture arch_sobel of gradient_tarek is
---	constant delay_x       : natural := 5; -- sure ?   -- Commented by Fred 07/01/22
---	constant delay_y       : natural := 1;
+	constant delay_x       : natural := 5; -- sure ?   -- Commented by Fred 07/01/22
+	constant delay_y       : natural := 1;
 	
-	constant delay_x       : natural := 0; -- sure ?
-	constant delay_y       : natural := 0;
+--	constant delay_x       : natural := 0; -- sure ?   -- Commented by Cody
+--	constant delay_y       : natural := 0;
 	
 --	component shift_reg is
 --	  generic(
@@ -97,6 +97,27 @@ architecture arch_sobel of gradient_tarek is
 	);
     end component;
     
+    component xy_delay_cody is
+        generic (
+        DELAY_X     : natural := 1;
+        DELAY_Y     : natural := 0;
+        IMG_WIDTH   : natural := 640;
+        IMG_HEIGHT  : natural := 480
+        );
+        port (
+        global_clk_i    : in  std_logic;
+        global_resetn_i : in  std_logic;
+  
+        xy_en_i : in  std_logic;
+        xy_x_i : in std_logic_vector(unsigned_num_bits(IMG_WIDTH-1)-1 downto 0);
+        xy_y_i : in std_logic_vector(unsigned_num_bits(IMG_HEIGHT-1)-1 downto 0);
+  
+        xy_en_o : out std_logic;
+        xy_x_o : out std_logic_vector(unsigned_num_bits(IMG_WIDTH-1)-1 downto 0);
+        xy_y_o : out std_logic_vector(unsigned_num_bits(IMG_HEIGHT-1)-1 downto 0)
+            );
+        end component;
+    
     
 	--signal s_data_out : unsigned(pixel_bus_width-1 downto 0);
 	
@@ -118,19 +139,19 @@ architecture arch_sobel of gradient_tarek is
 	signal s_xout : std_logic_vector(bus_width_x-1 downto 0);
 	signal s_yout : std_logic_vector(bus_width_y-1 downto 0);
 	
-	signal xin_r1,xin_r2,xin_r3,xin_r4,xin_r5 : std_logic_vector(bus_width_x-1 downto 0);
-	signal yin_r1,yin_r2,yin_r3,yin_r4,yin_r5 : std_logic_vector(bus_width_y-1 downto 0);
+	signal xin_r1,xin_r2,xin_r3,xin_r4,xin_r5,xin_r6,xin_r7,xin_r8 : std_logic_vector(bus_width_x-1 downto 0);
+	signal yin_r1,yin_r2,yin_r3,yin_r4,yin_r5,yin_r6,yin_r7,yin_r8 : std_logic_vector(bus_width_y-1 downto 0);
 	
 	signal s_EN, s_EN_out, s_enable : std_logic;
-	signal decal_en : std_logic_vector(5 downto 0);
+	signal decal_en : std_logic_vector(7 downto 0);
 	signal en_rtd : std_logic;
 	signal yin_int : integer;
 	
 begin
 
     yin_int <= conv_integer(yin);
---	xout <= s_xout;
---	yout <= s_yout;
+	xout <= s_xout;
+	yout <= s_yout;
 	EN_out <= s_EN_out;
 	--EN_out <= s_EN_out or EN;
 	
@@ -276,58 +297,67 @@ CG0:	process(clk)
 --	  data_out => doF);
 	
 	
-	-- resynchronisation des coordonnées x y et du enable 
-	-- le calcul du gradient nécessite deux coups d'horloge
-	-- le calcul de la norme nécessite trois coups d'horloge
+	-- resynchronisation des coordonnï¿½es x y et du enable 
+	-- le calcul du gradient nï¿½cessite deux coups d'horloge
+	-- le calcul de la norme nï¿½cessite trois coups d'horloge
 	
---	c_xy_delay : xy_delay
---		generic map (
---			DELAY_X => delay_x,
---			DELAY_Y => delay_y,
---			IMG_WIDTH => w_img,
---			IMG_HEIGHT => h_img
---		)
---		port map (
---			global_clk_i => clk,
---			global_resetn_i => '1',
+	c_xy_delay : xy_delay_cody
+		generic map (
+			DELAY_X => delay_x,
+			DELAY_Y => delay_y,
+			IMG_WIDTH => w_img,
+			IMG_HEIGHT => h_img
+		)
+		port map (
+			global_clk_i => clk,
+			global_resetn_i => reset,
 
---			xy_en_i => EN,
---			xy_x_i => xin,
---			xy_y_i => yin,
+			xy_en_i => EN,
+			xy_x_i => xin,
+			xy_y_i => yin,
 
---			xy_en_o => s_EN_out,
---			xy_x_o => s_xout,
---			xy_y_o => s_yout
---		);
+			xy_en_o => s_EN_out,
+			xy_x_o => s_xout,
+			xy_y_o => s_yout
+		);
 
-SYNC0:  process(clk)
-        begin
-        if (rising_edge(clk)) then
-            decal_en <= decal_en(4 downto 0) & EN;
-        end if;
-        end process;
+--SYNC0:  process(clk)                                       -- Commented by Cody
+--        begin
+--        if (rising_edge(clk)) then
+--            decal_en <= decal_en(6 downto 0) & EN;
+--        end if;
+--        end process;
         
-XY0:    process(clk)
-        begin
-        if (rising_edge(clk)) then
-            xin_r1 <= xin;
-            xin_r2 <= xin_r1;
-            xin_r3 <= xin_r2;
-            xin_r4 <= xin_r3;
-            xin_r5 <= xin_r4;
+--XY0:    process(clk)
+--        begin
+--        if (rising_edge(clk)) then
+--            xin_r1 <= xin;
+--            xin_r2 <= xin_r1;
+--            xin_r3 <= xin_r2;
+--            xin_r4 <= xin_r3;
+--            xin_r5 <= xin_r4;
+--            -- Agrandissement des fifo
+--            xin_r6 <= xin_r5;
+--            xin_r7 <= xin_r6;
+--            xin_r8 <= xin_r7;
             
-            yin_r1 <= yin;
-            yin_r2 <= yin_r1;
-            yin_r3 <= yin_r2;
-            yin_r4 <= yin_r3;
-            yin_r5 <= yin_r4;
+--            yin_r1 <= yin;
+--            yin_r2 <= yin_r1;
+--            yin_r3 <= yin_r2;
+--            yin_r4 <= yin_r3;
+--            yin_r5 <= yin_r4;
+--            -- Agrandissement des fifo
+--            yin_r6 <= yin_r5;
+--            yin_r7 <= yin_r6;
+--            yin_r8 <= yin_r7;
             
-            end if;
-            end process;
+            
+--            end if;
+--            end process;
             
             
-    s_EN_out <= decal_en(5);
-    xout <= xin_r5;
-    yout <= yin_r5;
+--    s_EN_out <= decal_en(7);
+--    xout <= xin_r8;
+--    yout <= yin_r8;
        
 end arch_sobel;
