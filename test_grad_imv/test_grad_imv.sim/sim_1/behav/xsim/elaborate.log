@@ -5,6 +5,13 @@ Running: /home/demelo/Xilinx_2023/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab --in
 Using 8 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3813] value in initialization depends on signal 'nbpixdeb' [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/test_pyramid.vhd:349]
+WARNING: [VRFC 10-3813] value in initialization depends on signal 'nbpixfin' [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/test_pyramid.vhd:350]
+WARNING: [VRFC 10-3813] value in initialization depends on signal 'nbligdeb' [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/test_pyramid.vhd:351]
+WARNING: [VRFC 10-3813] value in initialization depends on signal 'nbligfin' [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/test_pyramid.vhd:352]
+WARNING: [VRFC 10-3813] value in initialization depends on signal 'nbligfinseq' [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/test_pyramid.vhd:353]
+WARNING: [VRFC 10-3813] value in initialization depends on signal 'nbpixdeb' [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/test_pyramid.vhd:391]
+WARNING: [VRFC 10-3813] value in initialization depends on signal 'nbpixfin' [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/test_pyramid.vhd:392]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
@@ -20,12 +27,13 @@ Compiling package work.xy_delay_pkg
 Compiling package work.math_real
 Compiling package work.saturn_dog_pkg
 Compiling package work.dual_clk_fifo_pkg
+Compiling package xpm.vcomponents
 Compiling package vl.vl_types
 Compiling module work.glbl
 Compiling architecture arch_readimg of entity work.READIMG [\READIMG(nomfichier="/home/demel...]
 Compiling architecture arch_resynch_sgnx8 of entity work.RESYNCH_SGNX8 [resynch_sgnx8_default]
 Compiling architecture arch_imaging_to_axis of entity work.imaging_to_axis [imaging_to_axis_default]
-Compiling architecture rtl of entity work.axis_to_xy [\axis_to_xy(bus_width=8,img_widt...]
+Compiling architecture arch_axis_to_xy_cody of entity work.axis_to_xy_cody [\axis_to_xy_cody(bus_width=8,img...]
 Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6_output_stage(...
 Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6_output_stage(...
 Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6_softecc_outpu...
@@ -34,15 +42,17 @@ Compiling module blk_mem_gen_v8_4_6.blk_mem_axi_regs_fwd_v8_4(C_DATA...
 Compiling module blk_mem_gen_v8_4_6.blk_mem_gen_v8_4_6(C_FAMILY="zyn...
 Compiling module xil_defaultlib.dp_grad_tarek
 Compiling architecture arch_lr_grad_tarek of entity work.LR_GRAD_TAREK [lr_grad_tarek_default]
-Compiling architecture arch_sobel of entity work.gradient_tarek [\gradient_tarek(pixel_bus_width=...]
-Compiling architecture arch_xy_delay_fred of entity work.xy_delay_fred [\xy_delay_fred(delay_x=4,delay_y...]
-Compiling module work.generic_dpram(aw=10,dw=8)
-Compiling module work.generic_fifo_dc_gray(dw=8,aw=10)
-Compiling architecture arch of entity work.dual_clk_fifo [\dual_clk_fifo(depth=513)\]
-Compiling architecture arch_xy_delay_fred of entity work.xy_delay_fred [\xy_delay_fred(delay_x=511,img_w...]
-Compiling architecture arch_xy_delay_fred of entity work.xy_delay_fred [\xy_delay_fred(delay_x=8,delay_y...]
-Compiling architecture arch_1d of entity work.gaussian_filter [\gaussian_filter(pixel_bus_width...]
+Compiling architecture arch_xy_delay_cody2 of entity work.xy_delay_cody2 [\xy_delay_cody2(delay_x=7,img_wi...]
+Compiling architecture arch_gradient_cody of entity work.gradient_cody [\gradient_cody(pixel_bus_width=8...]
+Compiling architecture arch_xy_delay_cody2 of entity work.xy_delay_cody2 [\xy_delay_cody2(delay_x=4,delay_...]
+Compiling module xpm.xpm_memory_base(MEMORY_SIZE=4096...
+Compiling module xpm.xpm_memory_tdpram(MEMORY_SIZE=40...
+Compiling architecture arch_lr_cody of entity work.LR_CODY [lr_cody_default]
+Compiling architecture arch_xy_delay_cody2 of entity work.xy_delay_cody2 [\xy_delay_cody2(delay_x=0,delay_...]
+Compiling architecture arch_xy_delay_cody2 of entity work.xy_delay_cody2 [\xy_delay_cody2(delay_x=8,delay_...]
+Compiling architecture arch_1d of entity work.gaussian_filter_cody [\gaussian_filter_cody(pixel_bus_...]
 Compiling architecture arch of entity work.delay [\delay(pixel_bus_width=8,w_img=5...]
+Compiling architecture arch_1d of entity work.gaussian_filter_cody [\gaussian_filter_cody(pixel_bus_...]
 Compiling architecture arch_unsigned of entity work.dog [\dog(pixel_bus_width=8,w_img=512...]
 Compiling architecture rtl of entity work.xy_to_axis [\xy_to_axis(img_width=512,img_he...]
 Compiling architecture arch_writeimg of entity work.WRITEIMG [\WRITEIMG(nomfichier="/home/deme...]

@@ -1,0 +1,27 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../test_orec.gen/sources_1/ip/dp_snml/dp_snml_sim_netlist.vhdl" \
+"../../../../test_orec.gen/sources_1/ip/dp_grad/dp_grad_sim_netlist.vhdl" \
+"../../../../test_orec.gen/sources_1/ip/dp_conv/dp_conv_sim_netlist.vhdl" \
+
+vhdl work  \
+"../../../../test_orec.srcs/sources_1/imports/vhdl/src/orec-II/ampl.vhd" \
+"../../../../test_orec.srcs/sources_1/imports/vhdl/src/orec-II/biseuillage.vhd" \
+"../../../../test_orec.srcs/sources_1/imports/vhdl/src/orec-II/conv_col.vhd" \
+"../../../../test_orec.srcs/sources_1/imports/vhdl/src/orec-II/conv_lig.vhd" \
+"../../../../test_orec.srcs/sources_1/imports/vhdl/src/orec-II/gradient.vhd" \
+"../../../../test_orec.srcs/sources_1/imports/vhdl/src/orec-II/virtex-II-pro/lr_conv.vhd" \
+"../../../../test_orec.srcs/sources_1/imports/vhdl/src/orec-II/virtex-II-pro/lr_grad.vhd" \
+"../../../../test_orec.srcs/sources_1/imports/vhdl/src/orec-II/virtex-II-pro/lr_snml.vhd" \
+"../../../../test_orec.srcs/sources_1/imports/vhdl/src/orec-II/norm_orie.vhd" \
+"../../../../test_orec.srcs/sources_1/imports/vhdl/src/orec-II/orec.vhd" \
+"../../../../test_orec.srcs/sources_1/imports/vhdl/tst/divers/readimg.vhd" \
+"../../../../test_orec.srcs/sources_1/imports/vhdl/tst/divers/resynch_sgnx8.vhd" \
+"../../../../test_orec.srcs/sources_1/imports/work/saturn_numeric_pkg.vhd" \
+"../../../../test_orec.srcs/sources_1/imports/work/saturn_numeric_pkg-body.vhd" \
+"../../../../test_orec.srcs/sources_1/imports/vhdl/src/orec-II/snml.vhd" \
+"../../../../test_orec.srcs/sources_1/imports/vhdl/tst/divers/writeimg.vhd" \
+"../../../../test_orec.srcs/sources_1/imports/vhdl/tst/test_orec.vhd" \
+
+# Do not sort compile order
+nosort

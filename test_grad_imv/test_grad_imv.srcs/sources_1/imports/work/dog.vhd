@@ -59,13 +59,16 @@ entity dog is
 	);
 	port(
 		clk, EN   : in  std_logic;
-		EN_out    : out std_logic;
+		hsync_in, vsync_in    : in  std_logic;
 		xin       : in  std_logic_vector(bus_width_x-1 downto 0);
 		yin       : in  std_logic_vector(bus_width_y-1 downto 0);
-		xout      : out std_logic_vector(bus_width_x-1 downto 0);
-		yout      : out std_logic_vector(bus_width_y-1 downto 0);
 		data_in_a : in  std_logic_vector(pixel_bus_width-1 downto 0);
 		data_in_b : in  std_logic_vector(pixel_bus_width-1 downto 0);
+		
+		EN_out    : out std_logic;
+		hsync_out, vsync_out    : out  std_logic;
+		xout      : out std_logic_vector(bus_width_x-1 downto 0);
+		yout      : out std_logic_vector(bus_width_y-1 downto 0);
 		data_out  : out std_logic_vector(pixel_bus_width-1 downto 0)
 	);
 end entity;
@@ -100,6 +103,8 @@ begin
 	begin
 		if rising_edge(clk) then
 			EN_out <= EN;
+			hsync_out <= hsync_in;
+			vsync_out <= vsync_in;
 		end if;
 	end process en_p;
 end arch_unsigned;

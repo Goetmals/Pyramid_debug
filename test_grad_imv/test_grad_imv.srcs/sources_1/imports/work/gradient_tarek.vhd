@@ -70,7 +70,7 @@ end entity;
 
 
 architecture arch_sobel of gradient_tarek is
-	constant delay_x       : natural := 5; -- sure ?   -- Commented by Fred 07/01/22
+	constant delay_x       : natural := 4; -- sure ?   -- Commented by Fred 07/01/22
 	constant delay_y       : natural := 1;
 	
 --	constant delay_x       : natural := 0; -- sure ?   -- Commented by Cody
@@ -146,6 +146,8 @@ architecture arch_sobel of gradient_tarek is
 	signal decal_en : std_logic_vector(7 downto 0);
 	signal en_rtd : std_logic;
 	signal yin_int : integer;
+	signal decal_data_in : std_logic_vector(7 downto 0); -- add by cody
+	signal decal_data_in2 : std_logic_vector(7 downto 0); -- add by cody
 	
 begin
 
@@ -178,12 +180,29 @@ ENR0:   process(clk,reset)
 	   end if;
 	end process;  
 	         
-	A <=    data_in    when en_rtd ='1'    -- ligne i
+--	A <=    data_in    when en_rtd ='1'    -- ligne i
+--	  else (others=>'0');
+	  
+--	C <=   A                when yin_int = 0 -- ligne i-1
+--	 else  doF              when en_rtd = '1'
+--	 else (others=>'0');          
+	
+	
+--	A <=    decal_data_in    when EN ='1'    -- ligne i
+--	  else (others=>'0');
+	  
+--	C <=   A                when yin_int = 0 -- ligne i-1
+--	 else  doF              when EN = '1'
+--	 else (others=>'0');	
+	 
+	A <=    decal_data_in    when en_rtd ='1'    -- ligne i
 	  else (others=>'0');
 	  
 	C <=   A                when yin_int = 0 -- ligne i-1
 	 else  doF              when en_rtd = '1'
-	 else (others=>'0');          
+	 else (others=>'0');         
+	 
+	
 	
 	      
 ELM0:	process(clk,reset)
@@ -193,6 +212,8 @@ ELM0:	process(clk,reset)
 	   S0 <= (others=>'0');        S1 <= (others=>'0');
 	  elsif(rising_edge(clk)) then
 	--    if(s_enable = '1') then
+		decal_data_in <= data_in; -- add by cody
+		decal_data_in2 <= decal_data_in; -- add by cody
 		D0 <= D1;
 		S0 <= S1;
 		D1 <= ("00"&C) - ("00"&A);

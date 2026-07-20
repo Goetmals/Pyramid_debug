@@ -159,6 +159,7 @@ YCAL0:	process(global_clk_i, global_resetn_i)
 						if ((starting_line = "10") and (valid_image = '1')) then
 						decal_y <= '1';
 						end if;
+
 				end if;
 				end process;	
 					

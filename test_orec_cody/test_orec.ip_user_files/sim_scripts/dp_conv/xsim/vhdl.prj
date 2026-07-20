@@ -1,0 +1,5 @@
+vhdl xil_defaultlib  \
+"../../../../test_orec.gen/sources_1/ip/dp_conv/dp_conv_sim_netlist.vhdl" \
+
+# Do not sort compile order
+nosort

@@ -39,6 +39,13 @@ vhdl work  \
 "../../../../../pyramid_prj/pyramid.srcs/sources_1/imports/work/dog_pkg.vhd" \
 "../../../../test_grad_imv.srcs/sources_1/imports/work/delay_pkg.vhd" \
 "../../../../test_grad_imv.srcs/sources_1/imports/work/delay.vhd" \
+"../../../../test_grad_imv.srcs/sources_1/new/xy_delay_cody.vhd" \
+"../../../../test_grad_imv.srcs/sources_1/imports/work/axis_to_xy_cody.vhd" \
+"../../../../test_grad_imv.srcs/sources_1/imports/work/gradient_cody.vhd" \
+"../../../../test_grad_imv.srcs/sources_1/new/xy_delay_cody2.vhd" \
+"../../../../test_grad_imv.srcs/sources_1/new/gaussian_filter_cody.vhd" \
+"../../../../test_grad_imv.srcs/sources_1/new/lr_gauss_cody.vhd" \
+"../../../../test_grad_imv.srcs/sources_1/imports/Téléchargements/lr_cody.vhd" \
 
 # Do not sort compile order
 nosort

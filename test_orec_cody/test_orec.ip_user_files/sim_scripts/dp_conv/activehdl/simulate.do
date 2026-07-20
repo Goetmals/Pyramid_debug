@@ -1,0 +1,14 @@
+transcript off
+onbreak {quit -force}
+onerror {quit -force}
+transcript on
+
+asim +access +r +m+dp_conv  -L xpm -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -O2 xil_defaultlib.dp_conv xil_defaultlib.glbl
+
+do {dp_conv.udo}
+
+run
+
+endsim
+
+quit -force

@@ -49,12 +49,16 @@ architecture arch_axis_to_xy_cody of axis_to_xy_cody is
 	signal s_en : std_logic;
 	signal s_y_en : std_logic;
 	
-	signal en_rtd : std_logic_vector( (NbPixDeb+NbPixFin) downto 0);
+	--signal en_rtd : std_logic_vector( (NbPixDeb+NbPixFin) downto 0);
+	signal en_rtd : std_logic_vector( (NbPixDeb+NbPixFin-1) downto 0);
+	
 	
 	signal s_axis_tvalid_int, m_axis_tready_int : std_logic;
 	
 begin
-	s_en <= s_axis_tvalid_int and m_axis_tready_int;
+	--s_en <= s_axis_tvalid_int and m_axis_tready_int; --modified by cody
+	s_en <= S_AXIS_TVALID and m_axis_tready_int;
+	
 	s_y_en <= s_en and S_AXIS_TLAST;
 	
 	-- declage de (NbPixDeb + NbPixFin) pixels du signal s_y_en
@@ -67,7 +71,7 @@ begin
 					m_axis_tready_int <= '0';
 					
 					elsif rising_edge(aclk) then
-					en_rtd <= en_rtd((NbPixDeb+NbPixFin-1) downto 0) & s_y_en;
+					en_rtd <= en_rtd((NbPixDeb+NbPixFin-2) downto 0) & s_y_en;
 					s_axis_tvalid_int <= S_AXIS_TVALID;
 					m_axis_tready_int <= M_AXIS_TREADY;
 					end if;
@@ -96,7 +100,7 @@ begin
 		if (S_AXIS_TUSER = '1') then
 			r_count_y <= (others => '0');
 		elsif rising_edge(aclk) then
-			if (en_rtd(NbPixDeb+NbPixFin)  = '1') then 
+			if (en_rtd(NbPixDeb+NbPixFin-1)  = '1') then 
 				r_count_y <= r_count_y + 1;
 			end if;
 		end if;

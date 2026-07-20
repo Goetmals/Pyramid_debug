@@ -1,0 +1,151 @@
+/*
+
+AMD Vivado v2023.1 (64-bit) [Major: 2023, Minor: 1]
+SW Build: 3865809 on Sun May  7 15:04:56 MDT 2023
+IP Build: 3864474 on Sun May  7 20:36:21 MDT 2023
+IP Build: 3864474 on Sun May  7 20:36:21 MDT 2023
+
+Process ID (PID): 1766191
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Fri Jul 03 17:30:09 CEST 2026
+Time zone: 	Central European Standard Time (Europe/Paris)
+
+OS: Ubuntu
+OS Version: 6.8.0-124-generic
+OS Architecture: amd64
+Available processors (cores): 24
+
+Display: 2
+Screen size: 1920x1200
+Screen resolution (DPI): 100
+Available screens: 2
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+OS font scaling: 100%
+
+Java version: 	17.0.3 64-bit
+JavaFX version: 17.0.1
+Java home: 	/home/demelo/Xilinx_2023/Vivado/2023.1/tps/lnx64/jre17.0.3_7
+Java executable: 	/home/demelo/Xilinx_2023/Vivado/2023.1/tps/lnx64/jre17.0.3_7/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Djdk.gtk.version=2, -Dsun.java2d.uiScale.enabled=false, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, -XX:+UseStringDeduplication, -XX:MaxGCPauseMillis=200, -XX:+ParallelRefProcEnabled, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=80m, -XX:MaxNewSize=80m, -Xms512m, -Xmx4072m, -Xss10m, -Xrs]
+Java initial memory (-Xms): 	512 MB
+Java maximum memory (-Xmx):	 3 GB
+
+User name: 	cody
+User home directory: /home/cody
+User working directory: /home/demelo/vivado_prjs/testbench_eads
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /home/demelo/Xilinx_2023/Vivado
+HDI_APPROOT: /home/demelo/Xilinx_2023/Vivado/2023.1
+RDI_DATADIR: /home/demelo/Xilinx_2023/SharedData/2023.1/data:/home/demelo/Xilinx_2023/Vivado/2023.1/data
+RDI_BINDIR: /home/demelo/Xilinx_2023/Vivado/2023.1/bin
+
+Vivado preferences file: /home/cody/.Xilinx/Vivado/2023.1/vivado.xml
+Vivado preferences directory: /home/cody/.Xilinx/Vivado/2023.1/
+Vivado layouts directory: /home/cody/.Xilinx/Vivado/2023.1/data/layouts
+PlanAhead jar file: 	/home/demelo/Xilinx_2023/Vivado/2023.1/lib/classes/planAhead.jar
+Vivado log file: 	/home/demelo/vivado_prjs/testbench_eads/vivado.log
+Vivado journal file: 	/home/demelo/vivado_prjs/testbench_eads/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-1766191-metal
+Non-Default Parameters:	[]
+
+Xilinx & AMD Environment Variables
+--------------------------------------------------------------------------------------------
+GNOME_SHELL_SESSION_MODE: ubuntu
+RDI_APPROOT: /home/demelo/Xilinx_2023/Vivado/2023.1
+RDI_BASEROOT: /home/demelo/Xilinx_2023/Vivado
+RDI_BINROOT: /home/demelo/Xilinx_2023/Vivado/2023.1/bin
+RDI_BUILD: yes
+RDI_DATADIR: /home/demelo/Xilinx_2023/SharedData/2023.1/data:/home/demelo/Xilinx_2023/Vivado/2023.1/data
+RDI_INSTALLROOT: /home/demelo/Xilinx_2023
+RDI_INSTALLVER: 2023.1
+RDI_JAVA_PLATFORM: 
+RDI_JAVA_VERSION: 17.0.3_7
+RDI_LIBDIR: /home/demelo/Xilinx_2023/Vivado/2023.1/lib/lnx64.o/Ubuntu:/home/demelo/Xilinx_2023/Vivado/2023.1/lib/lnx64.o
+RDI_OPT_EXT: .o
+RDI_PATCHROOT: 
+RDI_PLATFORM: lnx64
+RDI_PREPEND_PATH: /home/demelo/Xilinx_2023/Vitis/2023.1/bin:/home/demelo/Xilinx_2023/Vivado/2023.1/ids_lite/ISE/bin/lin64
+RDI_PROG: /home/demelo/Xilinx_2023/Vivado/2023.1/bin/unwrapped/lnx64.o/vivado
+RDI_SESSION_INFO: /home/demelo/vivado_prjs/testbench_eads:metal_1783092596_1766151
+RDI_SHARED_DATA: /home/demelo/Xilinx_2023/SharedData/2023.1/data
+RDI_TPS_ROOT: /home/demelo/Xilinx_2023/Vivado/2023.1/tps/lnx64
+RDI_USE_JDK17: True
+SHELL: /bin/bash
+XILINX: /home/demelo/Xilinx_2023/Vivado/2023.1/ids_lite/ISE
+XILINXD_LICENSE_FILE: 2100@lic-srv.ensea.fr
+XILINX_DSP: /home/demelo/Xilinx_2023/Vivado/2023.1/ids_lite/ISE
+XILINX_HLS: /home/demelo/Xilinx_2023/Vitis_HLS/2023.1
+XILINX_PLANAHEAD: /home/demelo/Xilinx_2023/Vivado/2023.1
+XILINX_SDK: /home/demelo/Xilinx_2023/Vitis/2023.1
+XILINX_VITIS: /home/demelo/Xilinx_2023/Vitis/2023.1
+XILINX_VIVADO: /home/demelo/Xilinx_2023/Vivado/2023.1
+XILINX_VIVADO_HLS: /home/demelo/Xilinx_2023/Vivado/2023.1
+
+
+GUI allocated memory:	512 MB
+GUI max memory:		4,072 MB
+Engine allocated memory: 2,648 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// HOptionPane Error: 'Can't open project 'test_grad_imv'. Please verify that the project file still exists. (Open Project)'
+// HMemoryUtils.trashcanNow. Engine heap size: 2,673 MB. GUI used memory: 71 MB. Current time: 7/3/26, 5:30:11 PM CEST
+selectButton("OptionPane.button", "OK"); // JButton
+selectList(PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS, "/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.xpr", 0); // b.c
+// [GUI Memory]: 115 MB (+118401kb) [00:00:13]
+// [Engine Memory]: 2,715 MB (+2695428kb) [00:00:13]
+// Opening Vivado Project: /home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.xpr. Version: Vivado v2023.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 2,897 MB (+48510kb) [00:00:14]
+// [GUI Memory]: 131 MB (+10819kb) [00:00:15]
+// WARNING: HEventQueue.dispatchEvent() is taking  1683 ms.
+// Tcl Message: open_project /home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/demelo/Xilinx_2023/Vivado/2023.1/data/ip'. 
+// [GUI Memory]: 145 MB (+7198kb) [00:00:15]
+// Project name: test_grad_imv; location: /home/demelo/vivado_prjs/testbench_eads/test_grad_imv; part: xc7z045ffg900-1
+dismissDialog("Open Project"); // bq
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TEST_PYRAMID(ARCH_TEST_PYRAMID) (test_pyramid.vhd)]", 2, true); // E - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TEST_PYRAMID(ARCH_TEST_PYRAMID) (test_pyramid.vhd)]", 2, true, false, false, false, false, true); // E - Double Click - Node
+// [Engine Memory]: 3,056 MB (+15135kb) [00:00:20]

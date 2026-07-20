@@ -1,0 +1,45 @@
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /home/demelo/Xilinx_2023/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L work -L secureip --snapshot TEST_PYRAMID_func_synth work.TEST_PYRAMID -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-3813] value in initialization depends on signal 'nbpixdeb' [/home/demelo/vivado_prjs/testbench_eads/test_gradient/test_gradient.srcs/sim_1/imports/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/test_pyramid.vhd:166]
+WARNING: [VRFC 10-3813] value in initialization depends on signal 'nbpixfin' [/home/demelo/vivado_prjs/testbench_eads/test_gradient/test_gradient.srcs/sim_1/imports/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/test_pyramid.vhd:167]
+WARNING: [VRFC 10-3813] value in initialization depends on signal 'nbligdeb' [/home/demelo/vivado_prjs/testbench_eads/test_gradient/test_gradient.srcs/sim_1/imports/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/test_pyramid.vhd:168]
+WARNING: [VRFC 10-3813] value in initialization depends on signal 'nbligfin' [/home/demelo/vivado_prjs/testbench_eads/test_gradient/test_gradient.srcs/sim_1/imports/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/test_pyramid.vhd:169]
+WARNING: [VRFC 10-3813] value in initialization depends on signal 'nbligfinseq' [/home/demelo/vivado_prjs/testbench_eads/test_gradient/test_gradient.srcs/sim_1/imports/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/test_pyramid.vhd:170]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package work.saturn_numeric_pkg
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling package ieee.std_logic_signed
+Compiling package ieee.std_logic_textio
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture arch_readimg of entity work.READIMG [\READIMG(nomfichier="/home/demel...]
+Compiling architecture arch_resynch_sgnx8 of entity work.RESYNCH_SGNX8 [resynch_sgnx8_default]
+Compiling architecture gnd_v of entity unisim.GND [gnd_default]
+Compiling architecture rb18_internal_vhdl_v of entity unisim.RB18_INTERNAL_VHDL [\RB18_INTERNAL_VHDL(bram_size=18...]
+Compiling architecture ramb18e1_v of entity unisim.RAMB18E1 [\RAMB18E1(ram_mode="SDP",read_wi...]
+Compiling architecture structure of entity xil_defaultlib.blk_mem_gen_0_blk_mem_gen_prim_wrapper [blk_mem_gen_0_blk_mem_gen_prim_w...]
+Compiling architecture structure of entity xil_defaultlib.blk_mem_gen_0_blk_mem_gen_prim_width [blk_mem_gen_0_blk_mem_gen_prim_w...]
+Compiling architecture structure of entity xil_defaultlib.blk_mem_gen_0_blk_mem_gen_generic_cstr [blk_mem_gen_0_blk_mem_gen_generi...]
+Compiling architecture structure of entity xil_defaultlib.blk_mem_gen_0_blk_mem_gen_top [blk_mem_gen_0_blk_mem_gen_top_de...]
+Compiling architecture structure of entity xil_defaultlib.blk_mem_gen_0_blk_mem_gen_v8_4_6_synth [blk_mem_gen_0_blk_mem_gen_v8_4_6...]
+Compiling architecture structure of entity xil_defaultlib.blk_mem_gen_0_blk_mem_gen_v8_4_6 [blk_mem_gen_0_blk_mem_gen_v8_4_6...]
+Compiling architecture structure of entity xil_defaultlib.blk_mem_gen_0 [blk_mem_gen_0_default]
+Compiling architecture arch_lr_grad_tarek of entity work.LR_GRAD_TAREK [lr_grad_tarek_default]
+Compiling architecture arch_gradient of entity work.GRADIENT [gradient_default]
+Compiling architecture arch_writeimg of entity work.WRITEIMG [\WRITEIMG(nomfichier="/home/deme...]
+Compiling architecture arch_test_pyramid of entity work.test_pyramid
+Built simulation snapshot TEST_PYRAMID_func_synth

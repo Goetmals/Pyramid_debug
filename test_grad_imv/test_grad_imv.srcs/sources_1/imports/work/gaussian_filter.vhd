@@ -101,6 +101,27 @@ port (
     );
 end component;
 
+component xy_delay_cody2 is
+  generic (
+  DELAY_X     : natural := 1;
+  DELAY_Y     : natural := 0;
+  IMG_WIDTH   : natural := 640;
+  IMG_HEIGHT  : natural := 480
+  );
+port (
+  global_clk_i    : in  std_logic;
+  global_resetn_i : in  std_logic;
+  
+  xy_en_i         : in  std_logic;
+  xy_x_i : in std_logic_vector(unsigned_num_bits(IMG_WIDTH-1)-1 downto 0);
+  xy_y_i : in std_logic_vector(unsigned_num_bits(IMG_HEIGHT-1)-1 downto 0);
+  
+  xy_en_o : out std_logic;
+  xy_x_o : out std_logic_vector(unsigned_num_bits(IMG_WIDTH-1)-1 downto 0);
+  xy_y_o : out std_logic_vector(unsigned_num_bits(IMG_HEIGHT-1)-1 downto 0)
+    );
+end component;
+
 
 -- delay from data_in to the intput of the second pass
 	constant delay_x_H     : natural := kernel_width/2;--+1;
@@ -108,7 +129,8 @@ end component;
 -- delay from data_in to data_out
 -- X : 2*(2) for mult/acc operators (2 passes), kernel_width/2-1 to go through the last half of the horizontal pass
 -- Y : kernel_width/2 to go upwards through the first half of the vertical pass
-	constant delay_x_total : natural := kernel_width/2+4;--4 + (kernel_width-2);
+	--constant delay_x_total : natural := kernel_width/2+4;--4 + (kernel_width-2);
+	constant delay_x_total : natural := 4 + (kernel_width-2);
 	constant delay_y_total : natural := kernel_width/2;
 
 --	component fifo is
@@ -132,10 +154,10 @@ end component;
 
 	type t_kernel_data_out is array(0 to kernel_width-1) of unsigned(pixel_bus_width+bus_width_coeff_sum-1 downto 0);
 	signal s_v_mul_out : t_kernel_data_out := (others=>(others=>'0'));
-	signal s_v_acc_in1 : t_kernel_data_out;
-	signal s_v_acc_out : t_kernel_data_out;
+	signal s_v_acc_in1 : t_kernel_data_out := (others=>(others=>'0'));
+	signal s_v_acc_out : t_kernel_data_out := (others=>(others=>'0'));
 	type t_kernel_data_out_shorter_v is array(0 to kernel_width-2) of unsigned(pixel_bus_width+bus_width_coeff_sum-1 downto 0);
-	signal s_v_acc_in2 : t_kernel_data_out_shorter_v;
+	signal s_v_acc_in2 : t_kernel_data_out_shorter_v := (others=>(others=>'0'));
 
 -- FIFO are used to delay data_in for input of vertical pass. (delay = 1 line +/- operator delay)
 	type t_kernel_x is array(0 to kernel_width-1) of std_logic_vector(bus_width_x-1 downto 0);
@@ -149,14 +171,14 @@ end component;
 	type t_kernel_coeffs is array(0 to kernel_width-1) of unsigned(bus_width_coeff_sum-1 downto 0);
 	signal s_v_coeff        : t_kernel_coeffs;
 -- result of first pass
-	signal s_v_gauss_result : unsigned(pixel_bus_width-1 downto 0);
+	signal s_v_gauss_result : unsigned(pixel_bus_width-1 downto 0):= (others=>'0');
 
 -- Second pass : horizontal
-	signal s_h_mul_out      : t_kernel_data_out;
-	signal s_h_acc_in1      : t_kernel_data_out;
+	signal s_h_mul_out      : t_kernel_data_out := (others=>(others=>'0'));
+	signal s_h_acc_in1      : t_kernel_data_out := (others=>(others=>'0'));
 	type t_kernel_data_out_shorter_h is array(1 to kernel_width-1) of unsigned(pixel_bus_width+bus_width_coeff_sum-1 downto 0);
-	signal s_h_acc_in2      : t_kernel_data_out_shorter_h;
-	signal s_h_acc_out      : t_kernel_data_out;
+	signal s_h_acc_in2      : t_kernel_data_out_shorter_h := (others=>(others=>'0'));
+	signal s_h_acc_out      : t_kernel_data_out := (others=>(others=>'0'));
 	signal s_h_coeff        : t_kernel_coeffs;
 -- result of Gaussian filtering
 	signal s_h_gauss_result : unsigned(pixel_bus_width-1 downto 0)  := (others => '0');
@@ -252,7 +274,7 @@ begin
 -- Horizontal pass --
 ---------------------
 
-	c_xy_delay_horizontal : xy_delay_cody
+	c_xy_delay_horizontal : xy_delay_cody2
 	generic map (
 		DELAY_X => delay_x_H,
 		DELAY_Y => delay_y_H,
@@ -261,7 +283,7 @@ begin
 	)
 	port map (
 		 global_clk_i => clk,
-		 global_resetn_i => '1',
+		 global_resetn_i => reset_n,
 
 		 xy_en_i => EN,
 		 xy_x_i => xin,
@@ -418,7 +440,7 @@ begin
 	-- end generate gen_xy_delay_vertical_others;
 
 
-	c_xy_delay_vertical_0: xy_delay_cody
+	c_xy_delay_vertical_0: xy_delay_cody2
 	generic map (
 		DELAY_X => 0,
 		DELAY_Y => 1,
@@ -427,7 +449,7 @@ begin
 	)
 	port map (
 		global_clk_i => clk,
-		global_resetn_i => '1',
+		global_resetn_i => reset_n,
 		
 		xy_en_i => EN,
 		xy_x_i => s_xin,
@@ -445,7 +467,7 @@ begin
 	end generate gen_s_W_fifo;
 
 	gen_xy_delay_vertical_others: for i in 1 to (kernel_width-2) generate
-		c_xy_delay_vertical_others : xy_delay_cody
+		c_xy_delay_vertical_others : xy_delay_cody2
 		generic map (
 			DELAY_X => 0,
 			DELAY_Y => 1,
@@ -454,7 +476,7 @@ begin
 		)
 		port map (
 			 global_clk_i => clk,
-			 global_resetn_i => '1',
+			 global_resetn_i => reset_n,
 
 			 xy_en_i => s_R_fifo(i-1),
 			 xy_x_i => s_x_fifo(i-1),
@@ -467,23 +489,23 @@ begin
 	end generate gen_xy_delay_vertical_others;
 	
 	
-	c_xy_delay_out : xy_delay_cody
+	c_xy_delay_out : xy_delay_cody2
 	generic map (
-		DELAY_X => delay_x_total,
-		DELAY_Y => delay_y_total,
-		IMG_WIDTH => w_img,
-		IMG_HEIGHT => h_img
+    			DELAY_X => delay_x_total ,
+			DELAY_Y => delay_y_total,
+			IMG_WIDTH => w_img,
+			IMG_HEIGHT => h_img
 	)
 	port map (
-	    global_clk_i => clk,
-	    global_resetn_i => '1',
+	    		global_clk_i => clk,
+	    		global_resetn_i => reset_n,
 	
-	    xy_en_i => EN,
-	    xy_x_i => xin,
-	    xy_y_i => yin,
+	    		xy_en_i => EN,
+	    		xy_x_i => xin,
+	    		xy_y_i => yin,
 	
-	    xy_en_o => s_EN_out,
-	    xy_x_o => s_xout,
-	    xy_y_o => s_yout
+	    		xy_en_o => s_EN_out,
+	    		xy_x_o => s_xout,
+			xy_y_o => s_yout
 	);
 end arch_1D;

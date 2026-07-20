@@ -1,5 +1,5 @@
 -- (c) Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
--- (c) Copyright 2022-2025 Advanced Micro Devices, Inc. All rights reserved.
+-- (c) Copyright 2022-2026 Advanced Micro Devices, Inc. All rights reserved.
 -- 
 -- This file contains confidential and proprietary information
 -- of AMD and is protected under U.S. and international copyright
@@ -55,11 +55,12 @@ COMPONENT dp_grad
   PORT (
     clka : IN STD_LOGIC;
     wea : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
-    addra : IN STD_LOGIC_VECTOR(10 DOWNTO 0);
-    dina : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    addra : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
+    dina : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     clkb : IN STD_LOGIC;
-    addrb : IN STD_LOGIC_VECTOR(10 DOWNTO 0);
-    doutb : OUT STD_LOGIC_VECTOR(15 DOWNTO 0) 
+    enb : IN STD_LOGIC;
+    addrb : IN STD_LOGIC_VECTOR(8 DOWNTO 0);
+    doutb : OUT STD_LOGIC_VECTOR(7 DOWNTO 0) 
   );
 END COMPONENT;
 -- COMP_TAG_END ------ End COMPONENT Declaration ------------
@@ -75,6 +76,7 @@ your_instance_name : dp_grad
     addra => addra,
     dina => dina,
     clkb => clkb,
+    enb => enb,
     addrb => addrb,
     doutb => doutb
   );

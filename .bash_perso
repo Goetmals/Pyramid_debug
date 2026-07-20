@@ -1,0 +1,40 @@
+#!/bin/bash
+
+alias ls='ls --color'
+alias ll='ls -l --color'
+
+###################################
+#### Licences
+###################################
+#export LM_LICENSE_FILE=1700@odin.ensea.fr:1702@lucky.ensea.fr:1705@licence.ensea.fr:1717@licence.ensea.fr:1718@licence.ensea.fr:2100@lic-srv.ensea.fr:27000@lic-etis.ensea.fr:28000@licence.ensea.fr:30000@licences.cnfm.fr
+export XILINXD_LICENSE_FILE=2100@lic-srv.ensea.fr
+#export XILINXD_LICENSE_FILE=~/Xilinx_2023
+export PATH=$PATH:~/Xilinx_2023/Vivado/2023.1/bin/unwrapped/lnx64.o
+#export PATH=$PATH:~/Xilinx_2016/Vivado/2016.4/bin/unwrapped/lnx64.o
+
+###################################
+#### XILINX
+###################################
+source ~/Xilinx_2023/Vivado/2023.1/settings64.sh
+source ~/Xilinx_2023/Vitis/2023.1/settings64.sh
+#source ~/Xilinx_2023/petalinux/2023.1/settings.sh
+source ~/Xilinx_2024/petalinux/2024.2/settings.sh
+#source ~/petalinux_arm_sdk_2024/environment-setup-cortexa9t2hf-neon-xilinx-linux-gnueabi
+#source ~/petalinux_sdk/environment-setup-cortexa72-cortexa53-xilinx-linux
+#export PATH=$PATH:~/Xilinx_2024/petalinux/2024.2/sysroots/x86_64-petalinux-linux/usr/bin
+export PATH=$PATH:/home/demelo/Xilinx_2024/petalinux/2024.2/components/xsct/gnu/aarch32/lin/gcc-arm-linux-gnueabi/x86_64-petalinux-linux/usr/bin/arm-xilinx-linux-gnueabi
+
+#source ~/Xilinx_2016/Vivado/2016.4/settings64.sh
+#source ~/Xilinx_2016/SDK/2016.4/settings64.sh
+
+#pour compiler Linux Zynq
+export PATH=$PATH:/media/demelo/toshiba/wizard/my_git/dtc
+export PATH=$PATH:/media/demelo/toshiba/wizard/my_git/u-boot-xlnx/tools
+
+#pour ComfyUI
+export PATH=$PATH:~/.local/bin
+
+#export CROSS_COMPILE=arm-xilinx-linux-gnueabi-
+#export CROSS_COMPILE=arm-linux-gnueabihf-
+#export ARCH=arm
+

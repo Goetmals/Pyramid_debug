@@ -1,0 +1,3 @@
+blk_mem_gen_v8_4.v,verilog,blk_mem_gen_v8_4_6,../../../ipstatic/simulation/blk_mem_gen_v8_4.v,
+dp_grad_tarek.v,verilog,xil_defaultlib,../../../../test_gradient.gen/sim_1/ip/dp_grad_tarek/sim/dp_grad_tarek.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

@@ -1,0 +1,7 @@
+verilog xil_defaultlib  \
+"../../../../test_gradient.gen/sim_1/ip/dp_grad_tarek/sim/dp_grad_tarek.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

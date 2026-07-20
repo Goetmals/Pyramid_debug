@@ -2,7 +2,7 @@
 -- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
--- Date        : Wed Apr  9 10:45:18 2025
+-- Date        : Fri Jul 17 10:58:15 2026
 -- Host        : metal running 64-bit Ubuntu 22.04.5 LTS
 -- Command     : write_vhdl -force -mode synth_stub
 --               /home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.gen/sources_1/ip/dp_grad/dp_grad_stub.vhdl
@@ -17,11 +17,12 @@ entity dp_grad is
   Port ( 
     clka : in STD_LOGIC;
     wea : in STD_LOGIC_VECTOR ( 0 to 0 );
-    addra : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    dina : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    addra : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    dina : in STD_LOGIC_VECTOR ( 7 downto 0 );
     clkb : in STD_LOGIC;
-    addrb : in STD_LOGIC_VECTOR ( 10 downto 0 );
-    doutb : out STD_LOGIC_VECTOR ( 15 downto 0 )
+    enb : in STD_LOGIC;
+    addrb : in STD_LOGIC_VECTOR ( 8 downto 0 );
+    doutb : out STD_LOGIC_VECTOR ( 7 downto 0 )
   );
 
 end dp_grad;
@@ -30,7 +31,7 @@ architecture stub of dp_grad is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "clka,wea[0:0],addra[10:0],dina[15:0],clkb,addrb[10:0],doutb[15:0]";
+attribute black_box_pad_pin of stub : architecture is "clka,wea[0:0],addra[8:0],dina[7:0],clkb,enb,addrb[8:0],doutb[7:0]";
 attribute x_core_info : string;
 attribute x_core_info of stub : architecture is "blk_mem_gen_v8_4_6,Vivado 2023.1";
 begin

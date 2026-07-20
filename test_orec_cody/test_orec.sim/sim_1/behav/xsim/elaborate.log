@@ -1,0 +1,75 @@
+Vivado Simulator v2023.1
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+Running: /home/demelo/Xilinx_2023/Vivado/2023.1/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L work -L secureip -L xpm --snapshot TEST_OREC_behav work.TEST_OREC -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package work.saturn_numeric_pkg
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling package ieee.std_logic_signed
+Compiling package ieee.std_logic_textio
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture arch_readimg of entity work.READIMG [\READIMG(nomfichier="/home/demel...]
+Compiling architecture arch_resynch_sgnx8 of entity work.RESYNCH_SGNX8 [resynch_sgnx8_default]
+Compiling architecture gnd_v of entity unisim.GND [gnd_default]
+Compiling architecture rb36_internal_vhdl_v of entity unisim.RB36_INTERNAL_VHDL [\RB36_INTERNAL_VHDL(doa_reg=1,do...]
+Compiling architecture ramb36e1_v of entity unisim.RAMB36E1 [\RAMB36E1(doa_reg=1,dob_reg=1,re...]
+Compiling architecture structure of entity xil_defaultlib.dp_conv_blk_mem_gen_prim_wrapper [dp_conv_blk_mem_gen_prim_wrapper...]
+Compiling architecture structure of entity xil_defaultlib.dp_conv_blk_mem_gen_prim_width [dp_conv_blk_mem_gen_prim_width_d...]
+Compiling architecture structure of entity xil_defaultlib.\dp_conv_blk_mem_gen_prim_wrapper__parameterized0\ [\dp_conv_blk_mem_gen_prim_wrappe...]
+Compiling architecture structure of entity xil_defaultlib.\dp_conv_blk_mem_gen_prim_width__parameterized0\ [\dp_conv_blk_mem_gen_prim_width_...]
+Compiling architecture structure of entity xil_defaultlib.\dp_conv_blk_mem_gen_prim_wrapper__parameterized1\ [\dp_conv_blk_mem_gen_prim_wrappe...]
+Compiling architecture structure of entity xil_defaultlib.\dp_conv_blk_mem_gen_prim_width__parameterized1\ [\dp_conv_blk_mem_gen_prim_width_...]
+Compiling architecture structure of entity xil_defaultlib.\dp_conv_blk_mem_gen_prim_wrapper__parameterized2\ [\dp_conv_blk_mem_gen_prim_wrappe...]
+Compiling architecture structure of entity xil_defaultlib.\dp_conv_blk_mem_gen_prim_width__parameterized2\ [\dp_conv_blk_mem_gen_prim_width_...]
+Compiling architecture structure of entity xil_defaultlib.\dp_conv_blk_mem_gen_prim_wrapper__parameterized3\ [\dp_conv_blk_mem_gen_prim_wrappe...]
+Compiling architecture structure of entity xil_defaultlib.\dp_conv_blk_mem_gen_prim_width__parameterized3\ [\dp_conv_blk_mem_gen_prim_width_...]
+Compiling architecture structure of entity xil_defaultlib.dp_conv_blk_mem_gen_generic_cstr [dp_conv_blk_mem_gen_generic_cstr...]
+Compiling architecture structure of entity xil_defaultlib.dp_conv_blk_mem_gen_top [dp_conv_blk_mem_gen_top_default]
+Compiling architecture structure of entity xil_defaultlib.dp_conv_blk_mem_gen_v8_4_6_synth [dp_conv_blk_mem_gen_v8_4_6_synth...]
+Compiling architecture structure of entity xil_defaultlib.dp_conv_blk_mem_gen_v8_4_6 [dp_conv_blk_mem_gen_v8_4_6_defau...]
+Compiling architecture structure of entity xil_defaultlib.dp_conv [dp_conv_default]
+Compiling architecture arch_lr_conv of entity work.LR_CONV [lr_conv_default]
+Compiling architecture arch_conv_col of entity work.CONV_COL [conv_col_default]
+Compiling architecture arch_conv_lig of entity work.CONV_LIG [conv_lig_default]
+Compiling architecture arch_ampl of entity work.AMPL [ampl_default]
+Compiling architecture structure of entity xil_defaultlib.dp_grad_blk_mem_gen_prim_wrapper [dp_grad_blk_mem_gen_prim_wrapper...]
+Compiling architecture structure of entity xil_defaultlib.dp_grad_blk_mem_gen_prim_width [dp_grad_blk_mem_gen_prim_width_d...]
+Compiling architecture structure of entity xil_defaultlib.dp_grad_blk_mem_gen_generic_cstr [dp_grad_blk_mem_gen_generic_cstr...]
+Compiling architecture structure of entity xil_defaultlib.dp_grad_blk_mem_gen_top [dp_grad_blk_mem_gen_top_default]
+Compiling architecture structure of entity xil_defaultlib.dp_grad_blk_mem_gen_v8_4_6_synth [dp_grad_blk_mem_gen_v8_4_6_synth...]
+Compiling architecture structure of entity xil_defaultlib.dp_grad_blk_mem_gen_v8_4_6 [dp_grad_blk_mem_gen_v8_4_6_defau...]
+Compiling architecture structure of entity xil_defaultlib.dp_grad [dp_grad_default]
+Compiling architecture arch_lr_grad of entity work.LR_GRAD [lr_grad_default]
+Compiling architecture arch_gradient of entity work.GRADIENT [gradient_default]
+Compiling architecture arch_norm_orie of entity work.NORM_ORIE [norm_orie_default]
+Compiling architecture rb18_internal_vhdl_v of entity unisim.RB18_INTERNAL_VHDL [\RB18_INTERNAL_VHDL(bram_size=18...]
+Compiling architecture ramb18e1_v of entity unisim.RAMB18E1 [\RAMB18E1(doa_reg=1,dob_reg=1,re...]
+Compiling architecture structure of entity xil_defaultlib.dp_snml_blk_mem_gen_prim_wrapper [dp_snml_blk_mem_gen_prim_wrapper...]
+Compiling architecture structure of entity xil_defaultlib.dp_snml_blk_mem_gen_prim_width [dp_snml_blk_mem_gen_prim_width_d...]
+Compiling architecture structure of entity xil_defaultlib.\dp_snml_blk_mem_gen_prim_wrapper__parameterized0\ [\dp_snml_blk_mem_gen_prim_wrappe...]
+Compiling architecture structure of entity xil_defaultlib.\dp_snml_blk_mem_gen_prim_width__parameterized0\ [\dp_snml_blk_mem_gen_prim_width_...]
+Compiling architecture structure of entity xil_defaultlib.dp_snml_blk_mem_gen_generic_cstr [dp_snml_blk_mem_gen_generic_cstr...]
+Compiling architecture structure of entity xil_defaultlib.dp_snml_blk_mem_gen_top [dp_snml_blk_mem_gen_top_default]
+Compiling architecture structure of entity xil_defaultlib.dp_snml_blk_mem_gen_v8_4_6_synth [dp_snml_blk_mem_gen_v8_4_6_synth...]
+Compiling architecture structure of entity xil_defaultlib.dp_snml_blk_mem_gen_v8_4_6 [dp_snml_blk_mem_gen_v8_4_6_defau...]
+Compiling architecture structure of entity xil_defaultlib.dp_snml [dp_snml_default]
+Compiling architecture arch_lr_snml of entity work.LR_SNML [lr_snml_default]
+Compiling architecture arch_snml of entity work.SNML [snml_default]
+Compiling architecture arch_biseuillage of entity work.BISEUILLAGE [biseuillage_default]
+Compiling architecture arch_orec of entity work.OREC [orec_default]
+Compiling architecture arch_writeimg of entity work.WRITEIMG [\WRITEIMG(nomfichier="/home/deme...]
+Compiling architecture arch_test_orec of entity work.test_orec
+Built simulation snapshot TEST_OREC_behav

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="TEST_PYRAMID_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="TEST_PYRAMID" />
+            <top_module name="glbl" />
+            <top_module name="saturn_numeric_pkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="1,580.000001 us"></ZoomEndTime>
+      <Cursor1Time time="37.000000 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="143"></NameColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="17" />
+   <wvobject type="logic" fp_name="/TEST_PYRAMID/resetb">
+      <obj_property name="ElementShortName">resetb</obj_property>
+      <obj_property name="ObjectShortName">resetb</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/TEST_PYRAMID/clkb">
+      <obj_property name="ElementShortName">clkb</obj_property>
+      <obj_property name="ObjectShortName">clkb</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/TEST_PYRAMID/hsync_int">
+      <obj_property name="ElementShortName">hsync_int</obj_property>
+      <obj_property name="ObjectShortName">hsync_int</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/TEST_PYRAMID/vsync_int">
+      <obj_property name="ElementShortName">vsync_int</obj_property>
+      <obj_property name="ObjectShortName">vsync_int</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TEST_PYRAMID/pixel_int">
+      <obj_property name="ElementShortName">pixel_int[7:0]</obj_property>
+      <obj_property name="ObjectShortName">pixel_int[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/TEST_PYRAMID/GRD0/decalh">
+      <obj_property name="ElementShortName">decalh</obj_property>
+      <obj_property name="ObjectShortName">decalh</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/TEST_PYRAMID/GRD0/decalv">
+      <obj_property name="ElementShortName">decalv</obj_property>
+      <obj_property name="ObjectShortName">decalv</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TEST_PYRAMID/GRD0/A">
+      <obj_property name="ElementShortName">A[7:0]</obj_property>
+      <obj_property name="ObjectShortName">A[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TEST_PYRAMID/GRD0/C">
+      <obj_property name="ElementShortName">C[7:0]</obj_property>
+      <obj_property name="ObjectShortName">C[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TEST_PYRAMID/GRD0/D0">
+      <obj_property name="ElementShortName">D0[9:0]</obj_property>
+      <obj_property name="ObjectShortName">D0[9:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TEST_PYRAMID/GRD0/D1">
+      <obj_property name="ElementShortName">D1[9:0]</obj_property>
+      <obj_property name="ObjectShortName">D1[9:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TEST_PYRAMID/GRD0/S0">
+      <obj_property name="ElementShortName">S0[9:0]</obj_property>
+      <obj_property name="ObjectShortName">S0[9:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TEST_PYRAMID/GRD0/S1">
+      <obj_property name="ElementShortName">S1[9:0]</obj_property>
+      <obj_property name="ObjectShortName">S1[9:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/TEST_PYRAMID/hsync_out">
+      <obj_property name="ElementShortName">hsync_out</obj_property>
+      <obj_property name="ObjectShortName">hsync_out</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/TEST_PYRAMID/vsync_out">
+      <obj_property name="ElementShortName">vsync_out</obj_property>
+      <obj_property name="ObjectShortName">vsync_out</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TEST_PYRAMID/pixel_out_x">
+      <obj_property name="ElementShortName">pixel_out_x[9:0]</obj_property>
+      <obj_property name="ObjectShortName">pixel_out_x[9:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/TEST_PYRAMID/pixel_out_y">
+      <obj_property name="ElementShortName">pixel_out_y[9:0]</obj_property>
+      <obj_property name="ObjectShortName">pixel_out_y[9:0]</obj_property>
+   </wvobject>
+</wave_config>

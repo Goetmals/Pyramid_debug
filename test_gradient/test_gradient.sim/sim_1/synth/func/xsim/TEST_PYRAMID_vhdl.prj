@@ -1,0 +1,16 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"TEST_PYRAMID_func_synth.vhd" \
+
+vhdl work  \
+"../../../../../test_gradient.srcs/sim_1/imports/testbench_eads/vhdl/src/orec-II/gradient.vhd" \
+"../../../../../test_gradient.srcs/sources_1/imports/new/lr_grad_tarek.vhd" \
+"../../../../../test_gradient.srcs/sim_1/imports/testbench_eads/vhdl/tst/divers/readimg.vhd" \
+"../../../../../test_gradient.srcs/sim_1/imports/testbench_eads/vhdl/tst/divers/resynch_sgnx8.vhd" \
+"../../../../../test_gradient.srcs/sources_1/imports/work/saturn_numeric_pkg.vhd" \
+"../../../../../test_gradient.srcs/sources_1/imports/work/saturn_numeric_pkg-body.vhd" \
+"../../../../../test_gradient.srcs/sim_1/imports/testbench_eads/vhdl/tst/divers/writeimg.vhd" \
+"../../../../../test_gradient.srcs/sim_1/imports/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/test_pyramid.vhd" \
+
+# Do not sort compile order
+nosort
