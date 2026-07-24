@@ -41,7 +41,7 @@ architecture ARCH_LR_CODY of LR_CODY is
 	-- Plus besoin de d'instancier de composant "dp_grad_tarek" (IP Catalog) !
 	
 	-- Détermination automatique de la taille du bus d'adresse
-	constant ADDR_WIDTH : natural := unsigned_num_bits(G_DEPTH); -- Correspond à "8 downto 0" pour 512 mots
+	constant ADDR_WIDTH : natural := unsigned_num_bits(G_DEPTH-1); -- Correspond à "8 downto 0" pour 512 mots
 
 	-- déclaration des signaux internes
 	signal	adL, adE, adE_int 	: std_logic_vector(ADDR_WIDTH-1 downto 0);

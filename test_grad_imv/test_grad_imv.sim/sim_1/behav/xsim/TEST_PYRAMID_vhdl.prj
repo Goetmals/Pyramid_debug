@@ -46,6 +46,8 @@ vhdl work  \
 "../../../../test_grad_imv.srcs/sources_1/new/gaussian_filter_cody.vhd" \
 "../../../../test_grad_imv.srcs/sources_1/new/lr_gauss_cody.vhd" \
 "../../../../test_grad_imv.srcs/sources_1/imports/Téléchargements/lr_cody.vhd" \
+"../../../../test_grad_imv.srcs/sources_1/imports/Téléchargements/subsample_cody.vhd" \
+"../../../../test_grad_imv.srcs/sources_1/new/subsample_cody2.vhd" \
 
 # Do not sort compile order
 nosort

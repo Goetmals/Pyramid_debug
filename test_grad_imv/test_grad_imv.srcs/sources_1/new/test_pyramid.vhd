@@ -30,11 +30,11 @@ entity TEST_PYRAMID is
 generic (
 	  --nomSrce	: string  := "C:\Users\frede\OneDrive\Documents\testbench_eads\vhdl\tst\ImageTests\cube.imv";
 	  --nomSrce	: string  := "/home/cody/Documents/img_test.imv";
-	  nomSrce	: string  := "/home/demelo/vivado_prjs/testbench_eads/vhdl/tst/ImageTests/bridge.imv";
+	  nomSrce	: string  := "/home/demelo/vivado_prjs/testbench_eads/vhdl/tst/ImageTests/test_pyramid/bridge.imv";
 	  --nomDest	: string  := "C:\Users\frede\OneDrive\Documents\testbench_eads\vhdl\tst\ImageTests\cube_gf_py.imv";
-      nomDest	: string  := "/home/demelo/vivado_prjs/testbench_eads/vhdl/tst/ImageTests/bridge_dog01_generic.imv";
+      nomDest	: string  := "/home/demelo/vivado_prjs/testbench_eads/vhdl/tst/ImageTests/test_pyramid/bridge_grad_01.imv";
       --nomDest	: string  := "/home/demelo/vivado_prjs/testbench_eads/vhdl/tst/ImageTests/img_test_gf_v.imv";
-	  Periode	: time    := 10.000 ns
+	  Periode	: time    := 5.000 ns
 	);
 end TEST_PYRAMID;
 
@@ -45,6 +45,9 @@ architecture ARCH_TEST_PYRAMID of TEST_PYRAMID is
 	-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ --
 	-- d�claration des composants externes
 	-- --------------------------------------------------------- --
+	
+
+	
 component READIMG
 generic (
 	 nomfichier	: string  :="test.ima";
@@ -200,6 +203,32 @@ component gaussian_filter_cody
 	);
 end component;
 
+component subsample_cody2 
+	generic (
+		pixel_bus_width     : natural := 17;
+		w_img               : natural := 640;
+		h_img               : integer := 480
+	);
+	port (
+		clk			: in  std_logic;
+		reset_n 	: in std_logic;
+		EN  		: in  std_logic;
+		hsync_in	: in  std_logic;
+		vsync_in	: in  std_logic;
+		xin      	: in  std_logic_vector(unsigned_num_bits(w_img-1)-1 downto 0);
+		yin      	: in  std_logic_vector(unsigned_num_bits(h_img-1)-1 downto 0);
+		data_in  	: in  std_logic_vector(pixel_bus_width-1 downto 0);
+		
+		
+		EN_out   	: out std_logic;
+		hsync_out	: out std_logic;
+		vsync_out	: out std_logic;
+		xout     	: out std_logic_vector(unsigned_num_bits(w_img-1)-2 downto 0);
+		yout     	: out std_logic_vector(unsigned_num_bits(w_img-1)-2 downto 0);
+		data_out 	: out std_logic_vector(pixel_bus_width-1 downto 0)
+	);
+end component;
+
 component xy_to_axis 
 	generic (
 		MAX_COLOR : positive := 255;
@@ -278,8 +307,8 @@ end component;
     
     constant sq_sigma00 : real := 1.0;
     constant sq_sigma01 : real := 1.0;
-    constant sq_sigma02 : real := 2.0;
-    
+    --constant sq_sigma02 : real := 2.0;
+    constant sq_sigma02 : real := 1.0;
     constant kernel_width : natural := 9;
     constant bus_width_coeff_sum : natural := 24;
     
@@ -300,9 +329,11 @@ end component;
 	
 	signal	hsync_grd, vsync_grd	: std_logic;
 	
-	signal  hsync_gf00, vsync_gf00, hsync_gf01, vsync_gf01, hsync_gf02, vsync_gf02 : std_logic;
+	signal  hsync_gf00, vsync_gf00, hsync_gf01, vsync_gf01, hsync_gf02, vsync_gf02, hsync_gf10, vsync_gf10, hsync_gf11, vsync_gf11 : std_logic;
 	
-	signal  hsync_dog00, vsync_dog00, hsync_dog01, vsync_dog01 : std_logic;
+	signal hsync_sub0, vsync_sub0	: std_logic;
+	
+	signal  hsync_dog00, vsync_dog00, hsync_dog01, vsync_dog01, hsync_dog02, vsync_dog02, hsync_dog03, vsync_dog03 : std_logic;
 
 	signal	hsync_out,vsync_out	: std_logic;
 	signal	pixel_out		: std_logic_vector( 7 downto 0);
@@ -323,16 +354,16 @@ end component;
     signal o_y      : std_logic_vector(UNSIGNED_NUM_BITS(IMG_HEIGHT-1)-1 downto 0);
     signal o_value  : std_logic_vector(BUS_WIDTH-1 downto 0);
     
-    signal en_grd, en_gf00, en_gf01, en_gf02,en_dly, en_dog00, en_dog01     : std_logic;
-    signal x_grd, x_gf00, x_gf01, x_gf02, x_dly, x_dog00, x_dog01      : std_logic_vector(bus_width_x-1 downto 0);
-    signal y_grd, y_gf00, y_gf01, y_gf02, y_dly, y_dog00, y_dog01      : std_logic_vector(bus_width_y-1 downto 0);
-    signal pixel_grd, pixel_gf00, pixel_gf01, pixel_gf02, pixel_dog00, pixel_dog01  : std_logic_vector(7 downto 0);
-    
+    signal en_grd, en_gf00, en_gf01, en_gf02, en_gf10, en_gf11, en_dly, en_dog00, en_dog01, en_dog02, en_dog03,  en_sub0     : std_logic;
+    signal x_grd, x_gf00, x_gf01, x_gf02, x_dly, x_dog00, x_dog01        : std_logic_vector(bus_width_x-1 downto 0);
+    signal y_grd, y_gf00, y_gf01, y_gf02, y_dly, y_dog00, y_dog01        : std_logic_vector(bus_width_y-1 downto 0);
+    signal pixel_grd, pixel_gf00, pixel_gf01, pixel_gf02, pixel_dog00, pixel_dog01, pixel_dog02, pixel_dog03, pixel_sub0, pixel_gf10, pixel_gf11  : std_logic_vector(7 downto 0);
+    signal x_sub0, y_sub0, x_gf10, y_gf10, x_dog02, y_dog02, x_gf11, y_gf11, x_dog03, y_dog03  :  std_logic_vector(bus_width_y-2 downto 0);
     --signal decal_h : std_logic_vector(29 downto 0);
     --signal decal_h : std_logic_vector(15 downto 0);
     --signal decal_h : std_logic_vector(9 downto 0); -- gradient seul
     signal decal_h : std_logic_vector(8 downto 0);
-    signal delay00_data_out_s, delay01_data_out_s : std_logic_vector( 7 downto 0);
+    signal delay00_data_out_s, delay01_data_out_s, delay02_data_out_s, delay03_data_out_s : std_logic_vector( 7 downto 0);
 	
 	signal nbPixDeb, nbPixFin, nbLigDeb, nbLigFin, nbLigFinSeq	: integer := 6;
 	
@@ -489,20 +520,20 @@ GF01:     gaussian_filter_cody
                                 ,pixel_gf01
                             );
 
-DLY01:  delay
-		generic map (
-			pixel_bus_width => unsigned_num_bits(MAX_COLOR),
-			w_img => IMG_WIDTH,
-			h_img => IMG_HEIGHT,
-			delay_x => GAUSS_DELAY_X_C,
-			delay_y => GAUSS_DELAY_Y_C
-		)
-		port map (
-			clk => clkb,
-			EN => en_gf00,
-			data_in => pixel_gf00,
-			data_out => delay00_data_out_s
-		);
+--DLY01:  delay
+--		generic map (
+--			pixel_bus_width => unsigned_num_bits(MAX_COLOR),
+--			w_img => IMG_WIDTH,
+--			h_img => IMG_HEIGHT,
+--			delay_x => GAUSS_DELAY_X_C,
+--			delay_y => GAUSS_DELAY_Y_C
+--		)
+--		port map (
+--			clk => clkb,
+--			EN => en_gf00,
+--			data_in => pixel_gf00,
+--			data_out => delay00_data_out_s
+--		);
 		
 --DOG00:  dog
 --		generic map (
@@ -556,62 +587,224 @@ GF02:     gaussian_filter_cody
                                 ,pixel_gf02
                             );
 
-DLY02:  delay
-		generic map (
-			pixel_bus_width => unsigned_num_bits(MAX_COLOR),
-			w_img => IMG_WIDTH,
-			h_img => IMG_HEIGHT,
-			delay_x => GAUSS_DELAY_X_C,
-			delay_y => GAUSS_DELAY_Y_C
-		)
-		port map (
-			clk => clkb,
-			EN => en_gf01,
-			data_in => pixel_gf01,
-			data_out => delay01_data_out_s
-		);
+--DLY02:  delay
+--		generic map (
+--			pixel_bus_width => unsigned_num_bits(MAX_COLOR),
+--			w_img => IMG_WIDTH,
+--			h_img => IMG_HEIGHT,
+--			delay_x => GAUSS_DELAY_X_C,
+--			delay_y => GAUSS_DELAY_Y_C
+--		)
+--		port map (
+--			clk => clkb,
+--			EN => en_gf01,
+--			data_in => pixel_gf01,
+--			data_out => delay01_data_out_s
+--		);
 		  
-DOG01:  dog
-		generic map (
-			pixel_bus_width => unsigned_num_bits(MAX_COLOR),
-			w_img => IMG_WIDTH,
-			h_img => IMG_HEIGHT,
-			bus_width_x => unsigned_num_bits(IMG_WIDTH-1),
-			bus_width_y => unsigned_num_bits(IMG_HEIGHT-1)
-		)
-		port map (
-			clk => clkb,
-			EN => en_gf02,
-			hsync_in => hsync_gf02,
-			vsync_in => vsync_gf02,
-			xin => x_gf02,
-			yin => y_gf02,
-			data_in_a => pixel_gf02,
-			data_in_b => delay01_data_out_s,
+--DOG01:  dog
+--		generic map (
+--			pixel_bus_width => unsigned_num_bits(MAX_COLOR),
+--			w_img => IMG_WIDTH,
+--			h_img => IMG_HEIGHT,
+--			bus_width_x => unsigned_num_bits(IMG_WIDTH-1),
+--			bus_width_y => unsigned_num_bits(IMG_HEIGHT-1)
+--		)
+--		port map (
+--			clk => clkb,
+--			EN => en_gf02,
+--			hsync_in => hsync_gf02,
+--			vsync_in => vsync_gf02,
+--			xin => x_gf02,
+--			yin => y_gf02,
+--			data_in_a => pixel_gf02,
+--			data_in_b => delay01_data_out_s,
 			
-			EN_out => en_dog01,
-			hsync_out => hsync_dog01,
-			vsync_out => vsync_dog01,
-			xout => x_dog01,
-			yout => y_dog01,
-			data_out => pixel_dog01
-		);                            
-                                     
+--			EN_out => en_dog01,
+--			hsync_out => hsync_dog01,
+--			vsync_out => vsync_dog01,
+--			xout => x_dog01,
+--			yout => y_dog01,
+--			data_out => pixel_dog01
+--		);                            
+
+SUB0: subsample_cody2 
+          generic map (
+                    pixel_bus_width => unsigned_num_bits(MAX_COLOR),
+                    w_img => IMG_WIDTH,
+                    h_img => IMG_HEIGHT
+		)  
+		  port map (
+                    clk                   => clkb,
+                    reset_n               => resetb,
+                    EN                    => en_gf02,
+                    hsync_in              => hsync_gf02,
+                    vsync_in              => vsync_gf02,
+                    xin                   => x_gf02, 
+                    yin                   => y_gf02,
+                    data_in               => pixel_gf02,
+                    
+                    EN_out                => en_sub0,
+                    hsync_out             => hsync_sub0,
+                    vsync_out             => vsync_sub0,
+                    xout                  => x_sub0,
+                    yout                  => y_sub0,
+                    data_out              => pixel_sub0
+                    );   
+                
+GF10:     gaussian_filter_cody 
+                            generic map(
+                                 8
+                                ,IMG_WIDTH/2
+                                ,IMG_HEIGHT/2
+                                ,bus_width_x-1
+                                ,bus_width_y-1
+                            
+                                ,sq_sigma01            
+                                ,kernel_width        
+                                ,bus_width_coeff_sum 
+                            )
+                            port map(
+                                 clkb, en_sub0
+                                ,resetb
+                                ,en_gf10
+                                ,hsync_sub0, vsync_sub0
+                                ,x_sub0
+                                ,y_sub0
+                                ,hsync_gf10, vsync_gf10
+                                ,x_gf10
+                                ,y_gf10
+                                ,pixel_sub0
+                                ,pixel_gf10
+                            );
+
+
+--DLY03:  delay
+--		generic map (
+--			pixel_bus_width => unsigned_num_bits(MAX_COLOR),
+--			w_img => IMG_WIDTH/2,
+--			h_img => IMG_HEIGHT/2,
+--			delay_x => GAUSS_DELAY_X_C,
+--			delay_y => GAUSS_DELAY_Y_C
+--		)
+--		port map (
+--			clk => clkb,
+--			EN => en_sub0,
+--			data_in => pixel_sub0,
+--			data_out => delay02_data_out_s
+--		); 
+
+--DOG02:  dog
+--		generic map (
+--			pixel_bus_width => unsigned_num_bits(MAX_COLOR),
+--			w_img => IMG_WIDTH/2,
+--			h_img => IMG_HEIGHT/2,
+--			bus_width_x => unsigned_num_bits(IMG_WIDTH-1)-1,
+--			bus_width_y => unsigned_num_bits(IMG_HEIGHT-1)-1
+--		)
+--		port map (
+--			clk => clkb,
+--			EN => en_gf10,
+--			hsync_in => hsync_gf10,
+--			vsync_in => vsync_gf10,
+--			xin => x_gf10,
+--			yin => y_gf10,
+--			data_in_a => pixel_gf10,
+--			data_in_b => delay02_data_out_s,
+			
+--			EN_out => en_dog02,
+--			hsync_out => hsync_dog02,
+--			vsync_out => vsync_dog02,
+--			xout => x_dog02,
+--			yout => y_dog02,
+--			data_out => pixel_dog02
+--		);
+
+GF11:     gaussian_filter_cody 
+                            generic map(
+                                 8
+                                ,IMG_WIDTH/2
+                                ,IMG_HEIGHT/2
+                                ,bus_width_x-1
+                                ,bus_width_y-1
+                            
+                                ,sq_sigma02            
+                                ,kernel_width        
+                                ,bus_width_coeff_sum 
+                            )
+                            port map(
+                                 clkb, en_gf10
+                                ,resetb
+                                ,en_gf11
+                                ,hsync_gf10, vsync_gf10
+                                ,x_gf10
+                                ,y_gf10
+                                ,hsync_gf11, vsync_gf11
+                                ,x_gf11
+                                ,y_gf11
+                                ,pixel_gf10
+                                ,pixel_gf11
+                            );  
+
+--DLY04:  delay
+--		generic map (
+--			pixel_bus_width => unsigned_num_bits(MAX_COLOR),
+--			w_img => IMG_WIDTH/2,
+--			h_img => IMG_HEIGHT/2,
+--			delay_x => GAUSS_DELAY_X_C,
+--			delay_y => GAUSS_DELAY_Y_C
+--		)
+--		port map (
+--			clk => clkb,
+--			EN => en_gf10,
+--			data_in => pixel_gf10,
+--			data_out => delay03_data_out_s
+--		); 
+
+--DOG03:  dog
+--		generic map (
+--			pixel_bus_width => unsigned_num_bits(MAX_COLOR),
+--			w_img => IMG_WIDTH/2,
+--			h_img => IMG_HEIGHT/2,
+--			bus_width_x => unsigned_num_bits(IMG_WIDTH-1)-1,
+--			bus_width_y => unsigned_num_bits(IMG_HEIGHT-1)-1
+--		)
+--		port map (
+--			clk => clkb,
+--			EN => en_gf11,
+--			hsync_in => hsync_gf11,
+--			vsync_in => vsync_gf11,
+--			xin => x_gf11,
+--			yin => y_gf11,
+--			data_in_a => pixel_gf11,
+--			data_in_b => delay03_data_out_s,
+			
+--			EN_out => en_dog03,
+--			hsync_out => hsync_dog03,
+--			vsync_out => vsync_dog03,
+--			xout => x_dog03,
+--			yout => y_dog03,
+--			data_out => pixel_dog03
+--		);
+                             
+           
+                    
+                                                 
 XYAS0:  xy_to_axis 
                                    generic map (
                                         MAX_COLOR
-                                       ,IMG_WIDTH
-                                       ,IMG_HEIGHT
+                                       ,IMG_WIDTH/2
+                                       ,IMG_HEIGHT/2
                                    )
                                    port map (
                                         clkb,resetb
                                --------------------------------------------------------------------------------
                                -- XYEn side
                                --------------------------------------------------------------------------------
-                                       ,en_dog01
-                                       ,x_dog01
-                                       ,y_dog01
-                                       ,pixel_dog01
+                                       ,en_gf10
+                                       ,x_gf10
+                                       ,y_gf10
+                                       ,pixel_gf10
                                --------------------------------------------------------------------------------
                                -- AXIS Master side
                                --------------------------------------------------------------------------------
@@ -652,7 +845,7 @@ SYNC2:	process( resetb,clkb )
 			
 		-- ------------------------------------------------- --
 		elsif ( rising_edge(clkb) ) then
-			decal_h <= decal_h(7 downto 0) & hsync_dog01;
+			decal_h <= decal_h(7 downto 0) & hsync_gf10;
 		end if;
 	end process;
 	

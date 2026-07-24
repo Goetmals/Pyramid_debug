@@ -1,0 +1,602 @@
+
+*** Running vivado
+    with args -log gaussian_filter.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source gaussian_filter.tcl
+
+
+****** Vivado v2023.1 (64-bit)
+  **** SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+  **** IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+  **** SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source gaussian_filter.tcl -notrace
+Command: synth_design -top gaussian_filter -part xc7z045ffg900-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z045'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z045'
+INFO: [Common 17-1540] The version limit for your license is '2025.06' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for new releases.
+INFO: [Device 21-403] Loading part xc7z045ffg900-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 1519994
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 3246.176 ; gain = 384.801 ; free physical = 89269 ; free virtual = 112749
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-9111] actual expression for generic 'nbpixdeb' cannot reference a signal [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/test_pyramid.vhd:349]
+WARNING: [Synth 8-9111] actual expression for generic 'nbpixfin' cannot reference a signal [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/test_pyramid.vhd:350]
+WARNING: [Synth 8-9111] actual expression for generic 'nbligdeb' cannot reference a signal [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/test_pyramid.vhd:351]
+WARNING: [Synth 8-9111] actual expression for generic 'nbligfin' cannot reference a signal [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/test_pyramid.vhd:352]
+WARNING: [Synth 8-9111] actual expression for generic 'nbligfinseq' cannot reference a signal [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/test_pyramid.vhd:353]
+WARNING: [Synth 8-9111] actual expression for generic 'nbpixdeb' cannot reference a signal [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/test_pyramid.vhd:391]
+WARNING: [Synth 8-9111] actual expression for generic 'nbpixfin' cannot reference a signal [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/test_pyramid.vhd:392]
+INFO: [Synth 8-638] synthesizing module 'gaussian_filter' [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:81]
+WARNING: [Synth 8-5640] Port 'hsync_i' is missing in component declaration [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:104]
+WARNING: [Synth 8-5640] Port 'vsync_i' is missing in component declaration [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:104]
+WARNING: [Synth 8-5640] Port 'hsync_o' is missing in component declaration [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:104]
+WARNING: [Synth 8-5640] Port 'vsync_o' is missing in component declaration [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:104]
+	Parameter DELAY_X bound to: 3 - type: integer 
+	Parameter DELAY_Y bound to: 3 - type: integer 
+	Parameter IMG_WIDTH bound to: 640 - type: integer 
+	Parameter IMG_HEIGHT bound to: 480 - type: integer 
+INFO: [Synth 8-3491] module 'xy_delay_cody2' declared at '/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/xy_delay_cody2.vhd:55' bound to instance 'c_xy_delay_horizontal' of component 'xy_delay_cody2' [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:277]
+INFO: [Synth 8-638] synthesizing module 'xy_delay_cody2' [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/xy_delay_cody2.vhd:79]
+	Parameter DELAY_X bound to: 3 - type: integer 
+	Parameter DELAY_Y bound to: 3 - type: integer 
+	Parameter IMG_WIDTH bound to: 640 - type: integer 
+	Parameter IMG_HEIGHT bound to: 480 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xy_delay_cody2' (0#1) [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/xy_delay_cody2.vhd:79]
+	Parameter BUS_WIDTH bound to: 17 - type: integer 
+	Parameter DEPTH bound to: 641 - type: integer 
+INFO: [Synth 8-3491] module 'dual_clk_fifo' declared at '/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/dual_clk_fifo.vhd:19' bound to instance 'c_fifo_vertical_0' of component 'dual_clk_fifo' [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:348]
+INFO: [Synth 8-638] synthesizing module 'dual_clk_fifo' [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/dual_clk_fifo.vhd:40]
+	Parameter BUS_WIDTH bound to: 17 - type: integer 
+	Parameter DEPTH bound to: 641 - type: integer 
+	Parameter dw bound to: 17 - type: integer 
+	Parameter aw bound to: 10 - type: integer 
+INFO: [Synth 8-3491] module 'generic_fifo_dc_gray' declared at '/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/generic_fifo_dc_gray.v:123' bound to instance 'fifo_inst' of component 'generic_fifo_dc_gray' [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/dual_clk_fifo.vhd:64]
+INFO: [Synth 8-6157] synthesizing module 'generic_fifo_dc_gray' [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/generic_fifo_dc_gray.v:123]
+	Parameter dw bound to: 17 - type: integer 
+	Parameter aw bound to: 10 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'generic_dpram' [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/generic_dpram.v:109]
+	Parameter aw bound to: 10 - type: integer 
+	Parameter dw bound to: 17 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'generic_dpram' (0#1) [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/generic_dpram.v:109]
+INFO: [Synth 8-6155] done synthesizing module 'generic_fifo_dc_gray' (0#1) [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/generic_fifo_dc_gray.v:123]
+INFO: [Synth 8-256] done synthesizing module 'dual_clk_fifo' (0#1) [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/dual_clk_fifo.vhd:40]
+	Parameter BUS_WIDTH bound to: 17 - type: integer 
+	Parameter DEPTH bound to: 641 - type: integer 
+INFO: [Synth 8-3491] module 'dual_clk_fifo' declared at '/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/dual_clk_fifo.vhd:19' bound to instance 'c_fifo_vertical_others' of component 'dual_clk_fifo' [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:368]
+	Parameter BUS_WIDTH bound to: 17 - type: integer 
+	Parameter DEPTH bound to: 641 - type: integer 
+INFO: [Synth 8-3491] module 'dual_clk_fifo' declared at '/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/dual_clk_fifo.vhd:19' bound to instance 'c_fifo_vertical_others' of component 'dual_clk_fifo' [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:368]
+	Parameter BUS_WIDTH bound to: 17 - type: integer 
+	Parameter DEPTH bound to: 641 - type: integer 
+INFO: [Synth 8-3491] module 'dual_clk_fifo' declared at '/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/dual_clk_fifo.vhd:19' bound to instance 'c_fifo_vertical_others' of component 'dual_clk_fifo' [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:368]
+	Parameter BUS_WIDTH bound to: 17 - type: integer 
+	Parameter DEPTH bound to: 641 - type: integer 
+INFO: [Synth 8-3491] module 'dual_clk_fifo' declared at '/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/dual_clk_fifo.vhd:19' bound to instance 'c_fifo_vertical_others' of component 'dual_clk_fifo' [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:368]
+	Parameter BUS_WIDTH bound to: 17 - type: integer 
+	Parameter DEPTH bound to: 641 - type: integer 
+INFO: [Synth 8-3491] module 'dual_clk_fifo' declared at '/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/dual_clk_fifo.vhd:19' bound to instance 'c_fifo_vertical_others' of component 'dual_clk_fifo' [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:368]
+WARNING: [Synth 8-5640] Port 'hsync_i' is missing in component declaration [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:104]
+WARNING: [Synth 8-5640] Port 'vsync_i' is missing in component declaration [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:104]
+WARNING: [Synth 8-5640] Port 'hsync_o' is missing in component declaration [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:104]
+WARNING: [Synth 8-5640] Port 'vsync_o' is missing in component declaration [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:104]
+	Parameter DELAY_X bound to: 0 - type: integer 
+	Parameter DELAY_Y bound to: 1 - type: integer 
+	Parameter IMG_WIDTH bound to: 640 - type: integer 
+	Parameter IMG_HEIGHT bound to: 480 - type: integer 
+INFO: [Synth 8-3491] module 'xy_delay_cody2' declared at '/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/xy_delay_cody2.vhd:55' bound to instance 'c_xy_delay_vertical_0' of component 'xy_delay_cody2' [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:443]
+INFO: [Synth 8-638] synthesizing module 'xy_delay_cody2__parameterized1' [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/xy_delay_cody2.vhd:79]
+	Parameter DELAY_X bound to: 0 - type: integer 
+	Parameter DELAY_Y bound to: 1 - type: integer 
+	Parameter IMG_WIDTH bound to: 640 - type: integer 
+	Parameter IMG_HEIGHT bound to: 480 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xy_delay_cody2__parameterized1' (0#1) [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/xy_delay_cody2.vhd:79]
+WARNING: [Synth 8-5640] Port 'hsync_i' is missing in component declaration [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:104]
+WARNING: [Synth 8-5640] Port 'vsync_i' is missing in component declaration [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:104]
+WARNING: [Synth 8-5640] Port 'hsync_o' is missing in component declaration [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:104]
+WARNING: [Synth 8-5640] Port 'vsync_o' is missing in component declaration [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:104]
+	Parameter DELAY_X bound to: 0 - type: integer 
+	Parameter DELAY_Y bound to: 1 - type: integer 
+	Parameter IMG_WIDTH bound to: 640 - type: integer 
+	Parameter IMG_HEIGHT bound to: 480 - type: integer 
+INFO: [Synth 8-3491] module 'xy_delay_cody2' declared at '/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/xy_delay_cody2.vhd:55' bound to instance 'c_xy_delay_vertical_others' of component 'xy_delay_cody2' [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:470]
+WARNING: [Synth 8-5640] Port 'hsync_i' is missing in component declaration [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:104]
+WARNING: [Synth 8-5640] Port 'vsync_i' is missing in component declaration [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:104]
+WARNING: [Synth 8-5640] Port 'hsync_o' is missing in component declaration [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:104]
+WARNING: [Synth 8-5640] Port 'vsync_o' is missing in component declaration [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:104]
+	Parameter DELAY_X bound to: 0 - type: integer 
+	Parameter DELAY_Y bound to: 1 - type: integer 
+	Parameter IMG_WIDTH bound to: 640 - type: integer 
+	Parameter IMG_HEIGHT bound to: 480 - type: integer 
+INFO: [Synth 8-3491] module 'xy_delay_cody2' declared at '/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/xy_delay_cody2.vhd:55' bound to instance 'c_xy_delay_vertical_others' of component 'xy_delay_cody2' [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:470]
+WARNING: [Synth 8-5640] Port 'hsync_i' is missing in component declaration [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:104]
+WARNING: [Synth 8-5640] Port 'vsync_i' is missing in component declaration [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:104]
+WARNING: [Synth 8-5640] Port 'hsync_o' is missing in component declaration [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:104]
+WARNING: [Synth 8-5640] Port 'vsync_o' is missing in component declaration [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:104]
+	Parameter DELAY_X bound to: 0 - type: integer 
+	Parameter DELAY_Y bound to: 1 - type: integer 
+	Parameter IMG_WIDTH bound to: 640 - type: integer 
+	Parameter IMG_HEIGHT bound to: 480 - type: integer 
+INFO: [Synth 8-3491] module 'xy_delay_cody2' declared at '/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/xy_delay_cody2.vhd:55' bound to instance 'c_xy_delay_vertical_others' of component 'xy_delay_cody2' [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:470]
+WARNING: [Synth 8-5640] Port 'hsync_i' is missing in component declaration [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:104]
+WARNING: [Synth 8-5640] Port 'vsync_i' is missing in component declaration [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:104]
+WARNING: [Synth 8-5640] Port 'hsync_o' is missing in component declaration [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:104]
+WARNING: [Synth 8-5640] Port 'vsync_o' is missing in component declaration [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:104]
+	Parameter DELAY_X bound to: 0 - type: integer 
+	Parameter DELAY_Y bound to: 1 - type: integer 
+	Parameter IMG_WIDTH bound to: 640 - type: integer 
+	Parameter IMG_HEIGHT bound to: 480 - type: integer 
+INFO: [Synth 8-3491] module 'xy_delay_cody2' declared at '/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/xy_delay_cody2.vhd:55' bound to instance 'c_xy_delay_vertical_others' of component 'xy_delay_cody2' [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:470]
+WARNING: [Synth 8-5640] Port 'hsync_i' is missing in component declaration [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:104]
+WARNING: [Synth 8-5640] Port 'vsync_i' is missing in component declaration [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:104]
+WARNING: [Synth 8-5640] Port 'hsync_o' is missing in component declaration [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:104]
+WARNING: [Synth 8-5640] Port 'vsync_o' is missing in component declaration [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:104]
+	Parameter DELAY_X bound to: 0 - type: integer 
+	Parameter DELAY_Y bound to: 1 - type: integer 
+	Parameter IMG_WIDTH bound to: 640 - type: integer 
+	Parameter IMG_HEIGHT bound to: 480 - type: integer 
+INFO: [Synth 8-3491] module 'xy_delay_cody2' declared at '/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/xy_delay_cody2.vhd:55' bound to instance 'c_xy_delay_vertical_others' of component 'xy_delay_cody2' [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:470]
+WARNING: [Synth 8-5640] Port 'hsync_i' is missing in component declaration [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:104]
+WARNING: [Synth 8-5640] Port 'vsync_i' is missing in component declaration [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:104]
+WARNING: [Synth 8-5640] Port 'hsync_o' is missing in component declaration [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:104]
+WARNING: [Synth 8-5640] Port 'vsync_o' is missing in component declaration [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:104]
+	Parameter DELAY_X bound to: 9 - type: integer 
+	Parameter DELAY_Y bound to: 3 - type: integer 
+	Parameter IMG_WIDTH bound to: 640 - type: integer 
+	Parameter IMG_HEIGHT bound to: 480 - type: integer 
+INFO: [Synth 8-3491] module 'xy_delay_cody2' declared at '/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/xy_delay_cody2.vhd:55' bound to instance 'c_xy_delay_out' of component 'xy_delay_cody2' [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:492]
+INFO: [Synth 8-638] synthesizing module 'xy_delay_cody2__parameterized3' [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/xy_delay_cody2.vhd:79]
+	Parameter DELAY_X bound to: 9 - type: integer 
+	Parameter DELAY_Y bound to: 3 - type: integer 
+	Parameter IMG_WIDTH bound to: 640 - type: integer 
+	Parameter IMG_HEIGHT bound to: 480 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'xy_delay_cody2__parameterized3' (0#1) [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/xy_delay_cody2.vhd:79]
+INFO: [Synth 8-256] done synthesizing module 'gaussian_filter' (0#1) [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/work/gaussian_filter.vhd:81]
+WARNING: [Synth 8-6014] Unused sequential element nblig_r_reg was removed.  [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/xy_delay_cody2.vhd:143]
+WARNING: [Synth 8-6014] Unused sequential element valid_image_reg was removed.  [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/xy_delay_cody2.vhd:168]
+WARNING: [Synth 8-6014] Unused sequential element en_rtd2_int_reg was removed.  [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/xy_delay_cody2.vhd:207]
+WARNING: [Synth 8-6014] Unused sequential element xy_en_o_int2_reg was removed.  [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/xy_delay_cody2.vhd:208]
+WARNING: [Synth 8-6014] Unused sequential element nblig_r_reg was removed.  [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/xy_delay_cody2.vhd:143]
+WARNING: [Synth 8-6014] Unused sequential element valid_image_reg was removed.  [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/xy_delay_cody2.vhd:168]
+WARNING: [Synth 8-6014] Unused sequential element en_rtd2_int_reg was removed.  [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/xy_delay_cody2.vhd:207]
+WARNING: [Synth 8-6014] Unused sequential element xy_en_o_int2_reg was removed.  [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/xy_delay_cody2.vhd:208]
+WARNING: [Synth 8-6014] Unused sequential element nblig_r_reg was removed.  [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/xy_delay_cody2.vhd:143]
+WARNING: [Synth 8-6014] Unused sequential element valid_image_reg was removed.  [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/xy_delay_cody2.vhd:168]
+WARNING: [Synth 8-6014] Unused sequential element en_rtd2_int_reg was removed.  [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/xy_delay_cody2.vhd:207]
+WARNING: [Synth 8-6014] Unused sequential element xy_en_o_int2_reg was removed.  [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/xy_delay_cody2.vhd:208]
+WARNING: [Synth 8-7129] Port xy_en_i in module xy_delay_cody2__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_x_i[9] in module xy_delay_cody2__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_x_i[8] in module xy_delay_cody2__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_x_i[7] in module xy_delay_cody2__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_x_i[6] in module xy_delay_cody2__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_x_i[5] in module xy_delay_cody2__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_x_i[4] in module xy_delay_cody2__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_x_i[3] in module xy_delay_cody2__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_x_i[2] in module xy_delay_cody2__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_x_i[1] in module xy_delay_cody2__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_x_i[0] in module xy_delay_cody2__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_y_i[8] in module xy_delay_cody2__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_y_i[7] in module xy_delay_cody2__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_y_i[6] in module xy_delay_cody2__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_y_i[5] in module xy_delay_cody2__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_y_i[4] in module xy_delay_cody2__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_y_i[3] in module xy_delay_cody2__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_y_i[2] in module xy_delay_cody2__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_y_i[1] in module xy_delay_cody2__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_y_i[0] in module xy_delay_cody2__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_en_i in module xy_delay_cody2__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_x_i[9] in module xy_delay_cody2__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_x_i[8] in module xy_delay_cody2__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_x_i[7] in module xy_delay_cody2__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_x_i[6] in module xy_delay_cody2__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_x_i[5] in module xy_delay_cody2__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_x_i[4] in module xy_delay_cody2__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_x_i[3] in module xy_delay_cody2__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_x_i[2] in module xy_delay_cody2__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_x_i[1] in module xy_delay_cody2__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_x_i[0] in module xy_delay_cody2__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_y_i[8] in module xy_delay_cody2__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_y_i[7] in module xy_delay_cody2__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_y_i[6] in module xy_delay_cody2__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_y_i[5] in module xy_delay_cody2__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_y_i[4] in module xy_delay_cody2__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_y_i[3] in module xy_delay_cody2__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_y_i[2] in module xy_delay_cody2__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_y_i[1] in module xy_delay_cody2__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_y_i[0] in module xy_delay_cody2__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rrst in module generic_dpram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port oe in module generic_dpram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port wrst in module generic_dpram is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_en_i in module xy_delay_cody2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_x_i[9] in module xy_delay_cody2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_x_i[8] in module xy_delay_cody2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_x_i[7] in module xy_delay_cody2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_x_i[6] in module xy_delay_cody2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_x_i[5] in module xy_delay_cody2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_x_i[4] in module xy_delay_cody2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_x_i[3] in module xy_delay_cody2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_x_i[2] in module xy_delay_cody2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_x_i[1] in module xy_delay_cody2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_x_i[0] in module xy_delay_cody2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_y_i[8] in module xy_delay_cody2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_y_i[7] in module xy_delay_cody2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_y_i[6] in module xy_delay_cody2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_y_i[5] in module xy_delay_cody2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_y_i[4] in module xy_delay_cody2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_y_i[3] in module xy_delay_cody2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_y_i[2] in module xy_delay_cody2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_y_i[1] in module xy_delay_cody2 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_y_i[0] in module xy_delay_cody2 is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3324.113 ; gain = 462.738 ; free physical = 89175 ; free virtual = 112657
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3341.926 ; gain = 480.551 ; free physical = 89175 ; free virtual = 112656
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 3341.926 ; gain = 480.551 ; free physical = 89175 ; free virtual = 112656
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3341.926 ; gain = 0.000 ; free physical = 89175 ; free virtual = 112656
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3487.707 ; gain = 0.000 ; free physical = 89134 ; free virtual = 112630
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 3487.707 ; gain = 0.000 ; free physical = 89134 ; free virtual = 112630
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 3487.707 ; gain = 626.332 ; free physical = 89134 ; free virtual = 112630
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z045ffg900-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 3487.707 ; gain = 626.332 ; free physical = 89134 ; free virtual = 112630
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 3487.707 ; gain = 626.332 ; free physical = 89135 ; free virtual = 112631
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-6430] The Block RAM "generic_dpram:/mem_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 3487.707 ; gain = 626.332 ; free physical = 89131 ; free virtual = 112628
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   41 Bit       Adders := 12    
+	   2 Input   11 Bit       Adders := 24    
+	   2 Input   10 Bit       Adders := 26    
+	   2 Input    9 Bit       Adders := 8     
++---XORs : 
+	   2 Input     11 Bit         XORs := 24    
++---Registers : 
+	               41 Bit    Registers := 26    
+	               17 Bit    Registers := 5     
+	               13 Bit    Registers := 1     
+	               11 Bit    Registers := 36    
+	               10 Bit    Registers := 38    
+	                9 Bit    Registers := 8     
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 8     
+	                2 Bit    Registers := 18    
+	                1 Bit    Registers := 88    
++---RAMs : 
+	              17K Bit	(1024 X 17 bit)          RAMs := 6     
++---Muxes : 
+	   2 Input   41 Bit        Muxes := 12    
+	   2 Input   40 Bit        Muxes := 1     
+	   2 Input   39 Bit        Muxes := 4     
+	   2 Input   38 Bit        Muxes := 4     
+	   2 Input   36 Bit        Muxes := 3     
+	   2 Input   10 Bit        Muxes := 8     
+	   2 Input    9 Bit        Muxes := 8     
+	   2 Input    1 Bit        Muxes := 25    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 900 (col length:140)
+BRAMs: 1090 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+DSP Report: Generating DSP s_v_mul_out[6], operation Mode is: (A:0x7b337)*B.
+DSP Report: operator s_v_mul_out[6] is absorbed into DSP s_v_mul_out[6].
+DSP Report: Generating DSP s_v_mul_out[5], operation Mode is: (A:0x1ae036)*B.
+DSP Report: operator s_v_mul_out[5] is absorbed into DSP s_v_mul_out[5].
+DSP Report: Generating DSP s_v_mul_out[4], operation Mode is: (A:0x38e567)*B.
+DSP Report: operator s_v_mul_out[4] is absorbed into DSP s_v_mul_out[4].
+DSP Report: Generating DSP s_v_mul_out[3], operation Mode is: (A:0x490e59)*B.
+DSP Report: operator s_v_mul_out[3] is absorbed into DSP s_v_mul_out[3].
+DSP Report: Generating DSP s_v_mul_out[2], operation Mode is: (A:0x38e567)*B.
+DSP Report: operator s_v_mul_out[2] is absorbed into DSP s_v_mul_out[2].
+DSP Report: Generating DSP s_v_mul_out[1], operation Mode is: (A:0x1ae036)*B.
+DSP Report: operator s_v_mul_out[1] is absorbed into DSP s_v_mul_out[1].
+DSP Report: Generating DSP s_v_mul_out[0], operation Mode is: (A:0x7b337)*B.
+DSP Report: operator s_v_mul_out[0] is absorbed into DSP s_v_mul_out[0].
+DSP Report: Generating DSP s_h_mul_out[0], operation Mode is: (A:0x7b337)*B2.
+DSP Report: register s_v_gauss_result_reg is absorbed into DSP s_h_mul_out[0].
+DSP Report: operator s_h_mul_out[0] is absorbed into DSP s_h_mul_out[0].
+DSP Report: Generating DSP s_h_mul_out[1], operation Mode is: (A:0x1ae036)*B2.
+DSP Report: register s_v_gauss_result_reg is absorbed into DSP s_h_mul_out[1].
+DSP Report: operator s_h_mul_out[1] is absorbed into DSP s_h_mul_out[1].
+DSP Report: Generating DSP s_h_mul_out[2], operation Mode is: (A:0x38e567)*B2.
+DSP Report: register s_v_gauss_result_reg is absorbed into DSP s_h_mul_out[2].
+DSP Report: operator s_h_mul_out[2] is absorbed into DSP s_h_mul_out[2].
+DSP Report: Generating DSP s_h_mul_out[3], operation Mode is: (A:0x490e59)*B2.
+DSP Report: register s_v_gauss_result_reg is absorbed into DSP s_h_mul_out[3].
+DSP Report: operator s_h_mul_out[3] is absorbed into DSP s_h_mul_out[3].
+WARNING: [Synth 8-7129] Port xy_en_i in module xy_delay_cody2__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_x_i[9] in module xy_delay_cody2__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_x_i[8] in module xy_delay_cody2__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_x_i[7] in module xy_delay_cody2__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_x_i[6] in module xy_delay_cody2__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_x_i[5] in module xy_delay_cody2__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_x_i[4] in module xy_delay_cody2__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_x_i[3] in module xy_delay_cody2__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_x_i[2] in module xy_delay_cody2__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_x_i[1] in module xy_delay_cody2__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_x_i[0] in module xy_delay_cody2__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_y_i[8] in module xy_delay_cody2__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_y_i[7] in module xy_delay_cody2__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_y_i[6] in module xy_delay_cody2__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_y_i[5] in module xy_delay_cody2__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_y_i[4] in module xy_delay_cody2__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_y_i[3] in module xy_delay_cody2__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_y_i[2] in module xy_delay_cody2__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_y_i[1] in module xy_delay_cody2__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port xy_y_i[0] in module xy_delay_cody2__parameterized1 is either unconnected or has no load
+RAM Pipeline Warning: Read Address Register Found For RAM c_fifo_vertical_0/fifo_inst/u0/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM c_fifo_vertical_0/fifo_inst/u0/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "gaussian_filter/c_fifo_vertical_0/fifo_inst/u0/mem_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM gen_fifo_vertical_others[1].c_fifo_vertical_others/fifo_inst/u0/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM gen_fifo_vertical_others[1].c_fifo_vertical_others/fifo_inst/u0/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "gaussian_filter/gen_fifo_vertical_others[1].c_fifo_vertical_others/fifo_inst/u0/mem_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM gen_fifo_vertical_others[2].c_fifo_vertical_others/fifo_inst/u0/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM gen_fifo_vertical_others[2].c_fifo_vertical_others/fifo_inst/u0/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "gaussian_filter/gen_fifo_vertical_others[2].c_fifo_vertical_others/fifo_inst/u0/mem_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM gen_fifo_vertical_others[3].c_fifo_vertical_others/fifo_inst/u0/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM gen_fifo_vertical_others[3].c_fifo_vertical_others/fifo_inst/u0/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "gaussian_filter/gen_fifo_vertical_others[3].c_fifo_vertical_others/fifo_inst/u0/mem_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM gen_fifo_vertical_others[4].c_fifo_vertical_others/fifo_inst/u0/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM gen_fifo_vertical_others[4].c_fifo_vertical_others/fifo_inst/u0/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "gaussian_filter/gen_fifo_vertical_others[4].c_fifo_vertical_others/fifo_inst/u0/mem_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM gen_fifo_vertical_others[5].c_fifo_vertical_others/fifo_inst/u0/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM gen_fifo_vertical_others[5].c_fifo_vertical_others/fifo_inst/u0/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+WARNING: [Synth 8-6430] The Block RAM "gaussian_filter/gen_fifo_vertical_others[5].c_fifo_vertical_others/fifo_inst/u0/mem_reg" may get memory collision error if read and write address collide. Use attribute (* rw_addr_collision= "yes" *) to avoid collision 
+RAM Pipeline Warning: Read Address Register Found For RAM c_fifo_vertical_0/fifo_inst/u0/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM gen_fifo_vertical_others[1].c_fifo_vertical_others/fifo_inst/u0/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM gen_fifo_vertical_others[2].c_fifo_vertical_others/fifo_inst/u0/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM gen_fifo_vertical_others[3].c_fifo_vertical_others/fifo_inst/u0/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM gen_fifo_vertical_others[4].c_fifo_vertical_others/fifo_inst/u0/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+RAM Pipeline Warning: Read Address Register Found For RAM gen_fifo_vertical_others[5].c_fifo_vertical_others/fifo_inst/u0/mem_reg. We will not be able to pipeline it. This may degrade performance. 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 3487.707 ; gain = 626.332 ; free physical = 89117 ; free virtual = 112620
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++----------------+-------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name     | RTL Object                                                              | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++----------------+-------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|gaussian_filter | c_fifo_vertical_0/fifo_inst/u0/mem_reg                                  | 1 K x 17(READ_FIRST)   | W |   | 1 K x 17(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|gaussian_filter | gen_fifo_vertical_others[1].c_fifo_vertical_others/fifo_inst/u0/mem_reg | 1 K x 17(READ_FIRST)   | W |   | 1 K x 17(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|gaussian_filter | gen_fifo_vertical_others[2].c_fifo_vertical_others/fifo_inst/u0/mem_reg | 1 K x 17(READ_FIRST)   | W |   | 1 K x 17(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|gaussian_filter | gen_fifo_vertical_others[3].c_fifo_vertical_others/fifo_inst/u0/mem_reg | 1 K x 17(READ_FIRST)   | W |   | 1 K x 17(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|gaussian_filter | gen_fifo_vertical_others[4].c_fifo_vertical_others/fifo_inst/u0/mem_reg | 1 K x 17(READ_FIRST)   | W |   | 1 K x 17(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|gaussian_filter | gen_fifo_vertical_others[5].c_fifo_vertical_others/fifo_inst/u0/mem_reg | 1 K x 17(READ_FIRST)   | W |   | 1 K x 17(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
++----------------+-------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping Report (see note below. The ' indicates corresponding REG is set)
++----------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name     | DSP Mapping     | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++----------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|gaussian_filter | (A:0x7b337)*B   | 19     | 17     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|gaussian_filter | (A:0x1ae036)*B  | 21     | 17     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|gaussian_filter | (A:0x38e567)*B  | 22     | 17     | -      | -      | 39     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|gaussian_filter | (A:0x490e59)*B  | 23     | 17     | -      | -      | 40     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|gaussian_filter | (A:0x38e567)*B  | 22     | 17     | -      | -      | 39     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|gaussian_filter | (A:0x1ae036)*B  | 21     | 17     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|gaussian_filter | (A:0x7b337)*B   | 19     | 17     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|gaussian_filter | (A:0x7b337)*B2  | 19     | 17     | -      | -      | 36     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|gaussian_filter | (A:0x1ae036)*B2 | 21     | 17     | -      | -      | 38     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|gaussian_filter | (A:0x38e567)*B2 | 22     | 17     | -      | -      | 39     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|gaussian_filter | (A:0x490e59)*B2 | 23     | 17     | -      | -      | 40     | 0    | 1    | -    | -    | -     | 0    | 0    | 
++----------------+-----------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 3487.707 ; gain = 626.332 ; free physical = 89111 ; free virtual = 112623
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 3487.707 ; gain = 626.332 ; free physical = 89111 ; free virtual = 112623
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++----------------+-------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name     | RTL Object                                                              | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++----------------+-------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|gaussian_filter | c_fifo_vertical_0/fifo_inst/u0/mem_reg                                  | 1 K x 17(READ_FIRST)   | W |   | 1 K x 17(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|gaussian_filter | gen_fifo_vertical_others[1].c_fifo_vertical_others/fifo_inst/u0/mem_reg | 1 K x 17(READ_FIRST)   | W |   | 1 K x 17(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|gaussian_filter | gen_fifo_vertical_others[2].c_fifo_vertical_others/fifo_inst/u0/mem_reg | 1 K x 17(READ_FIRST)   | W |   | 1 K x 17(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|gaussian_filter | gen_fifo_vertical_others[3].c_fifo_vertical_others/fifo_inst/u0/mem_reg | 1 K x 17(READ_FIRST)   | W |   | 1 K x 17(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|gaussian_filter | gen_fifo_vertical_others[4].c_fifo_vertical_others/fifo_inst/u0/mem_reg | 1 K x 17(READ_FIRST)   | W |   | 1 K x 17(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|gaussian_filter | gen_fifo_vertical_others[5].c_fifo_vertical_others/fifo_inst/u0/mem_reg | 1 K x 17(READ_FIRST)   | W |   | 1 K x 17(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
++----------------+-------------------------------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-7052] The timing for the instance c_fifo_vertical_0/fifo_inst/u0/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance gen_fifo_vertical_others[1].c_fifo_vertical_others/fifo_inst/u0/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance gen_fifo_vertical_others[2].c_fifo_vertical_others/fifo_inst/u0/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance gen_fifo_vertical_others[3].c_fifo_vertical_others/fifo_inst/u0/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance gen_fifo_vertical_others[4].c_fifo_vertical_others/fifo_inst/u0/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+INFO: [Synth 8-7052] The timing for the instance gen_fifo_vertical_others[5].c_fifo_vertical_others/fifo_inst/u0/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 3487.707 ; gain = 626.332 ; free physical = 89096 ; free virtual = 112607
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3487.707 ; gain = 626.332 ; free physical = 89097 ; free virtual = 112608
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3487.707 ; gain = 626.332 ; free physical = 89097 ; free virtual = 112608
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3487.707 ; gain = 626.332 ; free physical = 89095 ; free virtual = 112606
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3487.707 ; gain = 626.332 ; free physical = 89095 ; free virtual = 112606
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3487.707 ; gain = 626.332 ; free physical = 89095 ; free virtual = 112606
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3487.707 ; gain = 626.332 ; free physical = 89095 ; free virtual = 112606
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+DSP Final Report (the ' indicates corresponding REG is set)
++----------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name     | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++----------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|gaussian_filter | (A*B)'      | 19     | 17     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|gaussian_filter | (A*B)'      | 21     | 17     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|gaussian_filter | (A*B)'      | 22     | 17     | -      | -      | 39     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|gaussian_filter | (A*B)'      | 23     | 17     | -      | -      | 40     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|gaussian_filter | (A*B)'      | 22     | 17     | -      | -      | 39     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|gaussian_filter | (A*B)'      | 21     | 17     | -      | -      | 38     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|gaussian_filter | (A*B)'      | 19     | 17     | -      | -      | 36     | 0    | 0    | -    | -    | -     | 0    | 1    | 
+|gaussian_filter | A*B'        | 19     | 17     | -      | -      | 36     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|gaussian_filter | A*B'        | 21     | 17     | -      | -      | 38     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|gaussian_filter | A*B'        | 22     | 17     | -      | -      | 39     | 0    | 1    | -    | -    | -     | 0    | 0    | 
+|gaussian_filter | (A*B')'     | 23     | 17     | -      | -      | 40     | 0    | 1    | -    | -    | -     | 0    | 1    | 
++----------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |BUFG     |     1|
+|2     |CARRY4   |   128|
+|3     |DSP48E1  |    11|
+|6     |LUT1     |    15|
+|7     |LUT2     |   480|
+|8     |LUT3     |    29|
+|9     |LUT4     |    40|
+|10    |LUT5     |    48|
+|11    |LUT6     |    36|
+|12    |RAMB18E1 |     6|
+|13    |FDCE     |    33|
+|14    |FDPE     |    17|
+|15    |FDRE     |   841|
+|16    |IBUF     |    20|
+|17    |OBUF     |    37|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3487.707 ; gain = 626.332 ; free physical = 89095 ; free virtual = 112606
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 28 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:18 ; elapsed = 00:00:18 . Memory (MB): peak = 3487.707 ; gain = 480.551 ; free physical = 89088 ; free virtual = 112599
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 3487.707 ; gain = 626.332 ; free physical = 89088 ; free virtual = 112599
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3487.707 ; gain = 0.000 ; free physical = 89354 ; free virtual = 112865
+INFO: [Netlist 29-17] Analyzing 145 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3487.707 ; gain = 0.000 ; free physical = 89354 ; free virtual = 112866
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: 4410c8bf
+INFO: [Common 17-83] Releasing license: Synthesis
+50 Infos, 142 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:24 . Memory (MB): peak = 3487.707 ; gain = 1035.875 ; free physical = 89354 ; free virtual = 112866
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2879.637; main = 2564.271; forked = 327.427
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4441.266; main = 3487.711; forked = 985.570
+INFO: [Common 17-1381] The checkpoint '/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.runs/synth_1/gaussian_filter.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file gaussian_filter_utilization_synth.rpt -pb gaussian_filter_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Jul 21 10:48:54 2026...

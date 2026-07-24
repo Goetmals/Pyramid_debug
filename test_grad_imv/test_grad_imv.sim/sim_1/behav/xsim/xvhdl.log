@@ -1,2 +1,9 @@
-INFO: [VRFC 10-163] Analyzing VHDL file "/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/imports/Téléchargements/lr_cody.vhd" into library work
-INFO: [VRFC 10-3107] analyzing entity 'LR_CODY'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/test_pyramid.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'TEST_PYRAMID'
+WARNING: [VRFC 10-3092] actual expression for generic 'nbpixdeb' cannot reference a signal [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/test_pyramid.vhd:380]
+WARNING: [VRFC 10-3092] actual expression for generic 'nbpixfin' cannot reference a signal [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/test_pyramid.vhd:381]
+WARNING: [VRFC 10-3092] actual expression for generic 'nbligdeb' cannot reference a signal [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/test_pyramid.vhd:382]
+WARNING: [VRFC 10-3092] actual expression for generic 'nbligfin' cannot reference a signal [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/test_pyramid.vhd:383]
+WARNING: [VRFC 10-3092] actual expression for generic 'nbligfinseq' cannot reference a signal [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/test_pyramid.vhd:384]
+WARNING: [VRFC 10-3092] actual expression for generic 'nbpixdeb' cannot reference a signal [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/test_pyramid.vhd:422]
+WARNING: [VRFC 10-3092] actual expression for generic 'nbpixfin' cannot reference a signal [/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.srcs/sources_1/new/test_pyramid.vhd:423]

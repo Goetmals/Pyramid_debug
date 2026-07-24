@@ -1,0 +1,198 @@
+/*
+
+AMD Vivado v2023.1 (64-bit) [Major: 2023, Minor: 1]
+SW Build: 3865809 on Sun May  7 15:04:56 MDT 2023
+IP Build: 3864474 on Sun May  7 20:36:21 MDT 2023
+IP Build: 3864474 on Sun May  7 20:36:21 MDT 2023
+
+Process ID (PID): 1077512
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Thu Jul 23 14:27:27 CEST 2026
+Time zone: 	Central European Standard Time (Europe/Paris)
+
+OS: Ubuntu
+OS Version: 6.8.0-124-generic
+OS Architecture: amd64
+Available processors (cores): 24
+
+Display: 1
+Screen size: 1920x1200
+Screen resolution (DPI): 100
+Available screens: 2
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+OS font scaling: 100%
+
+Java version: 	17.0.3 64-bit
+JavaFX version: 17.0.1
+Java home: 	/home/demelo/Xilinx_2023/Vivado/2023.1/tps/lnx64/jre17.0.3_7
+Java executable: 	/home/demelo/Xilinx_2023/Vivado/2023.1/tps/lnx64/jre17.0.3_7/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Djdk.gtk.version=2, -Dsun.java2d.uiScale.enabled=false, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, -XX:+UseStringDeduplication, -XX:MaxGCPauseMillis=200, -XX:+ParallelRefProcEnabled, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=80m, -XX:MaxNewSize=80m, -Xms512m, -Xmx4072m, -Xss10m, -Xrs]
+Java initial memory (-Xms): 	512 MB
+Java maximum memory (-Xmx):	 3 GB
+
+User name: 	cody
+User home directory: /home/cody
+User working directory: /home/demelo/vivado_prjs/testbench_eads/test_grad_imv
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /home/demelo/Xilinx_2023/Vivado
+HDI_APPROOT: /home/demelo/Xilinx_2023/Vivado/2023.1
+RDI_DATADIR: /home/demelo/Xilinx_2023/SharedData/2023.1/data:/home/demelo/Xilinx_2023/Vivado/2023.1/data
+RDI_BINDIR: /home/demelo/Xilinx_2023/Vivado/2023.1/bin
+
+Vivado preferences file: /home/cody/.Xilinx/Vivado/2023.1/vivado.xml
+Vivado preferences directory: /home/cody/.Xilinx/Vivado/2023.1/
+Vivado layouts directory: /home/cody/.Xilinx/Vivado/2023.1/data/layouts
+PlanAhead jar file: 	/home/demelo/Xilinx_2023/Vivado/2023.1/lib/classes/planAhead.jar
+Vivado log file: 	/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/vivado.log
+Vivado journal file: 	/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-1077512-metal
+Non-Default Parameters:	[]
+
+Xilinx & AMD Environment Variables
+--------------------------------------------------------------------------------------------
+GNOME_SHELL_SESSION_MODE: ubuntu
+RDI_APPROOT: /home/demelo/Xilinx_2023/Vivado/2023.1
+RDI_BASEROOT: /home/demelo/Xilinx_2023/Vivado
+RDI_BINROOT: /home/demelo/Xilinx_2023/Vivado/2023.1/bin
+RDI_BUILD: yes
+RDI_DATADIR: /home/demelo/Xilinx_2023/SharedData/2023.1/data:/home/demelo/Xilinx_2023/Vivado/2023.1/data
+RDI_INSTALLROOT: /home/demelo/Xilinx_2023
+RDI_INSTALLVER: 2023.1
+RDI_JAVA_PLATFORM: 
+RDI_JAVA_VERSION: 17.0.3_7
+RDI_LIBDIR: /home/demelo/Xilinx_2023/Vivado/2023.1/lib/lnx64.o/Ubuntu:/home/demelo/Xilinx_2023/Vivado/2023.1/lib/lnx64.o
+RDI_OPT_EXT: .o
+RDI_PATCHROOT: 
+RDI_PLATFORM: lnx64
+RDI_PREPEND_PATH: /home/demelo/Xilinx_2023/Vitis/2023.1/bin:/home/demelo/Xilinx_2023/Vivado/2023.1/ids_lite/ISE/bin/lin64
+RDI_PROG: /home/demelo/Xilinx_2023/Vivado/2023.1/bin/unwrapped/lnx64.o/vivado
+RDI_SESSION_INFO: /home/demelo/vivado_prjs/testbench_eads/test_grad_imv:metal_1784809633_1077472
+RDI_SHARED_DATA: /home/demelo/Xilinx_2023/SharedData/2023.1/data
+RDI_TPS_ROOT: /home/demelo/Xilinx_2023/Vivado/2023.1/tps/lnx64
+RDI_USE_JDK17: True
+SHELL: /bin/bash
+XILINX: /home/demelo/Xilinx_2023/Vivado/2023.1/ids_lite/ISE
+XILINXD_LICENSE_FILE: 2100@lic-srv.ensea.fr
+XILINX_DSP: /home/demelo/Xilinx_2023/Vivado/2023.1/ids_lite/ISE
+XILINX_HLS: /home/demelo/Xilinx_2023/Vitis_HLS/2023.1
+XILINX_PLANAHEAD: /home/demelo/Xilinx_2023/Vivado/2023.1
+XILINX_SDK: /home/demelo/Xilinx_2023/Vitis/2023.1
+XILINX_VITIS: /home/demelo/Xilinx_2023/Vitis/2023.1
+XILINX_VIVADO: /home/demelo/Xilinx_2023/Vivado/2023.1
+XILINX_VIVADO_HLS: /home/demelo/Xilinx_2023/Vivado/2023.1
+
+
+GUI allocated memory:	512 MB
+GUI max memory:		4,072 MB
+Engine allocated memory: 2,712 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 100 MB (+102709kb) [00:00:06]
+// [Engine Memory]: 2,548 MB (+2520115kb) [00:00:06]
+// Opening Vivado Project: test_grad_imv.xpr. Version: Vivado v2023.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// Tcl Message: open_project test_grad_imv.xpr 
+// HMemoryUtils.trashcanNow. Engine heap size: 2,787 MB. GUI used memory: 71 MB. Current time: 7/23/26, 2:27:29 PM CEST
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 134 MB (+30269kb) [00:00:13]
+// [Engine Memory]: 3,005 MB (+346199kb) [00:00:13]
+// WARNING: HEventQueue.dispatchEvent() is taking  1578 ms.
+// Tcl Message: open_project test_grad_imv.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/demelo/Xilinx_2023/Vivado/2023.1/data/ip'. 
+// [GUI Memory]: 146 MB (+5790kb) [00:00:14]
+// Tcl Message: open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:07 . Memory (MB): peak = 9104.047 ; gain = 492.852 ; free physical = 82091 ; free virtual = 117754 
+// Project name: test_grad_imv; location: /home/demelo/vivado_prjs/testbench_eads/test_grad_imv; part: xc7z045ffg900-1
+dismissDialog("Open Project"); // bq
+// [GUI Memory]: 156 MB (+1856kb) [00:00:17]
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // f
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TEST_PYRAMID(ARCH_TEST_PYRAMID) (test_pyramid.vhd)]", 2, true); // E - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TEST_PYRAMID(ARCH_TEST_PYRAMID) (test_pyramid.vhd)]", 2, true); // E - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TEST_PYRAMID(ARCH_TEST_PYRAMID) (test_pyramid.vhd)]", 2, true); // E - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TEST_PYRAMID(ARCH_TEST_PYRAMID) (test_pyramid.vhd), RS0 : RESYNCH_SGNX8(ARCH_RESYNCH_SGNX8) (resynch_sgnx8.vhd)]", 4, false, false, false, false, false, true); // E - Double Click
+// [Engine Memory]: 3,157 MB (+927kb) [00:00:26]
+// HMemoryUtils.trashcanNow. Engine heap size: 3,159 MB. GUI used memory: 80 MB. Current time: 7/23/26, 2:27:44 PM CEST
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TEST_PYRAMID(ARCH_TEST_PYRAMID) (test_pyramid.vhd), SUB0 : subsample_cody2(arch_subsample_cody2) (subsample_cody2.vhd)]", 14, false); // E
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TEST_PYRAMID(ARCH_TEST_PYRAMID) (test_pyramid.vhd), SUB0 : subsample_cody2(arch_subsample_cody2) (subsample_cody2.vhd)]", 14, false, false, false, false, false, true); // E - Double Click
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // f
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ao
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// TclEventType: LAUNCH_SIM
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: LOAD_FEATURE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.sim/sim_1/behav/xsim' 
+// Tcl Message: xvlog --incr --relax -prj TEST_PYRAMID_vlog.prj 
+// Tcl Message: xvhdl --incr --relax -prj TEST_PYRAMID_vhdl.prj 
+// TclEventType: LAUNCH_SIM_LOG
+// Tcl Message: Waiting for jobs to finish... No pending jobs, compilation finished. 
+// Tcl Message: INFO: [USF-XSim-69] 'compile' step finished in '3' seconds INFO: [USF-XSim-3] XSim::Elaborate design 
+// Tcl Message: INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.sim/sim_1/behav/xsim' 
+// Tcl Message: xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L blk_mem_gen_v8_4_6 -L work -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot TEST_PYRAMID_behav work.TEST_PYRAMID work.glbl -log elaborate.log 
+// TclEventType: LAUNCH_SIM
+// TclEventType: LOAD_FEATURE
+// Tcl Message: Completed static elaboration INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel 
+// Tcl Message: INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds INFO: [USF-XSim-4] XSim::Simulate design INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.sim/sim_1/behav/xsim' INFO: [USF-XSim-98] *** Running xsim 
+// Tcl Message:    with args "TEST_PYRAMID_behav -key {Behavioral:sim_1:Functional:TEST_PYRAMID} -tclbatch {TEST_PYRAMID.tcl} -view {/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/TEST_PYRAMID_behav.wcfg} -log {simulate.log}" 
+// Tcl Message: INFO: [USF-XSim-8] Loading simulator feature 
+// Tcl Message: shm_open: File exists 
+// Tcl Message: FATAL_ERROR: Vivado Simulator kernel has discovered an exceptional condition from which it cannot recover. Process will terminate. For technical support on this issue, please open a WebCase with this project attached at http://www.xilinx.com/support. Time: 0 ps  Iteration: 0 
+// HMemoryUtils.trashcanNow. Engine heap size: 3,232 MB. GUI used memory: 82 MB. Current time: 7/23/26, 2:28:21 PM CEST
+// Elapsed time: 48 seconds
+selectButton(RDIResource.ProgressDialog_CANCEL, "Cancel"); // a
+// Tcl Message: INFO: [Common 17-41] Interrupt caught. Command should exit soon. 
+// HMemoryUtils.trashcanNow. Engine heap size: 3,232 MB. GUI used memory: 80 MB. Current time: 7/23/26, 2:28:51 PM CEST
+// Elapsed time: 22 seconds
+selectButton(RDIResource.ProgressDialog_BACKGROUND, "Background"); // a
+// 'd' command handler elapsed time: 71 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag
