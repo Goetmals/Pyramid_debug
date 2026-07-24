@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="TEST_PYRAMID_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="TEST_PYRAMID" />
+            <top_module name="dual_clk_fifo_pkg" />
+            <top_module name="glbl" />
+            <top_module name="math_real" />
+            <top_module name="saturn_dog_pkg" />
+            <top_module name="saturn_numeric_pkg" />
+            <top_module name="vcomponents" />
+            <top_module name="xy_delay_pkg" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="85.751667 us"></ZoomStartTime>
+      <ZoomEndTime time="158.251668 us"></ZoomEndTime>
+      <Cursor1Time time="97.835000 us"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="208"></NameColumnWidth>
+      <ValueColumnWidth column_width="66"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="20" />
+   <wvobject type="logic" fp_name="/TEST_PYRAMID/clkb">
+      <obj_property name="ElementShortName">clkb</obj_property>
+      <obj_property name="ObjectShortName">clkb</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/TEST_PYRAMID/resetb">
+      <obj_property name="ElementShortName">resetb</obj_property>
+      <obj_property name="ObjectShortName">resetb</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group462">
+      <obj_property name="label">READIMG</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/RI0/hsync_out">
+         <obj_property name="ElementShortName">hsync_out</obj_property>
+         <obj_property name="ObjectShortName">hsync_out</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/RI0/vsync_out">
+         <obj_property name="ElementShortName">vsync_out</obj_property>
+         <obj_property name="ObjectShortName">vsync_out</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/RI0/pixel_out">
+         <obj_property name="ElementShortName">pixel_out[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_out[7:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group173">
+      <obj_property name="label">RESYNCH</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/RS0/hsync_out">
+         <obj_property name="ElementShortName">hsync_out</obj_property>
+         <obj_property name="ObjectShortName">hsync_out</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/RS0/vsync_out">
+         <obj_property name="ElementShortName">vsync_out</obj_property>
+         <obj_property name="ObjectShortName">vsync_out</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/RS0/pixel_out">
+         <obj_property name="ElementShortName">pixel_out[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_out[7:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group174">
+      <obj_property name="label">AXIS Input</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/M_AXIS_TREADY">
+         <obj_property name="ElementShortName">M_AXIS_TREADY</obj_property>
+         <obj_property name="ObjectShortName">M_AXIS_TREADY</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/M_AXIS_TVALID">
+         <obj_property name="ElementShortName">M_AXIS_TVALID</obj_property>
+         <obj_property name="ObjectShortName">M_AXIS_TVALID</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/M_AXIS_TUSER">
+         <obj_property name="ElementShortName">M_AXIS_TUSER</obj_property>
+         <obj_property name="ObjectShortName">M_AXIS_TUSER</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/M_AXIS_TLAST">
+         <obj_property name="ElementShortName">M_AXIS_TLAST</obj_property>
+         <obj_property name="ObjectShortName">M_AXIS_TLAST</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/M_AXIS_TDATA">
+         <obj_property name="ElementShortName">M_AXIS_TDATA[7:0]</obj_property>
+         <obj_property name="ObjectShortName">M_AXIS_TDATA[7:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group175">
+      <obj_property name="label">XY Input Image</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/ASXY0/S_AXIS_TVALID">
+         <obj_property name="ElementShortName">S_AXIS_TVALID</obj_property>
+         <obj_property name="ObjectShortName">S_AXIS_TVALID</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/ASXY0/s_axis_tvalid_int">
+         <obj_property name="ElementShortName">s_axis_tvalid_int</obj_property>
+         <obj_property name="ObjectShortName">s_axis_tvalid_int</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/ASXY0/s_en">
+         <obj_property name="ElementShortName">s_en</obj_property>
+         <obj_property name="ObjectShortName">s_en</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/ASXY0/s_y_en">
+         <obj_property name="ElementShortName">s_y_en</obj_property>
+         <obj_property name="ObjectShortName">s_y_en</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/o_en">
+         <obj_property name="ElementShortName">o_en</obj_property>
+         <obj_property name="ObjectShortName">o_en</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/o_x">
+         <obj_property name="ElementShortName">o_x[8:0]</obj_property>
+         <obj_property name="ObjectShortName">o_x[8:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/o_y">
+         <obj_property name="ElementShortName">o_y[8:0]</obj_property>
+         <obj_property name="ObjectShortName">o_y[8:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/o_value">
+         <obj_property name="ElementShortName">o_value[7:0]</obj_property>
+         <obj_property name="ObjectShortName">o_value[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group176">
+      <obj_property name="label">Gradient</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GRD0/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GRD0/reset">
+         <obj_property name="ElementShortName">reset</obj_property>
+         <obj_property name="ObjectShortName">reset</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GRD0/hsync_inn">
+         <obj_property name="ElementShortName">hsync_inn</obj_property>
+         <obj_property name="ObjectShortName">hsync_inn</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GRD0/vsync_inn">
+         <obj_property name="ElementShortName">vsync_inn</obj_property>
+         <obj_property name="ObjectShortName">vsync_inn</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GRD0/en_in">
+         <obj_property name="ElementShortName">en_in</obj_property>
+         <obj_property name="ObjectShortName">en_in</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/GRD0/xin">
+         <obj_property name="ElementShortName">xin[8:0]</obj_property>
+         <obj_property name="ObjectShortName">xin[8:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/GRD0/yin">
+         <obj_property name="ElementShortName">yin[8:0]</obj_property>
+         <obj_property name="ObjectShortName">yin[8:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/GRD0/data_in">
+         <obj_property name="ElementShortName">data_in[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data_in[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GRD0/hsync_out">
+         <obj_property name="ElementShortName">hsync_out</obj_property>
+         <obj_property name="ObjectShortName">hsync_out</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GRD0/vsync_out">
+         <obj_property name="ElementShortName">vsync_out</obj_property>
+         <obj_property name="ObjectShortName">vsync_out</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GRD0/EN_out">
+         <obj_property name="ElementShortName">EN_out</obj_property>
+         <obj_property name="ObjectShortName">EN_out</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/GRD0/xout">
+         <obj_property name="ElementShortName">xout[8:0]</obj_property>
+         <obj_property name="ObjectShortName">xout[8:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/GRD0/yout">
+         <obj_property name="ElementShortName">yout[8:0]</obj_property>
+         <obj_property name="ObjectShortName">yout[8:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/GRD0/data_out">
+         <obj_property name="ElementShortName">data_out[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data_out[7:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group180">
+      <obj_property name="label">Gaussien_00</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/GF00/data_in">
+         <obj_property name="ElementShortName">data_in[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data_in[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GF00/EN">
+         <obj_property name="ElementShortName">EN</obj_property>
+         <obj_property name="ObjectShortName">EN</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GF00/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GF00/hsync_in">
+         <obj_property name="ElementShortName">hsync_in</obj_property>
+         <obj_property name="ObjectShortName">hsync_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GF00/vsync_in">
+         <obj_property name="ElementShortName">vsync_in</obj_property>
+         <obj_property name="ObjectShortName">vsync_in</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/GF00/xin">
+         <obj_property name="ElementShortName">xin[8:0]</obj_property>
+         <obj_property name="ObjectShortName">xin[8:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/GF00/yin">
+         <obj_property name="ElementShortName">yin[8:0]</obj_property>
+         <obj_property name="ObjectShortName">yin[8:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GF00/EN_out">
+         <obj_property name="ElementShortName">EN_out</obj_property>
+         <obj_property name="ObjectShortName">EN_out</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GF00/hsync_out">
+         <obj_property name="ElementShortName">hsync_out</obj_property>
+         <obj_property name="ObjectShortName">hsync_out</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GF00/vsync_out">
+         <obj_property name="ElementShortName">vsync_out</obj_property>
+         <obj_property name="ObjectShortName">vsync_out</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/GF00/xout">
+         <obj_property name="ElementShortName">xout[8:0]</obj_property>
+         <obj_property name="ObjectShortName">xout[8:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/GF00/yout">
+         <obj_property name="ElementShortName">yout[8:0]</obj_property>
+         <obj_property name="ObjectShortName">yout[8:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/GF00/data_out">
+         <obj_property name="ElementShortName">data_out[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data_out[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group181">
+      <obj_property name="label">Gaussien_01</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/en_gf01">
+         <obj_property name="ElementShortName">en_gf01</obj_property>
+         <obj_property name="ObjectShortName">en_gf01</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/x_gf01">
+         <obj_property name="ElementShortName">x_gf01[8:0]</obj_property>
+         <obj_property name="ObjectShortName">x_gf01[8:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/y_gf01">
+         <obj_property name="ElementShortName">y_gf01[8:0]</obj_property>
+         <obj_property name="ObjectShortName">y_gf01[8:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/pixel_gf01">
+         <obj_property name="ElementShortName">pixel_gf01[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_gf01[7:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group182">
+      <obj_property name="label">Gaussien_02</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/GF02/xin">
+         <obj_property name="ElementShortName">xin[8:0]</obj_property>
+         <obj_property name="ObjectShortName">xin[8:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/GF02/yin">
+         <obj_property name="ElementShortName">yin[8:0]</obj_property>
+         <obj_property name="ObjectShortName">yin[8:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/GF02/data_in">
+         <obj_property name="ElementShortName">data_in[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data_in[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GF02/hsync_in">
+         <obj_property name="ElementShortName">hsync_in</obj_property>
+         <obj_property name="ObjectShortName">hsync_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GF02/vsync_in">
+         <obj_property name="ElementShortName">vsync_in</obj_property>
+         <obj_property name="ObjectShortName">vsync_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/en_gf02">
+         <obj_property name="ElementShortName">en_gf02</obj_property>
+         <obj_property name="ObjectShortName">en_gf02</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/x_gf02">
+         <obj_property name="ElementShortName">x_gf02[8:0]</obj_property>
+         <obj_property name="ObjectShortName">x_gf02[8:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/y_gf02">
+         <obj_property name="ElementShortName">y_gf02[8:0]</obj_property>
+         <obj_property name="ObjectShortName">y_gf02[8:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GF02/hsync_out">
+         <obj_property name="ElementShortName">hsync_out</obj_property>
+         <obj_property name="ObjectShortName">hsync_out</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GF02/vsync_out">
+         <obj_property name="ElementShortName">vsync_out</obj_property>
+         <obj_property name="ObjectShortName">vsync_out</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/pixel_gf02">
+         <obj_property name="ElementShortName">pixel_gf02[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_gf02[7:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group737">
+      <obj_property name="label">Delay_02</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group719">
+      <obj_property name="label">DOG_01</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/DOG01/EN">
+         <obj_property name="ElementShortName">EN</obj_property>
+         <obj_property name="ObjectShortName">EN</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/DOG01/hsync_in">
+         <obj_property name="ElementShortName">hsync_in</obj_property>
+         <obj_property name="ObjectShortName">hsync_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/DOG01/vsync_in">
+         <obj_property name="ElementShortName">vsync_in</obj_property>
+         <obj_property name="ObjectShortName">vsync_in</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/DOG01/xin">
+         <obj_property name="ElementShortName">xin[8:0]</obj_property>
+         <obj_property name="ObjectShortName">xin[8:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/DOG01/yin">
+         <obj_property name="ElementShortName">yin[8:0]</obj_property>
+         <obj_property name="ObjectShortName">yin[8:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/DOG01/data_in_a">
+         <obj_property name="ElementShortName">data_in_a[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data_in_a[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/DOG01/data_in_b">
+         <obj_property name="ElementShortName">data_in_b[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data_in_b[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/DOG01/EN_out">
+         <obj_property name="ElementShortName">EN_out</obj_property>
+         <obj_property name="ObjectShortName">EN_out</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/DOG01/hsync_out">
+         <obj_property name="ElementShortName">hsync_out</obj_property>
+         <obj_property name="ObjectShortName">hsync_out</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/DOG01/vsync_out">
+         <obj_property name="ElementShortName">vsync_out</obj_property>
+         <obj_property name="ObjectShortName">vsync_out</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/DOG01/xout">
+         <obj_property name="ElementShortName">xout[8:0]</obj_property>
+         <obj_property name="ObjectShortName">xout[8:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/DOG01/yout">
+         <obj_property name="ElementShortName">yout[8:0]</obj_property>
+         <obj_property name="ObjectShortName">yout[8:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/DOG01/data_out">
+         <obj_property name="ElementShortName">data_out[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data_out[7:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group102">
+      <obj_property name="label">SUB0</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/SUB0/reset_n">
+         <obj_property name="ElementShortName">reset_n</obj_property>
+         <obj_property name="ObjectShortName">reset_n</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/SUB0/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/SUB0/EN">
+         <obj_property name="ElementShortName">EN</obj_property>
+         <obj_property name="ObjectShortName">EN</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/SUB0/hsync_in">
+         <obj_property name="ElementShortName">hsync_in</obj_property>
+         <obj_property name="ObjectShortName">hsync_in</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/SUB0/start_of_line">
+         <obj_property name="ElementShortName">start_of_line[1:0]</obj_property>
+         <obj_property name="ObjectShortName">start_of_line[1:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/SUB0/cpt_col">
+         <obj_property name="ElementShortName">cpt_col[8:0]</obj_property>
+         <obj_property name="ObjectShortName">cpt_col[8:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/SUB0/cpt_lig">
+         <obj_property name="ElementShortName">cpt_lig[9:0]</obj_property>
+         <obj_property name="ObjectShortName">cpt_lig[9:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/SUB0/hsync_int">
+         <obj_property name="ElementShortName">hsync_int</obj_property>
+         <obj_property name="ObjectShortName">hsync_int</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/SUB0/hsync_out">
+         <obj_property name="ElementShortName">hsync_out</obj_property>
+         <obj_property name="ObjectShortName">hsync_out</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/SUB0/vsync_out">
+         <obj_property name="ElementShortName">vsync_out</obj_property>
+         <obj_property name="ObjectShortName">vsync_out</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/SUB0/EN_out">
+         <obj_property name="ElementShortName">EN_out</obj_property>
+         <obj_property name="ObjectShortName">EN_out</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/SUB0/vsync_in">
+         <obj_property name="ElementShortName">vsync_in</obj_property>
+         <obj_property name="ObjectShortName">vsync_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/SUB0/first_lig">
+         <obj_property name="ElementShortName">first_lig</obj_property>
+         <obj_property name="ObjectShortName">first_lig</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/SUB0/reading">
+         <obj_property name="ElementShortName">reading</obj_property>
+         <obj_property name="ObjectShortName">reading</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/SUB0/vsync_int">
+         <obj_property name="ElementShortName">vsync_int</obj_property>
+         <obj_property name="ObjectShortName">vsync_int</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/SUB0/xin">
+         <obj_property name="ElementShortName">xin[8:0]</obj_property>
+         <obj_property name="ObjectShortName">xin[8:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/SUB0/yin">
+         <obj_property name="ElementShortName">yin[8:0]</obj_property>
+         <obj_property name="ObjectShortName">yin[8:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/SUB0/data_in">
+         <obj_property name="ElementShortName">data_in[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data_in[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/SUB0/next_lig">
+         <obj_property name="ElementShortName">next_lig</obj_property>
+         <obj_property name="ObjectShortName">next_lig</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/SUB0/yout">
+         <obj_property name="ElementShortName">yout[7:0]</obj_property>
+         <obj_property name="ObjectShortName">yout[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/SUB0/vsync_int">
+         <obj_property name="ElementShortName">vsync_int</obj_property>
+         <obj_property name="ObjectShortName">vsync_int</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/SUB0/data_out">
+         <obj_property name="ElementShortName">data_out[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data_out[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/SUB0/xout">
+         <obj_property name="ElementShortName">xout[7:0]</obj_property>
+         <obj_property name="ObjectShortName">xout[7:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group89">
+      <obj_property name="label">Gaussien_10</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GF10/hsync_in">
+         <obj_property name="ElementShortName">hsync_in</obj_property>
+         <obj_property name="ObjectShortName">hsync_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GF10/vsync_in">
+         <obj_property name="ElementShortName">vsync_in</obj_property>
+         <obj_property name="ObjectShortName">vsync_in</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/GF10/xin">
+         <obj_property name="ElementShortName">xin[7:0]</obj_property>
+         <obj_property name="ObjectShortName">xin[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/GF10/yin">
+         <obj_property name="ElementShortName">yin[7:0]</obj_property>
+         <obj_property name="ObjectShortName">yin[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GF10/hsync_out">
+         <obj_property name="ElementShortName">hsync_out</obj_property>
+         <obj_property name="ObjectShortName">hsync_out</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GF10/vsync_out">
+         <obj_property name="ElementShortName">vsync_out</obj_property>
+         <obj_property name="ObjectShortName">vsync_out</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/GF10/EN_out">
+         <obj_property name="ElementShortName">EN_out</obj_property>
+         <obj_property name="ObjectShortName">EN_out</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/GF10/xout">
+         <obj_property name="ElementShortName">xout[7:0]</obj_property>
+         <obj_property name="ObjectShortName">xout[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/GF10/yout">
+         <obj_property name="ElementShortName">yout[7:0]</obj_property>
+         <obj_property name="ObjectShortName">yout[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/GF10/data_in">
+         <obj_property name="ElementShortName">data_in[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data_in[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/GF10/data_out">
+         <obj_property name="ElementShortName">data_out[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data_out[7:0]</obj_property>
+      </wvobject>
+      <wvobject type="group" fp_name="group4323">
+         <obj_property name="label">xy_delay_out</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="logic" fp_name="/TEST_PYRAMID/GF10/c_xy_delay_out/hsync_i">
+            <obj_property name="ElementShortName">hsync_i</obj_property>
+            <obj_property name="ObjectShortName">hsync_i</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/TEST_PYRAMID/GF10/c_xy_delay_out/vsync_i">
+            <obj_property name="ElementShortName">vsync_i</obj_property>
+            <obj_property name="ObjectShortName">vsync_i</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/TEST_PYRAMID/GF10/c_xy_delay_out/hsync_o">
+            <obj_property name="ElementShortName">hsync_o</obj_property>
+            <obj_property name="ObjectShortName">hsync_o</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/TEST_PYRAMID/GF10/c_xy_delay_out/vsync_o">
+            <obj_property name="ElementShortName">vsync_o</obj_property>
+            <obj_property name="ObjectShortName">vsync_o</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/TEST_PYRAMID/GF10/c_xy_delay_out/xy_en_o">
+            <obj_property name="ElementShortName">xy_en_o</obj_property>
+            <obj_property name="ObjectShortName">xy_en_o</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/TEST_PYRAMID/GF10/c_xy_delay_out/vsync_o_int">
+            <obj_property name="ElementShortName">vsync_o_int</obj_property>
+            <obj_property name="ObjectShortName">vsync_o_int</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/TEST_PYRAMID/GF10/c_xy_delay_out/hsync_rtd">
+            <obj_property name="ElementShortName">hsync_rtd[11:0]</obj_property>
+            <obj_property name="ObjectShortName">hsync_rtd[11:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/TEST_PYRAMID/GF10/c_xy_delay_out/nblig">
+            <obj_property name="ElementShortName">nblig[4:0]</obj_property>
+            <obj_property name="ObjectShortName">nblig[4:0]</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group733">
+      <obj_property name="label">DELAY_03</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group116">
+      <obj_property name="label">DOG_02</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group2629">
+      <obj_property name="label">DOG_21</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/DOG21/EN">
+         <obj_property name="ElementShortName">EN</obj_property>
+         <obj_property name="ObjectShortName">EN</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/DOG21/hsync_in">
+         <obj_property name="ElementShortName">hsync_in</obj_property>
+         <obj_property name="ObjectShortName">hsync_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/DOG21/vsync_in">
+         <obj_property name="ElementShortName">vsync_in</obj_property>
+         <obj_property name="ObjectShortName">vsync_in</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/DOG21/data_in_a">
+         <obj_property name="ElementShortName">data_in_a[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data_in_a[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/DOG21/EN_out">
+         <obj_property name="ElementShortName">EN_out</obj_property>
+         <obj_property name="ObjectShortName">EN_out</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/DOG21/hsync_out">
+         <obj_property name="ElementShortName">hsync_out</obj_property>
+         <obj_property name="ObjectShortName">hsync_out</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/DOG21/vsync_out">
+         <obj_property name="ElementShortName">vsync_out</obj_property>
+         <obj_property name="ObjectShortName">vsync_out</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/DOG21/data_out">
+         <obj_property name="ElementShortName">data_out[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data_out[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group178">
+      <obj_property name="label">AXIS Output</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/M_AXIS_TVALID_o">
+         <obj_property name="ElementShortName">M_AXIS_TVALID_o</obj_property>
+         <obj_property name="ObjectShortName">M_AXIS_TVALID_o</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/M_AXIS_TUSER_o">
+         <obj_property name="ElementShortName">M_AXIS_TUSER_o</obj_property>
+         <obj_property name="ObjectShortName">M_AXIS_TUSER_o</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/M_AXIS_TLAST_o">
+         <obj_property name="ElementShortName">M_AXIS_TLAST_o</obj_property>
+         <obj_property name="ObjectShortName">M_AXIS_TLAST_o</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/M_AXIS_TDATA_o">
+         <obj_property name="ElementShortName">M_AXIS_TDATA_o[7:0]</obj_property>
+         <obj_property name="ObjectShortName">M_AXIS_TDATA_o[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group179">
+      <obj_property name="label">Imaging Output</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/WI0/EOI">
+         <obj_property name="ElementShortName">EOI</obj_property>
+         <obj_property name="ObjectShortName">EOI</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/WI0/M2I">
+         <obj_property name="ElementShortName">M2I</obj_property>
+         <obj_property name="ObjectShortName">M2I</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/WI0/hsync_inn">
+         <obj_property name="ElementShortName">hsync_inn</obj_property>
+         <obj_property name="ObjectShortName">hsync_inn</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/WI0/vsync_inn">
+         <obj_property name="ElementShortName">vsync_inn</obj_property>
+         <obj_property name="ObjectShortName">vsync_inn</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/WI0/pixel_inn">
+         <obj_property name="ElementShortName">pixel_inn[7:0]</obj_property>
+         <obj_property name="ObjectShortName">pixel_inn[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group2799">
+      <obj_property name="label">SUB1</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/SUB1/EN">
+         <obj_property name="ElementShortName">EN</obj_property>
+         <obj_property name="ObjectShortName">EN</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/SUB1/hsync_in">
+         <obj_property name="ElementShortName">hsync_in</obj_property>
+         <obj_property name="ObjectShortName">hsync_in</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/SUB1/vsync_in">
+         <obj_property name="ElementShortName">vsync_in</obj_property>
+         <obj_property name="ObjectShortName">vsync_in</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/SUB1/data_in">
+         <obj_property name="ElementShortName">data_in[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data_in[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/SUB1/EN_out">
+         <obj_property name="ElementShortName">EN_out</obj_property>
+         <obj_property name="ObjectShortName">EN_out</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/SUB1/hsync_out">
+         <obj_property name="ElementShortName">hsync_out</obj_property>
+         <obj_property name="ObjectShortName">hsync_out</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/TEST_PYRAMID/SUB1/vsync_out">
+         <obj_property name="ElementShortName">vsync_out</obj_property>
+         <obj_property name="ObjectShortName">vsync_out</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TEST_PYRAMID/SUB1/data_out">
+         <obj_property name="ElementShortName">data_out[7:0]</obj_property>
+         <obj_property name="ObjectShortName">data_out[7:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

@@ -17,12 +17,12 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="1,260.345000 us"></ZoomStartTime>
-      <ZoomEndTime time="1,402.945001 us"></ZoomEndTime>
-      <Cursor1Time time="1,378.945000 us"></Cursor1Time>
+      <ZoomStartTime time="50.110000 us"></ZoomStartTime>
+      <ZoomEndTime time="245.605604 us"></ZoomEndTime>
+      <Cursor1Time time="50.110000 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="220"></NameColumnWidth>
+      <NameColumnWidth column_width="216"></NameColumnWidth>
       <ValueColumnWidth column_width="66"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="18" />
@@ -590,18 +590,6 @@
       <obj_property name="label">DELAY_03</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="isExpanded"></obj_property>
-      <wvobject type="logic" fp_name="/TEST_PYRAMID/DLY03/EN">
-         <obj_property name="ElementShortName">EN</obj_property>
-         <obj_property name="ObjectShortName">EN</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/TEST_PYRAMID/DLY03/data_in">
-         <obj_property name="ElementShortName">data_in[7:0]</obj_property>
-         <obj_property name="ObjectShortName">data_in[7:0]</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/TEST_PYRAMID/DLY03/data_out">
-         <obj_property name="ElementShortName">data_out[7:0]</obj_property>
-         <obj_property name="ObjectShortName">data_out[7:0]</obj_property>
-      </wvobject>
    </wvobject>
    <wvobject type="group" fp_name="group116">
       <obj_property name="label">DOG_02</obj_property>

@@ -1,0 +1,1257 @@
+/*
+
+AMD Vivado v2023.1 (64-bit) [Major: 2023, Minor: 1]
+SW Build: 3865809 on Sun May  7 15:04:56 MDT 2023
+IP Build: 3864474 on Sun May  7 20:36:21 MDT 2023
+IP Build: 3864474 on Sun May  7 20:36:21 MDT 2023
+
+Process ID (PID): 1506740
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Tue Jul 21 10:30:59 CEST 2026
+Time zone: 	Central European Standard Time (Europe/Paris)
+
+OS: Ubuntu
+OS Version: 6.8.0-124-generic
+OS Architecture: amd64
+Available processors (cores): 24
+
+Display: 1
+Screen size: 1920x1200
+Screen resolution (DPI): 100
+Available screens: 2
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+OS font scaling: 100%
+
+Java version: 	17.0.3 64-bit
+JavaFX version: 17.0.1
+Java home: 	/home/demelo/Xilinx_2023/Vivado/2023.1/tps/lnx64/jre17.0.3_7
+Java executable: 	/home/demelo/Xilinx_2023/Vivado/2023.1/tps/lnx64/jre17.0.3_7/bin/java
+Java arguments: 	[-Dsun.java2d.pmoffscreen=false, -Dhttps.protocols=TLSv1,TLSv1.1,TLSv1.2, -Dsun.java2d.xrender=false, -Djdk.gtk.version=2, -Dsun.java2d.uiScale.enabled=false, -Dswing.aatext=true, -XX:-UsePerfData, -Djdk.map.althashing.threshold=512, -XX:StringTableSize=4072, -XX:+UseStringDeduplication, -XX:MaxGCPauseMillis=200, -XX:+ParallelRefProcEnabled, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.base/java.nio=ALL-UNNAMED, --add-opens=java.desktop/sun.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-opens=java.desktop/javax.swing=ALL-UNNAMED, --add-opens=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-opens=java.desktop/java.awt.event=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.base/java.nio=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.tree=ALL-UNNAMED, --add-exports=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED, --add-exports=java.desktop/sun.swing=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.table=ALL-UNNAMED, --add-exports=java.desktop/sun.swing.plaf.synth=ALL-UNNAMED, --add-exports=java.desktop/sun.awt.shell=ALL-UNNAMED, --add-exports=java.base/sun.security.action=ALL-UNNAMED, --add-exports=java.desktop/sun.font=ALL-UNNAMED, --add-opens=java.desktop/sun.awt.X11=ALL-UNNAMED, -XX:NewSize=80m, -XX:MaxNewSize=80m, -Xms512m, -Xmx4072m, -Xss10m, -Xrs]
+Java initial memory (-Xms): 	512 MB
+Java maximum memory (-Xmx):	 3 GB
+
+User name: 	cody
+User home directory: /home/cody
+User working directory: /home/demelo/vivado_prjs/testbench_eads/pyramid_prj
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /home/demelo/Xilinx_2023/Vivado
+HDI_APPROOT: /home/demelo/Xilinx_2023/Vivado/2023.1
+RDI_DATADIR: /home/demelo/Xilinx_2023/SharedData/2023.1/data:/home/demelo/Xilinx_2023/Vivado/2023.1/data
+RDI_BINDIR: /home/demelo/Xilinx_2023/Vivado/2023.1/bin
+
+Vivado preferences file: /home/cody/.Xilinx/Vivado/2023.1/vivado.xml
+Vivado preferences directory: /home/cody/.Xilinx/Vivado/2023.1/
+Vivado layouts directory: /home/cody/.Xilinx/Vivado/2023.1/data/layouts
+PlanAhead jar file: 	/home/demelo/Xilinx_2023/Vivado/2023.1/lib/classes/planAhead.jar
+Vivado log file: 	/home/demelo/vivado_prjs/testbench_eads/pyramid_prj/vivado.log
+Vivado journal file: 	/home/demelo/vivado_prjs/testbench_eads/pyramid_prj/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-1506740-metal
+Non-Default Parameters:	[]
+
+Xilinx & AMD Environment Variables
+--------------------------------------------------------------------------------------------
+GNOME_SHELL_SESSION_MODE: ubuntu
+RDI_APPROOT: /home/demelo/Xilinx_2023/Vivado/2023.1
+RDI_BASEROOT: /home/demelo/Xilinx_2023/Vivado
+RDI_BINROOT: /home/demelo/Xilinx_2023/Vivado/2023.1/bin
+RDI_BUILD: yes
+RDI_DATADIR: /home/demelo/Xilinx_2023/SharedData/2023.1/data:/home/demelo/Xilinx_2023/Vivado/2023.1/data
+RDI_INSTALLROOT: /home/demelo/Xilinx_2023
+RDI_INSTALLVER: 2023.1
+RDI_JAVA_PLATFORM: 
+RDI_JAVA_VERSION: 17.0.3_7
+RDI_LIBDIR: /home/demelo/Xilinx_2023/Vivado/2023.1/lib/lnx64.o/Ubuntu:/home/demelo/Xilinx_2023/Vivado/2023.1/lib/lnx64.o
+RDI_OPT_EXT: .o
+RDI_PATCHROOT: 
+RDI_PLATFORM: lnx64
+RDI_PREPEND_PATH: /home/demelo/Xilinx_2023/Vitis/2023.1/bin:/home/demelo/Xilinx_2023/Vivado/2023.1/ids_lite/ISE/bin/lin64
+RDI_PROG: /home/demelo/Xilinx_2023/Vivado/2023.1/bin/unwrapped/lnx64.o/vivado
+RDI_SESSION_INFO: /home/demelo/vivado_prjs/testbench_eads/pyramid_prj:metal_1784622646_1506700
+RDI_SHARED_DATA: /home/demelo/Xilinx_2023/SharedData/2023.1/data
+RDI_TPS_ROOT: /home/demelo/Xilinx_2023/Vivado/2023.1/tps/lnx64
+RDI_USE_JDK17: True
+SHELL: /bin/bash
+XILINX: /home/demelo/Xilinx_2023/Vivado/2023.1/ids_lite/ISE
+XILINXD_LICENSE_FILE: 2100@lic-srv.ensea.fr
+XILINX_DSP: /home/demelo/Xilinx_2023/Vivado/2023.1/ids_lite/ISE
+XILINX_HLS: /home/demelo/Xilinx_2023/Vitis_HLS/2023.1
+XILINX_PLANAHEAD: /home/demelo/Xilinx_2023/Vivado/2023.1
+XILINX_SDK: /home/demelo/Xilinx_2023/Vitis/2023.1
+XILINX_VITIS: /home/demelo/Xilinx_2023/Vitis/2023.1
+XILINX_VIVADO: /home/demelo/Xilinx_2023/Vivado/2023.1
+XILINX_VIVADO_HLS: /home/demelo/Xilinx_2023/Vivado/2023.1
+
+
+GUI allocated memory:	512 MB
+GUI max memory:		4,072 MB
+Engine allocated memory: 2,641 MB
+
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 98 MB (+100748kb) [00:00:06]
+// [Engine Memory]: 2,557 MB (+2529380kb) [00:00:06]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,681 MB. GUI used memory: 73 MB. Current time: 7/21/26, 10:31:00 AM CEST
+selectRadioButton(PAResourceTtoZ.UpgradeProjectDialog_OPEN_PROJECT_IN_READ_ONLY_MODE, "Open project in read-only mode"); // a
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Opening Vivado Project: pyramid.xpr. Version: Vivado v2016.4 
+dismissDialog("Older Project Version"); // at
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 171 MB (+71038kb) [00:00:14]
+// [Engine Memory]: 2,769 MB (+88569kb) [00:00:14]
+// WARNING: HEventQueue.dispatchEvent() is taking  1838 ms.
+// Tcl Message: open_project -read_only pyramid.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/demelo/vivado_prjs/testbench_eads/pyramid_prj/pyramid.srcs/sources_1/imports'. INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/demelo/Xilinx_2023/Vivado/2023.1/data/ip'. 
+// Project name: pyramid; location: /home/demelo/vivado_prjs/testbench_eads/pyramid_prj; part: xc7z045ffg900-2
+dismissDialog("Open Project"); // bq
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Project is Read-Only"); // u
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, axis_pyramid_kp(IMP) (axis_pyramid_kp.vhd)]", 4, true); // E - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, axis_pyramid_kp(IMP) (axis_pyramid_kp.vhd)]", 4, true, false, false, false, false, true); // E - Double Click - Node
+// [Engine Memory]: 2,937 MB (+30460kb) [00:00:29]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,980 MB. GUI used memory: 89 MB. Current time: 7/21/26, 10:31:20 AM CEST
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pyramid_kp(rtl) (pyramid_kp.vhd)]", 6, true); // E - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pyramid_kp(rtl) (pyramid_kp.vhd), extractor00 : extractor(rtl) (extractor.vhd)]", 12, true, false, false, false, false, true); // E - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pyramid_kp(rtl) (pyramid_kp.vhd), pyramid : pyramid_dog(rtl) (pyramid_dog.vhd)]", 7, true); // E - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pyramid_kp(rtl) (pyramid_kp.vhd), pyramid : pyramid_dog(rtl) (pyramid_dog.vhd), delay10 : delay(arch) (delay.vhd)]", 13, false, false, false, false, false, true); // E - Double Click
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pyramid_kp(rtl) (pyramid_kp.vhd)]", 6, true); // E - Node
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pyramid_kp(rtl) (pyramid_kp.vhd), pyramid : pyramid_dog(rtl) (pyramid_dog.vhd)]", 7); // E
+selectButton((HResource) null, "Code_settings"); // v: TRUE
+selectButton((HResource) null, "Code_settings"); // v: FALSE
+selectCodeEditor("pyramid_dog.vhd", 244, 200); // G
+selectCodeEditor("pyramid_dog.vhd", 403, 209); // G
+// Elapsed time: 14 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pyramid_kp(rtl) (pyramid_kp.vhd), pyramid : pyramid_dog(rtl) (pyramid_dog.vhd)]", 7); // E
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, pyramid_kp(rtl) (pyramid_kp.vhd), pyramid : pyramid_dog(rtl) (pyramid_dog.vhd)]", 7); // E
+closeView(PAResourceOtoP.PAViews_CODE, "Code"); // F
+// Elapsed time: 426 seconds
+selectCodeEditor("pyramid_dog.vhd", 213, 548); // G
+selectCodeEditor("pyramid_dog.vhd", 213, 548, false, false, false, false, true); // G - Double Click
+// Elapsed time: 185 seconds
+selectCodeEditor("pyramid_dog.vhd", 127, 396); // G
+selectCodeEditor("pyramid_dog.vhd", 127, 396, false, false, false, false, true); // G - Double Click
+// Elapsed time: 26 seconds
+selectCodeEditor("pyramid_dog.vhd", 126, 311); // G
+selectCodeEditor("pyramid_dog.vhd", 126, 311, false, false, false, false, true); // G - Double Click
+// Elapsed time: 54 seconds
+selectCodeEditor("pyramid_dog.vhd", 150, 564); // G
+selectCodeEditor("pyramid_dog.vhd", 150, 564, false, false, false, false, true); // G - Double Click
+selectCodeEditor("pyramid_dog.vhd", 183, 571); // G
+selectCodeEditor("pyramid_dog.vhd", 183, 571, false, false, false, false, true); // G - Double Click
+selectCodeEditor("pyramid_dog.vhd", 224, 461); // G
+selectCodeEditor("pyramid_dog.vhd", 224, 461, false, false, false, false, true); // G - Double Click
+// Elapsed time: 56 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "pyramid_kp.vhd", 1); // o
+// Elapsed time: 78 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "pyramid_dog.vhd", 2); // o
+// Elapsed time: 47 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 2); // E
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, user_logic.vhd]", 3, false); // E
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, user_logic.vhd]", 3, false, false, false, false, false, true); // E - Double Click
+// Elapsed time: 12 seconds
+selectCodeEditor("user_logic.vhd", 487, 432); // G
+// Elapsed time: 22 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // al
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // al
+// HMemoryUtils.trashcanNow. Engine heap size: 3,082 MB. GUI used memory: 101 MB. Current time: 7/21/26, 10:47:25 AM CEST
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent"); // al
+selectMenuItem(PAResourceCommand.PACommandNames_CLOSE_PROJECT, "Close"); // ao
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // ag
+// Run Command: PAResourceCommand.PACommandNames_CLOSE_PROJECT
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Close Project"); // u
+// TclEventType: PROJECT_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 3,017 MB. GUI used memory: 92 MB. Current time: 7/21/26, 10:47:28 AM CEST
+// Tcl Message: close_project 
+dismissDialog("Close Project"); // bq
+selectList(PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS, "/home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.xpr", 1); // b.c
+// Opening Vivado Project: /home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.xpr. Version: Vivado v2023.1 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project /home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/home/demelo/Xilinx_2023/Vivado/2023.1/data/ip'. 
+// Project name: test_grad_imv; location: /home/demelo/vivado_prjs/testbench_eads/test_grad_imv; part: xc7z045ffg900-1
+dismissDialog("Open Project"); // bq
+// [Engine Memory]: 3,101 MB (+18400kb) [00:16:48]
+// Elapsed time: 13 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LR_GAUSS_CODY(ARCH_LR_GAUSS_CODY) (lr_gauss_cody.vhd)]", 6); // E
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, LR_GAUSS_CODY(ARCH_LR_GAUSS_CODY) (lr_gauss_cody.vhd)]", 6); // E
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, gaussian_filter(arch_1D) (gaussian_filter.vhd)]", 3); // E
+collapseTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, gaussian_filter(arch_1D) (gaussian_filter.vhd)]", 3); // E
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, gaussian_filter(arch_1D) (gaussian_filter.vhd)]", 3, true); // E - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, gaussian_filter(arch_1D) (gaussian_filter.vhd)]", 3, true, false, false, false, true, false); // E - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // al
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // al
+selectMenuItem(PAResourceCommand.PACommandNames_SET_AS_TOP, "Set as Top"); // ao
+// Run Command: PAResourceCommand.PACommandNames_SET_AS_TOP
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: set_property top gaussian_filter [current_fileset] 
+// TclEventType: DG_GRAPH_STALE
+// Elapsed Time for: 'L.f': 28s
+// Elapsed Time for: 'L.f': 30s
+// Elapsed time: 16 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 15, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // f
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs synth_1 -jobs 12 
+// Tcl Message: [Tue Jul 21 10:48:18 2026] Launched synth_1... Run output will be captured here: /home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bq
+// TclEventType: RUN_STATUS_CHANGE
+selectTab((HResource) null, (HResource) null, "Tcl Console", 0); // aa
+// HMemoryUtils.trashcanNow. Engine heap size: 3,132 MB. GUI used memory: 96 MB. Current time: 7/21/26, 10:48:30 AM CEST
+selectTab((HResource) null, (HResource) null, "Log", 2); // aa
+floatFrame(PAResourceOtoP.PAViews_COMPILATION, "Log"); // R
+// PAResourceOtoP.PAViews_COMPILATION: Compilation: float view
+maximizeFrame(PAResourceOtoP.PAViews_COMPILATION, "Log"); // R
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 25 seconds
+selectRadioButton(PAResourceCommand.PACommandNames_GOTO_NETLIST_DESIGN, "Open Synthesized Design"); // a
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_GOTO_NETLIST_DESIGN
+// Tcl Message: open_run synth_1 -name synth_1 
+// Tcl Message: Design is defaulting to impl run constrset: constrs_1 Design is defaulting to synth run part: xc7z045ffg900-1 
+// HMemoryUtils.trashcanNow. Engine heap size: 3,494 MB. GUI used memory: 95 MB. Current time: 7/21/26, 10:49:10 AM CEST
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// [Engine Memory]: 3,553 MB (+311836kb) [00:18:22]
+// HMemoryUtils.trashcanNow. Engine heap size: 3,602 MB. GUI used memory: 95 MB. Current time: 7/21/26, 10:49:11 AM CEST
+// TclEventType: DESIGN_NEW
+// [Engine Memory]: 3,779 MB (+50501kb) [00:18:22]
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// [GUI Memory]: 183 MB (+3600kb) [00:18:24]
+// 'dA' command handler elapsed time: 7 seconds
+// WARNING: HEventQueue.dispatchEvent() is taking  2059 ms.
+// Tcl Message: INFO: [Device 21-403] Loading part xc7z045ffg900-1 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 9433.750 ; gain = 0.000 ; free physical = 91433 ; free virtual = 114939 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 145 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2023.1 INFO: [Project 1-570] Preparing netlist for logic optimization INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s). 
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 9547.582 ; gain = 0.000 ; free physical = 91356 ; free virtual = 114863 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+dockFrame(PAResourceOtoP.PAViews_COMPILATION, "Log"); // R
+maximizeFrame(PAResourceOtoP.PAViews_COMPILATION, "Log"); // R
+// Tcl Message: open_run: Time (s): cpu = 00:00:16 ; elapsed = 00:00:07 . Memory (MB): peak = 9813.309 ; gain = 676.207 ; free physical = 91224 ; free virtual = 114732 
+dismissDialog("Open Synthesized Design"); // bq
+// Device view-level: 0.0
+// RouteApi::initDelayMediator elapsed time: 6.3s
+// [GUI Memory]: 214 MB (+22824kb) [00:18:30]
+// [Engine Memory]: 4,127 MB (+166766kb) [00:18:30]
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// Device view-level: 0.0
+// Elapsed time: 14 seconds
+expandTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[gaussian_filter, gen_fifo_vertical_others[1].c_fifo_vertical_others (dual_clk_fifo_0)]", 7); // aF
+expandTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[gaussian_filter, gen_fifo_vertical_others[1].c_fifo_vertical_others (dual_clk_fifo_0), fifo_inst (generic_fifo_dc_gray_11)]", 9); // aF
+// PAPropertyPanels.initPanels (u0 (generic_dpram_12)) elapsed time: 0.4s
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[gaussian_filter, gen_fifo_vertical_others[1].c_fifo_vertical_others (dual_clk_fifo_0), fifo_inst (generic_fifo_dc_gray_11), u0 (generic_dpram_12)]", 12, false); // aF
+// HMemoryUtils.trashcanNow. Engine heap size: 4,156 MB. GUI used memory: 136 MB. Current time: 7/21/26, 10:49:35 AM CEST
+expandTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[gaussian_filter, gen_fifo_vertical_others[1].c_fifo_vertical_others (dual_clk_fifo_0), fifo_inst (generic_fifo_dc_gray_11), u0 (generic_dpram_12)]", 12); // aF
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[gaussian_filter, gen_fifo_vertical_others[1].c_fifo_vertical_others (dual_clk_fifo_0), fifo_inst (generic_fifo_dc_gray_11), u0 (generic_dpram_12)]", 12, true); // aF - Node
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[gaussian_filter, c_fifo_vertical_0 (dual_clk_fifo)]", 3, false); // aF
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[gaussian_filter, gen_fifo_vertical_others[1].c_fifo_vertical_others (dual_clk_fifo_0), fifo_inst (generic_fifo_dc_gray_11), u0 (generic_dpram_12)]", 12, true); // aF - Node
+// Device view-level: 0.3
+// HMemoryUtils.trashcanNow. Engine heap size: 4,157 MB. GUI used memory: 141 MB. Current time: 7/21/26, 10:49:48 AM CEST
+// Device view-level: 0.6
+// Device view-level: 0.9
+// Device view-level: 1.2
+// HMemoryUtils.trashcanNow. Engine heap size: 4,158 MB. GUI used memory: 136 MB. Current time: 7/21/26, 10:49:49 AM CEST
+// Device view-level: 0.9
+// HMemoryUtils.trashcanNow. Engine heap size: 4,158 MB. GUI used memory: 158 MB. Current time: 7/21/26, 10:49:51 AM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 4,158 MB. GUI used memory: 182 MB. Current time: 7/21/26, 10:49:51 AM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 4,158 MB. GUI used memory: 201 MB. Current time: 7/21/26, 10:49:52 AM CEST
+// Elapsed time: 11 seconds
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[gaussian_filter, gen_fifo_vertical_others[1].c_fifo_vertical_others (dual_clk_fifo_0), fifo_inst (generic_fifo_dc_gray_11), u0 (generic_dpram_12)]", 12, true, false, false, false, true, false); // aF - Popup Trigger - Node
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // al
+selectMenu(PAResourceOtoP.PrimitivesMenu_HIGHLIGHT_LEAF_CELLS, "Highlight Leaf Cells"); // al
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // al
+selectMenu(PAResourceOtoP.PrimitivesMenu_HIGHLIGHT_LEAF_CELLS, "Highlight Leaf Cells"); // al
+selectMenu(PAResourceItoN.InstanceMenu_FLOORPLANNING, "Floorplanning"); // al
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // al
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // al
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // al
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 135594, 674691); // t
+// [GUI Memory]: 228 MB (+3561kb) [00:19:19]
+// Device select: 'Tile - CLBLM_R_X13Y161'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 248, 1234, 1184, 715); // G
+// HMemoryUtils.trashcanNow. Engine heap size: 4,267 MB. GUI used memory: 139 MB. Current time: 7/21/26, 10:50:09 AM CEST
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[gaussian_filter, gen_fifo_vertical_others[1].c_fifo_vertical_others (dual_clk_fifo_0), fifo_inst (generic_fifo_dc_gray_11), u0 (generic_dpram_12)]", 12, true); // aF - Node
+// Device view-level: 0.6
+// Device view-level: 0.3
+// Device view-level: 0.0
+// Elapsed time: 11 seconds
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 551227, 81193); // t
+// Device view-level: 1.8
+// HMemoryUtils.trashcanNow. Engine heap size: 4,165 MB. GUI used memory: 174 MB. Current time: 7/21/26, 10:50:23 AM CEST
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 579526, 135889); // t
+// Device select: 'Site - R15'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 3624, 851, 1184, 715); // G
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 579366, 131253); // t
+// Device select: 'Site - T14'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 3624, 821, 1184, 715); // G
+// Device view-level: 1.5
+// Device view-level: 1.2
+// Device view-level: 0.9
+// HMemoryUtils.trashcanNow. Engine heap size: 4,167 MB. GUI used memory: 158 MB. Current time: 7/21/26, 10:50:31 AM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 4,167 MB. GUI used memory: 188 MB. Current time: 7/21/26, 10:50:34 AM CEST
+// Device view-level: 0.6
+// HMemoryUtils.trashcanNow. Engine heap size: 4,173 MB. GUI used memory: 140 MB. Current time: 7/21/26, 10:50:36 AM CEST
+// Device view-level: 0.3
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[gaussian_filter, gen_fifo_vertical_others[2].c_fifo_vertical_others (dual_clk_fifo_1)]", 15, false); // aF
+expandTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[gaussian_filter, gen_fifo_vertical_others[2].c_fifo_vertical_others (dual_clk_fifo_1)]", 15); // aF
+expandTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[gaussian_filter, gen_fifo_vertical_others[2].c_fifo_vertical_others (dual_clk_fifo_1), fifo_inst (generic_fifo_dc_gray_9)]", 17); // aF
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[gaussian_filter, gen_fifo_vertical_others[1].c_fifo_vertical_others (dual_clk_fifo_0), fifo_inst (generic_fifo_dc_gray_11), u0 (generic_dpram_12)]", 12, true); // aF - Node
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[gaussian_filter, gen_fifo_vertical_others[2].c_fifo_vertical_others (dual_clk_fifo_1), fifo_inst (generic_fifo_dc_gray_9), u0 (generic_dpram_10)]", 20, false); // aF
+expandTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[gaussian_filter, gen_fifo_vertical_others[2].c_fifo_vertical_others (dual_clk_fifo_1), fifo_inst (generic_fifo_dc_gray_9), u0 (generic_dpram_10)]", 20); // aF
+expandTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[gaussian_filter, gen_fifo_vertical_others[2].c_fifo_vertical_others (dual_clk_fifo_1), fifo_inst (generic_fifo_dc_gray_9), u0 (generic_dpram_10), Nets (58)]", 21); // aF
+selectTree(PAResourceItoN.NetlistTreeView_NETLIST_TREE, "[gaussian_filter, gen_fifo_vertical_others[2].c_fifo_vertical_others (dual_clk_fifo_1), fifo_inst (generic_fifo_dc_gray_9), u0 (generic_dpram_10), Nets (58), <const0>]", 27, false); // aF
+// Device view-level: 0.6
+// HMemoryUtils.trashcanNow. Engine heap size: 4,177 MB. GUI used memory: 142 MB. Current time: 7/21/26, 10:51:00 AM CEST
+// Device view-level: 1.2
+// Device view-level: 0.9
+// Device view-level: 0.6
+// Device view-level: 0.3
+// Device view-level: 0.0
+// HMemoryUtils.trashcanNow. Engine heap size: 4,177 MB. GUI used memory: 163 MB. Current time: 7/21/26, 10:51:01 AM CEST
+// Elapsed time: 19 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Open Synthesized Design, Report Utilization]", 26, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RESOURCE_UTILIZATION
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// 'co' command handler elapsed time: 4 seconds
+dismissDialog("Report Utilization"); // a
+// TclEventType: UTILIZATION_RESULT_GENERATED
+// Tcl Message: report_utilization -name utilization_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 4,198 MB. GUI used memory: 149 MB. Current time: 7/21/26, 10:51:22 AM CEST
+dismissDialog("Report Utilization"); // bq
+floatFrame(PAResourceOtoP.PAViews_UTILIZATION, "Utilization - utilization_1"); // R
+// PAResourceOtoP.PAViews_UTILIZATION: Utilization: float view
+maximizeFrame(PAResourceOtoP.PAViews_UTILIZATION, "Utilization - utilization_1"); // R
+selectTree(PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, "[Report Contents, Memory, Block RAM Tile]", 8, true); // k - Node
+selectTree(PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, "[Report Contents, Memory, Block RAM Tile, RAMB18]", 9, true); // k - Node
+selectTree(PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, "[Report Contents, Memory, Block RAM Tile, RAMB18, RAMB18E1 only]", 10, false); // k
+selectTree(PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, "[Report Contents, Memory, Block RAM Tile, RAMB18]", 9, true); // k - Node
+selectTree(PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, "[Report Contents, Memory, Block RAM Tile]", 8, true); // k - Node
+selectTree(PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, "[Report Contents, Memory, Block RAM Tile, RAMB18]", 9, true); // k - Node
+selectTree(PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, "[Report Contents, Memory, Block RAM Tile, RAMB18, RAMB18E1 only]", 10, false); // k
+selectTree(PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, "[Report Contents, Memory, Block RAM Tile, RAMB18]", 9, true); // k - Node
+selectTree(PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, "[Report Contents, Memory, Block RAM Tile]", 8, true); // k - Node
+selectTree(PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, "[Report Contents, Memory, Block RAM Tile, RAMB18, RAMB18E1 only]", 10, false); // k
+selectTree(PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, "[Report Contents, Memory, Block RAM Tile, RAMB18]", 9, true); // k - Node
+// Elapsed time: 69 seconds
+selectTree(PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, "[Report Contents, Memory, Block RAM Tile, RAMB18, RAMB18E1 only]", 10, false); // k
+selectTree(PAResourceQtoS.ReportUtilTab_REPORT_UTILIZATION_NAVIGATION_TREE, "[Report Contents, Memory, Block RAM Tile, RAMB18]", 9, true); // k - Node
+dockFrame(PAResourceOtoP.PAViews_UTILIZATION, "Utilization - utilization_1"); // R
+maximizeFrame(PAResourceOtoP.PAViews_UTILIZATION, "Utilization - utilization_1"); // R
+// PAResourceOtoP.PAViews_UTILIZATION: Utilization: dock view
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Implementation, Run Implementation]", 30, false); // f
+// Run Command: PAResourceCommand.PACommandNames_RUN_IMPLEMENTATION
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Launch Runs"); // f
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_STATUS_CHANGE
+// Tcl Message: launch_runs impl_1 -jobs 12 
+// Tcl Message: [Tue Jul 21 10:53:19 2026] Launched impl_1... Run output will be captured here: /home/demelo/vivado_prjs/testbench_eads/test_grad_imv/test_grad_imv.runs/impl_1/runme.log 
+dismissDialog("Starting Design Runs"); // bq
+// TclEventType: RUN_STATUS_CHANGE
+selectTab((HResource) null, (HResource) null, "Log", 2); // aa
+floatFrame(PAResourceOtoP.PAViews_COMPILATION, "Log"); // R
+// PAResourceOtoP.PAViews_COMPILATION: Compilation: float view
+maximizeFrame(PAResourceOtoP.PAViews_COMPILATION, "Log"); // R
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 12 seconds
+dockFrame(PAResourceOtoP.PAViews_COMPILATION, "Log"); // R
+maximizeFrame(PAResourceOtoP.PAViews_COMPILATION, "Log"); // R
+// PAResourceOtoP.PAViews_COMPILATION: Compilation: dock view
+// TclEventType: RUN_STEP_COMPLETED
+selectTab((HResource) null, (HResource) null, "Tcl Console", 0); // aa
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aa
+selectTab((HResource) null, (HResource) null, "Reports", 3); // aa
+selectTab((HResource) null, (HResource) null, "Log", 2); // aa
+collapseTree(PAResourceItoN.LogPanel_LOG_NAVIGATOR, "[, Out-of-Context Module Runs]", 1); // a
+selectTab((HResource) null, (HResource) null, "Utilization", 5); // aa
+selectTab((HResource) null, (HResource) null, "Design Runs", 4); // aa
+selectTab((HResource) null, (HResource) null, "Reports", 3); // aa
+selectTab((HResource) null, (HResource) null, "Log", 2); // aa
+expandTree(PAResourceItoN.LogPanel_LOG_NAVIGATOR, "[, Out-of-Context Module Runs]", 1); // a
+collapseTree(PAResourceItoN.LogPanel_LOG_NAVIGATOR, "[, Out-of-Context Module Runs]", 1); // a
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aa
+selectTab((HResource) null, (HResource) null, "Tcl Console", 0); // aa
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 27 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+// Run Command: PAResourceCommand.PACommandNames_GOTO_IMPLEMENTED_DESIGN
+selectButton(PAResourceAtoD.ClosePlanner_YES, "Yes"); // a
+dismissDialog("Close Design"); // a.a
+// TclEventType: DESIGN_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 4,230 MB. GUI used memory: 134 MB. Current time: 7/21/26, 10:54:59 AM CEST
+// Engine heap size: 4,230 MB. GUI used memory: 135 MB. Current time: 7/21/26, 10:54:59 AM CEST
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: close_design 
+// TclEventType: DESIGN_CLOSE
+dismissDialog("Close"); // bq
+// Tcl Message: open_run impl_1 
+// TclEventType: FLOORPLAN_MODIFY
+// TclEventType: DESIGN_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 4,228 MB. GUI used memory: 101 MB. Current time: 7/21/26, 10:55:00 AM CEST
+// TclEventType: DESIGN_NEW
+// [Engine Memory]: 4,342 MB (+9038kb) [00:24:11]
+// TclEventType: HFED_INIT_ROUTE_STORAGE_COMPLETED
+// DeviceView Instantiated
+// TclEventType: CURR_DESIGN_SET
+// 'dA' command handler elapsed time: 10 seconds
+// WARNING: HEventQueue.dispatchEvent() is taking  1550 ms.
+// Tcl Message: Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 10254.707 ; gain = 0.000 ; free physical = 90532 ; free virtual = 114089 
+// Tcl Message: INFO: [Netlist 29-17] Analyzing 145 Unisim elements for replacement INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds INFO: [Project 1-479] Netlist was created with Vivado 2023.1 INFO: [Project 1-570] Preparing netlist for logic optimization 
+// Tcl Message: Reading XDEF placement. Reading placer database... Reading XDEF routing. 
+// Tcl Message: Read XDEF Files: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.08 . Memory (MB): peak = 10254.707 ; gain = 0.000 ; free physical = 90532 ; free virtual = 114089 
+// Tcl Message: Restored from archive | CPU: 0.090000 secs | Memory: 1.893242 MB | 
+// Tcl Message: Finished XDEF File Restore: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.08 . Memory (MB): peak = 10254.707 ; gain = 0.000 ; free physical = 90532 ; free virtual = 114089 Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 10254.707 ; gain = 0.000 ; free physical = 90532 ; free virtual = 114089 
+// Tcl Message: INFO: [Project 1-111] Unisim Transformation Summary: No Unisim elements were transformed.  
+dockFrame(PAResourceOtoP.PAViews_COMPILATION, "Log"); // R
+dismissDialog("Open Implemented Design"); // bq
+// TclEventType: DRC_ADDED
+// Device view-level: 0.0
+// RouteApi: Init Delay Mediator Swing Worker Finished
+// TclEventType: DRC_ADDED
+// TclEventType: METHODOLOGY_ADDED
+// TclEventType: POWER_UPDATED
+// TclEventType: TIMING_SUMMARY_UPDATED
+// Elapsed time: 11 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Methodology Violations"); // aO
+// HMemoryUtils.trashcanNow. Engine heap size: 4,451 MB. GUI used memory: 149 MB. Current time: 7/21/26, 10:55:16 AM CEST
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Methodology Summary]", 3, false); // a
+// Elapsed time: 10 seconds
+selectTree(PAResourceItoN.NavigableTimingReportTab_TIMING_REPORT_NAVIGATION_TREE, "[Root, Methodology Summary]", 3, false); // a
+// Device view-level: 0.3
+// Device view-level: 0.6
+// Device view-level: 0.9
+// HMemoryUtils.trashcanNow. Engine heap size: 4,319 MB. GUI used memory: 147 MB. Current time: 7/21/26, 10:55:35 AM CEST
+// Device view-level: 1.2
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 174596, 977592); // t
+// Device view-level: 1.2
+// Device view-level: 0.9
+// Device view-level: 0.6
+// HMemoryUtils.trashcanNow. Engine heap size: 4,304 MB. GUI used memory: 190 MB. Current time: 7/21/26, 10:55:38 AM CEST
+// Device view-level: 0.9
+// Device view-level: 1.2
+// Device view-level: 1.5
+// HMemoryUtils.trashcanNow. Engine heap size: 4,305 MB. GUI used memory: 176 MB. Current time: 7/21/26, 10:55:42 AM CEST
+// Device view-level: 1.8
+// Device view-level: 2.0
+// Device view-level: 2.3
+// Device view-level: 2.6
+// [GUI Memory]: 259 MB (+20102kb) [00:24:54]
+// HMemoryUtils.trashcanNow. Engine heap size: 4,305 MB. GUI used memory: 150 MB. Current time: 7/21/26, 10:55:44 AM CEST
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 408193, 722450); // t
+// Device select: 'Cell - clk_IBUF_BUFG_inst'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 8504, 15051, 1233, 715); // G
+// Device view-level: 2.3
+// Device view-level: 1.8
+// Elapsed time: 14 seconds
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 382645, 733376); // t
+// Device view-level: 1.8
+// Device view-level: 1.5
+// HMemoryUtils.trashcanNow. Engine heap size: 4,305 MB. GUI used memory: 220 MB. Current time: 7/21/26, 10:56:01 AM CEST
+// Device view-level: 1.2
+// Device view-level: 0.9
+// Device view-level: 0.6
+// HMemoryUtils.trashcanNow. Engine heap size: 4,305 MB. GUI used memory: 154 MB. Current time: 7/21/26, 10:56:02 AM CEST
+// Device view-level: 0.9
+// Device view-level: 1.2
+// Device view-level: 1.5
+// Device view-level: 1.8
+// Device view-level: 2.0
+// HMemoryUtils.trashcanNow. Engine heap size: 4,306 MB. GUI used memory: 226 MB. Current time: 7/21/26, 10:56:04 AM CEST
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 82080, 1023953); // t
+// Device view-level: 2.0
+// Device view-level: 2.0
+// Device view-level: 2.3
+// Device view-level: 2.9
+// HMemoryUtils.trashcanNow. Engine heap size: 4,306 MB. GUI used memory: 184 MB. Current time: 7/21/26, 10:56:06 AM CEST
+// Device view-level: 3.2
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 39361, 1027769); // t
+// Device select: 'I/O Port - data_in[2]'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 1845, 48176, 1233, 715); // G
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 38827, 1028942); // t
+// Device select: 'Cell - data_in_IBUF[2]_inst'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 1820, 48231, 1233, 715); // G
+// Device view-level: 2.9
+// Device view-level: 2.6
+// HMemoryUtils.trashcanNow. Engine heap size: 4,306 MB. GUI used memory: 155 MB. Current time: 7/21/26, 10:56:12 AM CEST
+// Device view-level: 2.3
+// Device view-level: 2.0
+// Device view-level: 1.8
+// Device view-level: 2.0
+// Device view-level: 2.3
+// HMemoryUtils.trashcanNow. Engine heap size: 4,306 MB. GUI used memory: 153 MB. Current time: 7/21/26, 10:56:14 AM CEST
+// Device view-level: 2.6
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 41185, 1050350); // t
+// Device select: 'I/O Bank - I/O Bank 9'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 858, 21882, 1233, 715); // G
+// WARNING: HEventQueue.dispatchEvent() is taking  41647 ms.
+// Thread: hw_ila_monitor
+// 	at java.base@17.0.3/java.lang.Object.wait(Native Method)
+// 	at java.base@17.0.3/java.lang.Object.wait(Object.java:338)
+// 	at java.base@17.0.3/java.util.TimerThread.mainLoop(Timer.java:537)
+// 	at java.base@17.0.3/java.util.TimerThread.run(Timer.java:516)
+// Thread: Timer-4
+// 	at java.base@17.0.3/java.lang.Object.wait(Native Method)
+// 	at java.base@17.0.3/java.util.TimerThread.mainLoop(Timer.java:563)
+// 	at java.base@17.0.3/java.util.TimerThread.run(Timer.java:516)
+// Thread: Timer-10
+// 	at java.base@17.0.3/java.lang.Object.wait(Native Method)
+// 	at java.base@17.0.3/java.util.TimerThread.mainLoop(Timer.java:563)
+// 	at java.base@17.0.3/java.util.TimerThread.run(Timer.java:516)
+// Thread: Finalizer
+// 	at java.base@17.0.3/java.lang.Object.wait(Native Method)
+// 	at java.base@17.0.3/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+// 	at java.base@17.0.3/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+// 	at java.base@17.0.3/java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:172)
+// Thread: SyntheticaAnimation 70
+// 	at java.base@17.0.3/java.lang.Thread.sleep(Native Method)
+// 	at de.javasoft.plaf.synthetica.painter.AnimationThreadFactory$AnimationThread.run(AnimationThreadFactory.java:119)
+// Thread: pool-12-thread-1
+// 	at java.base@17.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@17.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+// 	at java.base@17.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+// 	at java.base@17.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3463)
+// 	at java.base@17.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3434)
+// 	at java.base@17.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1623)
+// 	at java.base@17.0.3/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+// 	at java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+// 	at java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+// 	at java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+// 	at java.base@17.0.3/java.lang.Thread.run(Thread.java:833)
+// Thread: Batik CleanerThread
+// 	at java.base@17.0.3/java.lang.Object.wait(Native Method)
+// 	at java.base@17.0.3/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+// 	at java.base@17.0.3/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+// 	at org.apache.batik.util.CleanerThread.run(CleanerThread.java:106)
+// Thread: TimerQueue
+// 	at java.base@17.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@17.0.3/java.util.concurrent.locks.LockSupport.parkNanos(LockSupport.java:252)
+// 	at java.base@17.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.awaitNanos(AbstractQueuedSynchronizer.java:1672)
+// 	at java.base@17.0.3/java.util.concurrent.DelayQueue.take(DelayQueue.java:229)
+// 	at java.desktop@17.0.3/javax.swing.TimerQueue.run(TimerQueue.java:172)
+// 	at java.base@17.0.3/java.lang.Thread.run(Thread.java:833)
+// Thread: Monitor HEventQueue Thread
+// 	at java.base@17.0.3/java.lang.Thread.dumpThreads(Native Method)
+// 	at java.base@17.0.3/java.lang.Thread.getAllStackTraces(Thread.java:1662)
+// 	at ui.utils.d.c.iue(SourceFile:595)
+// 	at ui.frmwork.a.e.aQH(SourceFile:145)
+// 	at ui.frmwork.z.run(SourceFile:213)
+// 	at java.base@17.0.3/java.lang.Thread.run(Thread.java:833)
+// Thread: Timer-6
+// 	at java.base@17.0.3/java.lang.Object.wait(Native Method)
+// 	at java.base@17.0.3/java.util.TimerThread.mainLoop(Timer.java:563)
+// 	at java.base@17.0.3/java.util.TimerThread.run(Timer.java:516)
+// Thread: Timer-16
+// 	at java.base@17.0.3/java.lang.Object.wait(Native Method)
+// 	at java.base@17.0.3/java.util.TimerThread.mainLoop(Timer.java:563)
+// 	at java.base@17.0.3/java.util.TimerThread.run(Timer.java:516)
+// Thread: main
+// 	at java.base@17.0.3/java.lang.Thread.sleep(Native Method)
+// 	at ui.PlanAhead.c(SourceFile:1252)
+// 	at ui.PlanAhead.jswMain(SourceFile:1301)
+// Thread: pool-2-thread-1
+// 	at java.base@17.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@17.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+// 	at java.base@17.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+// 	at java.base@17.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3463)
+// 	at java.base@17.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3434)
+// 	at java.base@17.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1623)
+// 	at java.base@17.0.3/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+// 	at java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+// 	at java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+// 	at java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+// 	at java.base@17.0.3/java.lang.Thread.run(Thread.java:833)
+// Thread: AWT-XAWT
+// 	at java.desktop@17.0.3/sun.awt.X11.XToolkit.waitForEvents(Native Method)
+// 	at java.desktop@17.0.3/sun.awt.X11.XToolkit.run(XToolkit.java:683)
+// 	at java.desktop@17.0.3/sun.awt.X11.XToolkit.run(XToolkit.java:647)
+// 	at java.base@17.0.3/java.lang.Thread.run(Thread.java:833)
+// Thread: Monitor File Timestamp Swing Worker Thread
+// 	at java.base@17.0.3/java.lang.Thread.sleep(Native Method)
+// 	at ui.views.f.aQH(SourceFile:227)
+// 	at ui.frmwork.z.run(SourceFile:213)
+// 	at java.base@17.0.3/java.lang.Thread.run(Thread.java:833)
+// Thread: pool-14-thread-1
+// 	at java.base@17.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@17.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+// 	at java.base@17.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+// 	at java.base@17.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3463)
+// 	at java.base@17.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3434)
+// 	at java.base@17.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1623)
+// 	at java.base@17.0.3/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+// 	at java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+// 	at java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+// 	at java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+// 	at java.base@17.0.3/java.lang.Thread.run(Thread.java:833)
+// Thread: SyntheticaAnimation 25
+// 	at java.base@17.0.3/java.lang.Thread.sleep(Native Method)
+// 	at de.javasoft.plaf.synthetica.painter.AnimationThreadFactory$AnimationThread.run(AnimationThreadFactory.java:119)
+// Thread: SyntheticaAnimation 50
+// 	at java.base@17.0.3/java.lang.Thread.sleep(Native Method)
+// 	at com.jidesoft.plaf.synthetica.AnimationThreadFactory$AnimationThread.run(AnimationThreadFactory.java:99)
+// Thread: Timer-0
+// 	at java.base@17.0.3/java.lang.Object.wait(Native Method)
+// 	at java.base@17.0.3/java.util.TimerThread.mainLoop(Timer.java:563)
+// 	at java.base@17.0.3/java.util.TimerThread.run(Timer.java:516)
+// Thread: AWT-EventQueue-0
+// 	at ui.data.device.pkg.PackagePin_isDDRMC(Native Method)
+// 	at ui.data.device.o.i.cvo(SourceFile:274)
+// 	at ui.views.k.U.getValueAt(SourceFile:322)
+// 	at com.jidesoft.grid.TableModelWrapperImpl.getValueAt(Unknown Source)
+// 	at com.jidesoft.grid.DefaultTableModelWrapper.getValueAt(Unknown Source)
+// 	at ui.utils.i.i.s.getValueAt(SourceFile:496)
+// 	at com.jidesoft.grid.TableModelWrapperImpl.getValueAt(Unknown Source)
+// 	at com.jidesoft.grid.DefaultTableModelWrapper.getValueAt(Unknown Source)
+// 	at java.desktop@17.0.3/javax.swing.JTable.getValueAt(JTable.java:2763)
+// 	at com.jidesoft.grid.JideTable.getValueAt(Unknown Source)
+// 	at com.jidesoft.grid.JideTable.prepareRenderer(Unknown Source)
+// 	at com.jidesoft.grid.CellStyleTable.prepareRenderer(Unknown Source)
+// 	at com.jidesoft.grid.TableUtils.a(Unknown Source)
+// 	at com.jidesoft.grid.TableUtils.access$1100(Unknown Source)
+// 	at com.jidesoft.grid.TableUtils$d.run(Unknown Source)
+// 	at com.jidesoft.grid.TableUtils.autoResizeAllColumns(Unknown Source)
+// 	at com.jidesoft.grid.TableUtils.autoResizeAllColumns(Unknown Source)
+// 	at ui.utils.i.i.J.a(SourceFile:297)
+// 	at ui.utils.i.i.J$i.iBN(SourceFile:2770)
+// 	at ui.utils.i.i.J$i.ancestorMoved(SourceFile:2799)
+// 	at java.desktop@17.0.3/javax.swing.AncestorNotifier.fireAncestorMoved(AncestorNotifier.java:129)
+// 	at java.desktop@17.0.3/javax.swing.AncestorNotifier.componentMoved(AncestorNotifier.java:183)
+// 	at java.desktop@17.0.3/java.awt.Component.processComponentEvent(Component.java:6455)
+// 	at java.desktop@17.0.3/java.awt.Component.processEvent(Component.java:6406)
+// 	at java.desktop@17.0.3/java.awt.Container.processEvent(Container.java:2266)
+// 	at java.desktop@17.0.3/java.awt.Component.dispatchEventImpl(Component.java:5001)
+// 	at java.desktop@17.0.3/java.awt.Container.dispatchEventImpl(Container.java:2324)
+// 	at java.desktop@17.0.3/java.awt.Component.dispatchEvent(Component.java:4833)
+// 	at java.desktop@17.0.3/java.awt.EventQueue.dispatchEventImpl(EventQueue.java:773)
+// 	at java.desktop@17.0.3/java.awt.EventQueue$4.run(EventQueue.java:722)
+// 	at java.desktop@17.0.3/java.awt.EventQueue$4.run(EventQueue.java:716)
+// 	at java.base@17.0.3/java.security.AccessController.executePrivileged(AccessController.java:776)
+// 	at java.base@17.0.3/java.security.AccessController.doPrivileged(AccessController.java:399)
+// 	at java.base@17.0.3/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+// 	at java.base@17.0.3/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:97)
+// 	at java.desktop@17.0.3/java.awt.EventQueue$5.run(EventQueue.java:746)
+// 	at java.desktop@17.0.3/java.awt.EventQueue$5.run(EventQueue.java:744)
+// 	at java.base@17.0.3/java.security.AccessController.executePrivileged(AccessController.java:776)
+// 	at java.base@17.0.3/java.security.AccessController.doPrivileged(AccessController.java:399)
+// 	at java.base@17.0.3/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:86)
+// 	at java.desktop@17.0.3/java.awt.EventQueue.dispatchEvent(EventQueue.java:743)
+// 	at ui.frmwork.a.d.dispatchEvent(SourceFile:92)
+// 	at java.desktop@17.0.3/java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:203)
+// 	at java.desktop@17.0.3/java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:124)
+// 	at java.desktop@17.0.3/java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:113)
+// 	at java.desktop@17.0.3/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:109)
+// 	at java.desktop@17.0.3/java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101)
+// 	at java.desktop@17.0.3/java.awt.EventDispatchThread.run(EventDispatchThread.java:90)
+// Thread: SyntheticaAnimation 50
+// 	at java.base@17.0.3/java.lang.Thread.sleep(Native Method)
+// 	at de.javasoft.plaf.synthetica.painter.AnimationThreadFactory$AnimationThread.run(AnimationThreadFactory.java:119)
+// Thread: Timer-8
+// 	at java.base@17.0.3/java.lang.Object.wait(Native Method)
+// 	at java.base@17.0.3/java.util.TimerThread.mainLoop(Timer.java:563)
+// 	at java.base@17.0.3/java.util.TimerThread.run(Timer.java:516)
+// Thread: pool-3-thread-1
+// 	at java.base@17.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@17.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+// 	at java.base@17.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+// 	at java.base@17.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3463)
+// 	at java.base@17.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3434)
+// 	at java.base@17.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1623)
+// 	at java.base@17.0.3/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+// 	at java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+// 	at java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+// 	at java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+// 	at java.base@17.0.3/java.lang.Thread.run(Thread.java:833)
+// Thread: Image Animator 0
+// 	at java.base@17.0.3/java.lang.Thread.sleep(Native Method)
+// 	at java.desktop@17.0.3/sun.awt.image.GifFrame.dispose(GifImageDecoder.java:669)
+// 	at java.desktop@17.0.3/sun.awt.image.GifImageDecoder.readImage(GifImageDecoder.java:458)
+// 	at java.desktop@17.0.3/sun.awt.image.GifImageDecoder.produceImage(GifImageDecoder.java:212)
+// 	at java.desktop@17.0.3/sun.awt.image.InputStreamImageSource.doFetch(InputStreamImageSource.java:270)
+// 	at java.desktop@17.0.3/sun.awt.image.ImageFetcher.fetchloop(ImageFetcher.java:212)
+// 	at java.desktop@17.0.3/sun.awt.image.ImageFetcher.run(ImageFetcher.java:176)
+// Thread: pool-11-thread-1
+// 	at java.base@17.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@17.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+// 	at java.base@17.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+// 	at java.base@17.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3463)
+// 	at java.base@17.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3434)
+// 	at java.base@17.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1623)
+// 	at java.base@17.0.3/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+// 	at java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+// 	at java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+// 	at java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+// 	at java.base@17.0.3/java.lang.Thread.run(Thread.java:833)
+// Thread: pool-13-thread-1
+// 	at java.base@17.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@17.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+// 	at java.base@17.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+// 	at java.base@17.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3463)
+// 	at java.base@17.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3434)
+// 	at java.base@17.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1623)
+// 	at java.base@17.0.3/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+// 	at java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+// 	at java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+// 	at java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+// 	at java.base@17.0.3/java.lang.Thread.run(Thread.java:833)
+// Thread: Thread-1
+// Thread: pool-9-thread-1
+// 	at java.base@17.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@17.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+// 	at java.base@17.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+// 	at java.base@17.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3463)
+// 	at java.base@17.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3434)
+// 	at java.base@17.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1623)
+// 	at java.base@17.0.3/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+// 	at java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+// 	at java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+// 	at java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+// 	at java.base@17.0.3/java.lang.Thread.run(Thread.java:833)
+// Thread: Timer-17
+// 	at java.base@17.0.3/java.lang.Object.wait(Native Method)
+// 	at java.base@17.0.3/java.util.TimerThread.mainLoop(Timer.java:563)
+// 	at java.base@17.0.3/java.util.TimerThread.run(Timer.java:516)
+// Thread: SyntheticaCleanerThread
+// 	at java.base@17.0.3/java.lang.Thread.sleep(Native Method)
+// 	at de.javasoft.plaf.synthetica.StyleFactory$ComponentPropertyStore$1.run(StyleFactory.java:1903)
+// Thread: Reference Handler
+// 	at java.base@17.0.3/java.lang.ref.Reference.waitForReferencePendingList(Native Method)
+// 	at java.base@17.0.3/java.lang.ref.Reference.processPendingReferences(Reference.java:253)
+// 	at java.base@17.0.3/java.lang.ref.Reference$ReferenceHandler.run(Reference.java:215)
+// Thread: Timer-12
+// 	at java.base@17.0.3/java.lang.Object.wait(Native Method)
+// 	at java.base@17.0.3/java.util.TimerThread.mainLoop(Timer.java:563)
+// 	at java.base@17.0.3/java.util.TimerThread.run(Timer.java:516)
+// Thread: pool-4-thread-1
+// 	at java.base@17.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@17.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+// 	at java.base@17.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+// 	at java.base@17.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3463)
+// 	at java.base@17.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3434)
+// 	at java.base@17.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1623)
+// 	at java.base@17.0.3/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+// 	at java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+// 	at java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+// 	at java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+// 	at java.base@17.0.3/java.lang.Thread.run(Thread.java:833)
+// Thread: Attach Listener
+// Thread: Notification Thread
+// Thread: pool-15-thread-1
+// 	at java.base@17.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@17.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+// 	at java.base@17.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+// 	at java.base@17.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3463)
+// 	at java.base@17.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3434)
+// 	at java.base@17.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1623)
+// 	at java.base@17.0.3/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+// 	at java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+// 	at java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+// 	at java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+// 	at java.base@17.0.3/java.lang.Thread.run(Thread.java:833)
+// Thread: Timer-18
+// 	at java.base@17.0.3/java.lang.Object.wait(Native Method)
+// 	at java.base@17.0.3/java.util.TimerThread.mainLoop(Timer.java:563)
+// 	at java.base@17.0.3/java.util.TimerThread.run(Timer.java:516)
+// Thread: SyntheticaAnimation 50
+// 	at java.base@17.0.3/java.lang.Thread.sleep(Native Method)
+// 	at ui.utils.lnf.a$a.run(SourceFile:101)
+// Thread: Refresh Filesets Swing Worker Thread
+// 	at java.base@17.0.3/java.lang.Thread.sleep(Native Method)
+// 	at ui.data.design.z.aQH(SourceFile:2577)
+// 	at ui.frmwork.z.run(SourceFile:213)
+// 	at java.base@17.0.3/java.lang.Thread.run(Thread.java:833)
+// Thread: pool-10-thread-1
+// 	at java.base@17.0.3/jdk.internal.misc.Unsafe.park(Native Method)
+// 	at java.base@17.0.3/java.util.concurrent.locks.LockSupport.park(LockSupport.java:341)
+// 	at java.base@17.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionNode.block(AbstractQueuedSynchronizer.java:506)
+// 	at java.base@17.0.3/java.util.concurrent.ForkJoinPool.unmanagedBlock(ForkJoinPool.java:3463)
+// 	at java.base@17.0.3/java.util.concurrent.ForkJoinPool.managedBlock(ForkJoinPool.java:3434)
+// 	at java.base@17.0.3/java.util.concurrent.locks.AbstractQueuedSynchronizer$ConditionObject.await(AbstractQueuedSynchronizer.java:1623)
+// 	at java.base@17.0.3/java.util.concurrent.LinkedBlockingQueue.take(LinkedBlockingQueue.java:435)
+// 	at java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor.getTask(ThreadPoolExecutor.java:1062)
+// 	at java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1122)
+// 	at java.base@17.0.3/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+// 	at java.base@17.0.3/java.lang.Thread.run(Thread.java:833)
+// Thread: Timer-14
+// 	at java.base@17.0.3/java.lang.Object.wait(Native Method)
+// 	at java.base@17.0.3/java.util.TimerThread.mainLoop(Timer.java:563)
+// 	at java.base@17.0.3/java.util.TimerThread.run(Timer.java:516)
+// Thread: Process Messages Thread
+// 	at java.base@17.0.3/java.lang.Thread.sleep(Native Method)
+// 	at ui.frmwork.c.g.aQH(SourceFile:135)
+// 	at ui.frmwork.z.run(SourceFile:213)
+// 	at java.base@17.0.3/java.lang.Thread.run(Thread.java:833)
+// Thread: Timer-13
+// 	at java.base@17.0.3/java.lang.Object.wait(Native Method)
+// 	at java.base@17.0.3/java.util.TimerThread.mainLoop(Timer.java:563)
+// 	at java.base@17.0.3/java.util.TimerThread.run(Timer.java:516)
+// Thread: Timer-15
+// 	at java.base@17.0.3/java.lang.Object.wait(Native Method)
+// 	at java.base@17.0.3/java.util.TimerThread.mainLoop(Timer.java:563)
+// 	at java.base@17.0.3/java.util.TimerThread.run(Timer.java:516)
+// Thread: Java2D Disposer
+// 	at java.base@17.0.3/java.lang.Object.wait(Native Method)
+// 	at java.base@17.0.3/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+// 	at java.base@17.0.3/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:176)
+// 	at java.desktop@17.0.3/sun.java2d.Disposer.run(Disposer.java:145)
+// 	at java.base@17.0.3/java.lang.Thread.run(Thread.java:833)
+// Thread: Common-Cleaner
+// 	at java.base@17.0.3/java.lang.Object.wait(Native Method)
+// 	at java.base@17.0.3/java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:155)
+// 	at java.base@17.0.3/jdk.internal.ref.CleanerImpl.run(CleanerImpl.java:140)
+// 	at java.base@17.0.3/java.lang.Thread.run(Thread.java:833)
+// 	at java.base@17.0.3/jdk.internal.misc.InnocuousThread.run(InnocuousThread.java:162)
+// Thread: AWT-Shutdown
+// 	at java.base@17.0.3/java.lang.Object.wait(Native Method)
+// 	at java.base@17.0.3/java.lang.Object.wait(Object.java:338)
+// 	at java.desktop@17.0.3/sun.awt.AWTAutoShutdown.run(AWTAutoShutdown.java:291)
+// 	at java.base@17.0.3/java.lang.Thread.run(Thread.java:833)
+// Thread: Update Runs Swing Worker Thread
+// 	at java.base@17.0.3/java.lang.Thread.sleep(Native Method)
+// 	at ui.data.experiment.E.aQH(SourceFile:373)
+// 	at ui.frmwork.z.run(SourceFile:213)
+// 	at java.base@17.0.3/java.lang.Thread.run(Thread.java:833)
+// Elapsed time: 41 seconds
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 158438, 1125591); // t
+// Device select: 'Site Pin - ADDRBWRADDR5'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 652, 4632, 1233, 715); // G
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 157223, 1126320); // t
+// Device select: 'Site Pin - DIPBDIP1'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 647, 4635, 1233, 715); // G
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 165485, 1127049); // t
+// Device select: 'BEL - F7BMUX'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 681, 4638, 1233, 715); // G
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 143615, 1131666); // t
+// Device select: 'BEL - A5LUT'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 591, 4657, 1233, 715); // G
+// Device view-level: 1.5
+// Device view-level: 1.8
+// Device view-level: 2.0
+// HMemoryUtils.trashcanNow. Engine heap size: 4,405 MB. GUI used memory: 156 MB. Current time: 7/21/26, 10:57:17 AM CEST
+// Elapsed time: 21 seconds
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 140726, 1034006); // t
+// Device select: 'Cell - s_v_mul_out[5]'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 1303, 9574, 1233, 715); // G
+// Elapsed time: 10 seconds
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 159518, 1032170); // t
+// Device select: 'Cell - mem_reg'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 1477, 9557, 1233, 715); // G
+// Device view-level: 2.3
+// [Engine Memory]: 4,710 MB (+158059kb) [00:26:43]
+// Device view-level: 2.9
+// Device view-level: 2.6
+// Device view-level: 1.8
+// HMemoryUtils.trashcanNow. Engine heap size: 4,710 MB. GUI used memory: 157 MB. Current time: 7/21/26, 10:57:36 AM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 4,462 MB. GUI used memory: 155 MB. Current time: 7/21/26, 10:57:38 AM CEST
+// Device view-level: 2.0
+// Device view-level: 2.3
+// Device view-level: 2.6
+// Device view-level: 2.9
+// Device view-level: 3.2
+// HMemoryUtils.trashcanNow. Engine heap size: 4,447 MB. GUI used memory: 156 MB. Current time: 7/21/26, 10:57:39 AM CEST
+// Device view-level: 2.9
+// Device view-level: 2.3
+// Device view-level: 2.0
+// Device view-level: 1.8
+// HMemoryUtils.trashcanNow. Engine heap size: 4,441 MB. GUI used memory: 157 MB. Current time: 7/21/26, 10:57:54 AM CEST
+// Device view-level: 1.5
+// Device view-level: 1.2
+// Elapsed time: 28 seconds
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 416629, 996192); // t
+// Device view-level: 1.2
+// Device view-level: 1.2
+// HMemoryUtils.trashcanNow. Engine heap size: 4,441 MB. GUI used memory: 239 MB. Current time: 7/21/26, 10:57:59 AM CEST
+// Device view-level: 1.5
+// Device view-level: 1.8
+// Device view-level: 2.0
+// HMemoryUtils.trashcanNow. Engine heap size: 4,441 MB. GUI used memory: 156 MB. Current time: 7/21/26, 10:58:02 AM CEST
+// Device view-level: 2.3
+// Device view-level: 2.6
+// Device view-level: 2.9
+// Device view-level: 2.6
+// Device view-level: 2.3
+// [Engine Memory]: 5,236 MB (+304221kb) [00:27:14]
+// HMemoryUtils.trashcanNow. Engine heap size: 5,236 MB. GUI used memory: 161 MB. Current time: 7/21/26, 10:58:04 AM CEST
+// Device view-level: 2.0
+// Device view-level: 1.8
+// Device view-level: 2.0
+// HMemoryUtils.trashcanNow. Engine heap size: 5,236 MB. GUI used memory: 158 MB. Current time: 7/21/26, 10:58:14 AM CEST
+// Device view-level: 2.3
+// Device view-level: 2.6
+// Device view-level: 2.9
+// Device view-level: 3.2
+// Device view-level: 3.5
+// HMemoryUtils.trashcanNow. Engine heap size: 4,456 MB. GUI used memory: 155 MB. Current time: 7/21/26, 10:58:16 AM CEST
+// Device view-level: 3.8
+// Elapsed time: 18 seconds
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 407349, 960497); // t
+// Device select: 'Site - BUFHCE_X0Y14'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 42962, 101301, 1233, 715); // G
+// HMemoryUtils.trashcanNow. Engine heap size: 4,441 MB. GUI used memory: 161 MB. Current time: 7/21/26, 10:58:33 AM CEST
+// Device view-level: 3.5
+// Device view-level: 3.2
+// HMemoryUtils.trashcanNow. Engine heap size: 4,441 MB. GUI used memory: 157 MB. Current time: 7/21/26, 10:58:34 AM CEST
+// Device view-level: 2.9
+// Device view-level: 2.6
+// Device view-level: 2.3
+// HMemoryUtils.trashcanNow. Engine heap size: 4,441 MB. GUI used memory: 157 MB. Current time: 7/21/26, 10:58:35 AM CEST
+// Elapsed time: 18 seconds
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 408390, 912397); // t
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 5672, 12672, 1233, 715); // G
+// HMemoryUtils.trashcanNow. Engine heap size: 4,441 MB. GUI used memory: 156 MB. Current time: 7/21/26, 10:58:37 AM CEST
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 409614, 785171); // t
+// Device select: 'Site - BUFHCE_X1Y32'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 5689, 10905, 1233, 715); // G
+// HMemoryUtils.trashcanNow. Engine heap size: 4,435 MB. GUI used memory: 157 MB. Current time: 7/21/26, 10:58:39 AM CEST
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 409110, 788771); // t
+// Device select: 'Site - BUFHCE_X1Y30'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 5682, 10955, 1233, 715); // G
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 412134, 800435); // t
+// Device select: 'BEL - CARRY4'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 5724, 11117, 1233, 715); // G
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 409182, 797267); // t
+// Device select: 'Site - BUFHCE_X1Y26'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 5683, 11073, 1233, 715); // G
+// Device view-level: 2.6
+// Device view-level: 2.9
+// HMemoryUtils.trashcanNow. Engine heap size: 4,842 MB. GUI used memory: 170 MB. Current time: 7/21/26, 10:58:50 AM CEST
+// Device view-level: 3.2
+// Device view-level: 3.5
+// Elapsed time: 12 seconds
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 381645, 795873); // t
+// Device select: 'Site - SLICE_X82Y124'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 26834, 55959, 1233, 715); // G
+// Device view-level: 3.8
+// Device view-level: 4.1
+// HMemoryUtils.trashcanNow. Engine heap size: 4,842 MB. GUI used memory: 186 MB. Current time: 7/21/26, 10:59:06 AM CEST
+// Device view-level: 4.4
+// Device view-level: 4.1
+// Device view-level: 3.8
+// Elapsed time: 19 seconds
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 379625, 795840); // t
+// Device select: 'Site - SLICE_X82Y124'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 40038, 83935, 1233, 715); // G
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 379644, 795659); // t
+// Device select: 'Site - SLICE_X82Y124'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 40041, 83916, 1233, 715); // G
+// HMemoryUtils.trashcanNow. Engine heap size: 4,842 MB. GUI used memory: 199 MB. Current time: 7/21/26, 10:59:19 AM CEST
+// Device view-level: 4.1
+// Device view-level: 4.4
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 380343, 794079); // t
+// Device select: 'BEL - CARRY4_CMUX'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 90256, 188436, 1233, 715); // G
+// [GUI Memory]: 272 MB (+137kb) [00:28:39]
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 380630, 794357); // t
+// Device select: 'BEL - CARRY4_CXOR'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 90324, 188501, 1233, 715); // G
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 380647, 795019); // t
+// Device select: 'BEL - CARRY4_BXOR'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 90328, 188659, 1233, 715); // G
+// HMemoryUtils.trashcanNow. Engine heap size: 4,843 MB. GUI used memory: 218 MB. Current time: 7/21/26, 10:59:32 AM CEST
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 380360, 795267); // t
+// Device select: 'BEL - CARRY4_AMUX'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 90260, 188718, 1233, 715); // G
+// HMemoryUtils.trashcanNow. Engine heap size: 4,843 MB. GUI used memory: 167 MB. Current time: 7/21/26, 10:59:38 AM CEST
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 379665, 798340); // t
+// Device select: 'BEL - F7AMUX'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 90095, 189447, 1233, 715); // G
+// HMemoryUtils.trashcanNow. Engine heap size: 4,499 MB. GUI used memory: 162 MB. Current time: 7/21/26, 10:59:41 AM CEST
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 379197, 797008); // t
+// Device select: 'BEL - D5LUT'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 89984, 189131, 1233, 715); // G
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 379193, 796755); // t
+// Device select: 'BEL - D5LUT'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 89983, 189071, 1233, 715); // G
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 379193, 796755); // t
+// Device select: 'BEL - D5LUT'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 89983, 189071, 1233, 715); // G
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 379113, 796865); // t
+// Device select: 'BEL - D5LUT'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 89964, 189097, 1233, 715); // G
+// HMemoryUtils.trashcanNow. Engine heap size: 4,470 MB. GUI used memory: 159 MB. Current time: 7/21/26, 10:59:51 AM CEST
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 379024, 796616); // t
+// Device select: 'BEL - D6LUT'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 89943, 189038, 1233, 715); // G
+// Device view-level: 4.7
+// Device view-level: 5.0
+// Device view-level: 5.3
+// Device view-level: 5.6
+// HMemoryUtils.trashcanNow. Engine heap size: 4,464 MB. GUI used memory: 164 MB. Current time: 7/21/26, 11:00:02 AM CEST
+// Device view-level: 5.3
+// HMemoryUtils.trashcanNow. Engine heap size: 4,464 MB. GUI used memory: 161 MB. Current time: 7/21/26, 11:00:06 AM CEST
+// Elapsed time: 12 seconds
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 379217, 796726); // t
+// Device select: 'BEL - D6LUT'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 303712, 638091, 1233, 715); // G
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 379268, 796986); // t
+// Device select: 'Site - SLICE_X82Y123'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 303753, 638300, 1233, 715); // G
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 379232, 797108); // t
+// Device select: 'Site - SLICE_X82Y123'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 303724, 638397, 1233, 715); // G
+// Device view-level: 5.0
+// HMemoryUtils.trashcanNow. Engine heap size: 4,464 MB. GUI used memory: 161 MB. Current time: 7/21/26, 11:00:13 AM CEST
+// Device view-level: 4.7
+// HMemoryUtils.trashcanNow. Engine heap size: 4,464 MB. GUI used memory: 159 MB. Current time: 7/21/26, 11:00:15 AM CEST
+// Device view-level: 4.4
+// Device view-level: 4.1
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 381433, 798915); // t
+// Device select: 'BEL - AFF'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 60343, 126389, 1233, 715); // G
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 381414, 798592); // t
+// Device select: 'BEL - A5FF'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 60340, 126338, 1233, 715); // G
+// Device view-level: 4.4
+// HMemoryUtils.trashcanNow. Engine heap size: 4,458 MB. GUI used memory: 166 MB. Current time: 7/21/26, 11:00:22 AM CEST
+// Device view-level: 4.7
+// Device view-level: 5.0
+// Device view-level: 5.3
+// HMemoryUtils.trashcanNow. Engine heap size: 4,458 MB. GUI used memory: 162 MB. Current time: 7/21/26, 11:00:30 AM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 4,459 MB. GUI used memory: 159 MB. Current time: 7/21/26, 11:00:31 AM CEST
+// Device view-level: 5.0
+// Device view-level: 4.7
+// Device view-level: 4.4
+// Device view-level: 4.1
+// Device view-level: 3.8
+// HMemoryUtils.trashcanNow. Engine heap size: 4,451 MB. GUI used memory: 160 MB. Current time: 7/21/26, 11:00:32 AM CEST
+// Device view-level: 3.5
+// Device view-level: 3.2
+// Device view-level: 2.9
+// Device view-level: 2.6
+// Device view-level: 2.3
+// HMemoryUtils.trashcanNow. Engine heap size: 4,444 MB. GUI used memory: 159 MB. Current time: 7/21/26, 11:00:33 AM CEST
+// Device view-level: 2.0
+// Device view-level: 1.8
+// Device view-level: 1.5
+// Device view-level: 1.2
+// Device view-level: 0.9
+// HMemoryUtils.trashcanNow. Engine heap size: 4,444 MB. GUI used memory: 159 MB. Current time: 7/21/26, 11:00:34 AM CEST
+// Device view-level: 0.6
+// Device view-level: 0.3
+// Device view-level: 0.6
+// Device view-level: 0.9
+// Device view-level: 1.2
+// HMemoryUtils.trashcanNow. Engine heap size: 4,445 MB. GUI used memory: 165 MB. Current time: 7/21/26, 11:00:40 AM CEST
+// Device view-level: 1.5
+// Device view-level: 1.2
+// Device view-level: 0.9
+// Device view-level: 0.6
+// Device view-level: 0.9
+// HMemoryUtils.trashcanNow. Engine heap size: 4,445 MB. GUI used memory: 161 MB. Current time: 7/21/26, 11:00:47 AM CEST
+// Device view-level: 1.2
+// Device view-level: 1.5
+// Elapsed time: 26 seconds
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 109108, 1133853); // t
+// Device view-level: 1.5
+// Device view-level: 1.8
+// HMemoryUtils.trashcanNow. Engine heap size: 4,445 MB. GUI used memory: 162 MB. Current time: 7/21/26, 11:00:50 AM CEST
+// Device view-level: 2.0
+// Device view-level: 2.3
+// Device view-level: 2.6
+// Device view-level: 2.3
+// Device view-level: 2.0
+// HMemoryUtils.trashcanNow. Engine heap size: 4,445 MB. GUI used memory: 160 MB. Current time: 7/21/26, 11:00:53 AM CEST
+// Device view-level: 1.8
+// Device view-level: 1.5
+// Device view-level: 1.2
+// HMemoryUtils.trashcanNow. Engine heap size: 4,445 MB. GUI used memory: 159 MB. Current time: 7/21/26, 11:00:59 AM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 4,445 MB. GUI used memory: 159 MB. Current time: 7/21/26, 11:01:00 AM CEST
+// Device view-level: 0.9
+// Device view-level: 0.6
+// Device view-level: 0.3
+// Elapsed time: 16 seconds
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 84981, 207904); // t
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 358, 169, 1233, 715); // G
+// HMemoryUtils.trashcanNow. Engine heap size: 4,445 MB. GUI used memory: 218 MB. Current time: 7/21/26, 11:01:04 AM CEST
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 130499, 216516); // t
+// Device select: 'Tile - PSS2_X32Y313'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 395, 176, 1233, 715); // G
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 151412, 324774); // t
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 412, 264, 1233, 715); // G
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 99743, 313702); // t
+// Device select: 'Tile - PSS2_X32Y313'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 370, 255, 1233, 715); // G
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 51765, 113179); // t
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 331, 92, 1233, 715); // G
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 123117, 227588); // t
+// Device select: 'Tile - PSS2_X32Y313'
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 389, 185, 1233, 715); // G
+// HMemoryUtils.trashcanNow. Engine heap size: 4,445 MB. GUI used memory: 164 MB. Current time: 7/21/26, 11:01:13 AM CEST
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 54226, 190682); // t
+selectView(PAResourceOtoP.PAViews_DEVICE, "Device", 333, 155, 1233, 715); // G
+// Device view-level: 0.6
+// Device view-level: 0.9
+// Device view-level: 1.2
+// Device view-level: 1.5
+// HMemoryUtils.trashcanNow. Engine heap size: 4,445 MB. GUI used memory: 208 MB. Current time: 7/21/26, 11:01:16 AM CEST
+// Device view-level: 1.8
+// Device view-level: 2.0
+// Device view-level: 2.3
+// Device view-level: 2.6
+// Device view-level: 2.9
+// HMemoryUtils.trashcanNow. Engine heap size: 4,648 MB. GUI used memory: 161 MB. Current time: 7/21/26, 11:01:18 AM CEST
+// Device view-level: 3.5
+// Device view-level: 3.2
+// Device view-level: 2.9
+// Device view-level: 2.6
+// Device view-level: 2.3
+// HMemoryUtils.trashcanNow. Engine heap size: 4,480 MB. GUI used memory: 219 MB. Current time: 7/21/26, 11:01:19 AM CEST
+// Device view-level: 1.8
+selectGraphicalView(PAResourceOtoP.PAViews_DEVICE, 142238, 272326); // t
+// Device view-level: 1.8
+// Device view-level: 1.8
+// Device view-level: 1.8
+// HMemoryUtils.trashcanNow. Engine heap size: 4,480 MB. GUI used memory: 162 MB. Current time: 7/21/26, 11:01:22 AM CEST
+// Device view-level: 2.0
+// Device view-level: 2.3
+// Device view-level: 2.6
+// HMemoryUtils.trashcanNow. Engine heap size: 4,472 MB. GUI used memory: 167 MB. Current time: 7/21/26, 11:01:24 AM CEST
+// Device view-level: 2.9
+// Device view-level: 2.6
+// Device view-level: 2.3
+// HMemoryUtils.trashcanNow. Engine heap size: 4,472 MB. GUI used memory: 169 MB. Current time: 7/21/26, 11:01:31 AM CEST
+// Device view-level: 1.8
+// Device view-level: 1.5
+// Device view-level: 1.2
+// Device view-level: 0.9
+// Device view-level: 0.6
+// HMemoryUtils.trashcanNow. Engine heap size: 4,472 MB. GUI used memory: 254 MB. Current time: 7/21/26, 11:01:39 AM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 4,472 MB. GUI used memory: 263 MB. Current time: 7/21/26, 11:01:44 AM CEST
+// Device view-level: 0.9
+// Device view-level: 1.2
+// Device view-level: 1.5
+// Device view-level: 1.8
+// Device view-level: 2.0
+// HMemoryUtils.trashcanNow. Engine heap size: 4,472 MB. GUI used memory: 163 MB. Current time: 7/21/26, 11:02:00 AM CEST
+// Device view-level: 2.6
+// HMemoryUtils.trashcanNow. Engine heap size: 4,472 MB. GUI used memory: 161 MB. Current time: 7/21/26, 11:02:01 AM CEST
+// HMemoryUtils.trashcanNow. Engine heap size: 4,472 MB. GUI used memory: 199 MB. Current time: 7/21/26, 11:02:02 AM CEST
+// Device view-level: 2.3
+// Device view-level: 2.0
+// Device view-level: 1.2
+// Device view-level: 0.9
+// Device view-level: 0.6
+// HMemoryUtils.trashcanNow. Engine heap size: 4,472 MB. GUI used memory: 222 MB. Current time: 7/21/26, 11:02:02 AM CEST
+// Device view-level: 0.0
+// Elapsed time: 48 seconds
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // j
+closeTask("Implementation", "Implemented Design", "DesignTask.RESULTS_ANALYSIS");
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a
+dismissDialog("Confirm Close"); // u
+// TclEventType: DESIGN_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 4,472 MB. GUI used memory: 145 MB. Current time: 7/21/26, 11:02:11 AM CEST
+// TclEventType: TIMING_RESULTS_UNLOAD
+// Engine heap size: 4,472 MB. GUI used memory: 145 MB. Current time: 7/21/26, 11:02:11 AM CEST
+// TclEventType: CURR_DESIGN_SET
+// Tcl Message: close_design 
+// TclEventType: DESIGN_CLOSE
+dismissDialog("Close"); // bq
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TEST_PYRAMID(ARCH_TEST_PYRAMID) (test_pyramid.vhd)]", 3, true); // E - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TEST_PYRAMID(ARCH_TEST_PYRAMID) (test_pyramid.vhd)]", 3, true, false, false, false, true, false); // E - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_OPEN_FILE_WITH, "Open With"); // al
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // al
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // al
+selectMenuItem(PAResourceCommand.PACommandNames_SET_AS_TOP, "Set as Top"); // ao
+// Run Command: PAResourceCommand.PACommandNames_SET_AS_TOP
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: set_property top TEST_PYRAMID [current_fileset] 
+// TclEventType: DG_GRAPH_STALE
+// Elapsed Time for: 'L.f': 14m:46s
+// Elapsed Time for: 'L.f': 14m:48s
+// Elapsed time: 558 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TEST_PYRAMID(ARCH_TEST_PYRAMID) (test_pyramid.vhd)]", 2, true); // E - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, TEST_PYRAMID(ARCH_TEST_PYRAMID) (test_pyramid.vhd), RS0 : RESYNCH_SGNX8(ARCH_RESYNCH_SGNX8) (resynch_sgnx8.vhd)]", 4, false, false, false, false, false, true); // E - Double Click
+// Elapsed time: 945 seconds
+floatFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // R
+// PAResourceOtoP.PAViews_SOURCES: Sources: dock view
+dockFrame(PAResourceOtoP.PAViews_SOURCES, "Sources"); // R
+// PAResourceOtoP.PAViews_SOURCES: Sources: dock view
+// Elapsed time: 47 seconds
+maximizeFrame(PAResourceOtoP.PAViews_COMPILATION, "Log"); // R

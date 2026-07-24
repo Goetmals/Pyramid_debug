@@ -1,0 +1,11 @@
+# compile vhdl design source files
+vhdl work  \
+"../../../../pyramid.srcs/sources_1/imports/work/saturn_numeric_pkg.vhd" \
+"../../../../pyramid.srcs/sources_1/imports/work/xy_delay_pkg.vhd" \
+"../../../../pyramid.srcs/sources_1/imports/work/saturn_numeric_pkg-body.vhd" \
+"../../../../pyramid.srcs/sources_1/imports/work/shift_reg.vhd" \
+"../../../../pyramid.srcs/sources_1/imports/work/xy_delay.vhd" \
+"../../../../pyramid.srcs/sources_1/imports/work/gradient.vhd" \
+
+# Do not sort compile order
+nosort

@@ -11,7 +11,8 @@ entity subsample_cody2 is
 	generic (
 		pixel_bus_width     : natural := 17;
 		w_img               : natural := 640;
-		h_img               : integer := 480
+		h_img               : integer := 480;
+		start_hsync         : std_logic := '0'
 	);
 	port (
 		clk			: in  std_logic;
@@ -61,7 +62,7 @@ architecture arch_subsample_cody2 of subsample_cody2 is
     signal cpt_col : std_logic_vector(unsigned_num_bits(w_img-1)-1  downto 0);
     signal cpt_lig : std_logic_vector(unsigned_num_bits(w_img)-1  downto 0);
     signal cpt_start : std_logic := '0';  
-    signal odd_lig :   std_logic := '0';
+    signal odd_lig :   std_logic := start_hsync;
     signal start_of_line : std_logic_vector(1 downto 0);
 	
 	
@@ -80,7 +81,7 @@ begin
                 -- Capture uniquement les pixels d'indice X pair
                 if xin(0) = '0' then
                     line_buffer(ad_E) <= data_in;
-                    if ad_E < 255 then
+                    if ad_E < (w_img/2-1) then
                         ad_E <= ad_E + 1;
                     end if;
                 end if;
@@ -116,35 +117,8 @@ begin
             yout        <= (others => '0');
 			
         elsif rising_edge(clk) then
---            if (reading='1') then
-                hsync_rtd <= hsync_in;
---                vsync_rtd <= vsync_in;
---            else 
---                hsync_rtd <= '1';
---                vsync_rtd <= '1';
---            end if;
---            -------------------------------------------------------------------
---            -- HSYNC_OUT : Transmis 1 ligne sur 2 (lignes paires)
---            -------------------------------------------------------------------
---            if yin(0) = '1' then
---                hsync_int <= hsync_rtd;
---            else
---                hsync_int <= '1';
---            end if;
 
---            hsync_out <= hsync_int;
-
-
-    
---            if ( start_of_line = "01") then 
---                cpt_lig <= cpt_lig + '1';
---            end if;
-            
---            if ( start_of_line = "01" or start_of_line = "00" ) then
---                cpt_col <= cpt_col + '1';
---            end if;
-
-
+              hsync_rtd <= hsync_in;
 
               if hsync_in = '0' and  hsync_rtd = '1' and odd_lig = '1' then
                 cpt_start <= '1';
@@ -152,7 +126,7 @@ begin
               
               if cpt_start = '1' then
                  cpt_col <= cpt_col + '1';
-                 if cpt_col = conv_std_logic_vector(255, unsigned_num_bits(w_img-1)) then
+                 if cpt_col = conv_std_logic_vector((w_img/2-1), unsigned_num_bits(w_img-1)) then
                     cpt_start <= '0';
                     cpt_col <= (others => '0');
                  end if;
@@ -163,17 +137,8 @@ begin
               end if;
                 
               
-               hsync_int <= not(cpt_start);
+              hsync_int <= not(cpt_start);
                                                                  
---            -------------------------------------------------------------------
---            -- VSYNC_OUT : Suit HSYNC_OUT pendant l'image, 1 en dehors
---            -------------------------------------------------------------------
---            if vsync_in = '1' then
---                vsync_out <= hsync_int; -- Copie conforme de HSYNC_OUT pendant l'image
---            else
---                vsync_out <= '1';       -- Reste verrouillé à 1 en dehors de l'image
---            end if;
-            
             ------------------------------------------------------------------
             -- next_lig : Réinitialisation de next_lig
             -------------------------------------------------------------------
@@ -200,7 +165,7 @@ begin
                 en_int          <= '1';
                 data_out  		<= line_buffer(ad_L);
                 
-                if ad_L = 255 then
+                if ad_L = (w_img/2-1) then
                     reading <= '0'; -- Fin des 256 pixels
                 else
                     ad_L  <= ad_L + 1;
@@ -236,9 +201,6 @@ begin
     end process;
 		
 vsync_int <= not(reading);
---hsync_int <= '1' when (cpt_col <= conv_std_logic_vector(255, unsigned_num_bits(w_img-1)) and cpt_lig(0) = '0') or start_of_line(1)='1'
---        else '0';
---hsync_out <= not(hsync_int);   
 hsync_out <=  hsync_int;
 vsync_out <= vsync_int;
 	

@@ -1,0 +1,31 @@
+# compile vhdl design source files
+vhdl work  \
+"../../../../test_grad_imv.srcs/sources_1/imports/work/saturn_numeric_pkg.vhd" \
+"../../../../test_grad_imv.srcs/sources_1/imports/work/saturn_numeric_pkg-body.vhd" \
+"../../../../test_grad_imv.srcs/sources_1/imports/work/math_real.vhd" \
+"../../../../test_grad_imv.srcs/sources_1/imports/work/math_real_body.vhd" \
+"../../../../test_grad_imv.srcs/sources_1/imports/work/saturn_dog_pkg.vhd" \
+"../../../../test_grad_imv.srcs/sources_1/imports/work/saturn_dog_pkg-body.vhd" \
+"../../../../test_grad_imv.srcs/sources_1/imports/work/dual_clk_fifo_pkg.vhd" \
+"../../../../test_grad_imv.srcs/sources_1/imports/work/xy_delay_pkg.vhd" \
+"../../../../test_grad_imv.srcs/sources_1/new/imaging_to_axis.vhd" \
+"../../../../../vhdl/tst/divers/resynch_sgnx8.vhd" \
+"../../../../../vhdl/tst/divers/writeimg.vhd" \
+"../../../../../vhdl/tst/divers/readimg.vhd" \
+"../../../../test_grad_imv.srcs/sources_1/imports/work/xy_to_axis.vhd" \
+"../../../../test_grad_imv.srcs/sources_1/new/lr_grad_tarek.vhd" \
+"../../../../test_grad_imv.srcs/sources_1/new/test_pyramid.vhd" \
+"../../../../test_grad_imv.srcs/sources_1/imports/work/gaussian_filter_pkg.vhd" \
+"../../../../test_grad_imv.srcs/sources_1/imports/work/dog.vhd" \
+"../../../../../pyramid_prj/pyramid.srcs/sources_1/imports/work/dog_pkg.vhd" \
+"../../../../test_grad_imv.srcs/sources_1/imports/work/delay_pkg.vhd" \
+"../../../../test_grad_imv.srcs/sources_1/imports/work/delay.vhd" \
+"../../../../test_grad_imv.srcs/sources_1/imports/work/axis_to_xy_cody.vhd" \
+"../../../../test_grad_imv.srcs/sources_1/imports/work/gradient_cody.vhd" \
+"../../../../test_grad_imv.srcs/sources_1/new/xy_delay_cody2.vhd" \
+"../../../../test_grad_imv.srcs/sources_1/new/gaussian_filter_cody.vhd" \
+"../../../../test_grad_imv.srcs/sources_1/imports/Téléchargements/lr_cody.vhd" \
+"../../../../test_grad_imv.srcs/sources_1/new/subsample_cody2.vhd" \
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,12 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../test_grad_imv.gen/sources_1/ip/dp_grad_tarek/sim/dp_grad_tarek.v" \
+
+verilog work  \
+"../../../../test_grad_imv.srcs/sources_1/imports/work/timescale.v" \
+
+# compile glbl module
+verilog work "glbl.v"
+
+# Do not sort compile order
+nosort

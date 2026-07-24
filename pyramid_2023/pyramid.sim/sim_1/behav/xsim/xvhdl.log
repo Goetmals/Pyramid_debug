@@ -1,0 +1,9 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/demelo/vivado_prjs/testbench_eads/pyramid_2023/pyramid.srcs/sources_1/imports/work/saturn_numeric_pkg.vhd" into library work
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/demelo/vivado_prjs/testbench_eads/pyramid_2023/pyramid.srcs/sources_1/imports/work/xy_delay_pkg.vhd" into library work
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/demelo/vivado_prjs/testbench_eads/pyramid_2023/pyramid.srcs/sources_1/imports/work/saturn_numeric_pkg-body.vhd" into library work
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/demelo/vivado_prjs/testbench_eads/pyramid_2023/pyramid.srcs/sources_1/imports/work/shift_reg.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'shift_reg'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/demelo/vivado_prjs/testbench_eads/pyramid_2023/pyramid.srcs/sources_1/imports/work/xy_delay.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'xy_delay'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/demelo/vivado_prjs/testbench_eads/pyramid_2023/pyramid.srcs/sources_1/imports/work/gradient.vhd" into library work
+INFO: [VRFC 10-3107] analyzing entity 'gradient'
